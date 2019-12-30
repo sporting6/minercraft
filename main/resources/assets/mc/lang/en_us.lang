@@ -1,1 +1,20 @@
+
+//items
 item.tungsten_ingot.name=Tungsten Ingot
+item.copper_ingot.name=Copper Ingot
+
+//Blocks
+tile.tungsten_block.name=Block of Tungsten
+
+//tools
+item.tungsten_sword.name=Tungsten Sword
+item.tungsten_shovel.name=Tungsten Shovel
+item.tungsten_pickaxe.name=Tungsten Pickaxe
+item.tungsten_axe.name=Tungsten Axe
+item.tungsten_hoe.name=Tungsten Hoe
+
+//Armor 
+item.tungsten_helmet.name=Tungsten Helmet
+item.tungsten_chestplate.name=Tungsten Chestplate
+item.tungsten_leggings.name=Tungsten Leggings
+item.tungsten_boots.name=Tungsten Boots

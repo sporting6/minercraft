@@ -1,5 +1,6 @@
  package com.sporting6.minercraft;
 
+import com.sporting6.minercraft.init.ModRecipes;
 import com.sporting6.minercraft.proxy.CommonProxy;
 import com.sporting6.minercraft.util.Reference;
 
@@ -32,7 +33,7 @@ public class Main {
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
-		
+		ModRecipes.init();
 	}
 	
 	

@@ -1,4 +1,4 @@
- package com.sporting6.minercraft.items;
+  package com.sporting6.minercraft.items;
 
 import com.sporting6.minercraft.Main;
 import com.sporting6.minercraft.init.ModItems;
