@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModRecipes {
 	
 	public static void init() {
-		GameRegistry.addSmelting(ModItems.TUNGSTEN_INGOT, new ItemStack(ModBlocks.TUNGSTEN_BLOCK, 1), 1.5f);
+		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_ORE, new ItemStack(ModItems.TUNGSTEN_INGOT, 1), 1.5f);
 	}
 
 }

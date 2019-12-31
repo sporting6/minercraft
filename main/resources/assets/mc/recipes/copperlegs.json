@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:copper_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:copper_leggings",
+        "count": 1
+    }
+}
