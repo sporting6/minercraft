@@ -2,12 +2,21 @@
 //items
 item.tungsten_ingot.name=Tungsten Ingot
 item.copper_ingot.name=Copper Ingot
+item.tin_ingot.name=Tin Ingot
+item.bronze_ingot.name=Bronze Ingot
+item.obsidian_ingot.name=Obsidian Ingot
+item.obsidian_shard.name=Obsidian Shard
+
 
 //Blocks
 tile.tungsten_block.name=Block of Tungsten
 tile.tungsten_ore.name=Tungsten Ore
 tile.copper_block.name=Block of Copper
 tile.copper_ore.name=Copper Ore
+tile.tin_block.name=Block of Tin
+tile.bronze_block.name=Block of Bronze
+tile.obsidian_block.name=Block of Obsidian
+tile.tin_ore.name=Tin Ore
 
 
 //tools
@@ -23,6 +32,19 @@ item.copper_pickaxe.name=Copper Pickaxe
 item.copper_axe.name=Copper Axe
 item.copper_hoe.name=Copper Hoe
 
+item.tin_sword.name=Tin Sword
+item.tin_shovel.name=Tin Shovel
+item.tin_pickaxe.name=Tin Pickaxe
+item.tin_axe.name=Tin Axe
+item.tin_hoe.name=Tin Hoe
+
+item.bronze_sword.name=Bronze Sword
+item.bronze_shovel.name=Bronze Shovel
+item.bronze_pickaxe.name=Bronze Pickaxe
+item.bronze_axe.name=Bronze Axe
+item.bronze_hoe.name=Bronze Hoe
+
+
 //Armor 
 item.tungsten_helmet.name=Tungsten Helmet
 item.tungsten_chestplate.name=Tungsten Chestplate
@@ -33,3 +55,14 @@ item.copper_helmet.name=Copper Helmet
 item.copper_chestplate.name=Copper Chestplate
 item.copper_leggings.name=Copper Leggings
 item.copper_boots.name=Copper Boots
+
+item.tin_helmet.name=Tin Helmet
+item.tin_chestplate.name=Tin Chestplate
+item.tin_leggings.name=Tin Leggings
+item.tin_boots.name=Tin Boots
+
+item.bronze_helmet.name=Bronze Helmet
+item.bronze_chestplate.name=Bronze Chestplate
+item.bronze_leggings.name=Bronze Leggings
+item.bronze_boots.name=Bronze Boots
+

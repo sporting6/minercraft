@@ -13,16 +13,19 @@ import net.minecraft.item.ItemBlock;
 
 public class BlockBase extends Block implements IHasModel
 {
-	public BlockBase(String name, Material miterial)
+	public BlockBase(String name, Material material)
 	{
-		super(miterial); 
+		this(name, material, CreativeTabs.BUILDING_BLOCKS);
+	}
+	
+	public BlockBase(String name, Material material, CreativeTabs buildingBlocks) {
+		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(CreativeTabs.BUILDING_BLOCKS); 
+		setCreativeTab(buildingBlocks); 
 		
 		ModBlocks.BLOCKS.add(this);
-		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName())); 
-		
+		ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 	}
 
 	@Override
