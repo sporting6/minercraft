@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:obsidian_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:obsidian_leggings",
+        "count": 1
+    }
+}

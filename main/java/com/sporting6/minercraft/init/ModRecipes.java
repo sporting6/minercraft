@@ -10,6 +10,9 @@ public class ModRecipes {
 		GameRegistry.addSmelting(ModBlocks.TUNGSTEN_ORE, new ItemStack(ModItems.TUNGSTEN_INGOT, 1), 1.5f);
 		GameRegistry.addSmelting(ModBlocks.COPPER_ORE, new ItemStack(ModItems.COPPER_INGOT, 1), 1.5f);
 		GameRegistry.addSmelting(Blocks.OBSIDIAN , new ItemStack(ModItems.OBSIDIAN_SHARD, 2), 1.5f);
+		GameRegistry.addSmelting(ModBlocks.TIN_ORE, new ItemStack(ModItems.TIN_INGOT, 1), 1.5f);
+
+
 
 		
 	}

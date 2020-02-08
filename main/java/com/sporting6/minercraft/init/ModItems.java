@@ -54,6 +54,9 @@ public class ModItems
 	public static final ArmorMaterial ARMOR_MATERIAL_BRONZE = EnumHelper.addArmorMaterial
 			("armor_material_tungsten", Reference.MOD_ID + ":bronze", 14, 
 			new int[] {3, 5, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
+	public static final ArmorMaterial ARMOR_MATERIAL_OBSIDIAN = EnumHelper.addArmorMaterial
+			("armor_material_obsidian", Reference.MOD_ID + ":obsidian", 14, 
+			new int[] {4, 7, 9, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
 	
 	
 	//ITEMS
@@ -61,6 +64,7 @@ public class ModItems
 	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
 	public static final Item TIN_INGOT = new ItemBase("tin_ingot");
 	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot");
+	public static final Item TITANIUM_INGOT = new ItemBase("tin_titanium");
 	public static final Item OBSIDIAN_INGOT = new ItemBase("obsidian_ingot");
 	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard");
 
@@ -134,6 +138,15 @@ public class ModItems
 			("bronze_leggings", ARMOR_MATERIAL_BRONZE, 2, EntityEquipmentSlot.LEGS);
 	public static final Item BRONZE_BOOTS = new ArmorBase
 			("bronze_boots", ARMOR_MATERIAL_BRONZE, 1, EntityEquipmentSlot.FEET);
+	
+	public static final Item OBSIDIAN_HELMET = new ArmorBase
+			("obsidian_helmet", ARMOR_MATERIAL_OBSIDIAN, 1, EntityEquipmentSlot.HEAD);
+	public static final Item OBSIDIAN_CHESTPLATE = new ArmorBase
+			("obsidian_chestplate", ARMOR_MATERIAL_OBSIDIAN, 1, EntityEquipmentSlot.CHEST);
+	public static final Item OBSIDIAN_LEGGINGS = new ArmorBase
+			("obsidian_leggings", ARMOR_MATERIAL_OBSIDIAN, 2, EntityEquipmentSlot.LEGS);
+	public static final Item OBSIDIAN_BOOTS = new ArmorBase
+			("obsidian_boots", ARMOR_MATERIAL_OBSIDIAN, 1, EntityEquipmentSlot.FEET);
 
 
 }

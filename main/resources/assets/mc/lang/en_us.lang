@@ -26,6 +26,13 @@ item.tungsten_pickaxe.name=Tungsten Pickaxe
 item.tungsten_axe.name=Tungsten Axe
 item.tungsten_hoe.name=Tungsten Hoe
 
+item.obsidian_sword.name=Obsidian Sword
+item.obsidian_shovel.name=Obsidian Shovel
+item.obsidian_pickaxe.name=Obsidian Pickaxe
+item.obsidian_axe.name=Obsidian Axe
+item.obsidian_hoe.name=Obsidian Hoe
+
+
 item.copper_sword.name=Copper Sword
 item.copper_shovel.name=Copper Shovel
 item.copper_pickaxe.name=Copper Pickaxe
@@ -50,6 +57,11 @@ item.tungsten_helmet.name=Tungsten Helmet
 item.tungsten_chestplate.name=Tungsten Chestplate
 item.tungsten_leggings.name=Tungsten Leggings
 item.tungsten_boots.name=Tungsten Boots
+
+item.obsidian_helmet.name=Obsidian Helmet
+item.obsidian_chestplate.name=Obsidian Chestplate
+item.obsidian_leggings.name=Obsidian Leggings
+item.obsidian_boots.name=Obsidian Boots
 
 item.copper_helmet.name=Copper Helmet
 item.copper_chestplate.name=Copper Chestplate
