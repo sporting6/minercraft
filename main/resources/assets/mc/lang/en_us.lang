@@ -1,6 +1,6 @@
-
 //items
 item.tungsten_ingot.name=Tungsten Ingot
+item.ruby.name=Ruby
 item.copper_ingot.name=Copper Ingot
 item.tin_ingot.name=Tin Ingot
 item.bronze_ingot.name=Bronze Ingot
@@ -17,6 +17,8 @@ tile.tin_block.name=Block of Tin
 tile.bronze_block.name=Block of Bronze
 tile.obsidian_block.name=Block of Obsidian
 tile.tin_ore.name=Tin Ore
+tile.ruby_block.name=Ruby of Tungsten
+tile.ruby_ore.name=Ruby Ore
 
 
 //tools
@@ -31,7 +33,6 @@ item.obsidian_shovel.name=Obsidian Shovel
 item.obsidian_pickaxe.name=Obsidian Pickaxe
 item.obsidian_axe.name=Obsidian Axe
 item.obsidian_hoe.name=Obsidian Hoe
-
 
 item.copper_sword.name=Copper Sword
 item.copper_shovel.name=Copper Shovel
@@ -50,6 +51,12 @@ item.bronze_shovel.name=Bronze Shovel
 item.bronze_pickaxe.name=Bronze Pickaxe
 item.bronze_axe.name=Bronze Axe
 item.bronze_hoe.name=Bronze Hoe
+
+item.ruby_sword.name=Ruby Sword
+item.ruby_shovel.name=Ruby Shovel
+item.ruby_pickaxe.name=Ruby Pickaxe
+item.ruby_axe.name=Ruby Axe
+item.ruby_hoe.name=Ruby Hoe
 
 
 //Armor 
@@ -78,3 +85,7 @@ item.bronze_chestplate.name=Bronze Chestplate
 item.bronze_leggings.name=Bronze Leggings
 item.bronze_boots.name=Bronze Boots
 
+item.ruby_helmet.name=Ruby Helmet
+item.ruby_chestplate.name=Ruby Chestplate
+item.ruby_leggings.name=Ruby Leggings
+item.ruby_boots.name=Ruby Boots

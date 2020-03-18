@@ -33,6 +33,8 @@ public class ModItems
 	//Materials
 	public static final ToolMaterial MATERIAL_TUNGSTEN = 
 			EnumHelper.addToolMaterial("material_tungsten", 2, 1000,  9.5f, 3.0f, 14);
+	public static final ToolMaterial MATERIAL_RUBY = 
+			EnumHelper.addToolMaterial("material_ruby", 2, 250,  7.0f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_COPPER = 
 			EnumHelper.addToolMaterial("material_copper", 2, 200 ,  10.5f, 2.0f, 10);
 	public static final ToolMaterial MATERIAL_TIN = 
@@ -40,11 +42,14 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_BRONZE = 
 			EnumHelper.addToolMaterial("material_bronze", 2, 350 ,  8.0f, 2.5f, 10);
 	public static final ToolMaterial MATERIAL_OBSIDIAN = 
-			EnumHelper.addToolMaterial("material_obsidian", 2, 2000,  8.0f, 3.0f, 14);
+			EnumHelper.addToolMaterial("material_obsidian", 2, 3000,  8.0f, 3.0f, 14);
 	
 	public static final ArmorMaterial ARMOR_MATERIAL_TUNGSTEN = EnumHelper.addArmorMaterial
 			("armor_material_tungsten", Reference.MOD_ID + ":tungsten", 14, 
 			new int[] {2, 5, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
+	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial
+			("armor_material_ruby", Reference.MOD_ID + ":ruby", 14, 
+			new int[] {2, 4, 5, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
 	public static final ArmorMaterial ARMOR_MATERIAL_COPPER = EnumHelper.addArmorMaterial
 			("armor_material_copper", Reference.MOD_ID + ":copper", 14, 
 			new int[] {1, 4, 6, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
@@ -64,9 +69,11 @@ public class ModItems
 	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
 	public static final Item TIN_INGOT = new ItemBase("tin_ingot");
 	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot");
-	public static final Item TITANIUM_INGOT = new ItemBase("tin_titanium");
+	public static final Item TITANIUM_INGOT = new ItemBase("titanium_ingot");
 	public static final Item OBSIDIAN_INGOT = new ItemBase("obsidian_ingot");
 	public static final Item OBSIDIAN_SHARD = new ItemBase("obsidian_shard");
+	public static final Item RUBY = new ItemBase("ruby");
+
 
 	
 
@@ -77,6 +84,12 @@ public class ModItems
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ToolPickaxe("tungsten_pickaxe", MATERIAL_TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ToolAxe("tungsten_axe", MATERIAL_TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ToolHoe("tungsten_hoe", MATERIAL_TUNGSTEN);
+	
+	public static final ItemSword RUBY_SWORD = new ToolSword("ruby_sword", MATERIAL_RUBY);
+	public static final ItemSpade RUBY_SHOVEL = new ToolSpade("ruby_shovel", MATERIAL_RUBY);
+	public static final ItemPickaxe RUBY_PICKAXE = new ToolPickaxe("ruby_pickaxe", MATERIAL_RUBY);
+	public static final ItemAxe RUBY_AXE = new ToolAxe("ruby_axe", MATERIAL_RUBY);
+	public static final ItemHoe RUBY_HOE = new ToolHoe("ruby_hoe", MATERIAL_RUBY);
 	
 	public static final ItemSword COPPER_SWORD = new ToolSword("copper_sword", MATERIAL_COPPER);
 	public static final ItemSpade COPPER_SHOVEL = new ToolSpade("copper_shovel", MATERIAL_COPPER);
@@ -111,6 +124,15 @@ public class ModItems
 			("tungsten_leggings", ARMOR_MATERIAL_TUNGSTEN, 2, EntityEquipmentSlot.LEGS);
 	public static final Item TUNGSTEN_BOOTS = new ArmorBase
 			("tungsten_boots", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET);
+	
+	public static final Item RUBY_HELMET = new ArmorBase
+			("ruby_helmet", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.HEAD);
+	public static final Item RUBY_CHESTPLATE = new ArmorBase
+			("ruby_chestplate", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.CHEST);
+	public static final Item RUBY_LEGGINGS = new ArmorBase
+			("ruby_leggings", ARMOR_MATERIAL_RUBY, 2, EntityEquipmentSlot.LEGS);
+	public static final Item RUBY_BOOTS = new ArmorBase
+			("ruby_boots", ARMOR_MATERIAL_RUBY, 1, EntityEquipmentSlot.FEET);
 	
 	public static final Item COPPER_HELMET = new ArmorBase
 			("copper_helmet", ARMOR_MATERIAL_COPPER, 1, EntityEquipmentSlot.HEAD);
