@@ -1,9 +1,16 @@
 //items
 item.tungsten_ingot.name=Tungsten Ingot
+
 item.ruby.name=Ruby
+
 item.copper_ingot.name=Copper Ingot
+
 item.tin_ingot.name=Tin Ingot
+
 item.bronze_ingot.name=Bronze Ingot
+
+item.titanium_ingot.name=Titanium Ingot
+
 item.obsidian_ingot.name=Obsidian Ingot
 item.obsidian_shard.name=Obsidian Shard
 
@@ -11,13 +18,21 @@ item.obsidian_shard.name=Obsidian Shard
 //Blocks
 tile.tungsten_block.name=Block of Tungsten
 tile.tungsten_ore.name=Tungsten Ore
+
+tile.titanium_block.name=Block of Titanium
+tile.titanium_ore.name=Titanium Ore
+
 tile.copper_block.name=Block of Copper
 tile.copper_ore.name=Copper Ore
+
 tile.tin_block.name=Block of Tin
-tile.bronze_block.name=Block of Bronze
-tile.obsidian_block.name=Block of Obsidian
 tile.tin_ore.name=Tin Ore
-tile.ruby_block.name=Ruby of Tungsten
+
+tile.bronze_block.name=Block of Bronze
+
+tile.obsidian_block.name=Block of Obsidian
+
+tile.ruby_block.name=Block of Ruby
 tile.ruby_ore.name=Ruby Ore
 
 
@@ -27,6 +42,13 @@ item.tungsten_shovel.name=Tungsten Shovel
 item.tungsten_pickaxe.name=Tungsten Pickaxe
 item.tungsten_axe.name=Tungsten Axe
 item.tungsten_hoe.name=Tungsten Hoe
+
+item.titanium_sword.name=Titanium Sword
+item.titanium_shovel.name=Titanium Shovel
+item.titanium_pickaxe.name=Titanium Pickaxe
+item.titanium_axe.name=Titanium Axe
+item.titanium_hoe.name=Titanium Hoe
+
 
 item.obsidian_sword.name=Obsidian Sword
 item.obsidian_shovel.name=Obsidian Shovel
@@ -64,6 +86,11 @@ item.tungsten_helmet.name=Tungsten Helmet
 item.tungsten_chestplate.name=Tungsten Chestplate
 item.tungsten_leggings.name=Tungsten Leggings
 item.tungsten_boots.name=Tungsten Boots
+
+item.titanium_helmet.name=Titanium Helmet
+item.titanium_chestplate.name=Titanium Chestplate
+item.titanium_leggings.name=Titanium Leggings
+item.titanium_boots.name=Titanium Boots
 
 item.obsidian_helmet.name=Obsidian Helmet
 item.obsidian_chestplate.name=Obsidian Chestplate

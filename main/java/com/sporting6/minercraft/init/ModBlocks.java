@@ -27,6 +27,8 @@ public class ModBlocks
 	 public static final Block TIN_BLOCK = new TinBlock ("tin_block", Material.IRON); 
 	 public static final Block OBSISIAN_BLOCK = new CopperBlock ("obsidian_block", Material.IRON); 
 	 public static final Block TUNGSTEN_ORE = new TungstenOre ("tungsten_ore", Material.ROCK);
+	 public static final Block TITANIUM_BLOCK = new TungstenBlock ("titanium_block", Material.IRON); 
+	 public static final Block TITANIUM_ORE = new TungstenOre ("titanium_ore", Material.ROCK);
 	 public static final Block RUBY_ORE = new RubyOre ("ruby_ore", Material.ROCK);
 	 public static final Block COPPER_ORE = new CopperOre ("copper_ore", Material.ROCK); 
 	 public static final Block TIN_ORE = new TinOre ("tin_ore", Material.ROCK);
