@@ -22,10 +22,12 @@ public class ModWorldGen implements IWorldGenerator{
 	}
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		generateOre(ModBlocks.TUNGSTEN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 9, 35, random.nextInt(5)+2, 6);
-		generateOre(ModBlocks.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 20, 64, random.nextInt(7)+2, 18);
-		generateOre(ModBlocks.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 20, 64, random.nextInt(10)+2, 18);
-		generateOre(ModBlocks.RUBY_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 9, 44, random.nextInt(6)+2, 10);
+		generateOre(ModBlocks.TUNGSTEN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 9, 35, random.nextInt(6)+2, 7);
+		generateOre(ModBlocks.COPPER_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 20, 64, random.nextInt(10)+2, 16);
+		generateOre(ModBlocks.TIN_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 20, 64, random.nextInt(10)+2, 16);
+		generateOre(ModBlocks.RUBY_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 9, 44, random.nextInt(8)+2, 10);
+		generateOre(ModBlocks.TITANIUM_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 9, 35, random.nextInt(6)+2, 8);
+		generateOre(ModBlocks.NANITERIUM_ORE.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 5, 17, random.nextInt(4)+1, 3);
 
 	}
 	

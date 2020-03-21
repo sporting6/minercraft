@@ -30,9 +30,11 @@ public class ModItems
 	
 	//Materials
 	public static final ToolMaterial MATERIAL_TUNGSTEN = 
-			EnumHelper.addToolMaterial("material_tungsten", 2, 1000,  9.5f, 3.0f, 14);
+			EnumHelper.addToolMaterial("material_tungsten", 2, 1500,  9.5f, 3.0f, 14);
+	public static final ToolMaterial MATERIAL_NANITERIUM = 
+			EnumHelper.addToolMaterial("material_naniterium", 4, 3000,  10.5f, 4.0f, 14);
 	public static final ToolMaterial MATERIAL_TITANIUM = 
-			EnumHelper.addToolMaterial("material_titanium", 2, 1000,  9.5f, 3.0f, 14);
+			EnumHelper.addToolMaterial("material_titanium", 2, 750,  9.5f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_RUBY = 
 			EnumHelper.addToolMaterial("material_ruby", 2, 250,  7.0f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_COPPER = 
@@ -42,12 +44,15 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_BRONZE = 
 			EnumHelper.addToolMaterial("material_bronze", 2, 450 ,  8.0f, 2.5f, 10);
 	public static final ToolMaterial MATERIAL_OBSIDIAN = 
-			EnumHelper.addToolMaterial("material_obsidian", 2, 3000,  8.0f, 3.0f, 14);
+			EnumHelper.addToolMaterial("material_obsidian", 4, 2000,  8.0f, 3.0f, 14);
 	
 	//Armor Materials
 	public static final ArmorMaterial ARMOR_MATERIAL_TUNGSTEN = EnumHelper.addArmorMaterial
 			("armor_material_tungsten", Reference.MOD_ID + ":tungsten", 14, 
 			new int[] {2, 6, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
+	public static final ArmorMaterial ARMOR_MATERIAL_NANITERIUM = EnumHelper.addArmorMaterial
+			("armor_material_naniterium", Reference.MOD_ID + ":naniterium", 14, 
+			new int[] {4, 8, 9, 4}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
 	public static final ArmorMaterial ARMOR_MATERIAL_RUBY = EnumHelper.addArmorMaterial
 			("armor_material_ruby", Reference.MOD_ID + ":ruby", 14, 
 			new int[] {2, 4, 5, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
@@ -65,11 +70,12 @@ public class ModItems
 			new int[] {3, 5, 7, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
 	public static final ArmorMaterial ARMOR_MATERIAL_OBSIDIAN = EnumHelper.addArmorMaterial
 			("armor_material_obsidian", Reference.MOD_ID + ":obsidian", 14, 
-			new int[] {4, 7, 9, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
+			new int[] {4, 7, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f);
 	
 	
 	//Items
 	public static final Item TUNGSTEN_INGOT = new ItemBase("tungsten_ingot");
+	public static final Item NANITERIUM_INGOT = new ItemBase("naniterium_ingot");
 	public static final Item COPPER_INGOT = new ItemBase("copper_ingot");
 	public static final Item TIN_INGOT = new ItemBase("tin_ingot");
 	public static final Item BRONZE_INGOT = new ItemBase("bronze_ingot");
@@ -88,6 +94,12 @@ public class ModItems
 	public static final ItemPickaxe TUNGSTEN_PICKAXE = new ToolPickaxe("tungsten_pickaxe", MATERIAL_TUNGSTEN);
 	public static final ItemAxe TUNGSTEN_AXE = new ToolAxe("tungsten_axe", MATERIAL_TUNGSTEN);
 	public static final ItemHoe TUNGSTEN_HOE = new ToolHoe("tungsten_hoe", MATERIAL_TUNGSTEN);
+	
+	public static final ItemSword NANITERIUM_SWORD = new ToolSword("naniterium_sword", MATERIAL_NANITERIUM);
+	public static final ItemSpade NANITERIUM_SHOVEL = new ToolSpade("naniterium_shovel", MATERIAL_NANITERIUM);
+	public static final ItemPickaxe NANITERIUM_PICKAXE = new ToolPickaxe("naniterium_pickaxe", MATERIAL_NANITERIUM);
+	public static final ItemAxe NANITERIUM_AXE = new ToolAxe("naniterium_axe", MATERIAL_NANITERIUM);
+	public static final ItemHoe NANITERIUM_HOE = new ToolHoe("naniterium_hoe", MATERIAL_NANITERIUM);
 	
 	public static final ItemSword TITANIUM_SWORD = new ToolSword("titanium_sword", MATERIAL_TITANIUM);
 	public static final ItemSpade TITANIUM_SHOVEL = new ToolSpade("titanium_shovel", MATERIAL_TITANIUM);
@@ -134,6 +146,15 @@ public class ModItems
 			("tungsten_leggings", ARMOR_MATERIAL_TUNGSTEN, 2, EntityEquipmentSlot.LEGS);
 	public static final Item TUNGSTEN_BOOTS = new ArmorBase
 			("tungsten_boots", ARMOR_MATERIAL_TUNGSTEN, 1, EntityEquipmentSlot.FEET);
+	
+	public static final Item NANITERIUM_HELMET = new ArmorBase
+			("naniterium_helmet", ARMOR_MATERIAL_NANITERIUM, 1, EntityEquipmentSlot.HEAD);
+	public static final Item NANITERIUM_CHESTPLATE = new ArmorBase
+			("naniterium_chestplate", ARMOR_MATERIAL_NANITERIUM, 1, EntityEquipmentSlot.CHEST);
+	public static final Item NANITERIUM_LEGGINGS = new ArmorBase
+			("naniterium_leggings", ARMOR_MATERIAL_NANITERIUM, 2, EntityEquipmentSlot.LEGS);
+	public static final Item NANITERIUM_BOOTS = new ArmorBase
+			("naniterium_boots", ARMOR_MATERIAL_NANITERIUM, 1, EntityEquipmentSlot.FEET);
 	
 	public static final Item TITANIUM_HELMET = new ArmorBase
 			("titanium_helmet", ARMOR_MATERIAL_TITANIUM, 1, EntityEquipmentSlot.HEAD);

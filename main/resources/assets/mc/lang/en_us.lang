@@ -5,6 +5,8 @@ item.ruby.name=Ruby
 
 item.copper_ingot.name=Copper Ingot
 
+item.naniterium_ingot.name=Naniterium Ingot
+
 item.tin_ingot.name=Tin Ingot
 
 item.bronze_ingot.name=Bronze Ingot
@@ -18,6 +20,9 @@ item.obsidian_shard.name=Obsidian Shard
 //Blocks
 tile.tungsten_block.name=Block of Tungsten
 tile.tungsten_ore.name=Tungsten Ore
+
+tile.naniterium_block.name=Block of Naniterium
+tile.naniterium_ore.name=Naniterium Ore
 
 tile.titanium_block.name=Block of Titanium
 tile.titanium_ore.name=Titanium Ore
@@ -49,6 +54,11 @@ item.titanium_pickaxe.name=Titanium Pickaxe
 item.titanium_axe.name=Titanium Axe
 item.titanium_hoe.name=Titanium Hoe
 
+item.naniterium_sword.name=Naniterium Sword
+item.naniterium_shovel.name=Naniterium Shovel
+item.naniterium_pickaxe.name=Naniterium Pickaxe
+item.naniterium_axe.name=Naniterium Axe
+item.naniterium_hoe.name=Naniterium Hoe
 
 item.obsidian_sword.name=Obsidian Sword
 item.obsidian_shovel.name=Obsidian Shovel
@@ -91,6 +101,11 @@ item.titanium_helmet.name=Titanium Helmet
 item.titanium_chestplate.name=Titanium Chestplate
 item.titanium_leggings.name=Titanium Leggings
 item.titanium_boots.name=Titanium Boots
+
+item.naniterium_helmet.name=Naniterium Helmet
+item.naniterium_chestplate.name=Naniterium Chestplate
+item.naniterium_leggings.name=Naniterium Leggings
+item.naniterium_boots.name=Naniterium Boots
 
 item.obsidian_helmet.name=Obsidian Helmet
 item.obsidian_chestplate.name=Obsidian Chestplate
