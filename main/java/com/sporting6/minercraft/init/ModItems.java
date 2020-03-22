@@ -32,17 +32,17 @@ public class ModItems
 	public static final ToolMaterial MATERIAL_TUNGSTEN = 
 			EnumHelper.addToolMaterial("material_tungsten", 2, 1500,  9.5f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_NANITERIUM = 
-			EnumHelper.addToolMaterial("material_naniterium", 4, 3000,  10.5f, 4.0f, 14);
+			EnumHelper.addToolMaterial("material_naniterium", 4, 3000,  12.0f, 4.0f, 10);
 	public static final ToolMaterial MATERIAL_TITANIUM = 
 			EnumHelper.addToolMaterial("material_titanium", 2, 750,  9.5f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_RUBY = 
 			EnumHelper.addToolMaterial("material_ruby", 2, 250,  7.0f, 3.0f, 14);
 	public static final ToolMaterial MATERIAL_COPPER = 
-			EnumHelper.addToolMaterial("material_copper", 2, 200 ,  10.5f, 2.0f, 10);
+			EnumHelper.addToolMaterial("material_copper", 2, 200 ,  10.5f, 2.0f, 18);
 	public static final ToolMaterial MATERIAL_TIN = 
-			EnumHelper.addToolMaterial("material_tin", 1, 100 ,  10.0f, 1.5f, 10);
+			EnumHelper.addToolMaterial("material_tin", 1, 100 ,  10.0f, 1.5f, 18);
 	public static final ToolMaterial MATERIAL_BRONZE = 
-			EnumHelper.addToolMaterial("material_bronze", 2, 450 ,  8.0f, 2.5f, 10);
+			EnumHelper.addToolMaterial("material_bronze", 2, 450 ,  8.0f, 2.5f, 16);
 	public static final ToolMaterial MATERIAL_OBSIDIAN = 
 			EnumHelper.addToolMaterial("material_obsidian", 4, 2000,  8.0f, 3.0f, 14);
 	
