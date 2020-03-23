@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "   ",
+        " RR",
+        " RR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:polished_marble"
+        },
+    },
+   
+    "result":
+    {
+        "item": "mc:marble_bricks",
+        "count": 4
+    }
+}

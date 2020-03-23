@@ -6,6 +6,7 @@ import java.util.List;
 import com.sporting6.minercraft.block.BlockBase;
 import com.sporting6.minercraft.block.CopperBlock;
 import com.sporting6.minercraft.block.CopperOre;
+import com.sporting6.minercraft.block.Marble;
 import com.sporting6.minercraft.block.NaniteriumOre;
 import com.sporting6.minercraft.block.RubyBlock;
 import com.sporting6.minercraft.block.RubyOre;
@@ -33,6 +34,9 @@ public class ModBlocks
 	 public static final Block NANITERIUM_BLOCK = new TungstenBlock ("naniterium_block", Material.IRON); 
 	 public static final Block NANITERIUM_ORE = new NaniteriumOre ("naniterium_ore", Material.ROCK);
 	 public static final Block RUBY_ORE = new RubyOre ("ruby_ore", Material.ROCK);
-	 public static final Block COPPER_ORE = new CopperOre ("copper_ore", Material.ROCK); 
+	 public static final Block COPPER_ORE = new CopperOre ("copper_ore", Material.ROCK);
+	 public static final Block MARBLE = new Marble ("marble", Material.ROCK); 
+	 public static final Block POLISHED_MARBLE = new Marble ("polished_marble", Material.ROCK); 
+	 public static final Block MARBLE_BRICKS = new Marble ("marble_bricks", Material.ROCK); 
 	 public static final Block TIN_ORE = new TinOre ("tin_ore", Material.ROCK);
 }

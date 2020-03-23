@@ -21,6 +21,10 @@ item.obsidian_shard.name=Obsidian Shard
 tile.tungsten_block.name=Block of Tungsten
 tile.tungsten_ore.name=Tungsten Ore
 
+tile.marble.name=Marble
+tile.marble_bricks.name=Marble Bricks
+tile.polished_marble.name=Polished Marble
+
 tile.naniterium_block.name=Block of Naniterium
 tile.naniterium_ore.name=Naniterium Ore
 
