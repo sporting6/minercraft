@@ -1,0 +1,20 @@
+{
+"item.mc.nanitarium_ingot":"Nanitarium Ingot",
+"item.mc.copper_ingot":"Copper Ingot",
+"item.mc.obsidian_ingot":"Obsidian Ingot",
+"item.mc.tungsten_ingot":"Tungsten Ingot",
+"item.mc.titanium_ingot":"Titanium Ingot",
+"item.mc.bronze_ingot":"Bronze Ingot",
+"item.mc.tin_ingot":"Tin Ingot",
+"item.mc.ruby":"Ruby",
+"block.mc.nanitarium_block":"Block of Nanitarium",
+"block.mc.copper_block":"Block of Copper",
+"block.mc.obsidian_block":"Block of Obsidian",
+"block.mc.tungsten_block":"Block of Tungsten",
+"block.mc.titanium_block":"Block of Titanium",
+"block.mc.bronze_block":"Block of Bronze",
+"block.mc.tin_block":"Block of Tin",
+"block.mc.ruby_block":"Block of Ruby",
+"block.mc.ruby_ore":"Ruby Ore",
+"itemGroup.minercraft":"MinerCraft"
+}
