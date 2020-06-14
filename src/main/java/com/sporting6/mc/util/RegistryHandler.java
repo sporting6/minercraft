@@ -2,11 +2,8 @@ package com.sporting6.mc.util;
 
 import com.sporting6.mc.Minercraft;
 import com.sporting6.mc.blocks.BlockItemBase;
-import com.sporting6.mc.blocks.Mining1BlockBase;
-import com.sporting6.mc.blocks.Mining2BlockBase;
-import com.sporting6.mc.blocks.Mining2OreBase;
-import com.sporting6.mc.blocks.Mining3BlockBase;
-import com.sporting6.mc.blocks.Mining4BlockBase;
+import com.sporting6.mc.blocks.OreBase;
+import com.sporting6.mc.blocks.BlockBase;
 import com.sporting6.mc.items.ItemBase;
 
 import net.minecraft.block.Block;
@@ -42,27 +39,25 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", ItemBase::new);
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
 	
-
-	
 	//Blocks
 	
-	public static final RegistryObject<Block> NANITARIUM_BLOCK = BLOCKS.register("nanitarium_block", Mining3BlockBase::new);
-	public static final RegistryObject<Block> TUNGSTEN_BLOCK = BLOCKS.register("tungsten_block", Mining2BlockBase::new);
-	public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block", Mining2BlockBase::new);
-	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", Mining2BlockBase::new);
-	public static final RegistryObject<Block> OBSIDIAN_BLOCK = BLOCKS.register("obsidian_block", Mining3BlockBase::new);
-	public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", Mining2BlockBase::new);
-	public static final RegistryObject<Block> TIN__BLOCK = BLOCKS.register("tin_block", Mining1BlockBase::new);
-	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", Mining2BlockBase::new);
-	public static final RegistryObject<Block> NANITARIUM_ORE = BLOCKS.register("nanitarium_ore", () -> new Mining4BlockBase(4));
-	public static final RegistryObject<Block> TUNGSTEN_ORE = BLOCKS.register("tungsten_ore", Mining2BlockBase::new);
-	public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", Mining2BlockBase::new);
-	public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", Mining2BlockBase::new);
-	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore", Mining1BlockBase::new);
-	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", Mining2OreBase::new);
-	public static final RegistryObject<Block> MARBLE = BLOCKS.register("marble", Mining1BlockBase::new);
-	public static final RegistryObject<Block> POLISHED_MARBLE = BLOCKS.register("polished_marble", Mining1BlockBase::new);
-	public static final RegistryObject<Block> MARBLE_BRICKS = BLOCKS.register("marble_bricks", Mining1BlockBase::new);
+	public static final RegistryObject<Block> NANITARIUM_BLOCK = BLOCKS.register("nanitarium_block", () -> new BlockBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> TUNGSTEN_BLOCK = BLOCKS.register("tungsten_block", () -> new BlockBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block",  () -> new BlockBase(1, 5.0f, 15.0f));
+	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new BlockBase(2, 7.0f, 25.0f));
+	public static final RegistryObject<Block> OBSIDIAN_BLOCK = BLOCKS.register("obsidian_block", () -> new BlockBase(2, 8.0f, 50.001f));
+	public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", () -> new BlockBase(2, 5.0f, 25.0f));
+	public static final RegistryObject<Block> TIN__BLOCK = BLOCKS.register("tin_block", () -> new BlockBase(1, 5.0f, 15.0f));
+	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", () -> new BlockBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> NANITARIUM_ORE = BLOCKS.register("nanitarium_ore", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> TUNGSTEN_ORE = BLOCKS.register("tungsten_ore", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> COPPER_ORE = BLOCKS.register("copper_ore", () -> new OreBase(2, 5.0f, 15.0f));
+	public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> TIN_ORE = BLOCKS.register("tin_ore",  () -> new OreBase(1, 5.0f, 15.0f));
+	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> MARBLE = BLOCKS.register("marble", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> POLISHED_MARBLE = BLOCKS.register("polished_marble", () -> new OreBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> MARBLE_BRICKS = BLOCKS.register("marble_bricks", () -> new OreBase(2, 7.0f, 20.0f));
 
 	//Block Items
 	

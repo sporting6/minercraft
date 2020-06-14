@@ -5,19 +5,15 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.common.ToolType;
 
-public class Mining4OreBase extends Block{
+public class OreBase extends Block {
 
-	public Mining4OreBase() {
+	public OreBase(int harvestLevel, float hardness, float resistance) {
 		super(Block.Properties.create(Material.ROCK)
-				.hardnessAndResistance(10.0f, 30.0f)
-				.harvestLevel(4)
+				.hardnessAndResistance(hardness, resistance)
+				.harvestLevel(harvestLevel)
 				.sound(SoundType.STONE)
 				.harvestTool(ToolType.PICKAXE)
 				);
-	}
-	
-	
-	
-	
+	}	
 
 }

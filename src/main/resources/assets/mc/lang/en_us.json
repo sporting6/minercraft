@@ -15,6 +15,14 @@
 "block.mc.bronze_block":"Block of Bronze",
 "block.mc.tin_block":"Block of Tin",
 "block.mc.ruby_block":"Block of Ruby",
+"block.mc.nanitarium_ore":"Nanitarium Ore",
+"block.mc.copper_ore":"Copper Ore",
+"block.mc.tungsten_ore":"Tungsten Ore",
+"block.mc.titanium_ore":"Titanium Ore",
+"block.mc.tin_ore":"Tin Ore",
 "block.mc.ruby_ore":"Ruby Ore",
+"block.mc.marble":"Marble",
+"block.mc.marble_bricks":"Marble Bricks",
+"block.mc.polished_marble":"Polished Marble",
 "itemGroup.minercraft":"MinerCraft"
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mc:nanitarium_ore"
+  },
+  "result": "mc:nanitarium_ingit",
+  "experience": 5.0,
+  "cookingtime": 60
+}
