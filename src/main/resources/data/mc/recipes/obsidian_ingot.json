@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "mc:obsidian_block"
+      }
+    ],
+    "result":
+    {
+      "item": "mc:obsidian_ingot",
+      "count": 9
+    }
+  }

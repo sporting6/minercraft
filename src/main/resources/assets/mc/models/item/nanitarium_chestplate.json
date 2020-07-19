@@ -1,6 +1,6 @@
  {
    "parent": "item/generated",
    "textures": {
-       "layer0": "mc:items/naniterium_chestplate"
+       "layer0": "mc:items/nanitarium_chestplate"
    }
 }

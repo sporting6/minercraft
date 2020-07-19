@@ -5,9 +5,15 @@ import com.sporting6.mc.blocks.BlockItemBase;
 import com.sporting6.mc.blocks.OreBase;
 import com.sporting6.mc.blocks.BlockBase;
 import com.sporting6.mc.items.ItemBase;
+import com.sporting6.mc.tools.ModitemTeir;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -38,6 +44,20 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot", ItemBase::new);
 	public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", ItemBase::new);
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
+	
+	//Tools
+	
+	public static final RegistryObject<SwordItem> NANITARIUM_SWORD = ITEMS.register("nanitarium_sword", () -> 
+	new SwordItem(ModitemTeir.NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<PickaxeItem> NANITARIUM_PICK = ITEMS.register("nanitarium_pickaxe", () -> 
+	new PickaxeItem(ModitemTeir.NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ShovelItem> NANITARIUM_SHOVEL = ITEMS.register("nanitarium_shovel", () -> 
+	new ShovelItem(ModitemTeir.NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<AxeItem> NANITARIUM_AXE = ITEMS.register("nanitarium_axe", () -> 
+	new AxeItem(ModitemTeir.NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<HoeItem> NANITARIUM_HOE = ITEMS.register("nanitarium_hoe", () -> 
+	new HoeItem(ModitemTeir.NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+
 	
 	//Blocks
 	
@@ -80,4 +100,5 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> MARBLE_BRICKS_ITEM = ITEMS.register("marble_bricks", () -> new BlockItemBase(MARBLE_BRICKS.get()));
 	
 
+	
 }

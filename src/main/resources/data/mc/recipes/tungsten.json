@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mc:tungsten_ore"
+  },
+  "result": "mc:tungsten_ingot",
+  "experience": 5.0,
+  "cookingtime": 60
+}

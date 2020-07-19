@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "xxx",
+      "xxx",
+      "xxx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:bronze_ingot"
+      }
+    },
+    "result":
+    {
+      "item": "mc:bronze_block",
+      "count": 1
+    }
+}

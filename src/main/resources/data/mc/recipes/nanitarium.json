@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "mc:nanitarium_ore"
   },
-  "result": "mc:nanitarium_ingit",
+  "result": "mc:nanitarium_ingot",
   "experience": 5.0,
   "cookingtime": 60
 }

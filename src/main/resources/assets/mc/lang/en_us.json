@@ -1,4 +1,5 @@
 {
+
 "item.mc.nanitarium_ingot":"Nanitarium Ingot",
 "item.mc.copper_ingot":"Copper Ingot",
 "item.mc.obsidian_ingot":"Obsidian Ingot",
@@ -7,6 +8,15 @@
 "item.mc.bronze_ingot":"Bronze Ingot",
 "item.mc.tin_ingot":"Tin Ingot",
 "item.mc.ruby":"Ruby",
+
+"item.mc.nanitarium_sword":"Nanitarium Sword",
+"item.mc.nanitarium_pickaxe":"Nanitarium Pickaxe",
+"item.mc.nanitarium_hoe":"Nanitarium Hoe",
+"item.mc.nanitarium_axe":"Nanitarium Axe",
+"item.mc.nanitarium_shovel":"Nanitarium Shovel",
+
+
+
 "block.mc.nanitarium_block":"Block of Nanitarium",
 "block.mc.copper_block":"Block of Copper",
 "block.mc.obsidian_block":"Block of Obsidian",
@@ -24,5 +34,6 @@
 "block.mc.marble":"Marble",
 "block.mc.marble_bricks":"Marble Bricks",
 "block.mc.polished_marble":"Polished Marble",
+
 "itemGroup.minercraft":"MinerCraft"
 }
