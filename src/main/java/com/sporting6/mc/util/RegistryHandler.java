@@ -47,15 +47,26 @@ public class RegistryHandler {
 	
 	//Tools
 	
-	public static final RegistryObject<SwordItem> NANITARIUM_SWORD = ITEMS.register("nanitarium_sword", () -> 
+	public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword", () -> 
 	new SwordItem(ModitemTeir.NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
-	public static final RegistryObject<PickaxeItem> NANITARIUM_PICK = ITEMS.register("nanitarium_pickaxe", () -> 
+	public static final RegistryObject<PickaxeItem> BLUE_NANITARIUM_PICK = ITEMS.register("blue_nanitarium_pickaxe", () -> 
 	new PickaxeItem(ModitemTeir.NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
-	public static final RegistryObject<ShovelItem> NANITARIUM_SHOVEL = ITEMS.register("nanitarium_shovel", () -> 
+	public static final RegistryObject<ShovelItem> BLUE_NANITARIUM_SHOVEL = ITEMS.register("blue_nanitarium_shovel", () -> 
 	new ShovelItem(ModitemTeir.NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
-	public static final RegistryObject<AxeItem> NANITARIUM_AXE = ITEMS.register("nanitarium_axe", () -> 
+	public static final RegistryObject<AxeItem> BLUE_NANITARIUM_AXE = ITEMS.register("blue_nanitarium_axe", () -> 
 	new AxeItem(ModitemTeir.NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
-	public static final RegistryObject<HoeItem> NANITARIUM_HOE = ITEMS.register("nanitarium_hoe", () -> 
+	public static final RegistryObject<HoeItem> BLUE_NANITARIUM_HOE = ITEMS.register("blue_nanitarium_hoe", () -> 
+	new HoeItem(ModitemTeir.NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+	
+	public static final RegistryObject<SwordItem> RED_NANITARIUM_SWORD = ITEMS.register("red_nanitarium_sword", () -> 
+	new SwordItem(ModitemTeir.NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<PickaxeItem> RED_NANITARIUM_PICK = ITEMS.register("red_nanitarium_pickaxe", () -> 
+	new PickaxeItem(ModitemTeir.NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ShovelItem> RED_NANITARIUM_SHOVEL = ITEMS.register("red_nanitarium_shovel", () -> 
+	new ShovelItem(ModitemTeir.NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<AxeItem> RED_NANITARIUM_AXE = ITEMS.register("red_nanitarium_axe", () -> 
+	new AxeItem(ModitemTeir.NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<HoeItem> RED_NANITARIUM_HOE = ITEMS.register("red_nanitarium_hoe", () -> 
 	new HoeItem(ModitemTeir.NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
 
 	

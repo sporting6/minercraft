@@ -9,11 +9,17 @@
 "item.mc.tin_ingot":"Tin Ingot",
 "item.mc.ruby":"Ruby",
 
-"item.mc.nanitarium_sword":"Nanitarium Sword",
-"item.mc.nanitarium_pickaxe":"Nanitarium Pickaxe",
-"item.mc.nanitarium_hoe":"Nanitarium Hoe",
-"item.mc.nanitarium_axe":"Nanitarium Axe",
-"item.mc.nanitarium_shovel":"Nanitarium Shovel",
+"item.mc.blue_nanitarium_sword":"Blue Nanitarium Sword",
+"item.mc.blue_nanitarium_pickaxe":"Blue Nanitarium Pickaxe",
+"item.mc.blue_nanitarium_hoe":"Blue Nanitarium Hoe",
+"item.mc.blue_nanitarium_axe":"Blue Nanitarium Axe",
+"item.mc.blue_nanitarium_shovel":"Blue Nanitarium Shovel",
+
+"item.mc.red_nanitarium_sword":"Red Nanitarium Sword",
+"item.mc.red_nanitarium_pickaxe":"Red Nanitarium Pickaxe",
+"item.mc.red_nanitarium_hoe":"Red Nanitarium Hoe",
+"item.mc.red_nanitarium_axe":"Red Nanitarium Axe",
+"item.mc.red_nanitarium_shovel":"Red Nanitarium Shovel",
 
 
 
