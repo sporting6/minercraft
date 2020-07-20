@@ -1,6 +1,7 @@
 package com.sporting6.mc.util;
 
 import com.sporting6.mc.Minercraft;
+import com.sporting6.mc.armor.ModArmorMaterial;
 import com.sporting6.mc.blocks.BlockItemBase;
 import com.sporting6.mc.blocks.OreBase;
 import com.sporting6.mc.blocks.BlockBase;
@@ -8,6 +9,8 @@ import com.sporting6.mc.items.ItemBase;
 import com.sporting6.mc.tools.ModitemTeir;
 
 import net.minecraft.block.Block;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -36,7 +39,8 @@ public class RegistryHandler {
 	
 	//Items
 	
-	public static final RegistryObject<Item> NANITARIUM_INGOT = ITEMS.register("nanitarium_ingot", ItemBase::new);
+	public static final RegistryObject<Item> BLUE_NANITARIUM_INGOT = ITEMS.register("blue_nanitarium_ingot", ItemBase::new);
+	public static final RegistryObject<Item> RED_NANITARIUM_INGOT = ITEMS.register("red_nanitarium_ingot", ItemBase::new);
 	public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", ItemBase::new);
 	public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", ItemBase::new);
 	public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", ItemBase::new);
@@ -48,26 +52,46 @@ public class RegistryHandler {
 	//Tools
 	
 	public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword", () -> 
-	new SwordItem(ModitemTeir.NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
+			new SwordItem(ModitemTeir.BLUE_NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<PickaxeItem> BLUE_NANITARIUM_PICK = ITEMS.register("blue_nanitarium_pickaxe", () -> 
-	new PickaxeItem(ModitemTeir.NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new PickaxeItem(ModitemTeir.BLUE_NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<ShovelItem> BLUE_NANITARIUM_SHOVEL = ITEMS.register("blue_nanitarium_shovel", () -> 
-	new ShovelItem(ModitemTeir.NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new ShovelItem(ModitemTeir.BLUE_NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<AxeItem> BLUE_NANITARIUM_AXE = ITEMS.register("blue_nanitarium_axe", () -> 
-	new AxeItem(ModitemTeir.NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
+			new AxeItem(ModitemTeir.BLUE_NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<HoeItem> BLUE_NANITARIUM_HOE = ITEMS.register("blue_nanitarium_hoe", () -> 
-	new HoeItem(ModitemTeir.NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+			new HoeItem(ModitemTeir.BLUE_NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
 	
 	public static final RegistryObject<SwordItem> RED_NANITARIUM_SWORD = ITEMS.register("red_nanitarium_sword", () -> 
-	new SwordItem(ModitemTeir.NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
+			new SwordItem(ModitemTeir.RED_NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<PickaxeItem> RED_NANITARIUM_PICK = ITEMS.register("red_nanitarium_pickaxe", () -> 
-	new PickaxeItem(ModitemTeir.NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new PickaxeItem(ModitemTeir.RED_NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<ShovelItem> RED_NANITARIUM_SHOVEL = ITEMS.register("red_nanitarium_shovel", () -> 
-	new ShovelItem(ModitemTeir.NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new ShovelItem(ModitemTeir.RED_NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<AxeItem> RED_NANITARIUM_AXE = ITEMS.register("red_nanitarium_axe", () -> 
-	new AxeItem(ModitemTeir.NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
+			new AxeItem(ModitemTeir.RED_NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<HoeItem> RED_NANITARIUM_HOE = ITEMS.register("red_nanitarium_hoe", () -> 
-	new HoeItem(ModitemTeir.NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+			new HoeItem(ModitemTeir.RED_NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+	
+	//Armor
+	public static final RegistryObject<ArmorItem> RED_NANITARIUM_HELMET = ITEMS.register("red_nanitarium_helmet",()-> 
+			new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlotType.HEAD, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> RED_NANITARIUM_CHESTPLATE = ITEMS.register("red_nanitarium_chestplate",()-> 
+			new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlotType.CHEST, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> RED_NANITARIUM_LEGS = ITEMS.register("red_nanitarium_leggings",()-> 
+			new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlotType.LEGS, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> RED_NANITARIUM_BOOTS = ITEMS.register("red_nanitarium_boots", () -> 
+			new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlotType.FEET, new Item.Properties().group(Minercraft.TAB)));
+	
+	public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_HELMET = ITEMS.register("blue_nanitarium_helmet",()-> 
+			new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlotType.HEAD, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_CHESTPLATE = ITEMS.register("blue_nanitarium_chestplate",()-> 
+			new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlotType.CHEST, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_LEGS = ITEMS.register("blue_nanitarium_leggings",()-> 
+			new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlotType.LEGS, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_BOOTS = ITEMS.register("blue_nanitarium_boots", () -> 
+			new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlotType.FEET, new Item.Properties().group(Minercraft.TAB)));
+	
 
 	
 	//Blocks

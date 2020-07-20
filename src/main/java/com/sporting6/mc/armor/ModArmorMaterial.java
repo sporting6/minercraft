@@ -12,12 +12,19 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.SoundEvent;
 
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+
 
 public enum ModArmorMaterial implements IArmorMaterial {
-	
-	NANITARIUM(Minercraft.MOD_ID + ":nanitarium", 40, new int[] { 3, 6, 8, 3 }, 20, 
-			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5F, () -> { return Ingredient.fromItems
-					(RegistryHandler.NANITARIUM_INGOT.get()); });
+
+	RED_NANITARIUM(Minercraft.MOD_ID + ":red_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 20, 
+			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5F, () -> Ingredient.fromItems
+					(RegistryHandler.RED_NANITARIUM_INGOT.get())),	
+	BLUE_NANITARIUM(Minercraft.MOD_ID + ":blue_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 20, 
+			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5F, () -> Ingredient.fromItems
+					(RegistryHandler.BLUE_NANITARIUM_INGOT.get()));
+
 
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] {11,16, 15, 13};
 	private final String name;
@@ -26,17 +33,17 @@ public enum ModArmorMaterial implements IArmorMaterial {
 	private final int enchantabilaty;
 	private final SoundEvent soundEvent;
 	private final float toughness;
-	private final Supplier<Ingredient> rapairMaterial;
+	private final Supplier<Ingredient> repairMaterial;
 	
 	ModArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantabilaty,
-			SoundEvent soundEvent, float toughness, Supplier<Ingredient> rapairMaterial ){
+			SoundEvent soundEvent, float toughness, Supplier<Ingredient> repairMaterial ){
 		this.name = name;
 		this.maxDamageFactor = maxDamageFactor;
 		this.damageReductionAmountArray = damageReductionAmountArray;
 		this.enchantabilaty = enchantabilaty;
 		this.soundEvent = soundEvent;
 		this.toughness = toughness;
-		this.rapairMaterial = rapairMaterial;
+		this.repairMaterial = repairMaterial;
 	}
 	
 
@@ -55,31 +62,32 @@ public enum ModArmorMaterial implements IArmorMaterial {
 	@Override
 	public int getEnchantability() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.enchantabilaty;
 	}
 
 	@Override
 	public SoundEvent getSoundEvent() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.soundEvent;
 	}
 
 	@Override
 	public Ingredient getRepairMaterial() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.repairMaterial.get();
 	}
-
+	
+	@OnlyIn(Dist.CLIENT)
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.name;
 	}
 
 	@Override
 	public float getToughness() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.toughness;
 	}
 	
 	

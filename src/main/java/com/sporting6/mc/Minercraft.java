@@ -40,7 +40,7 @@ public class Minercraft {
 		@Override
 		public ItemStack createIcon() {
 			
-			return new ItemStack(RegistryHandler.NANITARIUM_INGOT.get());
+			return new ItemStack(RegistryHandler.BLUE_NANITARIUM_PICK.get());
 		}
 		
 	};
