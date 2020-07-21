@@ -1,6 +1,7 @@
 {
 
-"item.mc.nanitarium_ingot":"Nanitarium Ingot",
+"item.mc.red_nanitarium_ingot":"RedNanitarium Ingot",
+"item.mc.blue_nanitarium_ingot":"Blue Nanitarium Ingot",
 "item.mc.copper_ingot":"Copper Ingot",
 "item.mc.obsidian_ingot":"Obsidian Ingot",
 "item.mc.tungsten_ingot":"Tungsten Ingot",
@@ -8,6 +9,17 @@
 "item.mc.bronze_ingot":"Bronze Ingot",
 "item.mc.tin_ingot":"Tin Ingot",
 "item.mc.ruby":"Ruby",
+
+"item.mc.blue_nanitarium_helmet":"Blue Nanitarium Helmet",
+"item.mc.blue_nanitarium_chestplate":"Blue Nanitarium Chestplate",
+"item.mc.blue_nanitarium_leggings":"Blue Nanitarium Leggings",
+"item.mc.blue_nanitarium_boots":"Blue Nanitarium Boots",
+
+"item.mc.red_nanitarium_helmet":"Red Nanitarium Helmet",
+"item.mc.red_nanitarium_chestplate":"Red Nanitarium Chestplate",
+"item.mc.red_nanitarium_leggings":"Red Nanitarium Leggings",
+"item.mc.red_nanitarium_boots":"Red Nanitarium Boots",
+
 
 "item.mc.blue_nanitarium_sword":"Blue Nanitarium Sword",
 "item.mc.blue_nanitarium_pickaxe":"Blue Nanitarium Pickaxe",
@@ -21,9 +33,12 @@
 "item.mc.red_nanitarium_axe":"Red Nanitarium Axe",
 "item.mc.red_nanitarium_shovel":"Red Nanitarium Shovel",
 
+"item.mc.nanitarium_apple":"Blue Nanitarium Apple",
+"item.mc.nanitarium_apple2":"Red Nanitarium Apple",
+"item.mc.slime_apple":"Slime Apple",
 
-
-"block.mc.nanitarium_block":"Block of Nanitarium",
+"block.mc.blue_nanitarium_block":"Block of Blue Nanitarium",
+"block.mc.red_nanitarium_block":"Block of Red Nanitarium",
 "block.mc.copper_block":"Block of Copper",
 "block.mc.obsidian_block":"Block of Obsidian",
 "block.mc.tungsten_block":"Block of Tungsten",
@@ -31,7 +46,8 @@
 "block.mc.bronze_block":"Block of Bronze",
 "block.mc.tin_block":"Block of Tin",
 "block.mc.ruby_block":"Block of Ruby",
-"block.mc.nanitarium_ore":"Nanitarium Ore",
+"block.mc.red_nanitarium_ore":"Red Nanitarium Ore",
+"block.mc.blue_nanitarium_ore":"Blue Nanitarium Ore",
 "block.mc.copper_ore":"Copper Ore",
 "block.mc.tungsten_ore":"Tungsten Ore",
 "block.mc.titanium_ore":"Titanium Ore",

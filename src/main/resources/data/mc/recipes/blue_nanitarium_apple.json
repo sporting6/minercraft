@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "xxx",
+      "xgx",
+      "xxx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:blue_nanitarium_ingot"
+      },
+      "g":
+      {
+        "item": "minecraft:enchanted_golden_apple"
+      }
+    },
+    "result":
+    {
+      "item": "mc:nanitarium_apple",
+      "count": 1
+    }
+}

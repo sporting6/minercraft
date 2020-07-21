@@ -6,6 +6,8 @@ import com.sporting6.mc.blocks.BlockItemBase;
 import com.sporting6.mc.blocks.OreBase;
 import com.sporting6.mc.blocks.BlockBase;
 import com.sporting6.mc.items.ItemBase;
+import com.sporting6.mc.items.NanitariumApple;
+import com.sporting6.mc.items.SlimeApple;
 import com.sporting6.mc.tools.ModitemTeir;
 
 import net.minecraft.block.Block;
@@ -49,21 +51,28 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", ItemBase::new);
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
 	
+	//FOOD
+	public static final RegistryObject<NanitariumApple> BLUE_NANITARIUM_APPLE = ITEMS.register("nanitarium_apple", NanitariumApple::new);
+	public static final RegistryObject<NanitariumApple> RED_NANITARIUM_APPLE = ITEMS.register("nanitarium_apple2", NanitariumApple::new);
+	public static final RegistryObject<SlimeApple> SLIME_APPLE = ITEMS.register("slime_apple", SlimeApple::new);
+
+
+	
 	//Tools
 	
 	public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword", () -> 
 			new SwordItem(ModitemTeir.BLUE_NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<PickaxeItem> BLUE_NANITARIUM_PICK = ITEMS.register("blue_nanitarium_pickaxe", () -> 
-			new PickaxeItem(ModitemTeir.BLUE_NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new PickaxeItem(ModitemTeir.BLUE_NANITARIUM, 0, -2.4f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<ShovelItem> BLUE_NANITARIUM_SHOVEL = ITEMS.register("blue_nanitarium_shovel", () -> 
-			new ShovelItem(ModitemTeir.BLUE_NANITARIUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+			new ShovelItem(ModitemTeir.BLUE_NANITARIUM, 1, -2.4f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<AxeItem> BLUE_NANITARIUM_AXE = ITEMS.register("blue_nanitarium_axe", () -> 
-			new AxeItem(ModitemTeir.BLUE_NANITARIUM, 6, -2.6f, new Item.Properties().group(Minercraft.TAB)));
+			new AxeItem(ModitemTeir.BLUE_NANITARIUM, 6, -2.2f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<HoeItem> BLUE_NANITARIUM_HOE = ITEMS.register("blue_nanitarium_hoe", () -> 
 			new HoeItem(ModitemTeir.BLUE_NANITARIUM, -0.8f, new Item.Properties().group(Minercraft.TAB)));
 	
 	public static final RegistryObject<SwordItem> RED_NANITARIUM_SWORD = ITEMS.register("red_nanitarium_sword", () -> 
-			new SwordItem(ModitemTeir.RED_NANITARIUM, 5, -2.0f, new Item.Properties().group(Minercraft.TAB)));
+			new SwordItem(ModitemTeir.RED_NANITARIUM, 5, -2.4f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<PickaxeItem> RED_NANITARIUM_PICK = ITEMS.register("red_nanitarium_pickaxe", () -> 
 			new PickaxeItem(ModitemTeir.RED_NANITARIUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 	public static final RegistryObject<ShovelItem> RED_NANITARIUM_SHOVEL = ITEMS.register("red_nanitarium_shovel", () -> 
@@ -96,7 +105,8 @@ public class RegistryHandler {
 	
 	//Blocks
 	
-	public static final RegistryObject<Block> NANITARIUM_BLOCK = BLOCKS.register("nanitarium_block", () -> new BlockBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> BLUE_NANITARIUM_BLOCK = BLOCKS.register("blue_nanitarium_block", () -> new BlockBase(2, 7.0f, 20.0f));
+	public static final RegistryObject<Block> RED_NANITARIUM_BLOCK = BLOCKS.register("red_nanitarium_block", () -> new BlockBase(2, 7.0f, 20.0f));
 	public static final RegistryObject<Block> TUNGSTEN_BLOCK = BLOCKS.register("tungsten_block", () -> new BlockBase(2, 7.0f, 20.0f));
 	public static final RegistryObject<Block> COPPER_BLOCK = BLOCKS.register("copper_block",  () -> new BlockBase(1, 5.0f, 15.0f));
 	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block", () -> new BlockBase(2, 7.0f, 25.0f));
@@ -116,7 +126,8 @@ public class RegistryHandler {
 
 	//Block Items
 	
-	public static final RegistryObject<Item> NANITARIUM_BLOCK_ITEM = ITEMS.register("nanitarium_block", () -> new BlockItemBase(NANITARIUM_BLOCK.get()));
+	public static final RegistryObject<Item> BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("blue_nanitarium_block", () -> new BlockItemBase(BLUE_NANITARIUM_BLOCK.get()));
+	public static final RegistryObject<Item> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block", () -> new BlockItemBase(RED_NANITARIUM_BLOCK.get()));
 	public static final RegistryObject<Item> TUNGSTEN_BLOCK_ITEM = ITEMS.register("tungsten_block", () -> new BlockItemBase(TUNGSTEN_BLOCK.get()));
 	public static final RegistryObject<Item> COPPER_BLOCK_ITEM = ITEMS.register("copper_block", () -> new BlockItemBase(COPPER_BLOCK.get()));
 	public static final RegistryObject<Item> TITANIUM_BLOCK_ITEM = ITEMS.register("titanium_block", () -> new BlockItemBase(TITANIUM_BLOCK.get()));

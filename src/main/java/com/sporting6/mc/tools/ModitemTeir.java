@@ -10,7 +10,7 @@ import net.minecraft.item.crafting.Ingredient;
 public enum ModitemTeir implements IItemTier{
 	
 	
-	BLUE_NANITARIUM(5, 2000, 10.0f, 4.0f, 15, () -> {
+	BLUE_NANITARIUM(5, 2250, 15.0f, 6.0f, 18, () -> {
 		return Ingredient.fromItems(RegistryHandler.BLUE_NANITARIUM_INGOT.get());}),
 	RED_NANITARIUM(5, 2000, 10.0f, 4.0f, 15, () -> {
 		return Ingredient.fromItems(RegistryHandler.RED_NANITARIUM_INGOT.get());});

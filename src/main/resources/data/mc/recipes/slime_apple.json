@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "xxx",
+      "xgx",
+      "xxx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "minecraft:slime_ball"
+      },
+      "g":
+      {
+        "item": "minecraft:golden_apple"
+      }
+    },
+    "result":
+    {
+      "item": "mc:slime_apple",
+      "count": 1
+    }
+}

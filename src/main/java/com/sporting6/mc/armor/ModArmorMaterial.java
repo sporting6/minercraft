@@ -18,15 +18,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public enum ModArmorMaterial implements IArmorMaterial {
 
-	RED_NANITARIUM(Minercraft.MOD_ID + ":red_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 20, 
+	RED_NANITARIUM(Minercraft.MOD_ID + ":red_nanitarium", 45, new int[] { 3, 6, 8, 3 }, 21, 
 			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5F, () -> Ingredient.fromItems
 					(RegistryHandler.RED_NANITARIUM_INGOT.get())),	
-	BLUE_NANITARIUM(Minercraft.MOD_ID + ":blue_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 20, 
+	BLUE_NANITARIUM(Minercraft.MOD_ID + ":blue_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 22, 
 			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2.5F, () -> Ingredient.fromItems
 					(RegistryHandler.BLUE_NANITARIUM_INGOT.get()));
 
 
-	private static final int[] MAX_DAMAGE_ARRAY = new int[] {11,16, 15, 13};
+	private static final int[] MAX_DAMAGE_ARRAY = new int[] {11, 16, 15, 13};
 	private final String name;
 	private final int maxDamageFactor;
 	private final int[] damageReductionAmountArray;
