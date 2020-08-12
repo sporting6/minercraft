@@ -20,6 +20,35 @@
 "item.mc.red_nanitarium_leggings":"Red Nanitarium Leggings",
 "item.mc.red_nanitarium_boots":"Red Nanitarium Boots",
 
+"item.mc.copper_helmet":"Copper Helmet",
+"item.mc.copper_chestplate":"Copper Chestplate",
+"item.mc.copper_leggings":"Copper Leggings",
+"item.mc.copper_boots":"Copper Boots",
+
+"item.mc.tin_helmet":"Tin Helmet",
+"item.mc.tin_chestplate":"Tin Chestplate",
+"item.mc.tin_leggings":"Tin Leggings",
+"item.mc.tin_boots":"Tin Boots",
+
+"item.mc.bronze_helmet":"Bronze Helmet",
+"item.mc.bronze_chestplate":"Bronze Chestplate",
+"item.mc.bronze_leggings":"Bronze Leggings",
+"item.mc.bronze_boots":"Bronze Boots",
+
+"item.mc.obsidian_helmet":"Obsidian Helmet",
+"item.mc.obsidian_chestplate":"Obsidian Chestplate",
+"item.mc.obsidian_leggings":"Obsidian Leggings",
+"item.mc.obsidian_boots":"Obsidian Boots",
+
+"item.mc.titanium_helmet":"Titanium Helmet",
+"item.mc.titanium_chestplate":"Titanium Chestplate",
+"item.mc.titanium_leggings":"Titanium Leggings",
+"item.mc.titanium_boots":"Titanium Boots",
+
+"item.mc.tungsten_helmet":"Tungsten Helmet",
+"item.mc.tungsten_chestplate":"Tungsten Chestplate",
+"item.mc.tungsten_leggings":"Tungsten Leggings",
+"item.mc.tungsten_boots":"Tungsten Boots",
 
 "item.mc.blue_nanitarium_sword":"Blue Nanitarium Sword",
 "item.mc.blue_nanitarium_pickaxe":"Blue Nanitarium Pickaxe",
@@ -32,6 +61,49 @@
 "item.mc.red_nanitarium_hoe":"Red Nanitarium Hoe",
 "item.mc.red_nanitarium_axe":"Red Nanitarium Axe",
 "item.mc.red_nanitarium_shovel":"Red Nanitarium Shovel",
+
+"item.mc.ruby_sword":"Ruby Sword",
+"item.mc.ruby_pickaxe":"Ruby Pickaxe",
+"item.mc.ruby_hoe":"Ruby Hoe",
+"item.mc.ruby_axe":"Ruby Axe",
+"item.mc.ruby_shovel":"Ruby Shovel",
+
+"item.mc.titanium_sword":"Titanium Sword",
+"item.mc.titanium_pickaxe":"Titanium Pickaxe",
+"item.mc.titanium_hoe":"Titanium Hoe",
+"item.mc.titanium_axe":"Titanium Axe",
+"item.mc.titanium_shovel":"Titanium Shovel",
+
+"item.mc.copper_sword":"Copper Sword",
+"item.mc.copper_pickaxe":"Copper Pickaxe",
+"item.mc.copper_hoe":"Copper Hoe",
+"item.mc.copper_axe":"Copper Axe",
+"item.mc.copper_shovel":"Copper Shovel",
+
+"item.mc.tin_sword":"Tin Sword",
+"item.mc.tin_pickaxe":"Tin Pickaxe",
+"item.mc.tin_hoe":"Tin Hoe",
+"item.mc.tin_axe":"Tin Axe",
+"item.mc.tin_shovel":"Tin Shovel",
+
+"item.mc.bronze_sword":"Bronze Sword",
+"item.mc.bronze_pickaxe":"Bronze Pickaxe",
+"item.mc.bronze_hoe":"Bronze Hoe",
+"item.mc.bronze_axe":"Bronze Axe",
+"item.mc.bronze_shovel":"Bronze Shovel",
+
+"item.mc.tungsten_sword":"Tungsten Sword",
+"item.mc.tungsten_pickaxe":"Tungsten Pickaxe",
+"item.mc.tungsten_hoe":"Tungsten Hoe",
+"item.mc.tungsten_axe":"Tungsten Axe",
+"item.mc.tungsten_shovel":"Tungsten Shovel",
+
+"item.mc.obsidian_sword":"Obsidian Sword",
+"item.mc.obsidian_pickaxe":"Obsidian Pickaxe",
+"item.mc.obsidian_hoe":"Obsidian Hoe",
+"item.mc.obsidian_axe":"Obsidian Axe",
+"item.mc.obsidian_shovel":"Obsidian Shovel",
+
 
 "item.mc.nanitarium_apple":"Blue Nanitarium Apple",
 "item.mc.nanitarium_apple2":"Red Nanitarium Apple",
@@ -56,6 +128,8 @@
 "block.mc.marble":"Marble",
 "block.mc.marble_bricks":"Marble Bricks",
 "block.mc.polished_marble":"Polished Marble",
+
+"block.mc.nanitarium_furnace":"Nanitarium Furnace",
 
 "itemGroup.minercraft":"MinerCraft"
 }

@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "ttt",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "t":
+        {
+            "item": "mc:obsidian_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:obsidian_pickaxe",
+        "count": 1
+    }
+}

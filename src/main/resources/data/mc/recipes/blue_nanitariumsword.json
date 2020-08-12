@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " R ",
+        " R ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:blue_nanitarium_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:blue_nanitarium_sword",
+        "count": 1
+    }
+}

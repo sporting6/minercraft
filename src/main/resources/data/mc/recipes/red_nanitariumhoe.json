@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " RR",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:red_nanitarium_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:red_nanitarium_hoe",
+        "count": 1
+    }
+}

@@ -3,7 +3,11 @@ package com.sporting6.mc;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.sporting6.mc.util.RegistryHandler;
+import com.sporting6.mc.init.ModArmor;
+import com.sporting6.mc.init.ModBlocks;
+import com.sporting6.mc.init.ModFood;
+import com.sporting6.mc.init.ModItems;
+import com.sporting6.mc.init.ModTools;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -15,7 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod ("mc")
 public class Minercraft {
 	
-	private static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger();
 	public static final String MOD_ID = "mc";
 	
 	public Minercraft() {
@@ -24,7 +28,14 @@ public class Minercraft {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 		
-		RegistryHandler.init();
+		ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModBlocks.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModTools.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModArmor.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModFood.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+
 
 		MinecraftForge.EVENT_BUS.register(this);
 			
@@ -40,7 +51,7 @@ public class Minercraft {
 		@Override
 		public ItemStack createIcon() {
 			
-			return new ItemStack(RegistryHandler.BLUE_NANITARIUM_PICK.get());
+			return new ItemStack(ModTools .BLUE_NANITARIUM_PICK.get());
 		}
 		
 	};

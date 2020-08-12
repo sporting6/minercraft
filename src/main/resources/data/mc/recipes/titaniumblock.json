@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:titanium_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:titanium_block",
+        "count": 1
+    }
+}

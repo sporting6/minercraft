@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:bronze_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:bronze_block",
+        "count": 1
+    }
+}

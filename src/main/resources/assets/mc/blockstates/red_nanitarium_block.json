@@ -1,5 +1,5 @@
 {
     "variants": {
-     "" : { "model": "mc:block/reds_nanitarium_block" }
+     "" : { "model": "mc:block/red_nanitarium_block" }
     }
 }

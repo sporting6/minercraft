@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "ttt",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "t":
+        {
+            "item": "mc:tin_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:tin_pickaxe",
+        "count": 1
+    }
+}
