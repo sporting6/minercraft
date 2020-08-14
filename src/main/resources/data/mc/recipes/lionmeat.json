@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "mc:lion_meat"
+  },
+  "result": "mc:cooked_lion_meat",
+  "experience": 5.0,
+  "cookingtime": 60
+}

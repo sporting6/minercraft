@@ -108,6 +108,9 @@
 "item.mc.nanitarium_apple":"Blue Nanitarium Apple",
 "item.mc.nanitarium_apple2":"Red Nanitarium Apple",
 "item.mc.slime_apple":"Slime Apple",
+"item.mc.lion_meat":"Raw Lion",
+"item.mc.cooked_lion_meat":"Cooked Lion",
+
 
 "block.mc.blue_nanitarium_block":"Block of Blue Nanitarium",
 "block.mc.red_nanitarium_block":"Block of Red Nanitarium",
@@ -130,6 +133,8 @@
 "block.mc.polished_marble":"Polished Marble",
 
 "block.mc.nanitarium_furnace":"Nanitarium Furnace",
+
+"entity.mc.lion": "Lion",
 
 "itemGroup.minercraft":"MinerCraft"
 }

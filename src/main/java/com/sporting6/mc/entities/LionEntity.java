@@ -1,15 +1,35 @@
 package com.sporting6.mc.entities;
 
+import com.sporting6.mc.init.ModEntityTypes;
+
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
+import net.minecraft.entity.ai.goal.BreedGoal;
+import net.minecraft.entity.ai.goal.FollowParentGoal;
+import net.minecraft.entity.ai.goal.LookAtGoal;
+import net.minecraft.entity.ai.goal.LookRandomlyGoal;
+import net.minecraft.entity.ai.goal.PanicGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
+import net.minecraft.entity.ai.goal.TemptGoal;
+import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Items;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class LionEntity extends AnimalEntity{
+public class LionEntity extends AnimalEntity {
+	
+	public static final Ingredient TEMTATION_ITEMS = 
+			Ingredient.fromItems(Items.BEEF, Items.CHICKEN,Items.PORKCHOP);
 
 	public LionEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
 		super(type, worldIn);
@@ -21,20 +41,49 @@ public class LionEntity extends AnimalEntity{
 		
 		return MobEntity.func_233666_p_()
 				.createMutableAttribute(Attributes.MAX_HEALTH, 40.0D)
-				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.75D);
+				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5D);
 	}
 	
 	@Override
 	protected void registerGoals(){
 		super.registerGoals();
-		this.goalSelector.addGoal(3, new SwimGoal(this));
+		this.goalSelector.addGoal(0, new SwimGoal(this));
+		this.goalSelector.addGoal(1, new TemptGoal(this, 1.25D, TEMTATION_ITEMS, false));
+		this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D ));
+		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.25D ));
+		this.goalSelector.addGoal(4, new PanicGoal(this, 1.75D));
+		this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D ));
+		this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 9.0f));
+		this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+	}
+	@Override
+	protected int getExperiencePoints(PlayerEntity player) {
+		return 3 + this.world.rand.nextInt(7);
 	}
 	
+	@Override
+	protected SoundEvent getAmbientSound() {
+		return SoundEvents.ENTITY_POLAR_BEAR_AMBIENT;
+	}
+	
+	@Override
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_POLAR_BEAR_DEATH;
+	}
+	
+	@Override
+	protected SoundEvent getHurtSound(DamageSource damageSourseIn) {
+		return SoundEvents.ENTITY_POLAR_BEAR_HURT;
+	}
+	
+	@Override
+	protected void playStepSound(BlockPos pos, BlockState blockIn) {
+		this.playSound(SoundEvents.ENTITY_POLAR_BEAR_STEP, 0.2f, 1.05F);
+	}
 	
 	@Override
 	public AgeableEntity createChild(AgeableEntity ageable) {
-		// TODO Auto-generated method stub
-		return null;
+		return ModEntityTypes.LION.get().create(this.world );
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.sporting6.mc.items;
+package com.sporting6.mc.items.food;
 
 import com.sporting6.mc.Minercraft;
 
