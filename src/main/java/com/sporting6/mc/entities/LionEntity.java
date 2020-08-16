@@ -1,6 +1,6 @@
 package com.sporting6.mc.entities;
 
-import com.sporting6.mc.init.ModEntityTypes;
+import com.sporting6.mc.init.ModEntityType;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.AgeableEntity;
@@ -29,7 +29,7 @@ import net.minecraft.world.World;
 public class LionEntity extends AnimalEntity {
 	
 	public static final Ingredient TEMTATION_ITEMS = 
-			Ingredient.fromItems(Items.BEEF, Items.CHICKEN,Items.PORKCHOP);
+			Ingredient.fromItems(Items.BEEF, Items.CHICKEN,Items.PORKCHOP,Items.MUTTON,Items.RABBIT);
 
 	public LionEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
 		super(type, worldIn);
@@ -41,15 +41,15 @@ public class LionEntity extends AnimalEntity {
 		
 		return MobEntity.func_233666_p_()
 				.createMutableAttribute(Attributes.MAX_HEALTH, 40.0D)
-				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.5D);
+				.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.35D);
 	}
 	
 	@Override
 	protected void registerGoals(){
 		super.registerGoals();
-		this.goalSelector.addGoal(0, new SwimGoal(this));
-		this.goalSelector.addGoal(1, new TemptGoal(this, 1.25D, TEMTATION_ITEMS, false));
-		this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D ));
+		this.goalSelector.addGoal(0, new TemptGoal(this, 1.25D, TEMTATION_ITEMS, false));
+		this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D ));
+		this.goalSelector.addGoal(2, new SwimGoal(this));
 		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.25D ));
 		this.goalSelector.addGoal(4, new PanicGoal(this, 1.75D));
 		this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D ));
@@ -83,7 +83,7 @@ public class LionEntity extends AnimalEntity {
 	
 	@Override
 	public AgeableEntity createChild(AgeableEntity ageable) {
-		return ModEntityTypes.LION.get().create(this.world );
+		return ModEntityType.LION.get().create(this.world );
 	}
 
 }

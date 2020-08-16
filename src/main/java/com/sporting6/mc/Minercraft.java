@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 import com.sporting6.mc.entities.LionEntity;
 import com.sporting6.mc.init.ModArmor;
 import com.sporting6.mc.init.ModBlocks;
-import com.sporting6.mc.init.ModEntityTypes;
+import com.sporting6.mc.init.ModEntityType;
 import com.sporting6.mc.init.ModFood;
 import com.sporting6.mc.init.ModItems;
 import com.sporting6.mc.init.ModTools;
@@ -38,7 +38,7 @@ public class Minercraft {
 		ModTools.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ModArmor.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		ModFood.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		ModEntityTypes.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ModEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
 
 
@@ -48,7 +48,7 @@ public class Minercraft {
 	
 	private void setup(final FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
-			GlobalEntityTypeAttributes.put(ModEntityTypes.LION.get(), LionEntity.setCustomAttributes().create());
+			GlobalEntityTypeAttributes.put(ModEntityType.LION.get(), LionEntity.setCustomAttributes().create());
 			});
 		
 	}

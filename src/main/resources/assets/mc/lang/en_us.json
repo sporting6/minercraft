@@ -1,9 +1,9 @@
 {
-
 "item.mc.red_nanitarium_ingot":"Red Nanitarium Ingot",
 "item.mc.blue_nanitarium_ingot":"Blue Nanitarium Ingot",
 "item.mc.copper_ingot":"Copper Ingot",
 "item.mc.obsidian_ingot":"Obsidian Ingot",
+"item.mc.obsidian_shard":"Obsidian Shard",
 "item.mc.tungsten_ingot":"Tungsten Ingot",
 "item.mc.titanium_ingot":"Titanium Ingot",
 "item.mc.bronze_ingot":"Bronze Ingot",
@@ -135,6 +135,8 @@
 "block.mc.nanitarium_furnace":"Nanitarium Furnace",
 
 "entity.mc.lion": "Lion",
+
+"item.mc.lion_spawn_egg":"Lion Spawn Egg",
 
 "itemGroup.minercraft":"MinerCraft"
 }
