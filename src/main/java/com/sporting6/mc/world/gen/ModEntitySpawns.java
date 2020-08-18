@@ -23,8 +23,14 @@ public class ModEntitySpawns {
 			//Savanna Mobs
 			else if(biome.getCategory() == Biome.Category.SAVANNA) {
 				biome.getSpawns(EntityClassification.CREATURE)
-				.add(new Biome.SpawnListEntry(ModEntityType.LION.get(), 8 , 3, 7))
-				;
+				.add(new Biome.SpawnListEntry(ModEntityType.LION.get(), 11 , 3, 7))
+				;}
+			else if(biome.getCategory() == Biome.Category.JUNGLE) {
+				biome.getSpawns(EntityClassification.CREATURE)
+				.add(new Biome.SpawnListEntry(ModEntityType.WHITE_TIGER.get(), 1 , 1, 3));
+				biome.getSpawns(EntityClassification.CREATURE)
+				.add(new Biome.SpawnListEntry(ModEntityType.TIGER.get(), 10 , 1, 3));
+				
 			}
 			else {}
 

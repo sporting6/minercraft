@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.sporting6.mc.entities.LionEntity;
+import com.sporting6.mc.entities.TigerEntity;
+import com.sporting6.mc.entities.WhiteTigerEntity;
 import com.sporting6.mc.init.ModArmor;
 import com.sporting6.mc.init.ModBlocks;
 import com.sporting6.mc.init.ModEntityType;
@@ -50,6 +52,12 @@ public class Minercraft {
 		DeferredWorkQueue.runLater(() -> {
 			GlobalEntityTypeAttributes.put(ModEntityType.LION.get(), LionEntity.setCustomAttributes().create());
 			});
+		DeferredWorkQueue.runLater(() -> {
+			GlobalEntityTypeAttributes.put(ModEntityType.TIGER.get(), TigerEntity.setCustomAttributes().create());
+			});
+		DeferredWorkQueue.runLater(() -> {
+			GlobalEntityTypeAttributes.put(ModEntityType.WHITE_TIGER.get(), WhiteTigerEntity.setCustomAttributes().create());
+			});
 		
 	}
 	
@@ -61,7 +69,7 @@ public class Minercraft {
 		@Override
 		public ItemStack createIcon() {
 			
-			return new ItemStack(ModTools .BLUE_NANITARIUM_PICK.get());
+			return new ItemStack(ModTools.BLUE_NANITARIUM_PICK.get());
 		}
 		
 	};

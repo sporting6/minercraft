@@ -28,5 +28,11 @@ public class ModItems {
 	//Spawn Eggs
 	public static final RegistryObject<ModSpawnEggItem> LION_SPAWN_EGG = ITEMS.register("lion_spawn_egg", 
 			() -> new ModSpawnEggItem(ModEntityType.LION,0xDFAB16 , 0xA05D01, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ModSpawnEggItem> TIGER_SPAWN_EGG = ITEMS.register("tiger_spawn_egg", 
+			() -> new ModSpawnEggItem(ModEntityType.TIGER,0xDFAB16 , 0x000000, new Item.Properties().group(Minercraft.TAB)));
+	public static final RegistryObject<ModSpawnEggItem> WHITE_TIGER_SPAWN_EGG = ITEMS.register("white_tiger_spawn_egg", 
+			() -> new ModSpawnEggItem(ModEntityType.WHITE_TIGER,0xf9f9f9 , 0x000000, new Item.Properties().group(Minercraft.TAB)));
+
+
 
 }

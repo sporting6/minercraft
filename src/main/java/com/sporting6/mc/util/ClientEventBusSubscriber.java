@@ -2,6 +2,8 @@ package com.sporting6.mc.util;
 
 import com.sporting6.mc.Minercraft;
 import com.sporting6.mc.client.render.LionRenderer;
+import com.sporting6.mc.client.render.TigerRenderer;
+import com.sporting6.mc.client.render.WhiteTigerRenderer;
 import com.sporting6.mc.init.ModEntityType;
 import com.sporting6.mc.items.ModSpawnEggItem;
 
@@ -19,6 +21,10 @@ public class ClientEventBusSubscriber {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(ModEntityType.LION.get(), LionRenderer::new );
+		RenderingRegistry.registerEntityRenderingHandler(ModEntityType.TIGER.get(), TigerRenderer::new );
+		RenderingRegistry.registerEntityRenderingHandler(ModEntityType.WHITE_TIGER.get(), WhiteTigerRenderer::new );
+
+			
 		
 	}
 	@SubscribeEvent

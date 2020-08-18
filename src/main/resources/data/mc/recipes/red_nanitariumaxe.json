@@ -12,7 +12,7 @@
     {
         "R":
         {
-            "item": "mc:nanitarium_ingot"
+            "item": "mc:red_nanitarium_ingot"
         },
         "s":
         {
@@ -22,7 +22,7 @@
    
     "result":
     {
-        "item": "mc:nanitarium_axe",
+        "item": "mc:red_nanitarium_axe",
         "count": 1
     }
 }
