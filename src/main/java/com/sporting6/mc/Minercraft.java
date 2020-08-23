@@ -7,6 +7,7 @@ import com.sporting6.mc.entities.LionEntity;
 import com.sporting6.mc.entities.TigerEntity;
 import com.sporting6.mc.entities.WhiteTigerEntity;
 import com.sporting6.mc.init.ModArmor;
+import com.sporting6.mc.init.ModBiome;
 import com.sporting6.mc.init.ModBlocks;
 import com.sporting6.mc.init.ModEntityType;
 import com.sporting6.mc.init.ModFood;
@@ -16,19 +17,25 @@ import com.sporting6.mc.init.ModTools;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod ("mc")
+@Mod.EventBusSubscriber(modid = Minercraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Minercraft {
 	
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final String MOD_ID = "mc";
 	
 	public Minercraft() {
+		
 		
 		
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -44,9 +51,13 @@ public class Minercraft {
 
 
 
+
 		MinecraftForge.EVENT_BUS.register(this);
 			
 	}
+	
+	
+			
 	
 	private void setup(final FMLCommonSetupEvent event) {
 		DeferredWorkQueue.runLater(() -> {
