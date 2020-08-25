@@ -132,6 +132,11 @@
 "block.mc.marble_bricks":"Marble Bricks",
 "block.mc.polished_marble":"Polished Marble",
 
+"block.mc.rekrument_red_ore":"Red Nanitarium Ore",
+"block.mc.rekrument_blue_ore":"Blue Nanitarium Ore",
+"block.mc.rekrument":"Rekument",
+"block.mc.metior_scrap":"Metior Scrap",
+
 "block.mc.nanitarium_furnace":"Nanitarium Furnace",
 
 "biome.mc.nanitarium_valley": "Nanitarium Valley",

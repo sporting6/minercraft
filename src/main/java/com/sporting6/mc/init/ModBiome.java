@@ -31,10 +31,22 @@ public class ModBiome {
 					.downfall(0.5f)
 					.depth(0.185f)
 					.parent(null)));
+	public static final RegistryObject<Biome> THE_KRUESYN = BIOMES.register("the_kruesyn", () -> new NanitariumValley
+			(new Biome.Builder()
+					.precipitation(RainType.NONE)
+					.scale(1.5f)
+					.temperature(0.4f)
+					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig
+					(ModBlocks.REKRUMENT.get().getDefaultState(), ModBlocks.REKRUMENT.get().getDefaultState(),ModBlocks.REKRUMENT.get().getDefaultState()))
+					.category(Category.NONE)
+					.downfall(0.0f)
+					.depth(0.185f)
+					.parent(null)));
 	public static void registerBiomes() {
 		registerBiome(NANITARIUM_VALLEY.get(), Type.COLD, Type.DRY, Type.OVERWORLD, Type.DEAD);
+		registerBiome(THE_KRUESYN.get(), Type.HOT, Type.WET, Type.MAGICAL);
+
 	}
-	
 	public static void registerBiome(Biome biome, Type... types) {
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addSpawnBiome(biome);

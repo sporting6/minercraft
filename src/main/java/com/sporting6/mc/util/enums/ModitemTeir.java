@@ -10,9 +10,9 @@ import net.minecraft.item.crafting.Ingredient;
 public enum ModitemTeir implements IItemTier{
 	
 	
-	BLUE_NANITARIUM(5, 2250, 15.0f, 6.0f, 18, () -> {
+	BLUE_NANITARIUM(6, 2250, 15.0f, 6.0f, 18, () -> {
 		return Ingredient.fromItems(ModItems.BLUE_NANITARIUM_INGOT.get());}),
-	RED_NANITARIUM(5, 2000, 10.0f, 4.0f, 15, () -> {
+	RED_NANITARIUM(6, 2000, 10.0f, 4.0f, 15, () -> {
 		return Ingredient.fromItems(ModItems.RED_NANITARIUM_INGOT.get());}),
 	RUBY(2, 500, 8.0f, 4.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.RUBY.get());}),
@@ -22,7 +22,7 @@ public enum ModitemTeir implements IItemTier{
 		return Ingredient.fromItems(ModItems.COPPER_INGOT.get());}),
 	TIN(2, 200, 8.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.TIN_INGOT.get());}),
-	OBSIDIAN(2, 200, 8.0f, 3.0f, 16, () -> {
+	OBSIDIAN(5, 200, 8.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.OBSIDIAN_INGOT.get());}),
 	TUNGSTEN(2, 1000, 8.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.TUNGSTEN_INGOT.get());}),
