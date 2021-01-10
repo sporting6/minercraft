@@ -37,7 +37,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
 	TITANIUM(Minercraft.MOD_ID + ":titanium", 30, new int[] { 3, 4, 6, 2 }, 22, 
 			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0.5f,0.0f, () -> Ingredient.fromItems
 					(ModItems.TITANIUM_INGOT.get())),	
-	OBSIDIAN(Minercraft.MOD_ID + ":obsidian", 35, new int[] { 3, 5, 6, 2 }, 22, 
+	OBSIDIAN(Minercraft.MOD_ID + ":obsidian", 35, new int[] { 2, 4, 5, 2 }, 22, 
 			SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 1.0f,() -> Ingredient.fromItems
 					(ModItems.OBSIDIAN_INGOT.get())),	
 	BLUE_NANITARIUM(Minercraft.MOD_ID + ":blue_nanitarium", 40, new int[] { 3, 6, 8, 3 }, 22, 

@@ -2,20 +2,20 @@
     "type": "minecraft:crafting_shaped",
     "pattern":
     [
-      "xxx",
-      "xxx",
-      "xxx"
+      "   ",
+      " xx",
+      " xx"
     ],
     "key":
     {
       "x":
       {
-        "item": "mc:blue_nanitarium_ingot"
+        "item": "minecraft:gold_nugget"
       }
     },
     "result":
     {
-      "item": "mc:blue_nanitarium_block",
+      "item": "mc:gold_coin",
       "count": 1
     }
 }

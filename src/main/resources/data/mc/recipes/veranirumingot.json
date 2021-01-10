@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "mc:therium_ingot"
+    },
+    {
+      "item": "mc:therium_ingot"
+    },
+    {
+      "item": "mc:therium_ingot"
+    },
+    {
+      "item": "mc:blue_nanitarium_ingot"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "mc:veranirum_ingot",
+        "count": 2
+    }
+}

@@ -11,7 +11,6 @@ public class BlockBase extends Block {
 		super(Block.Properties.create(Material.IRON)
 				.hardnessAndResistance(hardness, resistance)
 				.harvestLevel(harvestLevel)
-				.setRequiresTool()
 				.sound(SoundType.METAL)
 				.harvestTool(ToolType.PICKAXE)
 				.setRequiresTool()

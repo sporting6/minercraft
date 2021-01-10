@@ -22,10 +22,12 @@ public enum ModitemTeir implements IItemTier{
 		return Ingredient.fromItems(ModItems.COPPER_INGOT.get());}),
 	TIN(2, 200, 8.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.TIN_INGOT.get());}),
-	OBSIDIAN(5, 200, 8.0f, 3.0f, 16, () -> {
+	OBSIDIAN(5, 1248, 6.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.OBSIDIAN_INGOT.get());}),
 	TUNGSTEN(2, 1000, 8.0f, 3.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.TUNGSTEN_INGOT.get());}),
+	VERANIRUM(2, 200, 100.0f, 2.5f, 13, () -> {
+		return Ingredient.fromItems(ModItems.VERANIRUM_INGOT.get());}),
 	BRONZE(2, 600, 8.0f, 4.0f, 16, () -> {
 		return Ingredient.fromItems(ModItems.BRONZE_INGOT.get());});
 	

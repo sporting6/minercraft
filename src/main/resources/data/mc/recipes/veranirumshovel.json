@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " R ",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:veranirum_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:veranirum_shovel",
+        "count": 1
+    }
+}

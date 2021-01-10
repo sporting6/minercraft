@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "   ",
+      " xx",
+      " xx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:titanium_nugget"
+      }
+    },
+    "result":
+    {
+      "item": "mc:titanium_coin",
+      "count": 1
+    }
+}

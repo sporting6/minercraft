@@ -51,6 +51,17 @@ public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe"
 public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", () -> 
 	new HoeItem(ModitemTeir.RUBY,-2, -0.8f, new Item.Properties().group(Minercraft.TAB)));
 
+	public static final RegistryObject<SwordItem> VERANIRUM_SWORD = ITEMS.register("veranirum_sword", () -> 
+	new SwordItem(ModitemTeir.VERANIRUM, 3, -2.7f, new Item.Properties().group(Minercraft.TAB)));
+public static final RegistryObject<PickaxeItem> VERANIRUM_PICK = ITEMS.register("veranirum_pickaxe", () -> 
+	new PickaxeItem(ModitemTeir.VERANIRUM, 0, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+public static final RegistryObject<ShovelItem> VERANIRUM_SHOVEL = ITEMS.register("veranirum_shovel", () -> 
+	new ShovelItem(ModitemTeir.VERANIRUM, 1, -2.8f, new Item.Properties().group(Minercraft.TAB)));
+public static final RegistryObject<AxeItem> VERANIRUM_AXE = ITEMS.register("veranirum_axe", () -> 
+	new AxeItem(ModitemTeir.VERANIRUM, 4, -3.0f, new Item.Properties().group(Minercraft.TAB)));
+public static final RegistryObject<HoeItem> VERANIRUM_HOE = ITEMS.register("veranirum_hoe", () -> 
+	new HoeItem(ModitemTeir.VERANIRUM,-2, -0.8f, new Item.Properties().group(Minercraft.TAB)));
+
 public static final RegistryObject<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword", () -> 
 	new SwordItem(ModitemTeir.COPPER, 3, -2.8f, new Item.Properties().group(Minercraft.TAB)));
 public static final RegistryObject<PickaxeItem> COPPER_PICK = ITEMS.register("copper_pickaxe", () -> 

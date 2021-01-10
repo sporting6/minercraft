@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "   ",
+      " xx",
+      " xx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:tungsten_nugget"
+      }
+    },
+    "result":
+    {
+      "item": "mc:tungsten_coin",
+      "count": 1
+    }
+}

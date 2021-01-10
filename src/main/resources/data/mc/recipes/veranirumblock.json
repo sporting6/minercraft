@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mc:veranirum_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mc:veranirum_block",
+        "count": 1
+    }
+}

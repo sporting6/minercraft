@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "   ",
+      " xx",
+      " xx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:obsidian_shard"
+      }
+    },
+    "result":
+    {
+      "item": "mc:obsidian_coin",
+      "count": 1
+    }
+}

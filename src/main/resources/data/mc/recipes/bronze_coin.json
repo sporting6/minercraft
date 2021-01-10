@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "   ",
+      " xx",
+      " xx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mc:bronze_nugget"
+      }
+    },
+    "result":
+    {
+      "item": "mc:bronze_coin",
+      "count": 1
+    }
+}

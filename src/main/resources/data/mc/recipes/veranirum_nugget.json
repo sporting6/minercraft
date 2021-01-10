@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "mc:veranirum_ingot"
+      }
+    ],
+    "result":
+    {
+      "item": "mc:veranirum_nugget",
+      "count": 9
+    }
+  }

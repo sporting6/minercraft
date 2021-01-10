@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "mc:red_nanitarium_ingot"
+      }
+    ],
+    "result":
+    {
+      "item": "mc:red_nanitarium_nugget",
+      "count": 9
+    }
+  }
