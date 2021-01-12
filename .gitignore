@@ -27,3 +27,4 @@ forge*changelog.txt
 .vscode/
 
 **/.DS_Store
+logs/
