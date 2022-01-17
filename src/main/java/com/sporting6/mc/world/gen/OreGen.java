@@ -42,7 +42,7 @@ public class OreGen {
 				genOre(biome, 8, 0, 5, 35, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TITANIUM_ORE.get().getDefaultState(), 6);
 				genOre(biome, 7, 0, 5, 35, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TUNGSTEN_ORE.get().getDefaultState(), 5);
 				genOre(biome, 15, 0, 5, 100, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.POLISHED_MARBLE.get().getDefaultState(), 15);
-				genOre(biome, 7, 0, 5, 24, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.THERIUM_ORE .get().getDefaultState(), 5);
+				genOre(biome, 7, 0, 5, 24, OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.THERIUM_ORE.get().getDefaultState(), 5);
 
 			}
 				

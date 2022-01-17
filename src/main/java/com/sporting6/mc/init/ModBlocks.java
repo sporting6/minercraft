@@ -43,6 +43,7 @@ public class ModBlocks {
 	public static final RegistryObject<Block> MARBLE_BRICKS = BLOCKS.register("marble_bricks", () -> new OreBase(2, 7.0f, 20.0f));
 	//public static final RegistryObject<Block> NANITARIUM_FURNACE = BLOCKS.register("nanitarium_furnace", NanitariumFurnace::new);
 	//public static final RegistryObject<Block> BOX = BLOCKS.register("box", Box::new);
+	
 	//ITEMS
 	public static final RegistryObject<Item> BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("blue_nanitarium_block", () -> new BlockItemBase(BLUE_NANITARIUM_BLOCK.get()));
 	public static final RegistryObject<Item> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block", () -> new BlockItemBase(RED_NANITARIUM_BLOCK.get()));
