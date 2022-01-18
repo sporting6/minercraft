@@ -1,0 +1,15 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT"
+
+[[mods]]
+modId="mrc"
+version="0.0.0"
+displayName="MinerCraft"
+logoFile="logo.png"
+credits=""
+authors="Sporting6"
+description='''
+A tutorial mod for Minecraft 1.17!
+beans
+'''
