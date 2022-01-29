@@ -1,5 +1,10 @@
  {
 
-   "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot"
+
+   "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
+
+  
+   "block.mrc.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore"
+
 
  }
