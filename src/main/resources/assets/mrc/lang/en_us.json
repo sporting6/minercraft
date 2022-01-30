@@ -3,8 +3,15 @@
 
    "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
 
+   "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
+
   
-   "block.mrc.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore"
+   "block.mrc.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore",
+
+   "block.mrc.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
+
+
+   "itemGroup.minercraft_materials": "MinerCraft Materials"
 
 
  }

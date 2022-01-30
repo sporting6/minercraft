@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mrc:raw_blue_nanitarium"
+          "name": "mrc:raw_blue_nanitarium_block"
         }
       ],
       "conditions": [

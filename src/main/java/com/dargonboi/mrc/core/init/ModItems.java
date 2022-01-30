@@ -3,7 +3,6 @@ package com.dargonboi.mrc.core.init;
 import com.dargonboi.mrc.MinerCraft;
 
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,8 +15,14 @@ public final class ModItems {
 	 public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinerCraft.MODID);
 	 
 	 //Items
+	 
+	 //Ingots
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_INGOT = ITEMS.register("blue_nanitarium_ingot",
-			() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).fireResistant()));
+			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant()));
+	 
+	 //Raw Ores
+	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
+			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant()));
 	 
 	 
 	 
@@ -26,7 +31,16 @@ public final class ModItems {
 	 
 	 //Block Items
 	 
+	 //Ores
 	 public static final RegistryObject<BlockItem> BLUE_NANITARIUM_ORE_ITEM = ITEMS.register("blue_nanitarium_ore",
-			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_ORE.get() , new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-
+			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 //Raw Ore Blocks
+	 public static final RegistryObject<BlockItem> RAW_BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_blue_nanitarium_block",
+			 () -> new BlockItem(ModBlocks.RAW_BLUE_NANITARIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 //Meterial Blocks
+	 
 }
