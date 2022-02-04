@@ -30,5 +30,15 @@ public class MinerCraft {
 		public ItemStack makeIcon() {
 			return ModItems.BLUE_NANITARIUM_INGOT.get().getDefaultInstance();
 		}
+		
 	};
+public static final CreativeModeTab MINERCRAFT_TOOLS_ARMOR = new CreativeModeTab("minercraft_tools_armor") {
+		
+		@Override
+		public ItemStack makeIcon() {
+			return ModItems.BLUE_NANITARIUM_PICKAXE.get().getDefaultInstance();
+		}
+		
+	};
+	
 }

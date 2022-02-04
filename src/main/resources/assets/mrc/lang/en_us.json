@@ -5,13 +5,27 @@
 
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
 
+   "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",
+
+
   
    "block.mrc.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore",
 
    "block.mrc.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
 
+   "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
+	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
+	 "item.mrc.blue_nanitarium_shovel": "Blue Nanitarium Shovel",
+	 "item.mrc.blue_nanitarium_axe": "Blue Nanitarium Axe",
+   "item.mrc.blue_nanitarium_hoe": "Blue Nanitarium Hoe",
 
-   "itemGroup.minercraft_materials": "MinerCraft Materials"
+   "item.mrc.blue_nanitarium_helmet": "Blue Nanitarium Helmet",
+	 "item.mrc.blue_nanitarium_chestplate": "Blue Nanitarium Chestplate",
+	 "item.mrc.blue_nanitarium_leggings": "Blue Nanitarium Leggings",
+	 "item.mrc.blue_nanitarium_boots": "Blue Nanitarium Boots",
+
+   "itemGroup.minercraft_materials": "MinerCraft Materials",
+   "itemGroup.minercraft_tools_armor": "MinerCraft Materials"
 
 
  }
