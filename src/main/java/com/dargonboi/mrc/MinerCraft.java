@@ -32,7 +32,7 @@ public class MinerCraft {
 		}
 		
 	};
-public static final CreativeModeTab MINERCRAFT_TOOLS_ARMOR = new CreativeModeTab("minercraft_tools_armor") {
+	public static final CreativeModeTab MINERCRAFT_TOOLS_ARMOR = new CreativeModeTab("minercraft_tools_armor") {
 		
 		@Override
 		public ItemStack makeIcon() {

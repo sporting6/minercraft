@@ -66,19 +66,19 @@ public final class ModItems {
 	 
 	 //Blue Nanitarium Tools
 	 public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword", 
-			() -> new SwordItem(ModToolMaterials.BLUE_NANITARIUM, 16, -3F, 
+			() -> new SwordItem(ModToolMaterials.BLUE_NANITARIUM, 16, -2F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	 public static final RegistryObject<PickaxeItem> BLUE_NANITARIUM_PICKAXE = ITEMS.register("blue_nanitarium_pickaxe", 
-			() -> new PickaxeItem(ModToolMaterials.BLUE_NANITARIUM, 8, -3.4F, 
+			() -> new PickaxeItem(ModToolMaterials.BLUE_NANITARIUM, 8, -2.4F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	 public static final RegistryObject<AxeItem> BLUE_NANITARIUM_AXE = ITEMS.register("blue_nanitarium_axe", 
-			() -> new AxeItem(ModToolMaterials.BLUE_NANITARIUM, 18, -3.6F, 
+			() -> new AxeItem(ModToolMaterials.BLUE_NANITARIUM, 18, -2.6F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	 public static final RegistryObject<ShovelItem> BLUE_NANITARIUM_SHOVEL = ITEMS.register("blue_nanitarium_shovel", 
-			() -> new ShovelItem(ModToolMaterials.BLUE_NANITARIUM, 5, -3.8F, 
+			() -> new ShovelItem(ModToolMaterials.BLUE_NANITARIUM, 5, -2.8F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	 public static final RegistryObject<HoeItem> BLUE_NANITARIUM_HOE = ITEMS.register("blue_nanitarium_hoe", 
-			() -> new HoeItem(ModToolMaterials.BLUE_NANITARIUM, 3, -3.8F, 
+			() -> new HoeItem(ModToolMaterials.BLUE_NANITARIUM, 3, -2.8F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	 
 	 
