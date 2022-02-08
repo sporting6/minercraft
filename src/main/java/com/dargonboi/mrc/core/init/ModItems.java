@@ -30,15 +30,21 @@ public final class ModItems {
 	 
 	 //Ingots
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_INGOT = ITEMS.register("blue_nanitarium_ingot",
-			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
 	 public static final RegistryObject<Item> RED_NANITARIUM_INGOT = ITEMS.register("red_nanitarium_ingot",
-				() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 		 
 	 public static final RegistryObject<Item> PERFECT_DIAMOND = ITEMS.register("perfect_diamond", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
 	 
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_UPGRADE = ITEMS.register("blue_nanitarium_upgrade", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
+	 //Raw Ores
+	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 public static final RegistryObject<Item> RAW_RED_NANITARIUM = ITEMS.register("raw_red_nanitarium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
 	 //Food
@@ -78,9 +84,6 @@ public final class ModItems {
 			 ;
 		 
 	 
-	 //Raw Ores
-	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
-			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
 	 //Blue Nanitarium Tools
 	 public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword", 
@@ -155,12 +158,16 @@ public final class ModItems {
 					 Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 		 
 	 
-	 
+	 //Ore
 	 //Block Items
 	 
 	 //Ores
 	 public static final RegistryObject<BlockItem> BLUE_NANITARIUM_ORE_ITEM = ITEMS.register("blue_nanitarium_ore",
 			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<BlockItem> RED_NANITARIUM_ORE_ITEM = ITEMS.register("red_nanitarium_ore",
+			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_ORE.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
 	 //Raw Ore Blocks
