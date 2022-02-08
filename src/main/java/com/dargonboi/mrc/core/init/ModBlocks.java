@@ -27,9 +27,12 @@ public final class ModBlocks {
 	//Raw Ore Blocks
 	public static final RegistryObject<Block> RAW_BLUE_NANITARIUM_BLOCK = BLOCKS.register("raw_blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
-					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.STONE)));
+					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
 	
 	//Material Blocks
+	public static final RegistryObject<Block> BLUE_NANITARIUM_BLOCK = BLOCKS.register("blue_nanitarium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
+					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
 
 
 }

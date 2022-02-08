@@ -1,6 +1,4 @@
  {
-
-
    "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
 
    "item.mrc.perfect_diamond": "Perfect Diamond",
@@ -12,11 +10,11 @@
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
 
    "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",
-
+   "item.mrc.hastey_apple": "Hastey Apple",
 
   
    "block.mrc.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore",
-
+   "block.mrc.blue_nanitarium_block": "Blue Nanitarium Block",
    "block.mrc.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
 
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
@@ -25,10 +23,25 @@
 	 "item.mrc.blue_nanitarium_axe": "Blue Nanitarium Axe",
    "item.mrc.blue_nanitarium_hoe": "Blue Nanitarium Hoe",
 
+   "item.mrc.red_nanitarium_sword": "Red Nanitarium Sword",
+	 "item.mrc.red_nanitarium_pickaxe": "Red Nanitarium Pickaxe",
+	 "item.mrc.red_nanitarium_shovel": "Red Nanitarium Shovel",
+	 "item.mrc.red_nanitarium_axe": "Red Nanitarium Axe",
+   "item.mrc.red_nanitarium_hoe": "Red Nanitarium Hoe",
+
+   "item.mrc.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
+
+
+
    "item.mrc.blue_nanitarium_helmet": "Blue Nanitarium Helmet",
 	 "item.mrc.blue_nanitarium_chestplate": "Blue Nanitarium Chestplate",
 	 "item.mrc.blue_nanitarium_leggings": "Blue Nanitarium Leggings",
 	 "item.mrc.blue_nanitarium_boots": "Blue Nanitarium Boots",
+
+   "item.mrc.red_nanitarium_helmet": "Red Nanitarium Helmet",
+	 "item.mrc.red_nanitarium_chestplate": "Red Nanitarium Chestplate",
+	 "item.mrc.red_nanitarium_leggings": "Red Nanitarium Leggings",
+	 "item.mrc.red_nanitarium_boots": "Red Nanitarium Boots",
 
    "itemGroup.minercraft_materials": "MinerCraft Materials",
    "itemGroup.minercraft_tools_armor": "MinerCraft Materials"
