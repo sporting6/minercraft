@@ -28,6 +28,10 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> RED_NANITARIUM_ORE = BLOCKS.register("red_nanitarium_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED)
 					.requiresCorrectToolForDrops().strength(30.0F, 600.0F).sound(SoundType.NETHERRACK)));
+	
+	public static final RegistryObject<Block> VERANIUM_ORE = BLOCKS.register("veranium_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED)
+					.requiresCorrectToolForDrops().strength(30.0F, 600.0F).sound(SoundType.STONE)));
 	//Raw Ore Blocks
 	public static final RegistryObject<Block> RAW_BLUE_NANITARIUM_BLOCK = BLOCKS.register("raw_blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
@@ -35,6 +39,10 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<Block> RAW_RED_NANITARIUM_BLOCK = BLOCKS.register("raw_red_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_RED)
+					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> RAW_VERANIUM_BLOCK = BLOCKS.register("raw_veranium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
 					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
 	
 	//Material Blocks
@@ -45,6 +53,11 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> RED_NANITARIUM_BLOCK = BLOCKS.register("red_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_RED)
 					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> VERANIUM_BLOCK = BLOCKS.register("veranium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
+					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+
 
 
 

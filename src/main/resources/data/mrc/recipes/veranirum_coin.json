@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern":
+    [
+      "   ",
+      " xx",
+      " xx"
+    ],
+    "key":
+    {
+      "x":
+      {
+        "item": "mrc:veranium_nugget"
+      }
+    },
+    "result":
+    {
+      "item": "mrc:veranium_coin",
+      "count": 1
+    }
+}

@@ -1,15 +1,25 @@
  {
    "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
+   "item.mrc.red_nanitarium_ingot": "Red Nanitarium Ingot",
+   "item.mrc.veranium_ingot": "Veranium Ingot",
+
 
    "item.mrc.perfect_diamond": "Perfect Diamond",
 
-   "item.mrc.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Crystal",
+   "item.mrc.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Core",
+   "item.mrc.red_nanitarium_upgrade": "Red Nanitarium Upgrade Core",
+
 
 
 
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
+   "item.mrc.raw_red_nanitarium": "Raw Red Nanitarium",
+   "item.mrc.raw_veranium": "Raw Veranium",
+
+
 
    "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",
+   "item.mrc.red_nanitarium_apple": "Nanitarium Apple",
    "item.mrc.hastey_apple": "Hastey Apple",
 
   
@@ -17,9 +27,13 @@
    "block.mrc.blue_nanitarium_block": "Blue Nanitarium Block",
    "block.mrc.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
 
-   "block.mrc.red_nanitarium_ore": "Deepslate Red Nanitarium Ore",
+   "block.mrc.red_nanitarium_ore": "Red Nanitarium Ore",
    "block.mrc.red_nanitarium_block": "Red Nanitarium Block",
    "block.mrc.raw_red_nanitarium_block": "Raw Red Nanitarium Block",
+
+   "block.mrc.veranium_ore": "Veranium Ore",
+   "block.mrc.veranium_block": "Veranium Block",
+   "block.mrc.raw_veranium_block": "Raw Veranium Block",
 
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
 	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
@@ -32,6 +46,12 @@
 	 "item.mrc.red_nanitarium_shovel": "Red Nanitarium Shovel",
 	 "item.mrc.red_nanitarium_axe": "Red Nanitarium Axe",
    "item.mrc.red_nanitarium_hoe": "Red Nanitarium Hoe",
+
+   "item.mrc.veranium_sword": "Veranium Sword",
+	 "item.mrc.veranium_pickaxe": "Veranium Pickaxe",
+	 "item.mrc.veranium_shovel": "Veranium Shovel",
+	 "item.mrc.veranium_axe": "Veranium Axe",
+   "item.mrc.veranium_hoe": "Veranium Hoe",
 
    "item.mrc.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
 

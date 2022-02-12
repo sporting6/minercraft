@@ -9,15 +9,21 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.OrePlacements;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 
 public class OreGeneration {
 	
+	
+	public static final RuleTest END_TEST = new BlockMatchTest(Blocks.END_STONE);
+
 	
 	public static final List<PlacedFeature> OVERWORLD_ORES = new ArrayList<>();
 	public static final List<PlacedFeature> NETHER_ORES = new ArrayList<>();
@@ -28,7 +34,6 @@ public class OreGeneration {
 		final ConfiguredFeature<?, ?> blueNanitariumOre = FeatureUtils.register("blue_nanitarium_ore",
                 Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,
                 ModBlocks.BLUE_NANITARIUM_ORE.get().defaultBlockState())),
-                		
                 		3)));
 		
 		final PlacedFeature placedBlueNanitariumOre = PlacementUtils.register("blue_nanitarium_ore",
@@ -36,19 +41,48 @@ public class OreGeneration {
         OVERWORLD_ORES.add(placedBlueNanitariumOre);
         
         
+        
+        final ConfiguredFeature<?, ?> smallBlueNanitariumOre = FeatureUtils.register("blue_nanitarium_ore",
+                Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES,
+                ModBlocks.BLUE_NANITARIUM_ORE.get().defaultBlockState())),
+                		3)));
+		
+		final PlacedFeature placedSmallBlueNanitariumOre = PlacementUtils.register("blue_nanitarium_ore",
+                smallBlueNanitariumOre.placed(OrePlacements.commonOrePlacement(1, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(32)))));
+        OVERWORLD_ORES.add(placedSmallBlueNanitariumOre);
+        
+        
+        
         final ConfiguredFeature<?, ?> redNanitariumOre = FeatureUtils.register("red_nanitarium_ore",
                 Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES,
                 ModBlocks.RED_NANITARIUM_ORE.get().defaultBlockState())),
                 		
                 		3)));
+        
+        final ConfiguredFeature<?, ?> smallRedNanitariumOre = FeatureUtils.register("red_nanitarium_ore",
+                Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES,
+                ModBlocks.RED_NANITARIUM_ORE.get().defaultBlockState())),
+                		
+                		2)));
 		
 		final PlacedFeature placedRedNanitariumOre = PlacementUtils.register("red_nanitarium_ore",
-                redNanitariumOre.placed(OrePlacements.commonOrePlacement(100, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(32)))));
+                redNanitariumOre.placed(OrePlacements.commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(32)))));
         NETHER_ORES.add(placedRedNanitariumOre);
         
         final PlacedFeature placedSmallRedNanitariumOre = PlacementUtils.register("red_nanitarium_ore",
-                redNanitariumOre.placed(OrePlacements.commonOrePlacement(100, HeightRangePlacement.triangle(VerticalAnchor.absolute(32), VerticalAnchor.aboveBottom(64)))));
+                smallRedNanitariumOre.placed(OrePlacements.commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.absolute(32), VerticalAnchor.aboveBottom(64)))));
         NETHER_ORES.add(placedSmallRedNanitariumOre);
+        
+        
+        
+        final ConfiguredFeature<?, ?> veraniumOre = FeatureUtils.register("veranium_ore",
+                Feature.ORE.configured(new OreConfiguration(List.of(OreConfiguration.target(END_TEST,
+                ModBlocks.VERANIUM_ORE.get().defaultBlockState())),
+                		
+                		3)));
+        final PlacedFeature placedVeraniumOre = PlacementUtils.register("veranium_ore",
+        		veraniumOre.placed(OrePlacements.commonOrePlacement(100, HeightRangePlacement.triangle(VerticalAnchor.absolute(32), VerticalAnchor.aboveBottom(170)))));
+        END_ORES.add(placedVeraniumOre);
         
         //OVERWORLD_ORES.forEach(ore -> System.out.println("==> TPM registerOres: " + ore));
 		

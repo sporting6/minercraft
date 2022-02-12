@@ -41,6 +41,13 @@ public final class ModToolMaterials {
 			new ResourceLocation("mrc:red_nanitarium"),
 			List.of(Tiers.NETHERITE), List.of(BLUE_NANITARIUM));
 	
+	public static final Tag.Named<Block> VERANIUM_TAG = BlockTags.createOptional(new ResourceLocation("mrc:needs_veranium_tool"));
+	public static final Tier VERANIUM = TierSortingRegistry.registerTier(
+			new ForgeTier(3 ,1869, 100f, 0, 27,VERANIUM_TAG,() -> Ingredient.of(ModItems.VERANIUM_INGOT.get())),
+			new ResourceLocation("mrc:veranium"),
+			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+	
+	
 	
 	
 	@SubscribeEvent

@@ -34,6 +34,9 @@ public final class ModItems {
 	 
 	 public static final RegistryObject<Item> RED_NANITARIUM_INGOT = ITEMS.register("red_nanitarium_ingot",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<Item> VERANIUM_INGOT = ITEMS.register("veranium_ingot",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 		 
 	 public static final RegistryObject<Item> PERFECT_DIAMOND = ITEMS.register("perfect_diamond", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
@@ -48,6 +51,8 @@ public final class ModItems {
 	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 public static final RegistryObject<Item> RAW_RED_NANITARIUM = ITEMS.register("raw_red_nanitarium",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 public static final RegistryObject<Item> RAW_VERANIUM = ITEMS.register("raw_veranium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
 	 //Food
@@ -147,7 +152,22 @@ public final class ModItems {
 						new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 		 
 	//Veranium Tools
-		 
+	public static final RegistryObject<SwordItem> VERANIUM_SWORD = ITEMS.register("veranium_sword", 
+			() -> new SwordItem(ModToolMaterials.VERANIUM, 14, -2F, 
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	public static final RegistryObject<PickaxeItem> VERANIUM_PICKAXE = ITEMS.register("veranium_pickaxe", 
+			() -> new PickaxeItem(ModToolMaterials.VERANIUM, 8, -2.4F, 
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	public static final RegistryObject<AxeItem> VERANIUM_AXE = ITEMS.register("veranium_axe", 
+			() -> new AxeItem(ModToolMaterials.VERANIUM, 18, -2.6F, 
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	public static final RegistryObject<ShovelItem> VERANIUM_SHOVEL = ITEMS.register("veranium_shovel", 
+			() -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.8F, 
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	public static final RegistryObject<HoeItem> VERANIUM_HOE = ITEMS.register("veranium_hoe", 
+			() -> new HoeItem(ModToolMaterials.VERANIUM, 3, -2.8F, 
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+			 
 		 	
 		 
 		 
@@ -194,13 +214,20 @@ public final class ModItems {
 			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_ORE.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
+	 public static final RegistryObject<BlockItem> VERANIUM_ORE_ITEM = ITEMS.register("veranium_ore",
+			 () -> new BlockItem(ModBlocks.VERANIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
 	 //Raw Ore Blocks
 	 public static final RegistryObject<BlockItem> RAW_BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_blue_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RAW_BLUE_NANITARIUM_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
-	 public static final RegistryObject<BlockItem> RAW_red_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_red_nanitarium_block",
+	 public static final RegistryObject<BlockItem> RAW_RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_red_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RAW_RED_NANITARIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 public static final RegistryObject<BlockItem> RAW_VERANIUM_BLOCK_ITEM = ITEMS.register("raw_veranium_block",
+			 () -> new BlockItem(ModBlocks.RAW_VERANIUM_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
 	 //Meterial Blocks
@@ -211,6 +238,11 @@ public final class ModItems {
 	 public static final RegistryObject<BlockItem> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<BlockItem> VERANIUM_BLOCK_ITEM = ITEMS.register("veranium_block",
+			 () -> new BlockItem(ModBlocks.VERANIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
 	 
 	 
 }

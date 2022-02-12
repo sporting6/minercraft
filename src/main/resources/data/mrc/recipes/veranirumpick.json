@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "ttt",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "t":
+        {
+            "item": "mrc:veranium_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mrc:veranium_pickaxe",
+        "count": 1
+    }
+}
