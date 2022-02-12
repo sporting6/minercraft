@@ -23,12 +23,19 @@ Axe Attack Speed: 1.4<br>
 Sword Attack Damage: 15 (18 With Sharpness 5)<br>
 Sword Attack Speed: 2.0 <br>
 
-Pickaxe Mining Speed: 20 <br>
-Pickaxe Breaking Power: 6 <br>
+Pickaxe Mining Speed: 30 <br>
+Pickaxe Breaking Power: 4 <br>
 
 ### Red Nanitarium <br>
 
-#### Uncompleated<br>
+Axe Attack Damage: 15 (18 With Sharpness 5)<br>
+Axe Attack Speed: 1.2 <br>
+
+Sword Attack Damage: 12 (15 With Sharpness 5)<br>
+Sword Attack Speed: 1.7 <br>
+
+Pickaxe Mining Speed: 12 <br>
+Pickaxe Breaking Power: 6 <br>
 
 ### Verainium <br>
 
@@ -65,7 +72,11 @@ Pickaxe Breaking Power: 6 <br>
 
 ## Recipes
 
-### Uncompleated<br>
+
+### How To Craft A Perfect Diamond
+
+
+#### Uncompleated<br>
 
 
 ###### This README is uncompleate.
