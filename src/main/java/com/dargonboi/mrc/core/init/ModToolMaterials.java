@@ -35,8 +35,9 @@ public final class ModToolMaterials {
 			new ResourceLocation("mrc:blue_nanitarium"),
 			List.of(Tiers.NETHERITE), List.of());
 	
+	public static final Tag.Named<Block> RED_NANITARIUM_TAG = BlockTags.createOptional(new ResourceLocation("mrc:needs_red_nanitarium_tool"));
 	public static final Tier RED_NANITARIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(4 ,2680, 12f, 0, 19, BLUE_NANITARIUM_TAG,() -> Ingredient.of(ModItems.RED_NANITARIUM_INGOT.get())),
+			new ForgeTier(4 ,2680, 12f, 0, 19,RED_NANITARIUM_TAG,() -> Ingredient.of(ModItems.RED_NANITARIUM_INGOT.get())),
 			new ResourceLocation("mrc:red_nanitarium"),
 			List.of(Tiers.NETHERITE), List.of(BLUE_NANITARIUM));
 	

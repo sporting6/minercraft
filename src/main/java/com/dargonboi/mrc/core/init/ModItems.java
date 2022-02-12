@@ -41,6 +41,9 @@ public final class ModItems {
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_UPGRADE = ITEMS.register("blue_nanitarium_upgrade", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
+	 public static final RegistryObject<Item> RED_NANITARIUM_UPGRADE = ITEMS.register("red_nanitarium_upgrade", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
 	 //Raw Ores
 	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
@@ -49,6 +52,25 @@ public final class ModItems {
 	 
 	 //Food
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_APPLE = ITEMS.register("blue_nanitarium_apple",
+				() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.EPIC)
+						.food(new FoodProperties.Builder()
+								.alwaysEat()
+								.nutrition(5)
+								.saturationMod(1.5F)
+								.fast()
+								.effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 12000, 4), 1)
+								.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 6), 1)
+								.effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 12000, 1), 1)
+								.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 3000, 4), 1)
+								.effect(() -> new MobEffectInstance(MobEffects.GLOWING, 400, 1), .1f)
+								.effect(() -> new MobEffectInstance(MobEffects.JUMP, 6000, 2), 1)
+								.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 2), 1)
+								.build()
+								)
+						)
+				)
+			 ;
+	 public static final RegistryObject<Item> RED_NANITARIUM_APPLE = ITEMS.register("red_nanitarium_apple",
 				() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.EPIC)
 						.food(new FoodProperties.Builder()
 								.alwaysEat()
@@ -124,6 +146,8 @@ public final class ModItems {
 				() -> new HoeItem(ModToolMaterials.RED_NANITARIUM, 2, -2.6F, 
 						new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 		 
+	//Veranium Tools
+		 
 		 	
 		 
 		 
@@ -175,9 +199,17 @@ public final class ModItems {
 			 () -> new BlockItem(ModBlocks.RAW_BLUE_NANITARIUM_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
+	 public static final RegistryObject<BlockItem> RAW_red_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_red_nanitarium_block",
+			 () -> new BlockItem(ModBlocks.RAW_RED_NANITARIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
 	 //Meterial Blocks
 	 public static final RegistryObject<BlockItem> BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("blue_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<BlockItem> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block",
+			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
 	 
 	 

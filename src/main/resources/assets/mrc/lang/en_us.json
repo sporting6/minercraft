@@ -17,6 +17,10 @@
    "block.mrc.blue_nanitarium_block": "Blue Nanitarium Block",
    "block.mrc.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
 
+   "block.mrc.red_nanitarium_ore": "Deepslate Red Nanitarium Ore",
+   "block.mrc.red_nanitarium_block": "Red Nanitarium Block",
+   "block.mrc.raw_red_nanitarium_block": "Raw Red Nanitarium Block",
+
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
 	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
 	 "item.mrc.blue_nanitarium_shovel": "Blue Nanitarium Shovel",

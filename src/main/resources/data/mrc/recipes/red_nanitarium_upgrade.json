@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#m#",
+        "mMm",
+        "#m#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:amethyst_shard"
+        },
+        "m": {
+            "item": "mrc:red_nanitarium_ingot"
+        },
+        "M": {
+            "item": "mrc:perfect_diamond"
+        }
+    },
+    "result": {
+        "item": "mrc:red_nanitarium_upgrade",
+        "count": 1
+    }
+}

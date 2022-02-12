@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "mrc:blue_nanitarium_ore",
+              "name": "mrc:red_nanitarium_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "mrc:raw_blue_nanitarium",
+              "name": "mrc:raw_red_nanitarium",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",
