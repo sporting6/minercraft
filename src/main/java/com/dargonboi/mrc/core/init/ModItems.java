@@ -39,6 +39,24 @@ public final class ModItems {
 	 
 	 public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> OBSIDIAN_INGOT = ITEMS.register("obsidian_ingot", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", 
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 		 
 	 
 	 //Other Recources

@@ -3,15 +3,19 @@
     "values": [
         "mrc:blue_nanitarium_ore",
         "mrc:raw_blue_nanitarium_block",
+        "mrc:blue_nanitarium_block",
+
         "mrc:red_nanitarium_ore",
         "mrc:raw_red_nanitarium_block",
-        "mrc:veranium_ore",
-        "mrc:raw_veranium_block",
-        "mrc:blue_nanitarium_block",
         "mrc:red_nanitarium_block",
-        "mrc:veranium_block"
 
-        
+        "mrc:raw_veranium_block",
+        "mrc:veranium_ore",
+        "mrc:veranium_block",
+
+        "mrc:raw_titanium_block",
+        "mrc:titanium_ore",
+        "mrc:titanium_block"
 
 
     ]
