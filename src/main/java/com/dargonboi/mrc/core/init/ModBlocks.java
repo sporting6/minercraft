@@ -30,8 +30,16 @@ public final class ModBlocks {
 					.requiresCorrectToolForDrops().strength(30.0F, 600.0F).sound(SoundType.NETHERRACK)));
 	
 	public static final RegistryObject<Block> VERANIUM_ORE = BLOCKS.register("veranium_ore",
-			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED)
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_LIGHT_BLUE)
 					.requiresCorrectToolForDrops().strength(30.0F, 600.0F).sound(SoundType.STONE)));
+	
+	public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+					.requiresCorrectToolForDrops().strength(3.0F, 600.0F).sound(SoundType.STONE)));
+	
+	public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = BLOCKS.register("deepslate_titanium_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+					.requiresCorrectToolForDrops().strength(4.5F, 600.0F).sound(SoundType.STONE)));
 	//Raw Ore Blocks
 	public static final RegistryObject<Block> RAW_BLUE_NANITARIUM_BLOCK = BLOCKS.register("raw_blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
@@ -45,6 +53,10 @@ public final class ModBlocks {
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
 					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
 	
+	public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = BLOCKS.register("raw_titanium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
+	
 	//Material Blocks
 	public static final RegistryObject<Block> BLUE_NANITARIUM_BLOCK = BLOCKS.register("blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
@@ -57,6 +69,10 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> VERANIUM_BLOCK = BLOCKS.register("veranium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
 					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+
+	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
 
 
 

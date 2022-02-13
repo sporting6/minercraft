@@ -47,6 +47,12 @@ public final class ModToolMaterials {
 			new ResourceLocation("mrc:veranium"),
 			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 	
+	public static final Tag.Named<Block> TITANIUM_TAG = BlockTags.createOptional(new ResourceLocation("mrc:needs_titanium_tool"));
+	public static final Tier TITANIUM = TierSortingRegistry.registerTier(
+			new ForgeTier(2 ,500, 7.5f, 0, 12,TITANIUM_TAG,() -> Ingredient.of(ModItems.TITANIUM_INGOT.get())),
+			new ResourceLocation("mrc:titanium"),
+			List.of(Tiers.IRON), List.of(VERANIUM));
+	
 	
 	
 	

@@ -35,11 +35,18 @@ Sword Attack Damage: 12 (15 With Sharpness 5)<br>
 Sword Attack Speed: 1.7 <br>
 
 Pickaxe Mining Speed: 12 <br>
-Pickaxe Breaking Power: 6 <br>
+Pickaxe Breaking Power: 4 <br>
 
 ### Verainium <br>
 
-#### Uncompleated<br>
+Axe Attack Damage: 11 (14 With Sharpness 5)<br>
+Axe Attack Speed: 1.6 <br>
+
+Sword Attack Damage: 9 (12 With Sharpness 5)<br>
+Sword Attack Speed: 2.2 <br>
+
+Pickaxe Mining Speed: 100 <br>
+Pickaxe Breaking Power: 2 <br>
 
 ### Titanium <br>
 

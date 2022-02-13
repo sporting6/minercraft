@@ -2,6 +2,8 @@
    "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
    "item.mrc.red_nanitarium_ingot": "Red Nanitarium Ingot",
    "item.mrc.veranium_ingot": "Veranium Ingot",
+   "item.mrc.titanium_ingot": "Titanium Ingot",
+
 
 
    "item.mrc.perfect_diamond": "Perfect Diamond",
@@ -15,6 +17,8 @@
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
    "item.mrc.raw_red_nanitarium": "Raw Red Nanitarium",
    "item.mrc.raw_veranium": "Raw Veranium",
+   "item.mrc.raw_titanium": "Raw Titanium",
+
 
 
 
@@ -35,6 +39,11 @@
    "block.mrc.veranium_block": "Veranium Block",
    "block.mrc.raw_veranium_block": "Raw Veranium Block",
 
+   "block.mrc.titanium_ore": "Titanium Ore",
+   "block.mrc.deepslate_titanium_ore": "Deepslate Titanium Ore",
+   "block.mrc.titanium_block": "Titanium Block",
+   "block.mrc.raw_titanium_block": "Raw Titanium Block",
+
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
 	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
 	 "item.mrc.blue_nanitarium_shovel": "Blue Nanitarium Shovel",
@@ -53,6 +62,14 @@
 	 "item.mrc.veranium_axe": "Veranium Axe",
    "item.mrc.veranium_hoe": "Veranium Hoe",
 
+   "item.mrc.titanium_sword": "Titanium Sword",
+	 "item.mrc.titanium_pickaxe": "Titanium Pickaxe",
+	 "item.mrc.titanium_shovel": "Titanium Shovel",
+	 "item.mrc.titanium_axe": "Titanium Axe",
+   "item.mrc.titanium_hoe": "Titanium Hoe",
+
+
+
    "item.mrc.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
 
 
@@ -66,6 +83,12 @@
 	 "item.mrc.red_nanitarium_chestplate": "Red Nanitarium Chestplate",
 	 "item.mrc.red_nanitarium_leggings": "Red Nanitarium Leggings",
 	 "item.mrc.red_nanitarium_boots": "Red Nanitarium Boots",
+
+   "item.mrc.titanium_helmet": "Titanium Helmet",
+	 "item.mrc.titanium_chestplate": "Titanium Chestplate",
+	 "item.mrc.titanium_leggings": "Titanium Leggings",
+	 "item.mrc.titanium_boots": "Titanium Boots",
+
 
    "itemGroup.minercraft_materials": "MinerCraft Materials",
    "itemGroup.minercraft_tools_armor": "MinerCraft Materials"

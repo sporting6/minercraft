@@ -11,7 +11,6 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ShovelItem;
@@ -37,10 +36,17 @@ public final class ModItems {
 	 
 	 public static final RegistryObject<Item> VERANIUM_INGOT = ITEMS.register("veranium_ingot",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 		 
+	 
+	 //Other Recources
 	 public static final RegistryObject<Item> PERFECT_DIAMOND = ITEMS.register("perfect_diamond", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
 	 
+	 
+	 //Upgrade Cores
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_UPGRADE = ITEMS.register("blue_nanitarium_upgrade", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	 
@@ -153,13 +159,13 @@ public final class ModItems {
 		 
 	//Veranium Tools
 	public static final RegistryObject<SwordItem> VERANIUM_SWORD = ITEMS.register("veranium_sword", 
-			() -> new SwordItem(ModToolMaterials.VERANIUM, 14, -2F, 
+			() -> new SwordItem(ModToolMaterials.VERANIUM, 8, -1.8F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	public static final RegistryObject<PickaxeItem> VERANIUM_PICKAXE = ITEMS.register("veranium_pickaxe", 
-			() -> new PickaxeItem(ModToolMaterials.VERANIUM, 8, -2.4F, 
+			() -> new PickaxeItem(ModToolMaterials.VERANIUM, 6, -2.0F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	public static final RegistryObject<AxeItem> VERANIUM_AXE = ITEMS.register("veranium_axe", 
-			() -> new AxeItem(ModToolMaterials.VERANIUM, 18, -2.6F, 
+			() -> new AxeItem(ModToolMaterials.VERANIUM, 10, -2.4F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 	public static final RegistryObject<ShovelItem> VERANIUM_SHOVEL = ITEMS.register("veranium_shovel", 
 			() -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.8F, 
@@ -167,6 +173,18 @@ public final class ModItems {
 	public static final RegistryObject<HoeItem> VERANIUM_HOE = ITEMS.register("veranium_hoe", 
 			() -> new HoeItem(ModToolMaterials.VERANIUM, 3, -2.8F, 
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	
+	//Titanium Tools
+	public static final RegistryObject<SwordItem> TITANIUM_SWORD = ITEMS.register("titanium_sword", 
+			() -> new SwordItem(ModToolMaterials.VERANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<PickaxeItem> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", 
+			() -> new PickaxeItem(ModToolMaterials.VERANIUM, 3, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<AxeItem> TITANIUM_AXE = ITEMS.register("titanium_axe", 
+			() -> new AxeItem(ModToolMaterials.VERANIUM, 8, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", 
+			() -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<HoeItem> TITANIUM_HOE = ITEMS.register("titanium_hoe", 
+			() -> new HoeItem(ModToolMaterials.VERANIUM, 3, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 			 
 		 	
 		 
@@ -200,6 +218,16 @@ public final class ModItems {
 	 public static final RegistryObject<ArmorItem> RED_NANITARIUM_BOOTS = ITEMS.register("red_nanitarium_boots",
 			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.FEET, new 
 					 Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+	 
+	 //Titanium Armor
+	 public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.FEET, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 		 
 	 
 	 //Ore
@@ -208,40 +236,58 @@ public final class ModItems {
 	 //Ores
 	 public static final RegistryObject<BlockItem> BLUE_NANITARIUM_ORE_ITEM = ITEMS.register("blue_nanitarium_ore",
 			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_ORE.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
 	 
 	 public static final RegistryObject<BlockItem> RED_NANITARIUM_ORE_ITEM = ITEMS.register("red_nanitarium_ore",
 			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_ORE.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
 	 
 	 public static final RegistryObject<BlockItem> VERANIUM_ORE_ITEM = ITEMS.register("veranium_ore",
 			 () -> new BlockItem(ModBlocks.VERANIUM_ORE.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
+	 
+	 public static final RegistryObject<BlockItem> TITANIUM_ORE_ITEM = ITEMS.register("titanium_ore",
+			 () -> new BlockItem(ModBlocks.TITANIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<BlockItem> DEEPSLATE_TITANIUM_ORE_ITEM = ITEMS.register("deepslate_titanium_ore",
+			 () -> new BlockItem(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
 	 
 	 //Raw Ore Blocks
 	 public static final RegistryObject<BlockItem> RAW_BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_blue_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RAW_BLUE_NANITARIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
 	 
 	 public static final RegistryObject<BlockItem> RAW_RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("raw_red_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RAW_RED_NANITARIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
+	 
 	 public static final RegistryObject<BlockItem> RAW_VERANIUM_BLOCK_ITEM = ITEMS.register("raw_veranium_block",
 			 () -> new BlockItem(ModBlocks.RAW_VERANIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
+	 
+	 public static final RegistryObject<BlockItem> RAW_TITANIUM_BLOCK_ITEM = ITEMS.register("raw_titanium_block",
+			 () -> new BlockItem(ModBlocks.RAW_TITANIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 //Meterial Blocks
 	 public static final RegistryObject<BlockItem> BLUE_NANITARIUM_BLOCK_ITEM = ITEMS.register("blue_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.BLUE_NANITARIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
 	 
 	 public static final RegistryObject<BlockItem> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block",
 			 () -> new BlockItem(ModBlocks.RED_NANITARIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
 	 
 	 public static final RegistryObject<BlockItem> VERANIUM_BLOCK_ITEM = ITEMS.register("veranium_block",
 			 () -> new BlockItem(ModBlocks.VERANIUM_BLOCK.get(), 
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE)));
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
+	 
+	 public static final RegistryObject<BlockItem> TITANIUM_BLOCK_ITEM = ITEMS.register("titanium_block",
+			 () -> new BlockItem(ModBlocks.TITANIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 
 	 
