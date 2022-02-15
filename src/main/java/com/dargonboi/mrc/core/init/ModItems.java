@@ -194,15 +194,15 @@ public final class ModItems {
 	
 	//Titanium Tools
 	public static final RegistryObject<SwordItem> TITANIUM_SWORD = ITEMS.register("titanium_sword", 
-			() -> new SwordItem(ModToolMaterials.VERANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new SwordItem(ModToolMaterials.TITANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	public static final RegistryObject<PickaxeItem> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", 
-			() -> new PickaxeItem(ModToolMaterials.VERANIUM, 3, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new PickaxeItem(ModToolMaterials.TITANIUM, 3, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	public static final RegistryObject<AxeItem> TITANIUM_AXE = ITEMS.register("titanium_axe", 
-			() -> new AxeItem(ModToolMaterials.VERANIUM, 8, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new AxeItem(ModToolMaterials.TITANIUM, 8, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", 
-			() -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new ShovelItem(ModToolMaterials.TITANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	public static final RegistryObject<HoeItem> TITANIUM_HOE = ITEMS.register("titanium_hoe", 
-			() -> new HoeItem(ModToolMaterials.VERANIUM, 3, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new HoeItem(ModToolMaterials.TITANIUM, 3, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 			 
 		 	
 		 

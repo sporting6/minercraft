@@ -46,17 +46,20 @@ Sword Attack Damage: 9 (12 With Sharpness 5)<br>
 Sword Attack Speed: 2.2 <br>
 
 Pickaxe Mining Speed: 100 <br>
-Pickaxe Breaking Power: 2 <br>
+Pickaxe Breaking Power: 3 <br>
 
 ### Titanium <br>
 
-#### Uncompleated<br>
+Axe Attack Damage: 9 (12 With Sharpness 5)<br>
+Axe Attack Speed: 1.2 <br>
+
+Sword Attack Damage: 6 (9 With Sharpness 5)<br>
+Sword Attack Speed: 1.4 <br>
+
+Pickaxe Mining Speed: 7.5 <br>
+Pickaxe Breaking Power: 3 <br>
 
 ### Ruby <br>
-
-#### Uncompleated<br>
-
-### Tungsten <br>
 
 #### Uncompleated<br>
 
@@ -72,9 +75,6 @@ Pickaxe Breaking Power: 2 <br>
 
 #### Uncompleated<br>
 
-### Obsidian <br>
-
-#### Uncompleated<br>
 
 
 ## Recipes
