@@ -7,7 +7,6 @@
    "item.mrc.obsidian_ingot":"Obsidian Ingot",
    "item.mrc.obsidian_shard":"Obsidian Shard",
    "item.mrc.tungsten_ingot":"Tungsten Ingot",
-   "item.mrc.titanium_ingot":"Titanium Ingot",
    "item.mrc.bronze_ingot":"Bronze Ingot",
    "item.mrc.tin_ingot":"Tin Ingot",
    "item.mrc.ruby":"Ruby",
@@ -51,6 +50,10 @@
    "block.mrc.titanium_block": "Titanium Block",
    "block.mrc.raw_titanium_block": "Raw Titanium Block",
 
+   "block.mrc.ruby_ore": "Ruby Ore",
+   "block.mrc.deepslate_ruby_ore": "Deepslate Ruby Ore",
+   "block.mrc.ruby_block": "Ruby Block",
+
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
 	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
 	 "item.mrc.blue_nanitarium_shovel": "Blue Nanitarium Shovel",
@@ -75,6 +78,12 @@
 	 "item.mrc.titanium_axe": "Titanium Axe",
    "item.mrc.titanium_hoe": "Titanium Hoe",
 
+   "item.mrc.ruby_sword": "Ruby Sword",
+	 "item.mrc.ruby_pickaxe": "Ruby Pickaxe",
+	 "item.mrc.ruby_shovel": "Ruby Shovel",
+	 "item.mrc.ruby_axe": "Ruby Axe",
+   "item.mrc.ruby_hoe": "Ruby Hoe",
+
 
 
    "item.mrc.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
@@ -95,6 +104,11 @@
 	 "item.mrc.titanium_chestplate": "Titanium Chestplate",
 	 "item.mrc.titanium_leggings": "Titanium Leggings",
 	 "item.mrc.titanium_boots": "Titanium Boots",
+
+   "item.mrc.ruby_helmet": "Ruby Helmet",
+	 "item.mrc.ruby_chestplate": "Ruby Chestplate",
+	 "item.mrc.ruby_leggings": "Ruby Leggings",
+	 "item.mrc.ruby_boots": "Ruby Boots",
 
 
    "itemGroup.minercraft_materials": "MinerCraft Materials",

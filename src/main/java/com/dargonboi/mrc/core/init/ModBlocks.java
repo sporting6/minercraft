@@ -40,6 +40,15 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = BLOCKS.register("deepslate_titanium_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
 					.requiresCorrectToolForDrops().strength(4.5F, 600.0F).sound(SoundType.STONE)));
+	
+	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+					.requiresCorrectToolForDrops().strength(3.0F, 600.0F).sound(SoundType.STONE)));
+	
+	public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = BLOCKS.register("deepslate_ruby_ore",
+			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+					.requiresCorrectToolForDrops().strength(4.5F, 600.0F).sound(SoundType.STONE)));
+	
 	//Raw Ore Blocks
 	public static final RegistryObject<Block> RAW_BLUE_NANITARIUM_BLOCK = BLOCKS.register("raw_blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
@@ -57,6 +66,8 @@ public final class ModBlocks {
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
 					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
 	
+
+	
 	//Material Blocks
 	public static final RegistryObject<Block> BLUE_NANITARIUM_BLOCK = BLOCKS.register("blue_nanitarium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLUE)
@@ -71,6 +82,10 @@ public final class ModBlocks {
 					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
 
 	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block",
+			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
 					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
 

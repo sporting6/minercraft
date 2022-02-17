@@ -52,6 +52,11 @@ public final class ModToolMaterials {
 			new ForgeTier(2 ,500, 7.5f, 0, 12,TITANIUM_TAG,() -> Ingredient.of(ModItems.TITANIUM_INGOT.get())),
 			new ResourceLocation("mrc:titanium"),
 			List.of(Tiers.IRON), List.of(VERANIUM));
+	public static final Tag.Named<Block> RUBY_TAG = BlockTags.createOptional(new ResourceLocation("mrc:needs_ruby_tool"));
+	public static final Tier RUBY = TierSortingRegistry.registerTier(
+			new ForgeTier(2 ,700, 10f, 0, 18,RUBY_TAG,() -> Ingredient.of(ModItems.RUBY.get())),
+			new ResourceLocation("mrc:ruby"),
+			List.of(Tiers.IRON), List.of(TITANIUM));
 	
 	
 	

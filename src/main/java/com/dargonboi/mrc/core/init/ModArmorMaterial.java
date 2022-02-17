@@ -21,6 +21,10 @@ public final class ModArmorMaterial {
 			new int[] {3, 7, 5, 2}, 0.0f, 0.0F, MinerCraft.MODID + ":titanium", 
 			SoundEvents.ARMOR_EQUIP_IRON,() -> Ingredient.of(ModItems.TITANIUM_INGOT.get()));
 	
+	public static final ArmorMaterial RUBY = new BaseArmorMaterial(18, new int[] {700, 700, 700, 700}, 
+			new int[] {3, 7, 6, 2}, 0.0f, 0.0F, MinerCraft.MODID + ":ruby", 
+			SoundEvents.ARMOR_EQUIP_IRON,() -> Ingredient.of(ModItems.RUBY.get()));
+	
 	private ModArmorMaterial() {
 		
 	}

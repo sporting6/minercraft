@@ -40,13 +40,7 @@ public final class ModItems {
 	 public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
-	 public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", 
-			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
-	 
 	 public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot", 
-			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
-	 
-	 public static final RegistryObject<Item> OBSIDIAN_INGOT = ITEMS.register("obsidian_ingot", 
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
@@ -74,10 +68,15 @@ public final class ModItems {
 	 //Raw Ores
 	 public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
 	 public static final RegistryObject<Item> RAW_RED_NANITARIUM = ITEMS.register("raw_red_nanitarium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
 	 public static final RegistryObject<Item> RAW_VERANIUM = ITEMS.register("raw_veranium",
 			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	 
+	 public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium",
+			 () -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 //Food
 	 public static final RegistryObject<Item> BLUE_NANITARIUM_APPLE = ITEMS.register("blue_nanitarium_apple",
@@ -202,8 +201,20 @@ public final class ModItems {
 	public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", 
 			() -> new ShovelItem(ModToolMaterials.TITANIUM, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	public static final RegistryObject<HoeItem> TITANIUM_HOE = ITEMS.register("titanium_hoe", 
-			() -> new HoeItem(ModToolMaterials.TITANIUM, 3, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			() -> new HoeItem(ModToolMaterials.TITANIUM, 2, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 			 
+	//Titanium Tools
+	public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword", 
+			() -> new SwordItem(ModToolMaterials.RUBY, 6, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", 
+			() -> new PickaxeItem(ModToolMaterials.RUBY, 4, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe", 
+			() -> new AxeItem(ModToolMaterials.RUBY, 8, -2.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel", 
+			() -> new ShovelItem(ModToolMaterials.RUBY, 5, -2.6F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe", 
+			() -> new HoeItem(ModToolMaterials.RUBY, 3, -0.8F, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+				 
 		 	
 		 
 		 
@@ -239,12 +250,22 @@ public final class ModItems {
 	 
 	 //Titanium Armor
 	 public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
+			 () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 
+	 //Ruby Armor
+	 public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+	 public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots",
 			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.FEET, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 		 
 	 
@@ -270,6 +291,14 @@ public final class ModItems {
 	 
 	 public static final RegistryObject<BlockItem> DEEPSLATE_TITANIUM_ORE_ITEM = ITEMS.register("deepslate_titanium_ore",
 			 () -> new BlockItem(ModBlocks.DEEPSLATE_TITANIUM_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<BlockItem> RUBY_ORE_ITEM = ITEMS.register("ruby_ore",
+			 () -> new BlockItem(ModBlocks.RUBY_ORE.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<BlockItem> DEEPSLATE_RUBY_ORE_ITEM = ITEMS.register("deepslate_ruby_ore",
+			 () -> new BlockItem(ModBlocks.DEEPSLATE_RUBY_ORE.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 
@@ -305,6 +334,10 @@ public final class ModItems {
 	 
 	 public static final RegistryObject<BlockItem> TITANIUM_BLOCK_ITEM = ITEMS.register("titanium_block",
 			 () -> new BlockItem(ModBlocks.TITANIUM_BLOCK.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
+	 public static final RegistryObject<BlockItem> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block",
+			 () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
 	 
