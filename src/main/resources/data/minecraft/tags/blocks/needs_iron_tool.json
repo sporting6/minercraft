@@ -1,7 +1,16 @@
 {
     "replace": false,
     "values": [
-        
+
+        "mrc:raw_titanium_block",
+        "mrc:titanium_ore",
+        "mrc:deepslate_titanium_ore",
+        "mrc:titanium_block",
+
+        "mrc:ruby_ore",
+        "mrc:deepslate_ruby_ore",
+        "mrc:ruby_block"
+
 
     ]
 }

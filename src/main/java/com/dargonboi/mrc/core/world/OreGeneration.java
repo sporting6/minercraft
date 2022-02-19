@@ -61,15 +61,28 @@ public class OreGeneration {
                 		
                 OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.TITANIUM_ORE.get().defaultBlockState()),
                 OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState())),
-                		9)));
+                		7)));
 		
 		final PlacedFeature placedTitaniumOre = PlacementUtils.register("titanium_ore",
 				titaniumOre.placed(OrePlacements.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(16), VerticalAnchor.aboveBottom(128)))));
         OVERWORLD_ORES.add(placedTitaniumOre);
         
-        final PlacedFeature placedSmallTitaniumOre = PlacementUtils.register("titanium_ore",
+        final PlacedFeature placedSmallTitaniumOre = PlacementUtils.register("small_titanium_ore",
 				titaniumOre.placed(OrePlacements.commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(192), VerticalAnchor.aboveBottom(384)))));
         OVERWORLD_ORES.add(placedSmallTitaniumOre);
+        
+        final ConfiguredFeature<?, ?> rubyOre = FeatureUtils.register("ruby_ore",
+                Feature.ORE.configured(new OreConfiguration(List.of(
+                		
+                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.RUBY_ORE.get().defaultBlockState()),
+                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState())),
+                		3)));
+		
+		final PlacedFeature placedRubyOre = PlacementUtils.register("ruby_ore",
+				rubyOre.placed(OrePlacements.commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(16), VerticalAnchor.aboveBottom(100)))));
+        OVERWORLD_ORES.add(placedRubyOre);
+        
+  
         
         
         //Nether Ores

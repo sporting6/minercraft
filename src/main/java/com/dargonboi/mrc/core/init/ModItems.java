@@ -260,13 +260,13 @@ public final class ModItems {
 	 
 	 //Ruby Armor
 	 public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.HEAD, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.CHEST, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.LEGS, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 	 public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots",
-			 () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.FEET, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
+			 () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.FEET, new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR)));
 		 
 	 
 	 //Ore

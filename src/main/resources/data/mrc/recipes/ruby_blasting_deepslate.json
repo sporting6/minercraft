@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "mrc:deepslate_ruby_ore"
+  },
+  "result": "mrc:ruby",
+  "experience": 5.0,
+  "cookingtime": 60
+}
