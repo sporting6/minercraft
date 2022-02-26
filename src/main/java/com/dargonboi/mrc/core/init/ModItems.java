@@ -340,6 +340,12 @@ public final class ModItems {
 			 () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(), 
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 	 
+	 //Block Entitys
+	 
+	 public static final RegistryObject<BlockItem> IRON_CHEST_ITEM = ITEMS.register("iron_chest",
+			 () -> new BlockItem(ModBlocks.IRON_CHEST.get(), 
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	 
 	 
 	 
 }

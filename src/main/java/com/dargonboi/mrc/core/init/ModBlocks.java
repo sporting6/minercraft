@@ -1,6 +1,7 @@
 package com.dargonboi.mrc.core.init;
 
 import com.dargonboi.mrc.MinerCraft;
+import com.dargonboi.mrc.common.block.IronChestBlock;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -35,19 +36,19 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<Block> TITANIUM_ORE = BLOCKS.register("titanium_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-					.requiresCorrectToolForDrops().strength(3.0F, 600.0F).sound(SoundType.STONE)));
+					.requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
 	
 	public static final RegistryObject<Block> DEEPSLATE_TITANIUM_ORE = BLOCKS.register("deepslate_titanium_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-					.requiresCorrectToolForDrops().strength(4.5F, 600.0F).sound(SoundType.STONE)));
+					.requiresCorrectToolForDrops().strength(4.5F, 4.0F).sound(SoundType.STONE)));
 	
 	public static final RegistryObject<Block> RUBY_ORE = BLOCKS.register("ruby_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-					.requiresCorrectToolForDrops().strength(3.0F, 600.0F).sound(SoundType.STONE)));
+					.requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.STONE)));
 	
 	public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = BLOCKS.register("deepslate_ruby_ore",
 			() -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
-					.requiresCorrectToolForDrops().strength(4.5F, 600.0F).sound(SoundType.STONE)));
+					.requiresCorrectToolForDrops().strength(4.5F, 4.0F).sound(SoundType.STONE)));
 	
 	//Raw Ore Blocks
 	public static final RegistryObject<Block> RAW_BLUE_NANITARIUM_BLOCK = BLOCKS.register("raw_blue_nanitarium_block",
@@ -60,11 +61,11 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<Block> RAW_VERANIUM_BLOCK = BLOCKS.register("raw_veranium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
-					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = BLOCKS.register("raw_titanium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
-					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 	
 
 	
@@ -79,15 +80,23 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<Block> VERANIUM_BLOCK = BLOCKS.register("veranium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
-					.requiresCorrectToolForDrops().strength(8.0F, 600.0F).sound(SoundType.METAL)));
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
 	public static final RegistryObject<Block> TITANIUM_BLOCK = BLOCKS.register("titanium_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
-					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 	
 	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
-					.requiresCorrectToolForDrops().strength(4.0F, 600.0F).sound(SoundType.METAL)));
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+	
+	
+	//Block Entitys
+	
+	public static final RegistryObject<IronChestBlock> IRON_CHEST = BLOCKS.register("iron_chest",
+			() -> new IronChestBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL)));
+
 
 
 
