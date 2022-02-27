@@ -1,6 +1,7 @@
 package com.dargonboi.mrc.core.init;
 
 import com.dargonboi.mrc.MinerCraft;
+import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,6 +15,6 @@ public final class ModTileEntitys {
 	public static final DeferredRegister<BlockEntityType<?>> TILE_ENTITIES = DeferredRegister.create(
 			ForgeRegistries.BLOCK_ENTITIES, MinerCraft.MODID); 
 	
-	//public static final RegistryObject<BlockEntityType<IronChestBlockEntity>> IRON_CHEST = TILE_ENTITIES.register(
-	//		"iron_chest", () -> BlockEntityType.Builder.of(IronChestBlockEntity::new, ModBlocks.IRON_CHEST.get()));
+	 public static final RegistryObject<BlockEntityType<IronChestBlockEntity>> IRON_CHEST = TILE_ENTITIES.register(
+			"iron_chest", () -> BlockEntityType.Builder.of(IronChestBlockEntity::new, ModBlocks.IRON_CHEST.get()).build(null));
 }

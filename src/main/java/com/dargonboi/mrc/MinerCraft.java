@@ -2,6 +2,7 @@ package com.dargonboi.mrc;
 
 import com.dargonboi.mrc.core.init.ModBlocks;
 import com.dargonboi.mrc.core.init.ModItems;
+import com.dargonboi.mrc.core.init.ModTileEntitys;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +24,8 @@ public class MinerCraft {
 		
 		ModBlocks.BLOCKS.register(bus);
 		ModItems.ITEMS.register(bus);
+		ModTileEntitys.TILE_ENTITIES.register(bus);
+
 		
 		
 	}
