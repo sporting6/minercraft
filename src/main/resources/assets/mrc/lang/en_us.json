@@ -26,7 +26,8 @@
    "item.mrc.raw_titanium": "Raw Titanium",
 
 
-   "block.mrc.iron_chest": "Iron Chest", 
+   "block.mrc.iron_chest": "Iron Chest",
+   "container.mrc.iron_chest": "Iron Chest", 
 
 
    "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",

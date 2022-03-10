@@ -7,20 +7,29 @@ import java.util.stream.Stream;
 
 import com.dargonboi.mrc.MinerCraft;
 import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
+import com.dargonboi.mrc.common.container.IronChestContainer;
 import com.dargonboi.mrc.core.init.ModTileEntitys;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.state.StateDefinition.Builder;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -50,6 +59,17 @@ public class IronChestBlock extends HorizontalDirectionalBlock implements Entity
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
 		return ModTileEntitys.IRON_CHEST.get().create(pos, state);
+	}
+
+	@Override
+	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
+			BlockHitResult result) {
+		if (!level.isClientSide && level.getBlockEntity(pos) instanceof final IronChestBlockEntity chest) {
+			MenuProvider container = new SimpleMenuProvider(IronChestContainer.getServerContainer(chest, pos), IronChestBlockEntity.TITLE);
+			NetworkHooks.openGui((ServerPlayer) player, container, pos);
+		}
+
+		return InteractionResult.SUCCESS;
 	}
 
 	/*

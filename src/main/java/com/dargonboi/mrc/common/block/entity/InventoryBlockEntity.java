@@ -42,6 +42,24 @@ public class InventoryBlockEntity extends BlockEntity {
 				: super.getCapability(cap, side);
 	}
 
+	public ItemStack extractItem(int slot) {
+		final int count = getItemInSlot(slot).getCount();
+		this.requiresUpdate = true;
+		return this.handler.map(inv -> inv.extractItem(slot, count, false)).orElse(ItemStack.EMPTY);
+	}
+
+	public ItemStack insertItem(int slot, ItemStack stack) {
+		ItemStack copy = stack.copy();
+		stack.shrink(copy.getCount());
+		this.requiresUpdate = true;
+		return this.handler.map(inv -> inv.insertItem(slot, stack, false)).orElse(ItemStack.EMPTY);
+
+	}
+
+	public ItemStack getItemInSlot(int slot) {
+		return this.handler.map(inv -> inv.getStackInSlot(slot)).orElse(ItemStack.EMPTY);
+	}
+
 	public LazyOptional<ItemStackHandler> getHandler() {
 		return handler;
 	}
@@ -79,7 +97,7 @@ public class InventoryBlockEntity extends BlockEntity {
 		super.load(tag);
 		this.inventory.deserializeNBT(tag.getCompound("Inventory"));
 	}
-	
+
 	@Override
 	public void invalidateCaps() {
 		super.invalidateCaps();
@@ -91,20 +109,33 @@ public class InventoryBlockEntity extends BlockEntity {
 
 			@Override
 			public ItemStack extractItem(int slot, int amount, boolean simulate) {
+				InventoryBlockEntity.this.update();
 				return super.extractItem(slot, amount, simulate);
 
 			}
 
 			@Override
 			public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+				InventoryBlockEntity.this.update();
 				return super.insertItem(slot, stack, simulate);
 			}
 		};
 	}
-	
+
 	public void update() {
 		requestModelDataUpdate();
 		setChanged();
+		if (this.level != null) {
+			this.level.setBlockAndUpdate(worldPosition, getBlockState());
+		}
+	}
+
+	public void tick() {
+		this.timer++;
+		if (this.requiresUpdate && this.level != null) {
+			update();
+			this.requiresUpdate = false;
+		}
 	}
 
 }

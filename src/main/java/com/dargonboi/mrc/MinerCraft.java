@@ -1,6 +1,7 @@
 package com.dargonboi.mrc;
 
 import com.dargonboi.mrc.core.init.ModBlocks;
+import com.dargonboi.mrc.core.init.ModContainers;
 import com.dargonboi.mrc.core.init.ModItems;
 import com.dargonboi.mrc.core.init.ModTileEntitys;
 
@@ -24,6 +25,8 @@ public class MinerCraft {
 		ModBlocks.BLOCKS.register(bus);
 		ModItems.ITEMS.register(bus);
 		ModTileEntitys.TILE_ENTITIES.register(bus);
+		ModContainers.CONTAINERS.register(bus);
+
 
 	}
 
