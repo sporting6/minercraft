@@ -1,7 +1,7 @@
 package com.dargonboi.mrc.client.screen;
 
 import com.dargonboi.mrc.MinerCraft;
-import com.dargonboi.mrc.common.container.IronChestContainer;
+import com.dargonboi.mrc.common.container.DiamondChestContainer;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -11,17 +11,17 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class IronChestScreen extends AbstractContainerScreen<IronChestContainer> {
+public class DiamondChestScreen extends AbstractContainerScreen<DiamondChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
-			"textures/gui/iron_chest.png");
+			"textures/gui/diamond_chest.png");
 
-	public IronChestScreen(IronChestContainer container, Inventory playerInv, Component title) {
+	public DiamondChestScreen(DiamondChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);
 		this.leftPos = 0;
 		this.topPos = 0;
-		this.imageWidth = 176;
-		this.imageHeight = 222;
+		this.imageWidth = 193;
+		this.imageHeight = 255;
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class IronChestScreen extends AbstractContainerScreen<IronChestContainer>
 	public void render(PoseStack stack, int mouseX, int mouseY, float partialTicks) {
 		super.render(stack, mouseX, mouseY, partialTicks);
 		this.font.draw(stack, this.title, this.leftPos + 8, this.topPos + 6, 0x404040);
-		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 8, this.topPos + 128, 0x404040);
+		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 16, this.topPos + 164, 0x404040);
 	}
 
 	@Override

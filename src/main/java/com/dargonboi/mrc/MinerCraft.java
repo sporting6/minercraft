@@ -46,6 +46,14 @@ public class MinerCraft {
 		}
 
 	};
+	public static final CreativeModeTab MINERCRAFT_CHESTS = new CreativeModeTab("minercraft_chests") {
+
+		@Override
+		public ItemStack makeIcon() {
+			return ModItems.DIAMOND_CHEST_ITEM.get().getDefaultInstance();
+		}
+
+	};
 
 	public static VoxelShape calculateShapes(Direction to, VoxelShape shape) {
 		final VoxelShape[] buffer = { shape, Shapes.empty() };

@@ -20,7 +20,12 @@
 
         "mrc:ruby_ore",
         "mrc:deepslate_ruby_ore",
-        "mrc:ruby_block"
+        "mrc:ruby_block",
+
+        "mrc:iron_chest",
+        "mrc:diamond_chest"
+
+
 
 
     ]

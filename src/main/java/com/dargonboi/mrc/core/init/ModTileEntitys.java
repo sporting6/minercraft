@@ -1,6 +1,7 @@
 package com.dargonboi.mrc.core.init;
 
 import com.dargonboi.mrc.MinerCraft;
+import com.dargonboi.mrc.common.block.entity.DiamondChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -19,4 +20,8 @@ public final class ModTileEntitys {
 	public static final RegistryObject<BlockEntityType<IronChestBlockEntity>> IRON_CHEST = TILE_ENTITIES.register(
 			"iron_chest",
 			() -> BlockEntityType.Builder.of(IronChestBlockEntity::new, ModBlocks.IRON_CHEST.get()).build(null));
+
+	public static final RegistryObject<BlockEntityType<DiamondChestBlockEntity>> DIAMOND_CHEST = TILE_ENTITIES.register(
+			"diamond_chest",
+			() -> BlockEntityType.Builder.of(DiamondChestBlockEntity::new, ModBlocks.IRON_CHEST.get()).build(null));
 }

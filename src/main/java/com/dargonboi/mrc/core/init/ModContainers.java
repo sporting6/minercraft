@@ -1,6 +1,7 @@
 package com.dargonboi.mrc.core.init;
 
 import com.dargonboi.mrc.MinerCraft;
+import com.dargonboi.mrc.common.container.DiamondChestContainer;
 import com.dargonboi.mrc.common.container.IronChestContainer;
 
 import net.minecraft.world.inventory.MenuType;
@@ -18,5 +19,8 @@ public final class ModContainers {
 
 	public static final RegistryObject<MenuType<IronChestContainer>> IRON_CHEST = CONTAINERS.register("iron_chest",
 			() -> new MenuType<>(IronChestContainer::new));
+
+	public static final RegistryObject<MenuType<DiamondChestContainer>> DIAMOND_CHEST = CONTAINERS
+			.register("diamond_chest", () -> new MenuType<>(DiamondChestContainer::new));
 
 }

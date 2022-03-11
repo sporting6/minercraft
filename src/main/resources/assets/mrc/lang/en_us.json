@@ -29,6 +29,10 @@
    "block.mrc.iron_chest": "Iron Chest",
    "container.mrc.iron_chest": "Iron Chest", 
 
+   "block.mrc.diamond_chest": "Diamond Chest",
+   "container.mrc.diamond_chest": "Diamond Chest", 
+
+
 
    "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",
    "item.mrc.red_nanitarium_apple": "Nanitarium Apple",
@@ -114,7 +118,9 @@
 
 
    "itemGroup.minercraft_materials": "MinerCraft Materials",
-   "itemGroup.minercraft_tools_armor": "MinerCraft Materials"
+   "itemGroup.minercraft_tools_armor": "MinerCraft Materials",
+   "itemGroup.minercraft_chests": "MinerCraft Storage"
+
 
 
  }

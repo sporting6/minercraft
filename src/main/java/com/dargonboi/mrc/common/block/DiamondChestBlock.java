@@ -6,8 +6,8 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 import com.dargonboi.mrc.MinerCraft;
-import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
-import com.dargonboi.mrc.common.container.IronChestContainer;
+import com.dargonboi.mrc.common.block.entity.DiamondChestBlockEntity;
+import com.dargonboi.mrc.common.container.DiamondChestContainer;
 import com.dargonboi.mrc.core.init.ModTileEntitys;
 
 import net.minecraft.core.BlockPos;
@@ -34,11 +34,11 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 
-public class IronChestBlock extends HorizontalDirectionalBlock implements EntityBlock {
+public class DiamondChestBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
 	private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
 
-	public IronChestBlock(Properties properties) {
+	public DiamondChestBlock(Properties properties) {
 		super(properties);
 		registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH));
 		runCalculation(SHAPE.orElse(Shapes.block()));
@@ -56,15 +56,15 @@ public class IronChestBlock extends HorizontalDirectionalBlock implements Entity
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return ModTileEntitys.IRON_CHEST.get().create(pos, state);
+		return ModTileEntitys.DIAMOND_CHEST.get().create(pos, state);
 	}
 
 	@Override
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
 			BlockHitResult result) {
-		if (!level.isClientSide && level.getBlockEntity(pos) instanceof final IronChestBlockEntity chest) {
-			MenuProvider container = new SimpleMenuProvider(IronChestContainer.getServerContainer(chest, pos),
-					IronChestBlockEntity.TITLE);
+		if (!level.isClientSide && level.getBlockEntity(pos) instanceof final DiamondChestBlockEntity chest) {
+			MenuProvider container = new SimpleMenuProvider(DiamondChestContainer.getServerContainer(chest, pos),
+					DiamondChestBlockEntity.TITLE);
 			NetworkHooks.openGui((ServerPlayer) player, container, pos);
 		}
 
