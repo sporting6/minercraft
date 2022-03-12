@@ -340,5 +340,9 @@ public final class ModItems {
 	public static final RegistryObject<BlockItem> DIAMOND_CHEST_ITEM = ITEMS.register("diamond_chest",
 			() -> new BlockItem(ModBlocks.DIAMOND_CHEST.get(),
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
+	
+	public static final RegistryObject<BlockItem> NETHERITE_CHEST_ITEM = ITEMS.register("netherite_chest",
+			() -> new BlockItem(ModBlocks.NETHERITE_CHEST.get(),
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
 
 }

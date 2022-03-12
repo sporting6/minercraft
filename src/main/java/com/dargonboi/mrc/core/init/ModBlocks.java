@@ -3,6 +3,7 @@ package com.dargonboi.mrc.core.init;
 import com.dargonboi.mrc.MinerCraft;
 import com.dargonboi.mrc.common.block.DiamondChestBlock;
 import com.dargonboi.mrc.common.block.IronChestBlock;
+import com.dargonboi.mrc.common.block.NetheriteChestBlock;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -97,6 +98,10 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<DiamondChestBlock> DIAMOND_CHEST = BLOCKS.register("diamond_chest",
 			() -> new DiamondChestBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<NetheriteChestBlock> NETHERITE_CHEST = BLOCKS.register("netherite_chest",
+			() -> new NetheriteChestBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
 					.requiresCorrectToolForDrops().strength(4.0F, 6.0F).sound(SoundType.METAL)));
 
 }

@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "mrc:block/netherite_chest" },
+		"facing=south": { "model": "mrc:block/netherite_chest", "y": 180 },
+		"facing=west": { "model": "mrc:block/netherite_chest", "y": 270 },
+		"facing=east": { "model": "mrc:block/netherite_chest", "y": 90 }
+	}
+}
