@@ -67,6 +67,10 @@ public final class ModItems {
 	public static final RegistryObject<Item> RED_NANITARIUM_UPGRADE = ITEMS.register("red_nanitarium_upgrade",
 			() -> new Item(
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	
+	public static final RegistryObject<Item> NETHERIT_UPGRADE = ITEMS.register("netherite_upgrade",
+			() -> new Item(
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
 
 	// Raw Ores
 	public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium", () -> new Item(

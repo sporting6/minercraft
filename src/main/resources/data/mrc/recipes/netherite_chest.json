@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "mrc:diamond_chest"
+    },
+    "addition": {
+        "item": "mrc:netherite_upgrade"
+    },
+    "result": {
+        "item": "mrc:netherite_chest"
+    }
+}
