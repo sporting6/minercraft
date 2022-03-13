@@ -1,7 +1,7 @@
 package com.dargonboi.mrc.client.screen;
 
 import com.dargonboi.mrc.MinerCraft;
-import com.dargonboi.mrc.common.container.NetheriteChestContainer;
+import com.dargonboi.mrc.common.container.NanitariumChestContainer;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 
@@ -11,12 +11,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
-public class NetheriteChestScreen extends AbstractContainerScreen<NetheriteChestContainer> {
+public class NanitariumChestScreen extends AbstractContainerScreen<NanitariumChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
 			"textures/gui/chest_104.png");
 
-	public NetheriteChestScreen(NetheriteChestContainer container, Inventory playerInv, Component title) {
+	public NanitariumChestScreen(NanitariumChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);
 		this.leftPos = 0;
 		this.topPos = 0;

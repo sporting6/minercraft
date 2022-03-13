@@ -3,6 +3,7 @@ package com.dargonboi.mrc.core.init;
 import com.dargonboi.mrc.MinerCraft;
 import com.dargonboi.mrc.common.block.entity.DiamondChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
+import com.dargonboi.mrc.common.block.entity.NanitariumChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.NetheriteChestBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -29,4 +30,9 @@ public final class ModTileEntitys {
 	public static final RegistryObject<BlockEntityType<NetheriteChestBlockEntity>> NETHERITE_CHEST = TILE_ENTITIES.register(
 			"netherite_chest",
 			() -> BlockEntityType.Builder.of(NetheriteChestBlockEntity::new, ModBlocks.NETHERITE_CHEST.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<NanitariumChestBlockEntity>> NANITARIUM_CHEST = TILE_ENTITIES.register(
+			"nanitarium_chest",
+			() -> BlockEntityType.Builder.of(NanitariumChestBlockEntity::new, ModBlocks.NANITARIUM_CHEST.get()).build(null));
+
 }

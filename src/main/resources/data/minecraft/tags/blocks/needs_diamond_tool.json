@@ -6,7 +6,8 @@
         "mrc:raw_veranium_block",
         "mrc:red_nanitarium_block",
         "mrc:blue_nanitarium_block",
-        "mrc:veranium_block"
+        "mrc:veranium_block",
+        "mrc:nanitarium_chest"
 
     ]
 }

@@ -17,6 +17,8 @@
    "item.mrc.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Core",
    "item.mrc.red_nanitarium_upgrade": "Red Nanitarium Upgrade Core",
    "item.mrc.netherite_upgrade": "Netherite Chest Upgrade Core",
+   "item.mrc.nanitarium_upgrade": "Nanitarium Chest Upgrade Core",
+
 
 
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
@@ -33,6 +35,9 @@
 
    "block.mrc.netherite_chest": "Netherite Chest",
    "container.mrc.netherite_chest": "Netherite Chest", 
+
+   "block.mrc.nanitarium_chest": "Nanitarium Chest",
+   "container.mrc.nanitarium_chest": "Nanitarium Chest", 
 
 
 

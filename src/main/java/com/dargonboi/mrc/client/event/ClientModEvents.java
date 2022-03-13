@@ -3,6 +3,7 @@ package com.dargonboi.mrc.client.event;
 import com.dargonboi.mrc.MinerCraft;
 import com.dargonboi.mrc.client.screen.DiamondChestScreen;
 import com.dargonboi.mrc.client.screen.IronChestScreen;
+import com.dargonboi.mrc.client.screen.NanitariumChestScreen;
 import com.dargonboi.mrc.client.screen.NetheriteChestScreen;
 import com.dargonboi.mrc.core.init.ModContainers;
 
@@ -24,6 +25,8 @@ public class ClientModEvents {
 		MenuScreens.register(ModContainers.IRON_CHEST.get(), IronChestScreen::new);
 		MenuScreens.register(ModContainers.DIAMOND_CHEST.get(), DiamondChestScreen::new);
 		MenuScreens.register(ModContainers.NETHERITE_CHEST.get(), NetheriteChestScreen::new);
+		MenuScreens.register(ModContainers.NANITARIUM_CHEST.get(), NanitariumChestScreen::new);
+
 
 	}
 

@@ -23,7 +23,10 @@
         "mrc:ruby_block",
 
         "mrc:iron_chest",
-        "mrc:diamond_chest"
+        "mrc:diamond_chest",
+        "mrc:netherite_chest",
+        "mrc:nanitarium_chest"
+
 
 
 

@@ -68,9 +68,15 @@ public final class ModItems {
 			() -> new Item(
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 	
-	public static final RegistryObject<Item> NETHERIT_UPGRADE = ITEMS.register("netherite_upgrade",
+	public static final RegistryObject<Item> NETHERITE_UPGRADE = ITEMS.register("netherite_upgrade",
 			() -> new Item(
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
+	
+	public static final RegistryObject<Item> NANITARIUM_UPGRADE = ITEMS.register("nanitarium_upgrade",
+			() -> new Item(
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	
+	
 
 	// Raw Ores
 	public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium", () -> new Item(
@@ -347,6 +353,10 @@ public final class ModItems {
 	
 	public static final RegistryObject<BlockItem> NETHERITE_CHEST_ITEM = ITEMS.register("netherite_chest",
 			() -> new BlockItem(ModBlocks.NETHERITE_CHEST.get(),
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
+	
+	public static final RegistryObject<BlockItem> NANITARIUM_CHEST_ITEM = ITEMS.register("nanitarium_chest",
+			() -> new BlockItem(ModBlocks.NANITARIUM_CHEST.get(),
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
 
 }
