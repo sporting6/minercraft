@@ -13,7 +13,7 @@ public class DiamondChestBlockEntity extends InventoryBlockEntity {
 	public static final Component TITLE = new TranslatableComponent("container." + MinerCraft.MODID + ".diamond_chest");
 
 	public DiamondChestBlockEntity(BlockPos pos, BlockState state) {
-		super(ModTileEntitys.DIAMOND_CHEST.get(), pos, state, 81);
+		super(ModTileEntitys.DIAMOND_CHEST.get(), pos, state, 70);
 	}
 
 }

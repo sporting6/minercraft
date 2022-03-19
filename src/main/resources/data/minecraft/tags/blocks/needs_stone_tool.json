@@ -2,7 +2,8 @@
     "replace": false,
     "values": [
 
-        "mrc:iron_chest"
+        "mrc:iron_chest",
+        "mrc:charged_redstone_block"
 
         
 

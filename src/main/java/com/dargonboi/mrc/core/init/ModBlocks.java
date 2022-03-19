@@ -5,8 +5,10 @@ import com.dargonboi.mrc.common.block.DiamondChestBlock;
 import com.dargonboi.mrc.common.block.IronChestBlock;
 import com.dargonboi.mrc.common.block.NanitariumChestBlock;
 import com.dargonboi.mrc.common.block.NetheriteChestBlock;
+import com.dargonboi.mrc.common.block.PoweredChestBlock;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PoweredBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -90,6 +92,11 @@ public final class ModBlocks {
 	public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
 			() -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
 					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<Block> CHARGED_REDSTONE_BLOCK = BLOCKS.register("charged_redstone_block",
+			() -> new PoweredBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL).lightLevel((p_152686_) -> {return 15;})));
+
 
 	// Block Entitys
 
@@ -107,6 +114,10 @@ public final class ModBlocks {
 	
 	public static final RegistryObject<NanitariumChestBlock> NANITARIUM_CHEST = BLOCKS.register("nanitarium_chest",
 			() -> new NanitariumChestBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+					.requiresCorrectToolForDrops().strength(8.0F, 1200.0F).sound(SoundType.METAL)));
+	
+	public static final RegistryObject<PoweredChestBlock> POWERED_CHEST = BLOCKS.register("powered_chest",
+			() -> new PoweredChestBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
 					.requiresCorrectToolForDrops().strength(8.0F, 1200.0F).sound(SoundType.METAL)));
 
 }

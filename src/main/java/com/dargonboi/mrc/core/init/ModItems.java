@@ -43,9 +43,6 @@ public final class ModItems {
 	public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot",
 			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 
-	public static final RegistryObject<Item> COPPER_INGOT = ITEMS.register("copper_ingot",
-			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
-
 	public static final RegistryObject<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
 			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
 
@@ -57,6 +54,9 @@ public final class ModItems {
 
 	// Other Recources
 	public static final RegistryObject<Item> PERFECT_DIAMOND = ITEMS.register("perfect_diamond", () -> new Item(
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
+	
+	public static final RegistryObject<Item> CHARGED_REDSTONE = ITEMS.register("charged_redstone", () -> new Item(
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
 
 	// Upgrade Cores
@@ -340,6 +340,11 @@ public final class ModItems {
 	public static final RegistryObject<BlockItem> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block",
 			() -> new BlockItem(ModBlocks.RUBY_BLOCK.get(),
 					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+	
+	public static final RegistryObject<BlockItem> CHARGED_REDSTONE_BLOCK_ITEM = ITEMS.register("charged_redstone_block",
+			() -> new BlockItem(ModBlocks.CHARGED_REDSTONE_BLOCK.get(),
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS)));
+
 
 	// Block Entity Items
 
@@ -353,10 +358,14 @@ public final class ModItems {
 	
 	public static final RegistryObject<BlockItem> NETHERITE_CHEST_ITEM = ITEMS.register("netherite_chest",
 			() -> new BlockItem(ModBlocks.NETHERITE_CHEST.get(),
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS).rarity(Rarity.UNCOMMON).fireResistant()));
 	
 	public static final RegistryObject<BlockItem> NANITARIUM_CHEST_ITEM = ITEMS.register("nanitarium_chest",
 			() -> new BlockItem(ModBlocks.NANITARIUM_CHEST.get(),
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS).rarity(Rarity.RARE).fireResistant()));
+	
+	public static final RegistryObject<BlockItem> POWERED_CHEST_ITEM = ITEMS.register("powered_chest",
+			() -> new BlockItem(ModBlocks.POWERED_CHEST.get(),
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_CHESTS).rarity(Rarity.RARE).fireResistant()));
 
 }

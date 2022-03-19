@@ -13,6 +13,8 @@
 
 
    "item.mrc.perfect_diamond": "Perfect Diamond",
+   "item.mrc.charged_redstone": "Charged Redstone",
+
 
    "item.mrc.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Core",
    "item.mrc.red_nanitarium_upgrade": "Red Nanitarium Upgrade Core",
@@ -39,7 +41,10 @@
    "block.mrc.nanitarium_chest": "Nanitarium Chest",
    "container.mrc.nanitarium_chest": "Nanitarium Chest", 
 
+   "block.mrc.powered_chest": "Powered Chest",
+   "container.mrc.powered_chest": "Powered Chest", 
 
+  "button.mrc.right_page_button": ">",
 
    "item.mrc.blue_nanitarium_apple": "Nanitarium Apple",
    "item.mrc.red_nanitarium_apple": "Nanitarium Apple",
@@ -66,6 +71,9 @@
    "block.mrc.ruby_ore": "Ruby Ore",
    "block.mrc.deepslate_ruby_ore": "Deepslate Ruby Ore",
    "block.mrc.ruby_block": "Ruby Block",
+
+   "block.mrc.charged_redstone_block": "Charged Redstone Block",
+
 
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
 	 "item.mrc.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",

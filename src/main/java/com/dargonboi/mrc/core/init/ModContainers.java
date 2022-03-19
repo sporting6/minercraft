@@ -5,6 +5,7 @@ import com.dargonboi.mrc.common.container.DiamondChestContainer;
 import com.dargonboi.mrc.common.container.IronChestContainer;
 import com.dargonboi.mrc.common.container.NanitariumChestContainer;
 import com.dargonboi.mrc.common.container.NetheriteChestContainer;
+import com.dargonboi.mrc.common.container.PoweredChestContainer;
 
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,6 +31,10 @@ public final class ModContainers {
 	
 	public static final RegistryObject<MenuType<NanitariumChestContainer>> NANITARIUM_CHEST = CONTAINERS
 			.register("nanitarium_chest", () -> new MenuType<>(NanitariumChestContainer::new));
+	
+	public static final RegistryObject<MenuType<PoweredChestContainer>> POWERED_CHEST = CONTAINERS
+			.register("powered_chest", () -> new MenuType<>(PoweredChestContainer::new));
+
 
 
 }

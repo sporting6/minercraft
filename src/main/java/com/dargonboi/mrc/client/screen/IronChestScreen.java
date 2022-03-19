@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Inventory;
 public class IronChestScreen extends AbstractContainerScreen<IronChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
-			"textures/gui/iron_chest.png");
+			"textures/gui/chest_54.png");
 
 	public IronChestScreen(IronChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);

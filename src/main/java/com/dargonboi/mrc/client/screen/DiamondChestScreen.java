@@ -14,14 +14,14 @@ import net.minecraft.world.entity.player.Inventory;
 public class DiamondChestScreen extends AbstractContainerScreen<DiamondChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
-			"textures/gui/diamond_chest.png");
+			"textures/gui/chest_70.png");
 
 	public DiamondChestScreen(DiamondChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);
 		this.leftPos = 0;
 		this.topPos = 0;
 		this.imageWidth = 193;
-		this.imageHeight = 255;
+		this.imageHeight = 238;
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class DiamondChestScreen extends AbstractContainerScreen<DiamondChestCont
 	public void render(PoseStack stack, int mouseX, int mouseY, float partialTicks) {
 		super.render(stack, mouseX, mouseY, partialTicks);
 		this.font.draw(stack, this.title, this.leftPos + 8, this.topPos + 6, 0x404040);
-		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 16, this.topPos + 164, 0x404040);
+		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 16, this.topPos + 146, 0x404040);
 	}
 
 	@Override

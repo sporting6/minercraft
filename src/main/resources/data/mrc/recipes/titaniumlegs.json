@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mrc:titanium_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mrc:titanium_leggings",
+        "count": 1
+    }
+}

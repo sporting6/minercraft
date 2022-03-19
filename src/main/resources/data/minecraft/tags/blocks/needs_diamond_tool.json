@@ -7,7 +7,9 @@
         "mrc:red_nanitarium_block",
         "mrc:blue_nanitarium_block",
         "mrc:veranium_block",
-        "mrc:nanitarium_chest"
+        "mrc:nanitarium_chest",
+        "mrc:powered_chest"
+
 
     ]
 }

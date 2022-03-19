@@ -10,11 +10,15 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraftforge.client.gui.widget.ExtendedButton;
 
 public class NanitariumChestScreen extends AbstractContainerScreen<NanitariumChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
 			"textures/gui/chest_104.png");
+
+	//private ExtendedButton pageRightButton;
+	
 
 	public NanitariumChestScreen(NanitariumChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);
@@ -23,6 +27,29 @@ public class NanitariumChestScreen extends AbstractContainerScreen<NanitariumChe
 		this.imageWidth = 247;
 		this.imageHeight = 255;
 	}
+	/*@Override
+	protected void init() {
+		super.init();
+		this.pageRightButton = addRenderableWidget(
+
+				new ExtendedButton(this.leftPos + 224, this.topPos + 4, 12, 12,
+						new TranslatableComponent("button." + MinerCraft.MODID + ".right_page_button"), btn -> {
+
+							this.minecraft.player.closeContainer();
+
+							Player player = this.minecraft.player;  
+							//if (!level.isClientSide
+							//		&& level.getBlockEntity(pos) instanceof final NanitariumChestBlockEntity chest) {
+								
+								NetworkHooks.openGui((ServerPlayer) player, container, pos);
+								
+							//}
+
+						})
+
+		);
+
+	}*/
 
 	@Override
 	protected void renderBg(PoseStack stack, float mouseX, int mouseY, int partialTicks) {
@@ -43,4 +70,5 @@ public class NanitariumChestScreen extends AbstractContainerScreen<NanitariumChe
 	@Override
 	protected void renderLabels(PoseStack p_97808_, int p_97809_, int p_97810_) {
 	}
+
 }

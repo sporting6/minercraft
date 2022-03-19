@@ -5,6 +5,7 @@ import com.dargonboi.mrc.client.screen.DiamondChestScreen;
 import com.dargonboi.mrc.client.screen.IronChestScreen;
 import com.dargonboi.mrc.client.screen.NanitariumChestScreen;
 import com.dargonboi.mrc.client.screen.NetheriteChestScreen;
+import com.dargonboi.mrc.client.screen.PoweredChestScreen;
 import com.dargonboi.mrc.core.init.ModContainers;
 
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -26,6 +27,11 @@ public class ClientModEvents {
 		MenuScreens.register(ModContainers.DIAMOND_CHEST.get(), DiamondChestScreen::new);
 		MenuScreens.register(ModContainers.NETHERITE_CHEST.get(), NetheriteChestScreen::new);
 		MenuScreens.register(ModContainers.NANITARIUM_CHEST.get(), NanitariumChestScreen::new);
+		
+		
+		
+		MenuScreens.register(ModContainers.POWERED_CHEST.get(), PoweredChestScreen::new);
+
 
 
 	}

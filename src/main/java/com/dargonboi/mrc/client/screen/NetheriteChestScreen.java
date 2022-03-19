@@ -14,13 +14,13 @@ import net.minecraft.world.entity.player.Inventory;
 public class NetheriteChestScreen extends AbstractContainerScreen<NetheriteChestContainer> {
 
 	private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID,
-			"textures/gui/chest_104.png");
+			"textures/gui/chest_88.png");
 
 	public NetheriteChestScreen(NetheriteChestContainer container, Inventory playerInv, Component title) {
 		super(container, playerInv, title);
 		this.leftPos = 0;
 		this.topPos = 0;
-		this.imageWidth = 247;
+		this.imageWidth = 211;
 		this.imageHeight = 255;
 	}
 
@@ -37,7 +37,7 @@ public class NetheriteChestScreen extends AbstractContainerScreen<NetheriteChest
 	public void render(PoseStack stack, int mouseX, int mouseY, float partialTicks) {
 		super.render(stack, mouseX, mouseY, partialTicks);
 		this.font.draw(stack, this.title, this.leftPos + 8, this.topPos + 6, 0x404040);
-		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 43, this.topPos + 164, 0x404040);
+		this.font.draw(stack, this.playerInventoryTitle, this.leftPos + 26, this.topPos + 164, 0x404040);
 	}
 
 	@Override

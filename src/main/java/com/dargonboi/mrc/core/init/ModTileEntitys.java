@@ -5,6 +5,7 @@ import com.dargonboi.mrc.common.block.entity.DiamondChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.IronChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.NanitariumChestBlockEntity;
 import com.dargonboi.mrc.common.block.entity.NetheriteChestBlockEntity;
+import com.dargonboi.mrc.common.block.entity.PoweredChestBlockEntity;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -34,5 +35,9 @@ public final class ModTileEntitys {
 	public static final RegistryObject<BlockEntityType<NanitariumChestBlockEntity>> NANITARIUM_CHEST = TILE_ENTITIES.register(
 			"nanitarium_chest",
 			() -> BlockEntityType.Builder.of(NanitariumChestBlockEntity::new, ModBlocks.NANITARIUM_CHEST.get()).build(null));
+	
+	public static final RegistryObject<BlockEntityType<PoweredChestBlockEntity>> POWERED_CHEST = TILE_ENTITIES.register(
+			"powered_chest",
+			() -> BlockEntityType.Builder.of(PoweredChestBlockEntity::new, ModBlocks.POWERED_CHEST.get()).build(null));
 
 }

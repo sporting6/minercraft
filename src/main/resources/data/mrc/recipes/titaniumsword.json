@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " R ",
+        " R ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "mrc:titanium_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "mrc:titanium_sword",
+        "count": 1
+    }
+}

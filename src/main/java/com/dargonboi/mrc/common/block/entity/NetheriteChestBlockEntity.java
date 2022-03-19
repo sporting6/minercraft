@@ -13,7 +13,7 @@ public class NetheriteChestBlockEntity extends InventoryBlockEntity {
 	public static final Component TITLE = new TranslatableComponent("container." + MinerCraft.MODID + ".netherite_chest");
 
 	public NetheriteChestBlockEntity(BlockPos pos, BlockState state) {
-		super(ModTileEntitys.NETHERITE_CHEST.get(), pos, state, 104);
+		super(ModTileEntitys.NETHERITE_CHEST.get(), pos, state, 88);
 	}
 
 }

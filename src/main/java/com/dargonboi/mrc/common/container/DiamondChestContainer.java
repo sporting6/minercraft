@@ -22,7 +22,7 @@ public class DiamondChestContainer extends AbstractContainerMenu {
 
 	// Client Constructor
 	public DiamondChestContainer(int id, Inventory playerInv) {
-		this(id, playerInv, new ItemStackHandler(80), BlockPos.ZERO);
+		this(id, playerInv, new ItemStackHandler(70), BlockPos.ZERO);
 	}
 
 	// Server Constructor
@@ -30,9 +30,9 @@ public class DiamondChestContainer extends AbstractContainerMenu {
 		super(ModContainers.DIAMOND_CHEST.get(), id);
 		this.containerAccess = ContainerLevelAccess.create(playerInv.player.level, pos);
 
-		final int slotSizePlus2 = 18, startX = 8, startY = 176, hotbarY = 234, inventoryY = 18, invStartX = 17;
+		final int slotSizePlus2 = 18, startX = 8, startY = 158, hotbarY = 216, inventoryY = 18, invStartX = 17;
 
-		for (int row = 0; row < 8; row++) {
+		for (int row = 0; row < 7; row++) {
 			for (int column = 0; column < 10; column++) {
 				addSlot(new SlotItemHandler(slots, row * 10 + column, startX + column * slotSizePlus2,
 						inventoryY + row * slotSizePlus2));
@@ -58,10 +58,10 @@ public class DiamondChestContainer extends AbstractContainerMenu {
 		if (slot.hasItem()) {
 			final ItemStack item = slot.getItem();
 			retStack = item.copy();
-			if (index < 80) {
-				if (!moveItemStackTo(item, 80, this.slots.size(), true))
+			if (index < 70) {
+				if (!moveItemStackTo(item, 70, this.slots.size(), true))
 					return ItemStack.EMPTY;
-			} else if (!moveItemStackTo(item, 0, 80, true))
+			} else if (!moveItemStackTo(item, 0, 70, true))
 				return ItemStack.EMPTY;
 
 			if (item.isEmpty())

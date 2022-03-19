@@ -25,7 +25,9 @@
         "mrc:iron_chest",
         "mrc:diamond_chest",
         "mrc:netherite_chest",
-        "mrc:nanitarium_chest"
+        "mrc:nanitarium_chest",
+
+        "mrc:charged_redstone_block"
 
 
 

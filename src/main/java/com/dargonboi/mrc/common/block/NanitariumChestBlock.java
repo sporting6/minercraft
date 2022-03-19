@@ -36,6 +36,8 @@ import net.minecraftforge.network.NetworkHooks;
 
 public class NanitariumChestBlock extends HorizontalDirectionalBlock implements EntityBlock {
 
+
+	
 	private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
 
 	public NanitariumChestBlock(Properties properties) {
@@ -62,6 +64,8 @@ public class NanitariumChestBlock extends HorizontalDirectionalBlock implements 
 	@Override
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand,
 			BlockHitResult result) {
+		
+		
 		if (!level.isClientSide && level.getBlockEntity(pos) instanceof final NanitariumChestBlockEntity chest) {
 			MenuProvider container = new SimpleMenuProvider(NanitariumChestContainer.getServerContainer(chest, pos),
 					NanitariumChestBlockEntity.TITLE);
