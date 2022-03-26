@@ -27,7 +27,6 @@ public class MinerCraft {
 		ModTileEntitys.TILE_ENTITIES.register(bus);
 		ModContainers.CONTAINERS.register(bus);
 
-
 	}
 
 	public static final CreativeModeTab MINERCRAFT_MATERIALS = new CreativeModeTab("minercraft_materials") {

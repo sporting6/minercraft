@@ -1,11 +1,11 @@
  {
+   "item.mrc.kyranium_ingot": "Kyranium Ingot",
    "item.mrc.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
    "item.mrc.red_nanitarium_ingot": "Red Nanitarium Ingot",
    "item.mrc.veranium_ingot": "Veranium Ingot",
+   "item.mrc.therium_ingot": "Therium Ingot",
    "item.mrc.titanium_ingot": "Titanium Ingot",
    "item.mrc.copper_ingot":"Copper Ingot",
-   "item.mrc.obsidian_ingot":"Obsidian Ingot",
-   "item.mrc.obsidian_shard":"Obsidian Shard",
    "item.mrc.tungsten_ingot":"Tungsten Ingot",
    "item.mrc.bronze_ingot":"Bronze Ingot",
    "item.mrc.tin_ingot":"Tin Ingot",
@@ -14,6 +14,13 @@
 
    "item.mrc.perfect_diamond": "Perfect Diamond",
    "item.mrc.charged_redstone": "Charged Redstone",
+   "item.mrc.compressed_netherite": "Compressed Netherite",
+   
+
+   "item.mrc.obsidian_shards":"Obsidian Shards",
+   "item.mrc.partally_refined_obsidian":"Partialy Refined Obsidian",
+   "item.mrc.refined_obsidian":"Refined Obsidian",
+   "item.mrc.refined_obsidian_ingot":"Refined Obsidian Ingot",
 
 
    "item.mrc.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Core",
@@ -26,6 +33,7 @@
    "item.mrc.raw_blue_nanitarium": "Raw Blue Nanitarium",
    "item.mrc.raw_red_nanitarium": "Raw Red Nanitarium",
    "item.mrc.raw_veranium": "Raw Veranium",
+   "item.mrc.raw_therium": "Raw Therium",
    "item.mrc.raw_titanium": "Raw Titanium",
 
 
@@ -63,6 +71,12 @@
    "block.mrc.veranium_block": "Veranium Block",
    "block.mrc.raw_veranium_block": "Raw Veranium Block",
 
+   "block.mrc.therium_ore": "Therium Ore",
+
+   "block.mrc.kyranium_block": "Kyranium Block",
+
+
+
    "block.mrc.titanium_ore": "Titanium Ore",
    "block.mrc.deepslate_titanium_ore": "Deepslate Titanium Ore",
    "block.mrc.titanium_block": "Titanium Block",
@@ -73,6 +87,16 @@
    "block.mrc.ruby_block": "Ruby Block",
 
    "block.mrc.charged_redstone_block": "Charged Redstone Block",
+
+   "item.mrc.kyranium_sword": "Kyranium Sword",
+	 "item.mrc.kyranium_pickaxe": "Kyranium Pickaxe",
+	 "item.mrc.kyranium_shovel": "Kyranium Shovel",
+	 "item.mrc.kyranium_axe": "Kyranium Axe",
+   "item.mrc.kyranium_hoe": "Kyranium Hoe",
+
+   "item.mrc.sharpened_kyranium_sword": "Sharpened Kyranium Sword",
+   "item.mrc.sharpened_kyranium_axe": "Sharpened Kyranium Axe",
+
 
 
    "item.mrc.blue_nanitarium_sword": "Blue Nanitarium Sword",
@@ -115,6 +139,12 @@
 	 "item.mrc.blue_nanitarium_chestplate": "Blue Nanitarium Chestplate",
 	 "item.mrc.blue_nanitarium_leggings": "Blue Nanitarium Leggings",
 	 "item.mrc.blue_nanitarium_boots": "Blue Nanitarium Boots",
+
+   "item.mrc.kyranium_helmet": "Kyranium Helmet",
+	 "item.mrc.kyranium_chestplate": "Kyranium Chestplate",
+	 "item.mrc.kyranium_leggings": "Kyranium Leggings",
+	 "item.mrc.kyranium_boots": "Kyranium Boots",
+
 
    "item.mrc.red_nanitarium_helmet": "Red Nanitarium Helmet",
 	 "item.mrc.red_nanitarium_chestplate": "Red Nanitarium Chestplate",

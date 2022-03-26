@@ -4,6 +4,6 @@
         "item": "mrc:raw_blue_nanitarium"
     },
     "result": "mrc:blue_nanitarium_ingot",
-    "experience": 0.1,
-    "cookingtime": 8000
+    "experience": 5.0,
+    "cookingtime": 1200
 }

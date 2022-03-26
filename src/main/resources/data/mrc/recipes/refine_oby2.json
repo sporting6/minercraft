@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "mrc:partally_refined_obsidian"
+    },
+    "result": "mrc:refined_obsidian",
+    "experience": 2.0,
+    "cookingtime": 160
+}
