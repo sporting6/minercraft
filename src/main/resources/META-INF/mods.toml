@@ -4,7 +4,7 @@ license="MIT"
 
 [[mods]]
 modId="mrc"
-version="0.0.0"
+version="0.0.1"
 displayName="MinerCraft"
 logoFile="logo.png"
 credits=""
