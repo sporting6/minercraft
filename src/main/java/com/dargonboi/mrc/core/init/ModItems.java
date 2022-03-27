@@ -2,6 +2,7 @@ package com.dargonboi.mrc.core.init;
 
 import com.dargonboi.mrc.MinerCraft;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -23,6 +24,11 @@ public final class ModItems {
 
 	private ModItems() {
 	}
+
+	public static final Rarity INSANE = Rarity.create("insane", ChatFormatting.GOLD);
+	public static final Rarity CRAZY_INSANE = Rarity.create("crazy_insane", ChatFormatting.BOLD.GOLD);
+
+
 
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinerCraft.MODID);
 
@@ -55,8 +61,8 @@ public final class ModItems {
 	public static final RegistryObject<Item> THERIUM_INGOT = ITEMS.register("therium_ingot", () -> new Item(
 			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 
-	public static final RegistryObject<Item> KYRANIUM_INGOT = ITEMS.register("kyranium_ingot", () -> new Item(
-			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+	public static final RegistryObject<Item> KYRANIUM_INGOT = ITEMS.register("kyranium_ingot",
+			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(INSANE)));
 
 	// Other Recources
 	public static final RegistryObject<Item> PERFECT_DIAMOND = ITEMS.register("perfect_diamond",
@@ -68,6 +74,9 @@ public final class ModItems {
 	public static final RegistryObject<Item> COMPRESSED_NETHERITE = ITEMS.register("compressed_netherite",
 			() -> new Item(new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant()
 					.rarity(Rarity.UNCOMMON)));
+
+	public static final RegistryObject<Item> KYRANIUM_HANDLE = ITEMS.register("kyranium_handle", () -> new Item(
+			new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).fireResistant().rarity(CRAZY_INSANE)));
 
 	// Obsidian
 	public static final RegistryObject<Item> OBSIDIAN_SHARDS = ITEMS.register("obsidian_shards", () -> new Item(
@@ -168,27 +177,27 @@ public final class ModItems {
 	// Kyranium Tools
 	public static final RegistryObject<SwordItem> KYRANIUM_SWORD = ITEMS.register("kyranium_sword",
 			() -> new SwordItem(ModToolMaterials.KYRANIUM, 12, -2.2F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<PickaxeItem> KYRANIUM_PICKAXE = ITEMS.register("kyranium_pickaxe",
 			() -> new PickaxeItem(ModToolMaterials.KYRANIUM, 6, -2.6F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<AxeItem> KYRANIUM_AXE = ITEMS.register("kyranium_axe",
 			() -> new AxeItem(ModToolMaterials.KYRANIUM, 17, -2.8F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<ShovelItem> KYRANIUM_SHOVEL = ITEMS.register("kyranium_shovel",
 			() -> new ShovelItem(ModToolMaterials.KYRANIUM, 8, -2.6F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<HoeItem> KYRANIUM_HOE = ITEMS.register("kyranium_hoe",
 			() -> new HoeItem(ModToolMaterials.KYRANIUM, 5, -2.6F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-	
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
+
 	public static final RegistryObject<SwordItem> SHARPENED_KYRANIUM_SWORD = ITEMS.register("sharpened_kyranium_sword",
 			() -> new SwordItem(ModToolMaterials.KYRANIUM, 17, -2.2F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.EPIC)));
-	
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(CRAZY_INSANE)));
+
 	public static final RegistryObject<AxeItem> SHARPENED_KYRANIUM_AXE = ITEMS.register("sharpened_kyranium_axe",
 			() -> new AxeItem(ModToolMaterials.KYRANIUM, 22, -2.7F,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.EPIC)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(CRAZY_INSANE)));
 
 	// Blue Nanitarium Multi-Tools
 	// public static final RegistryObject<> BLUE_NANITARIUM_PICK_SHOVEL =
@@ -295,16 +304,16 @@ public final class ModItems {
 	// Kyranium Aromor
 	public static final RegistryObject<ArmorItem> KYRANIUM_HELMET = ITEMS.register("kyranium_helmet",
 			() -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.HEAD,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-	public static final RegistryObject<ArmorItem> KYRANIUM_CHESTPLATE = ITEMS.register(
-			"kyranium_chestplate", () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.CHEST,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
+	public static final RegistryObject<ArmorItem> KYRANIUM_CHESTPLATE = ITEMS.register("kyranium_chestplate",
+			() -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.CHEST,
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<ArmorItem> KYRANIUM_LEGGINGS = ITEMS.register("kyranium_leggings",
 			() -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.LEGS,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 	public static final RegistryObject<ArmorItem> KYRANIUM_BOOTS = ITEMS.register("kyranium_boots",
 			() -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.FEET,
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_TOOLS_ARMOR).fireResistant().rarity(INSANE)));
 
 	// Titanium Armor
 	public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
@@ -394,7 +403,7 @@ public final class ModItems {
 
 	public static final RegistryObject<BlockItem> KYRANIUM_BLOCK_ITEM = ITEMS.register("kyranium_block",
 			() -> new BlockItem(ModBlocks.KYRANIUM_BLOCK.get(),
-					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(Rarity.RARE).fireResistant()));
+					new Item.Properties().tab(MinerCraft.MINERCRAFT_MATERIALS).rarity(INSANE).fireResistant()));
 
 	public static final RegistryObject<BlockItem> RED_NANITARIUM_BLOCK_ITEM = ITEMS.register("red_nanitarium_block",
 			() -> new BlockItem(ModBlocks.RED_NANITARIUM_BLOCK.get(),
