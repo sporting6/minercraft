@@ -2,19 +2,9 @@
     "replace": false,
     "values": [
 
-        "mrc:raw_titanium_block",
-        "mrc:titanium_ore",
-        "mrc:deepslate_titanium_ore",
-        "mrc:titanium_block",
-
-        "mrc:ruby_ore",
-        "mrc:deepslate_ruby_ore",
-        "mrc:ruby_block",
-
-        "mrc:diamond_chest",
-        "mrc:netherite_chest"
-
-
-
+        "krasyrum:titanium_ore",
+        "krasyrum:deepslate_titanium_ore",
+        "krasyrum:ruby_ore",
+        "krasyrum:deepslate_ruby_ore"
     ]
 }

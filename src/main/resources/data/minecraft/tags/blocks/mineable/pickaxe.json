@@ -1,37 +1,30 @@
 {
     "replace": false,
     "values": [
-        "mrc:blue_nanitarium_ore",
-        "mrc:raw_blue_nanitarium_block",
-        "mrc:blue_nanitarium_block",
+        "krasyrum:blue_nanitarium_ore",
+        "krasyrum:raw_blue_nanitarium_block",
+        "krasyrum:blue_nanitarium_block",
 
-        "mrc:red_nanitarium_ore",
-        "mrc:raw_red_nanitarium_block",
-        "mrc:red_nanitarium_block",
+        "krasyrum:red_nanitarium_ore",
+        "krasyrum:raw_red_nanitarium_block",
+        "krasyrum:red_nanitarium_block",
 
-        "mrc:raw_veranium_block",
-        "mrc:veranium_ore",
-        "mrc:veranium_block",
+        "krasyrum:raw_veranium_block",
+        "krasyrum:veranium_ore",
+        "krasyrum:veranium_block",
 
-        "mrc:therium_ore",
+        "krasyrum:therium_ore",
 
-        "mrc:kyranium_block",
+        "krasyrum:kyranium_block",
 
-        "mrc:raw_titanium_block",
-        "mrc:titanium_ore",
-        "mrc:deepslate_titanium_ore",
-        "mrc:titanium_block",
+        "krasyrum:raw_titanium_block",
+        "krasyrum:titanium_ore",
+        "krasyrum:deepslate_titanium_ore",
+        "krasyrum:titanium_block",
 
-        "mrc:ruby_ore",
-        "mrc:deepslate_ruby_ore",
-        "mrc:ruby_block",
-
-        "mrc:iron_chest",
-        "mrc:diamond_chest",
-        "mrc:netherite_chest",
-        "mrc:nanitarium_chest",
-
-        "mrc:charged_redstone_block"
+        "krasyrum:ruby_ore",
+        "krasyrum:deepslate_ruby_ore",
+        "krasyrum:ruby_block"
 
 
 

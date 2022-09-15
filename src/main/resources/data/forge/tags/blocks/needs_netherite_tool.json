@@ -1,10 +1,10 @@
 {
     "replace": false,
     "values": [
-        "mrc:veranium_ore",
-        "mrc:therium_ore",
-        "mrc:blue_nanitarium_ore",
-        "mrc:red_nanitarium_ore"
+        "krasyrum:veranium_ore",
+        "krasyrum:therium_ore",
+        "krasyrum:blue_nanitarium_ore",
+        "krasyrum:red_nanitarium_ore"
 
     ]
 }

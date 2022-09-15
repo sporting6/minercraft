@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": {
-        "item": "minecraft:redstone"
-    },
-    "result": "mrc:charged_redstone",
-    "experience": 5.0,
-    "cookingtime": 8000
-}

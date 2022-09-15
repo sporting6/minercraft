@@ -1,6 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": {
-		"layer0": "mrc:items/raw_red_nanitarium"
-	}
-}

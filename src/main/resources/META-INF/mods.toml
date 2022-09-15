@@ -3,7 +3,7 @@ loaderVersion="[37,)"
 license="MIT"
 
 [[mods]]
-modId="mrc"
+modId="krasyrum"
 version="0.0.1"
 displayName="MinerCraft"
 logoFile="logo.png"

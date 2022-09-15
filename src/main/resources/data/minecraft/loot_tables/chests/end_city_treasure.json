@@ -330,39 +330,6 @@
             ],
             "name": "minecraft:iron_shovel"
           },
-          {
-          "type": "minecraft:item",
-            "weight": 1,
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1.0,
-                  "max": 2.0
-                },
-                "add": false
-              }
-            ],
-            "name": "mrc:kyranium_handle"
-          },
-          {
-            "type": "minecraft:item",
-              "weight": 1,
-              "functions": [
-                {
-                  "function": "minecraft:set_count",
-                  "count": {
-                    "type": "minecraft:uniform",
-                    "min": 0.0,
-                    "max": 1.0
-                  },
-                  "add": false
-                }
-              ],
-              "name": "mrc:kyranium_ingot"
-            },
-
            {
             "type": "minecraft:item",
               "weight": 13,
@@ -377,7 +344,7 @@
                   "add": false
                 }
               ],
-              "name": "mrc:titanium_ingot"
+              "name": "krasyrum:titanium_ingot"
             },
             {
                 "type": "minecraft:item",
@@ -393,7 +360,7 @@
                       "add": false
                     }
                   ],
-                  "name": "mrc:ruby"
+                  "name": "krasyrum:ruby"
             },
             {
                 "type": "minecraft:item",
@@ -425,7 +392,7 @@
                       "add": false
                     }
                   ],
-                  "name": "mrc:veranium_ingot"
+                  "name": "krasyrum:veranium_ingot"
             },
             {
                 "type": "minecraft:item",
@@ -441,7 +408,7 @@
                       "add": false
                     }
                   ],
-                  "name": "mrc:perfect_diamond"
+                  "name": "krasyrum:perfect_diamond"
             }
         ]
       }

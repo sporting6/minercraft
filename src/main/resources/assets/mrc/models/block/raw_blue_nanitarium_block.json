@@ -1,6 +1,0 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "mrc:blocks/raw_blue_nanitarium_block"   
-    }
-}

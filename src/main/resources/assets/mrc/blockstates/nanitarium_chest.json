@@ -1,8 +1,0 @@
-{
-	"variants": {
-		"facing=north": { "model": "mrc:block/nanitarium_chest" },
-		"facing=south": { "model": "mrc:block/nanitarium_chest", "y": 180 },
-		"facing=west": { "model": "mrc:block/nanitarium_chest", "y": 270 },
-		"facing=east": { "model": "mrc:block/nanitarium_chest", "y": 90 }
-	}
-}

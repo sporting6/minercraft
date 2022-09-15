@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:blasting",
-    "ingredient": {
-        "item": "mrc:raw_therium"
-    },
-    "result": "mrc:therium_ingot",
-    "experience": 2.0,
-    "cookingtime": 160
-}
