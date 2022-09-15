@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "krasyrum:partally_refined_obsidian"
+    },
+    "result": "krasyrum:refined_obsidian",
+    "experience": 2.0,
+    "cookingtime": 160
+}

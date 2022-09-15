@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RRR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:refined_obsidian"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:refined_obsidian_ingot",
+        "count": 2
+    }
+}

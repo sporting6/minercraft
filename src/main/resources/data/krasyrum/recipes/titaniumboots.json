@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "   ",
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:titanium_ingot"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:titanium_boots",
+        "count": 1
+    }
+}

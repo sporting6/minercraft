@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " RR",
+        " sR",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:kyranium_ingot"
+        },
+        "s":
+        {
+            "item": "krasyrum:kyranium_handle"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:kyranium_axe",
+        "count": 1
+    }
+}

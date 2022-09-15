@@ -1,0 +1,34 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "KSK",
+        "KsK",
+        "KSK"
+    ],
+   
+    "key":
+    {
+        "K":
+        {
+            "item": "krasyrum:kyranium_ingot"
+        },
+        "s":
+        {
+            "item": "krasyrum:kyranium_sword"
+        },
+        "S":
+      {
+          "item": "krasyrum:compressed_netherite"
+      }
+
+        
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:sharpened_kyranium_sword",
+        "count": 1
+    }
+}

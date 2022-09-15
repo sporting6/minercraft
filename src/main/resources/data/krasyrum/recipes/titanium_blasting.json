@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "krasyrum:raw_titanium"
+  },
+  "result": "krasyrum:titanium_ingot",
+  "experience": 5.0,
+  "cookingtime": 60
+}

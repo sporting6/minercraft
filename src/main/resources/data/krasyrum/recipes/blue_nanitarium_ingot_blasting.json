@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "krasyrum:raw_blue_nanitarium"
+    },
+    "result": "krasyrum:blue_nanitarium_ingot",
+    "experience": 5.0,
+    "cookingtime": 1200
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "krasyrum:deepslate_ruby_ore"
+  },
+  "result": "krasyrum:ruby",
+  "experience": 5.0,
+  "cookingtime": 60
+}

@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "krasyrum:red_nanitarium_block"
+      }
+    ],
+    "result":
+    {
+      "item": "krasyrum:red_nanitarium_ingot",
+      "count": 9
+    }
+  }

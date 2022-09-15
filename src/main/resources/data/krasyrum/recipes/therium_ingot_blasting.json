@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "krasyrum:raw_therium"
+    },
+    "result": "krasyrum:therium_ingot",
+    "experience": 2.0,
+    "cookingtime": 160
+}

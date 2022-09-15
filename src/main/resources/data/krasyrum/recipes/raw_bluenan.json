@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "krasyrum:raw_blue_nanitarium_block"
+      }
+    ],
+    "result":
+    {
+      "item": "krasyrum:raw_blue_nanitarium",
+      "count": 9
+    }
+  }

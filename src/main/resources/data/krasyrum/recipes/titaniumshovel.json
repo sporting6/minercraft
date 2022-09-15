@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " R ",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:titanium_ingot"
+        },
+        "s":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:titanium_shovel",
+        "count": 1
+    }
+}

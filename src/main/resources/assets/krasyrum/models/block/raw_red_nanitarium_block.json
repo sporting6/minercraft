@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "krasyrum:blocks/raw_red_nanitarium_block"   
+    }
+}

@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "krasyrum:block/netherite_chest" },
+		"facing=south": { "model": "krasyrum:block/netherite_chest", "y": 180 },
+		"facing=west": { "model": "krasyrum:block/netherite_chest", "y": 270 },
+		"facing=east": { "model": "krasyrum:block/netherite_chest", "y": 90 }
+	}
+}

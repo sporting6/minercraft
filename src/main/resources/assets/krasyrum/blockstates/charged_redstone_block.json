@@ -1,0 +1,5 @@
+{
+    "variants": {
+     "" : { "model": "krasyrum:block/charged_redstone_block" }
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:crafting_shaped",
+ 
+  "pattern":
+  [
+      "ORO",
+      "BSB",
+      "VTV"
+  ],
+ 
+  "key":
+  {
+      "B":
+      {
+          "item": "krasyrum:blue_nanitarium_block"
+      },
+      "R":
+      {
+          "item": "krasyrum:red_nanitarium_block"
+      },
+      "O":
+      {
+          "item": "krasyrum:refined_obsidian_ingot"
+      },
+      "T":
+      {
+          "item": "krasyrum:therium_ingot"
+      },
+      "V":
+      {
+          "item": "krasyrum:veranium_ingot"
+      },
+      "S":
+      {
+          "item": "krasyrum:compressed_netherite"
+      }
+  },
+ 
+  "result":
+  {
+      "item": "krasyrum:kyranium_ingot",
+      "count": 2
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "krasyrum:titanium_block"
+    }
+   
+    ],
+ 
+    "result":
+    {
+        "item": "krasyrum:titanium_ingot",
+        "count": 9
+    }
+}

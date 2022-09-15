@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "ttt",
+        " s ",
+        " s "
+    ],
+   
+    "key":
+    {
+        "t":
+        {
+            "item": "krasyrum:kyranium_ingot"
+        },
+        "s":
+        {
+            "item": "krasyrum:kyranium_handle"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:kyranium_pickaxe",
+        "count": 1
+    }
+}

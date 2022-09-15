@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        "RAR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:blue_nanitarium_ingot"
+        },
+
+        "A":
+        {
+            "item": "minecraft:enchanted_golden_apple"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:blue_nanitarium_apple",
+        "count": 1
+    }
+}

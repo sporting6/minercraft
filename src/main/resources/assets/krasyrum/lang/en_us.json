@@ -1,0 +1,176 @@
+{
+  "item.krasyrum.kyranium_ingot": "Kyranite Ingot",
+  "item.krasyrum.blue_nanitarium_ingot": "Blue Nanitarium Ingot",
+  "item.krasyrum.red_nanitarium_ingot": "Red Nanitarium Ingot",
+  "item.krasyrum.veranium_ingot": "Veranium Ingot",
+  "item.krasyrum.therium_ingot": "Therium Ingot",
+  "item.krasyrum.titanium_ingot": "Titanium Ingot",
+  "item.krasyrum.copper_ingot":"Copper Ingot",
+  "item.krasyrum.tungsten_ingot":"Tungsten Ingot",
+  "item.krasyrum.bronze_ingot":"Bronze Ingot",
+  "item.krasyrum.tin_ingot":"Tin Ingot",
+  "item.krasyrum.ruby":"Ruby",
+
+
+  "item.krasyrum.perfect_diamond": "Perfect Diamond",
+  "item.krasyrum.charged_redstone": "Charged Redstone",
+  "item.krasyrum.compressed_netherite": "Compressed Netherite",
+  "item.krasyrum.kyranium_handle": "Kyranite Handle",
+
+
+
+  "item.krasyrum.obsidian_shards":"Obsidian Shards",
+  "item.krasyrum.partally_refined_obsidian":"Partialy Refined Obsidian",
+  "item.krasyrum.refined_obsidian":"Refined Obsidian",
+  "item.krasyrum.refined_obsidian_ingot":"Refined Obsidian Ingot",
+
+
+  "item.krasyrum.blue_nanitarium_upgrade": "Blue Nanitarium Upgrade Core",
+  "item.krasyrum.red_nanitarium_upgrade": "Red Nanitarium Upgrade Core",
+  "item.krasyrum.netherite_upgrade": "Netherite Chest Upgrade Core",
+  "item.krasyrum.nanitarium_upgrade": "Nanitarium Chest Upgrade Core",
+
+
+
+  "item.krasyrum.raw_blue_nanitarium": "Raw Blue Nanitarium",
+  "item.krasyrum.raw_red_nanitarium": "Raw Red Nanitarium",
+  "item.krasyrum.raw_veranium": "Raw Veranium",
+  "item.krasyrum.raw_therium": "Raw Therium",
+  "item.krasyrum.raw_titanium": "Raw Titanium",
+
+
+  "block.krasyrum.iron_chest": "Iron Chest",
+  "container.krasyrum.iron_chest": "Iron Chest",
+
+  "block.krasyrum.diamond_chest": "Diamond Chest",
+  "container.krasyrum.diamond_chest": "Diamond Chest",
+
+  "block.krasyrum.netherite_chest": "Netherite Chest",
+  "container.krasyrum.netherite_chest": "Netherite Chest",
+
+  "block.krasyrum.nanitarium_chest": "Nanitarium Chest",
+  "container.krasyrum.nanitarium_chest": "Nanitarium Chest",
+
+  "button.krasyrum.right_page_button": ">",
+
+  "item.krasyrum.blue_nanitarium_apple": "Nanitarium Apple",
+  "item.krasyrum.red_nanitarium_apple": "Nanitarium Apple",
+  "item.krasyrum.hastey_apple": "Hastey Apple",
+
+  "block.krasyrum.pineapple_crop": "Pineapple Plant",
+  "item.krasyrum.pineapple_seeds": "Pineapple Seeds",
+  "item.krasyrum.pineapple": "Pineapple",
+  "item.krasyrum.pineapple_slice": "Pineapple Slice",
+
+
+  "block.krasyrum.blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore",
+  "block.krasyrum.blue_nanitarium_block": "Blue Nanitarium Block",
+  "block.krasyrum.raw_blue_nanitarium_block": "Raw Blue Nanitarium Block",
+
+  "block.krasyrum.red_nanitarium_ore": "Red Nanitarium Ore",
+  "block.krasyrum.red_nanitarium_block": "Red Nanitarium Block",
+  "block.krasyrum.raw_red_nanitarium_block": "Raw Red Nanitarium Block",
+
+  "block.krasyrum.veranium_ore": "Veranium Ore",
+  "block.krasyrum.veranium_block": "Veranium Block",
+  "block.krasyrum.raw_veranium_block": "Raw Veranium Block",
+
+  "block.krasyrum.therium_ore": "Therium Ore",
+
+  "block.krasyrum.kyranium_block": "Kyranite Block",
+
+
+
+  "block.krasyrum.titanium_ore": "Titanium Ore",
+  "block.krasyrum.deepslate_titanium_ore": "Deepslate Titanium Ore",
+  "block.krasyrum.titanium_block": "Titanium Block",
+  "block.krasyrum.raw_titanium_block": "Raw Titanium Block",
+
+  "block.krasyrum.ruby_ore": "Ruby Ore",
+  "block.krasyrum.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.krasyrum.ruby_block": "Ruby Block",
+
+  "block.krasyrum.charged_redstone_block": "Charged Redstone Block",
+
+  "item.krasyrum.kyranium_sword": "Kyranite Sword",
+  "item.krasyrum.kyranium_pickaxe": "Kyranite Pickaxe",
+  "item.krasyrum.kyranium_shovel": "Kyranite Shovel",
+  "item.krasyrum.kyranium_axe": "Kyranite Axe",
+  "item.krasyrum.kyranium_hoe": "Kyranite Hoe",
+
+  "item.krasyrum.sharpened_kyranium_sword": "Sharpened Kyranite Sword",
+  "item.krasyrum.sharpened_kyranium_axe": "Sharpened Kyranite Axe",
+
+
+
+  "item.krasyrum.blue_nanitarium_sword": "Blue Nanitarium Sword",
+  "item.krasyrum.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
+  "item.krasyrum.blue_nanitarium_shovel": "Blue Nanitarium Shovel",
+  "item.krasyrum.blue_nanitarium_axe": "Blue Nanitarium Axe",
+  "item.krasyrum.blue_nanitarium_hoe": "Blue Nanitarium Hoe",
+
+  "item.krasyrum.red_nanitarium_sword": "Red Nanitarium Sword",
+  "item.krasyrum.red_nanitarium_pickaxe": "Red Nanitarium Pickaxe",
+  "item.krasyrum.red_nanitarium_shovel": "Red Nanitarium Shovel",
+  "item.krasyrum.red_nanitarium_axe": "Red Nanitarium Axe",
+  "item.krasyrum.red_nanitarium_hoe": "Red Nanitarium Hoe",
+
+  "item.krasyrum.veranium_sword": "Veranium Sword",
+  "item.krasyrum.veranium_pickaxe": "Veranium Pickaxe",
+  "item.krasyrum.veranium_shovel": "Veranium Shovel",
+  "item.krasyrum.veranium_axe": "Veranium Axe",
+  "item.krasyrum.veranium_hoe": "Veranium Hoe",
+
+  "item.krasyrum.titanium_sword": "Titanium Sword",
+  "item.krasyrum.titanium_pickaxe": "Titanium Pickaxe",
+  "item.krasyrum.titanium_shovel": "Titanium Shovel",
+  "item.krasyrum.titanium_axe": "Titanium Axe",
+  "item.krasyrum.titanium_hoe": "Titanium Hoe",
+
+  "item.krasyrum.ruby_sword": "Ruby Sword",
+  "item.krasyrum.ruby_pickaxe": "Ruby Pickaxe",
+  "item.krasyrum.ruby_shovel": "Ruby Shovel",
+  "item.krasyrum.ruby_axe": "Ruby Axe",
+  "item.krasyrum.ruby_hoe": "Ruby Hoe",
+
+
+
+  "item.krasyrum.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
+
+
+
+  "item.krasyrum.blue_nanitarium_helmet": "Blue Nanitarium Helmet",
+  "item.krasyrum.blue_nanitarium_chestplate": "Blue Nanitarium Chestplate",
+  "item.krasyrum.blue_nanitarium_leggings": "Blue Nanitarium Leggings",
+  "item.krasyrum.blue_nanitarium_boots": "Blue Nanitarium Boots",
+
+  "item.krasyrum.kyranium_helmet": "Kyranite Helmet",
+  "item.krasyrum.kyranium_chestplate": "Kyranite Chestplate",
+  "item.krasyrum.kyranium_leggings": "Kyranite Leggings",
+  "item.krasyrum.kyranium_boots": "Kyranite Boots",
+
+
+  "item.krasyrum.red_nanitarium_helmet": "Red Nanitarium Helmet",
+  "item.krasyrum.red_nanitarium_chestplate": "Red Nanitarium Chestplate",
+  "item.krasyrum.red_nanitarium_leggings": "Red Nanitarium Leggings",
+  "item.krasyrum.red_nanitarium_boots": "Red Nanitarium Boots",
+
+  "item.krasyrum.titanium_helmet": "Titanium Helmet",
+  "item.krasyrum.titanium_chestplate": "Titanium Chestplate",
+  "item.krasyrum.titanium_leggings": "Titanium Leggings",
+  "item.krasyrum.titanium_boots": "Titanium Boots",
+
+  "item.krasyrum.ruby_helmet": "Ruby Helmet",
+  "item.krasyrum.ruby_chestplate": "Ruby Chestplate",
+  "item.krasyrum.ruby_leggings": "Ruby Leggings",
+  "item.krasyrum.ruby_boots": "Ruby Boots",
+
+
+  "itemGroup.krasyrum_materials": "Krasyrum Materials",
+  "itemGroup.krasyrum_tools_armor": "Krasyrum Tools And Armor",
+  "itemGroup.krasyrum_foods": "Krasyrum Foods",
+  "itemGroup.krasyrum_chests": "Krasyrum Storage"
+
+
+
+}

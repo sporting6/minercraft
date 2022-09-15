@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "krasyrum:raw_veranium"
+    },
+    "result": "krasyrum:veranium_ingot",
+    "experience": 5,
+    "cookingtime": 200
+}

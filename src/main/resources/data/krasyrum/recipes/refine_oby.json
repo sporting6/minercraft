@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "minecraft:obsidian"
+    },
+    "result": "krasyrum:obsidian_shards",
+    "experience": 2.0,
+    "cookingtime": 200
+}
