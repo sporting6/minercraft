@@ -89,6 +89,10 @@ public class ModBlockItem {
             () -> new BlockItem(ModBlocks.RUBY_BLOCK.get(),
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
 
+    public static final RegistryObject<BlockItem> INFUSION_CHAMBER_ITEM = ITEMS.register("infusion_chamber",
+            () -> new BlockItem(ModBlocks.INFUSION_CHAMBER.get(),
+                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
+
     public static void Register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

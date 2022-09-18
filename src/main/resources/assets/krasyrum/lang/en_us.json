@@ -30,7 +30,18 @@
   "item.krasyrum.netherite_upgrade": "Netherite Chest Upgrade Core",
   "item.krasyrum.nanitarium_upgrade": "Nanitarium Chest Upgrade Core",
 
+  "block.krasyrum.infusion_chamber": "Infusion Chamber",
 
+  "item.minecraft.potion.effect.acid_bottle": "Acid Bottle",
+  "item.minecraft.splash_potion.effect.acid_bottle": "Splash Bottle of Acid",
+  "item.minecraft.lingering_potion.effect.acid_bottle": "Lingering Bottle of Acid",
+  "item.minecraft.tipped_arrow.effect.acid_bottle": "Arrow of Acid",
+
+  "block.krasyrum.lemon_log": "Lemon Log",
+  "block.krasyrum.lemon_wood": "Lemon Wood",
+  "block.krasyrum.lemon_planks": "Lemon Planks",
+  "block.krasyrum.stripped_lemon_log": "Stripped Lemon Log",
+  "block.krasyrum.stripped_lemon_wood": "Stripped Lemon Wood",
 
   "item.krasyrum.raw_blue_nanitarium": "Raw Blue Nanitarium",
   "item.krasyrum.raw_red_nanitarium": "Raw Red Nanitarium",
