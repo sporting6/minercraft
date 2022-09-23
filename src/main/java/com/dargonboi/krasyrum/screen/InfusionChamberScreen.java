@@ -1,6 +1,6 @@
 package com.dargonboi.krasyrum.screen;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class InfusionChamberScreen extends AbstractContainerScreen<InfusionChamberMenu> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(MinerCraft.MODID, "textures/gui/infusion_chamber.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(Krasyrum.MODID, "textures/gui/infusion_chamber.png");
 
     public InfusionChamberScreen(InfusionChamberMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

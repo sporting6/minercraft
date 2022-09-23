@@ -1,6 +1,6 @@
 package com.dargonboi.krasyrum.recipe;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,7 +11,7 @@ public class ModRecipes {
 
 
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, MinerCraft.MODID);
+            DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Krasyrum.MODID);
 
     public static final RegistryObject<RecipeSerializer<InfusionChamberRecipe>> INFUSION_CHAMBER_SERIALIZER =
             SERIALIZERS.register("infusing", () -> InfusionChamberRecipe.Serializer.INSTANCE);

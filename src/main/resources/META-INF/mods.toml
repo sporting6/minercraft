@@ -5,10 +5,10 @@ license="MIT"
 [[mods]]
 modId="krasyrum"
 version="0.0.1"
-displayName="MinerCraft"
+displayName="The Krasyrum"
 logoFile="logo.png"
 credits=""
-authors="Sporting6"
+authors="DargonBoi"
 description='''
 Extra Materials For Minecraft.
 '''

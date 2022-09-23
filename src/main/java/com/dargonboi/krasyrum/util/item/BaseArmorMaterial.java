@@ -1,11 +1,11 @@
-package com.dargonboi.krasyrum.init;
-
-import java.util.function.Supplier;
+package com.dargonboi.krasyrum.util.item;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
+
+import java.util.function.Supplier;
 
 public class BaseArmorMaterial implements ArmorMaterial {
 	

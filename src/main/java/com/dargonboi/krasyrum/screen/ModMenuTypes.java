@@ -1,6 +1,6 @@
 package com.dargonboi.krasyrum.screen;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModMenuTypes {
 
     public static final DeferredRegister<MenuType<?>> MENUS =
-            DeferredRegister.create(ForgeRegistries.CONTAINERS, MinerCraft.MODID);
+            DeferredRegister.create(ForgeRegistries.CONTAINERS, Krasyrum.MODID);
 
     public static final RegistryObject<MenuType<InfusionChamberMenu>> INFUSION_CHAMBER_MENU =
             registerMenuType(InfusionChamberMenu::new, "infusion_chamber_menu");

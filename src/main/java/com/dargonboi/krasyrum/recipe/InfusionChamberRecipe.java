@@ -1,6 +1,6 @@
 package com.dargonboi.krasyrum.recipe;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
@@ -69,7 +69,7 @@ public class InfusionChamberRecipe implements Recipe<SimpleContainer> {
     public static class Serializer implements RecipeSerializer<InfusionChamberRecipe>{
         public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
-                new ResourceLocation(MinerCraft.MODID,"infusing");
+                new ResourceLocation(Krasyrum.MODID,"infusing");
 
         @Override
         public InfusionChamberRecipe fromJson(ResourceLocation id, JsonObject json) {

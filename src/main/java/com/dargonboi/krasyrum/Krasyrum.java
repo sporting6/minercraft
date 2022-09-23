@@ -1,8 +1,9 @@
 package com.dargonboi.krasyrum;
 
+import com.dargonboi.krasyrum.block.ModBlocks;
+import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
-import com.dargonboi.krasyrum.init.*;
-
+import com.dargonboi.krasyrum.item.*;
 import com.dargonboi.krasyrum.recipe.ModRecipes;
 import com.dargonboi.krasyrum.screen.InfusionChamberScreen;
 import com.dargonboi.krasyrum.screen.ModMenuTypes;
@@ -14,13 +15,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import javax.swing.*;
-
-@Mod(MinerCraft.MODID)
-public class MinerCraft {
+@Mod(Krasyrum.MODID)
+public class Krasyrum {
 	public static final String MODID = "krasyrum";
 
-	public MinerCraft() {
+	public Krasyrum() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -45,6 +44,10 @@ public class MinerCraft {
 	}
 	private void clientSetup(final FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.INFUSION_CHAMBER.get(), RenderType.cutout());
+
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_LEAVES.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_SAPLING.get(), RenderType.cutout());
+
 
 		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
 

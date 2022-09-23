@@ -1,16 +1,17 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.block;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.custom.InfusionChamberBlock;
+import com.dargonboi.krasyrum.item.ModIngots;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.world.feature.tree.LemonTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
@@ -20,14 +21,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nullable;
-import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
-            MinerCraft.MODID);
+            Krasyrum.MODID);
 
 
     // Raw Ore Blocks
@@ -72,6 +71,27 @@ public class ModBlocks {
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> LEMON_LEAVES = registerBlock("lemon_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeTab.KRASYRUM_MATERIALS);
+    public static final RegistryObject<Block> LEMON_SAPLING = registerBlock("lemon_sapling",
+            () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTab.KRASYRUM_TOOLS_ARMOR);
+
 
     public static final RegistryObject<Block> INFUSION_CHAMBER = registerBlock("infusion_chamber",
             () -> new InfusionChamberBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)

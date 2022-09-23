@@ -1,0 +1,6 @@
+{
+   "parent": "block/leaves",
+   "textures": {
+       "all": "krasyrum:blocks/lemon_leaves"
+   }
+}

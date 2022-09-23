@@ -1,6 +1,9 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.item;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.util.item.ModRaritys;
+import com.dargonboi.krasyrum.util.item.ModToolMaterials;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -8,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModTools {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinerCraft.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
 
     // Blue Nanitarium Tools

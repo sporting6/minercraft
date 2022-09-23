@@ -1,6 +1,8 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.item;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.util.item.ModRaritys;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -10,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModIngots {
 
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinerCraft.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
     public static final RegistryObject<Item> BLUE_NANITARIUM_INGOT = ITEMS.register("blue_nanitarium_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));

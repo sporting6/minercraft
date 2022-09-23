@@ -1,7 +1,7 @@
 package com.dargonboi.krasyrum.screen;
 
+import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.entity.custom.InfusionChamberBlockEntity;
-import com.dargonboi.krasyrum.init.ModBlocks;
 import com.dargonboi.krasyrum.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,7 +12,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.Nullable;
 
 public class InfusionChamberMenu extends AbstractContainerMenu {
     private final InfusionChamberBlockEntity blockEntity;

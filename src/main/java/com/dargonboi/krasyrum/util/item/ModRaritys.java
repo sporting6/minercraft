@@ -1,4 +1,4 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.util.item;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.Rarity;

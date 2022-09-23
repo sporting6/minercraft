@@ -1,10 +1,8 @@
 package com.dargonboi.krasyrum.block.entity;
 
-import com.dargonboi.krasyrum.MinerCraft;
-import com.dargonboi.krasyrum.block.custom.InfusionChamberBlock;
+import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.entity.custom.InfusionChamberBlockEntity;
-import com.dargonboi.krasyrum.init.ModBlocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModBlockEntities {
 
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
-            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, MinerCraft.MODID);
+            DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Krasyrum.MODID);
 
     public static final RegistryObject<BlockEntityType<InfusionChamberBlockEntity>> INFUSION_CHAMBER_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("infusion_chamber_block_entity",

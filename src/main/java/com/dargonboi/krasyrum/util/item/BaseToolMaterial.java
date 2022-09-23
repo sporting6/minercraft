@@ -1,9 +1,9 @@
-package com.dargonboi.krasyrum.init;
-
-import java.util.function.Supplier;
+package com.dargonboi.krasyrum.util.item;
 
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+
+import java.util.function.Supplier;
 
 public class BaseToolMaterial implements Tier {
 	

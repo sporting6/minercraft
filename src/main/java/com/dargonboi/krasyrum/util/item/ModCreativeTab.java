@@ -1,5 +1,8 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.util.item;
 
+import com.dargonboi.krasyrum.item.ModFoods;
+import com.dargonboi.krasyrum.item.ModIngots;
+import com.dargonboi.krasyrum.item.ModTools;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 

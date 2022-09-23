@@ -1,0 +1,5 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "krasyrum:titanium_ore_placed"
+}

@@ -1,6 +1,9 @@
-package com.dargonboi.krasyrum.init;
+package com.dargonboi.krasyrum.item;
 
-import com.dargonboi.krasyrum.MinerCraft;
+import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.util.item.ModArmorMaterial;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.util.item.ModRaritys;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
@@ -11,7 +14,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModArmor {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MinerCraft.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
     // Blue Nanitarium Armor
     public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_HELMET = ITEMS.register("blue_nanitarium_helmet",
