@@ -18,6 +18,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<InfusionChamberMenu>> INFUSION_CHAMBER_MENU =
             registerMenuType(InfusionChamberMenu::new, "infusion_chamber_menu");
 
+    public static final RegistryObject<MenuType<CondenserMenu>> CONDENSER_MENU =
+            registerMenuType(CondenserMenu::new, "condenser_menu");
+
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {

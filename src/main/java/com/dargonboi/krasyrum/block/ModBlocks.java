@@ -1,6 +1,7 @@
 package com.dargonboi.krasyrum.block;
 
 import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.block.custom.CondenserBlock;
 import com.dargonboi.krasyrum.block.custom.InfusionChamberBlock;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
@@ -92,9 +93,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEMON_SAPLING = registerBlock("lemon_sapling",
             () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTab.KRASYRUM_TOOLS_ARMOR);
 
-
+    // Machines
     public static final RegistryObject<Block> INFUSION_CHAMBER = registerBlock("infusion_chamber",
             () -> new InfusionChamberBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+                    .strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> CONDENSER = registerBlock("condenser",
+            () -> new CondenserBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

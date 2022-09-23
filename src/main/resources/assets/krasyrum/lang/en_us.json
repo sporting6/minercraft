@@ -31,11 +31,11 @@
   "item.krasyrum.nanitarium_upgrade": "Nanitarium Chest Upgrade Core",
 
   "block.krasyrum.infusion_chamber": "Infusion Chamber",
+  "block.krasyrum.condenser": "Condenser",
 
-  "item.minecraft.potion.effect.acid_bottle": "Acid Bottle",
-  "item.minecraft.splash_potion.effect.acid_bottle": "Splash Bottle of Acid",
-  "item.minecraft.lingering_potion.effect.acid_bottle": "Lingering Bottle of Acid",
-  "item.minecraft.tipped_arrow.effect.acid_bottle": "Arrow of Acid",
+  "item.krasyrum.lemon_juice":"Lemon Juice",
+  "item.krasyrum.acid_bottle":"Acid Bottle",
+
 
   "block.krasyrum.lemon_leaves": "Lemon Leaves",
   "block.krasyrum.lemon_sapling": "Lemon Sapling",

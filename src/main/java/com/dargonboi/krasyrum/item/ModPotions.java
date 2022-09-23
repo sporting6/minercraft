@@ -14,8 +14,6 @@ public class ModPotions {
     public static final DeferredRegister<Potion> POTIONS
             = DeferredRegister.create(ForgeRegistries.POTIONS, Krasyrum.MODID);
 
-    public static final RegistryObject<Potion> ACID_BOTTLE = POTIONS.register("acid_bottle",
-            () -> new Potion(new MobEffectInstance(MobEffects.POISON, 200, 0)));
 
 
     public static void register(IEventBus eventBus) {

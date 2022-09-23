@@ -5,6 +5,7 @@ import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.*;
 import com.dargonboi.krasyrum.recipe.ModRecipes;
+import com.dargonboi.krasyrum.screen.CondenserScreen;
 import com.dargonboi.krasyrum.screen.InfusionChamberScreen;
 import com.dargonboi.krasyrum.screen.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -50,6 +51,8 @@ public class Krasyrum {
 
 
 		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
+		MenuScreens.register(ModMenuTypes.CONDENSER_MENU.get(), CondenserScreen::new);
+
 
 	}
 }

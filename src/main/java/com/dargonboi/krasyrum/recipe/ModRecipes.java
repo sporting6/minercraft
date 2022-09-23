@@ -13,8 +13,11 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Krasyrum.MODID);
 
-    public static final RegistryObject<RecipeSerializer<InfusionChamberRecipe>> INFUSION_CHAMBER_SERIALIZER =
+    public static final RegistryObject<RecipeSerializer<InfusionChamberRecipe>> INFUSING_SERIALIZER =
             SERIALIZERS.register("infusing", () -> InfusionChamberRecipe.Serializer.INSTANCE);
+
+    public static final RegistryObject<RecipeSerializer<CondenserRecipe>> CONDENSING_SERIALIZER =
+            SERIALIZERS.register("condensing", () -> CondenserRecipe.Serializer.INSTANCE);
 
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);

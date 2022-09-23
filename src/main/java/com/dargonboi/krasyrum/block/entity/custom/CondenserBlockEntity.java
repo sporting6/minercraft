@@ -1,10 +1,9 @@
 package com.dargonboi.krasyrum.block.entity.custom;
 
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
-import com.dargonboi.krasyrum.item.ModFoods;
 import com.dargonboi.krasyrum.item.ModPotions;
-import com.dargonboi.krasyrum.recipe.InfusionChamberRecipe;
-import com.dargonboi.krasyrum.screen.InfusionChamberMenu;
+import com.dargonboi.krasyrum.recipe.CondenserRecipe;
+import com.dargonboi.krasyrum.screen.CondenserMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -35,8 +34,8 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
-public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(5){
+public class CondenserBlockEntity extends BlockEntity implements MenuProvider {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3){
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -47,23 +46,23 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 200;
+    private int maxProgress = 1000;
 
-    public InfusionChamberBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.INFUSION_CHAMBER_BLOCK_ENTITY.get(), pos, state);
+    public CondenserBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.CONDENSER_BLOCK_ENTITY.get(), pos, state);
         this.data = new ContainerData() {
             public int get(int index) {
                 switch (index) {
-                    case 0: return InfusionChamberBlockEntity.this.progress;
-                    case 1: return InfusionChamberBlockEntity.this.maxProgress;
+                    case 0: return CondenserBlockEntity.this.progress;
+                    case 1: return CondenserBlockEntity.this.maxProgress;
                     default: return 0;
                 }
             }
 
             public void set(int index, int value) {
                 switch(index) {
-                    case 0: InfusionChamberBlockEntity.this.progress = value; break;
-                    case 1: InfusionChamberBlockEntity.this.maxProgress = value; break;
+                    case 0: CondenserBlockEntity.this.progress = value; break;
+                    case 1: CondenserBlockEntity.this.maxProgress = value; break;
                 }
             }
 
@@ -75,13 +74,13 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("Infusion Chamber");
+        return new TextComponent("Condenser");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inv, Player player) {
-        return new InfusionChamberMenu(id, inv, this, this.data);
+        return new CondenserMenu(id, inv, this, this.data);
     }
 
     @Nonnull
@@ -109,7 +108,7 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
         tag.put("inventory", itemHandler.serializeNBT());
-        tag.putInt("infusion_chamber.progress", progress);
+        tag.putInt("condenser.progress", progress);
         super.saveAdditional(tag);
     }
 
@@ -117,7 +116,7 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
     public void load(CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
-        progress = nbt.getInt("infusion_chamber.progress"); 
+        progress = nbt.getInt("condenser.progress"); 
     }
 
     public void drops() {
@@ -129,7 +128,7 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
 
-    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, InfusionChamberBlockEntity pBlockEntity) {
+    public static void tick(Level pLevel, BlockPos pPos, BlockState pState, CondenserBlockEntity pBlockEntity) {
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
@@ -142,55 +141,51 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
         }
     }
 
-    private static boolean hasRecipe(InfusionChamberBlockEntity entity) {
+    private static boolean hasRecipe(CondenserBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<InfusionChamberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(InfusionChamberRecipe.Type.INSTANCE, inventory, level);
+        Optional<CondenserRecipe> match = level.getRecipeManager()
+                .getRecipeFor(CondenserRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())
-                && hasWaterInWaterSlot(entity) && hasFuelInFuelSlot(entity);
+                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem()) && hasFuelInFuelSlot(entity);
     }
 
-    private static boolean hasWaterInWaterSlot(InfusionChamberBlockEntity entity) {
-        return (entity.itemHandler.getStackInSlot(1).getItem() == ModFoods.ACID_BOTTLE.get());
-    }
 
-    private static boolean hasFuelInFuelSlot(InfusionChamberBlockEntity entity) {
+
+    private static boolean hasFuelInFuelSlot(CondenserBlockEntity entity) {
         boolean hasFuel = false;
         Item[] fuels = {Items.COAL, Items.CHARCOAL};
         for(int i = 0; i < fuels.length; i++){
-            if (entity.itemHandler.getStackInSlot(3).getItem() == fuels[i]) {
+            if (entity.itemHandler.getStackInSlot(1).getItem() == fuels[i]) {
                 hasFuel = true;
             }
         }
         return hasFuel;
     }
 
-    private static void craftItem(InfusionChamberBlockEntity entity) {
+    private static void craftItem(CondenserBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<InfusionChamberRecipe> match = level.getRecipeManager()
-                .getRecipeFor(InfusionChamberRecipe.Type.INSTANCE, inventory, level);
+        Optional<CondenserRecipe> match = level.getRecipeManager()
+                .getRecipeFor(CondenserRecipe.Type.INSTANCE, inventory, level);
 
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);
             entity.itemHandler.extractItem(1,1, false);
-            entity.itemHandler.extractItem(2,1, false);
-            entity.itemHandler.extractItem(3,1, false);
 
 
-            entity.itemHandler.setStackInSlot(4, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(4).getCount() + 1));
+
+            entity.itemHandler.setStackInSlot(2, new ItemStack(match.get().getResultItem().getItem(),
+                    entity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             entity.resetProgress();
         }
@@ -201,11 +196,11 @@ public class InfusionChamberBlockEntity extends BlockEntity implements MenuProvi
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output) {
-        return inventory.getItem(4).getItem() == output.getItem() || inventory.getItem(4).isEmpty();
+        return inventory.getItem(2).getItem() == output.getItem() || inventory.getItem(2).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(4).getMaxStackSize() > inventory.getItem(4).getCount();
+        return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
     }
 
 }

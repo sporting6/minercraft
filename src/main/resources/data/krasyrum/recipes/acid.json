@@ -1,0 +1,12 @@
+{
+    "type": "krasyrum:condensing",
+    "ingredients": [
+      {
+        "item": "krasyrum:lemon_juice"
+      }
+    ],
+    "output":
+    {
+      "item": "krasyrum:acid_bottle"
+    }
+  }

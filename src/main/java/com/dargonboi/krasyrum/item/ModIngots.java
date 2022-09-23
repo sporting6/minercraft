@@ -77,6 +77,9 @@ public class ModIngots {
             () -> new Item(
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> LEMON_JUICE = ITEMS.register("lemon_juice", () -> new Item(
+            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant()));
+
 
     public static void Register(IEventBus eventBus){
         ITEMS.register(eventBus);

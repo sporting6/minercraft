@@ -49,7 +49,10 @@ public class ModFoods {
                             .rarity(Rarity.EPIC)
                             .food(new FoodProperties.Builder().alwaysEat().nutrition(5).saturationMod(1.5F).fast()
                                     .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 24000, 2), 1)
-                                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 24000, 2), 1).build())));
+                                    .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 24000, 4), 1).build())));
+    public static final RegistryObject<Item> ACID_BOTTLE = ITEMS.register("acid_bottle",() -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_FOODS)
+            .food(new FoodProperties.Builder().nutrition(0).saturationMod(0.0f)
+                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 500, 1), .99f).alwaysEat().build())));
     
     
     public static void Register(IEventBus eventBus){
