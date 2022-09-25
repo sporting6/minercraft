@@ -2,7 +2,6 @@ package com.dargonboi.krasyrum.block.entity.custom;
 
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.ModFoods;
-import com.dargonboi.krasyrum.item.ModPotions;
 import com.dargonboi.krasyrum.recipe.InfusionChamberRecipe;
 import com.dargonboi.krasyrum.screen.InfusionChamberMenu;
 import net.minecraft.core.BlockPos;
@@ -20,7 +19,6 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
