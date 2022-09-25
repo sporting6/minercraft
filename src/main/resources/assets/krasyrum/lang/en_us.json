@@ -19,6 +19,9 @@
 
 
 
+  "item.krasyrum.plate_iron": "Iron Plate",
+
+
   "item.krasyrum.obsidian_shards":"Obsidian Shards",
   "item.krasyrum.partally_refined_obsidian":"Partialy Refined Obsidian",
   "item.krasyrum.refined_obsidian":"Refined Obsidian",
@@ -34,6 +37,8 @@
   "block.krasyrum.condenser": "Condenser",
 
   "item.krasyrum.lemon_juice":"Lemon Juice",
+  "item.krasyrum.lemon":"Lemon",
+  "item.krasyrum.squeezer":"Squeezer",
   "item.krasyrum.acid_bottle":"Acid Bottle",
 
 

@@ -1,8 +1,8 @@
 package com.dargonboi.krasyrum.block;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import com.dargonboi.krasyrum.block.custom.CondenserBlock;
-import com.dargonboi.krasyrum.block.custom.InfusionChamberBlock;
+import com.dargonboi.krasyrum.block.entity.custom.CondenserBlock;
+import com.dargonboi.krasyrum.block.entity.custom.InfusionChamberBlock;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.feature.tree.LemonTreeGrower;

@@ -1,14 +1,20 @@
 package com.dargonboi.krasyrum.item;
 
 import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.item.custom.SqueezerItem;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.util.item.ModRaritys;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Consumer;
 
 public class ModIngots {
 
@@ -46,6 +52,10 @@ public class ModIngots {
     public static final RegistryObject<Item> KYRANIUM_HANDLE = ITEMS.register("kyranium_handle",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(ModRaritys.INSANE)));
 
+    public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("plate_iron",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
+
+
     //Raw Ores
     public static final RegistryObject<Item> RAW_BLUE_NANITARIUM = ITEMS.register("raw_blue_nanitarium", () -> new Item(
             new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
@@ -77,8 +87,14 @@ public class ModIngots {
             () -> new Item(
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 
+    //Lemon
     public static final RegistryObject<Item> LEMON_JUICE = ITEMS.register("lemon_juice", () -> new Item(
-            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant()));
+            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
+    public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new Item(
+            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
+    public static final RegistryObject<Item> SQUEEZER = ITEMS.register("squeezer", () -> new SqueezerItem(
+            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).durability(100)));
+
 
 
     public static void Register(IEventBus eventBus){
