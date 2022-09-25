@@ -24,7 +24,10 @@
 
         "krasyrum:ruby_ore",
         "krasyrum:deepslate_ruby_ore",
-        "krasyrum:ruby_block"
+        "krasyrum:ruby_block",
+        
+        "krasyrum:infusion_chamber",
+        "krasyrum:condenser"
 
 
 

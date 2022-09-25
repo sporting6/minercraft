@@ -95,6 +95,8 @@ public class ModIngots {
     public static final RegistryObject<Item> SQUEEZER = ITEMS.register("squeezer", () -> new SqueezerItem(
             new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).durability(100)));
 
+    public static final RegistryObject<Item> CANISTER_IRON = ITEMS.register("canister_iron", () -> new Item(
+            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
 
 
     public static void Register(IEventBus eventBus){

@@ -11,8 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.Random;
+import java.util.function.Consumer;
 
 
 public class SqueezerItem extends Item {
@@ -31,7 +33,7 @@ public class SqueezerItem extends Item {
 
 
         if(pPlayer.getItemInHand(InteractionHand.OFF_HAND).equals(offHandCheck, true)
-                && !pPlayer.getItemInHand(InteractionHand.OFF_HAND).equals(ItemStack.EMPTY)){
+                && !pPlayer.getItemInHand(InteractionHand.OFF_HAND).equals(new ItemStack(Blocks.AIR,1), true)){
 
             System.out.println("Squeeze Successful!\n");
 
@@ -39,13 +41,15 @@ public class SqueezerItem extends Item {
             pPlayer.setItemInHand(InteractionHand.OFF_HAND, offHand);
 
             ItemStack mainHand =  new ItemStack(ModIngots.SQUEEZER.get());
-            mainHand.hurtAndBreak(1, pPlayer,null);
+            //mainHand.hurtAndBreak(100, pPlayer, null);
             pPlayer.setItemInHand(InteractionHand.MAIN_HAND, mainHand);
 
             pPlayer.addEffect(new MobEffectInstance(MobEffects.HUNGER,2, 25));
 
             pPlayer.addItem(new ItemStack(ModIngots.LEMON_JUICE.get(), 1));
+            return super.use(pLevel, pPlayer, pUsedHand);
         }
+
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 }
