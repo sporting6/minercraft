@@ -2,12 +2,14 @@ package com.dargonboi.krasyrum.block.entity.custom;
 
 
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
+import com.dargonboi.krasyrum.item.ModIngots;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -17,54 +19,52 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
-public class CondenserBlock extends BaseEntityBlock {
+public class StrainerBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+
     public static final BooleanProperty IS_USED = BooleanProperty.create("is_used");
+
+
     private static final Map<Direction, VoxelShape> SHAPES = new EnumMap<>(Direction.class);
 
     public static final VoxelShape SHAPE = Stream.of(
-            Block.box(0, 0, 0, 16, 1, 16),
-            Block.box(3, 1, 3, 13, 2, 13),
-            Block.box(2, 2, 2, 14, 3, 14),
-            Block.box(3, 3, 3, 13, 4, 13),
-            Block.box(2, 4, 2, 14, 5, 14),
-            Block.box(2, 8, 2, 14, 9, 14),
-            Block.box(3, 7, 3, 13, 8, 13),
-            Block.box(2, 6, 2, 14, 7, 14),
-            Block.box(3, 5, 3, 13, 6, 13),
-            Block.box(3, 9, 3, 13, 10, 13),
-            Block.box(2, 10, 2, 14, 11, 14),
-            Block.box(3, 11, 3, 13, 12, 13),
-            Block.box(2, 12, 2, 14, 13, 14),
-            Block.box(3, 13, 3, 13, 14, 13),
-            Block.box(2, 14, 2, 14, 15, 14),
-            Block.box(2, 15, 2, 4, 17, 14),
-            Block.box(12, 15, 2, 14, 17, 14),
-            Block.box(4, 15, 12, 12, 17, 14),
-            Block.box(4, 15, 11, 11, 16, 12),
-            Block.box(4, 15, 4, 5, 16, 11),
-            Block.box(5, 15, 4, 12, 16, 5),
-            Block.box(11, 15, 5, 12, 16, 12),
-            Block.box(4, 15, 2, 12, 17, 4)
-    ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
+            Block.box(4, 0, 4, 12, 8, 5),
+            Block.box(4, 0, 11, 12, 8, 12),
+            Block.box(4, 0, 5, 5, 8, 11),
+            Block.box(11, 0, 5, 12, 8, 11),
+            Block.box(5, 0, 5, 11, 1, 11),
+            Block.box(12, 0, 12, 14, 12, 14),
+            Block.box(2, 0, 12, 4, 12, 14),
+            Block.box(2, 0, 2, 4, 12, 4),
+            Block.box(12, 0, 2, 14, 12, 4),
+            Block.box(2, 10, 4, 4, 12, 12),
+            Block.box(12, 10, 4, 14, 12, 12),
+            Block.box(4, 10, 12, 12, 12, 14),
+            Block.box(4, 10, 2, 12, 12, 4),
+            Block.box(5, 11, 4, 6, 11, 12),
+            Block.box(7, 11, 4, 8, 11, 12),
+            Block.box(9, 11, 4, 10, 11, 12),
+            Block.box(11, 11, 4, 12, 11, 12),
+            Block.box(4, 11, 10, 12, 11, 11),
+            Block.box(4, 11, 8, 12, 11, 9),
+            Block.box(4, 11, 6, 12, 11, 7),
+            Block.box(4, 11, 4, 12, 11, 5)
+        ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public CondenserBlock(Properties properties) {
+    public StrainerBlock(Properties properties) {
         super(properties);
         registerDefaultState(defaultBlockState().setValue(FACING, Direction.NORTH).setValue(IS_USED, false));
         runCalculation(SHAPE);
@@ -123,13 +123,14 @@ public class CondenserBlock extends BaseEntityBlock {
         }
     }
 
+
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
                                  Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof CondenserBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (CondenserBlockEntity)entity, pPos);
+            if(entity instanceof StrainerBlockEntity) {
+                NetworkHooks.openGui(((ServerPlayer)pPlayer), (StrainerBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -138,11 +139,11 @@ public class CondenserBlock extends BaseEntityBlock {
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
     @Override
-    public void onRemove(BlockState pState,  Level pLevel,  BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
         if (pState.getBlock() != pNewState.getBlock()) {
             BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-            if (blockEntity instanceof CondenserBlockEntity) {
-                ((CondenserBlockEntity) blockEntity).drops();
+            if (blockEntity instanceof StrainerBlockEntity) {
+                ((StrainerBlockEntity) blockEntity).drops();
             }
         }
         super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
@@ -152,14 +153,14 @@ public class CondenserBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new CondenserBlockEntity(pos, state);
+        return new StrainerBlockEntity(pos, state);
     }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.CONDENSER_BLOCK_ENTITY.get(),
-                CondenserBlockEntity::tick);
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.STRAINER_BLOCK_ENTITY.get(),
+                StrainerBlockEntity::tick);
     }
 
 }

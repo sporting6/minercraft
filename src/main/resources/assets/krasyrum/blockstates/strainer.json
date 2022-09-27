@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "krasyrum:block/strainer" },
+		"facing=east": { "model": "krasyrum:block/strainer", "y": 90 },
+		"facing=south": { "model": "krasyrum:block/strainer", "y": 180 },
+		"facing=west": { "model": "krasyrum:block/strainer", "y": 270 }
+	}
+}

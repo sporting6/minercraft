@@ -1,0 +1,12 @@
+{
+    "type": "krasyrum:straining",
+    "ingredients": [
+      {
+        "item": "krasyrum:red_nanitarium_slurry"
+      }
+    ],
+    "output":
+    {
+      "item": "krasyrum:pure_red_nanitarium"
+    }
+  }

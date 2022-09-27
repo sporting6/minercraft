@@ -26,6 +26,18 @@ public class ModIngots {
     public static final RegistryObject<Item> RED_NANITARIUM_INGOT = ITEMS.register("red_nanitarium_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> BLUE_NANITARIUM_SLURRY = ITEMS.register("blue_nanitarium_slurry",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> RED_NANITARIUM_SLURRY = ITEMS.register("red_nanitarium_slurry",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> PURE_BLUE_NANITARIUM = ITEMS.register("pure_blue_nanitarium",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+
+    public static final RegistryObject<Item> PURE_RED_NANITARIUM = ITEMS.register("pure_red_nanitarium",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+
     public static final RegistryObject<Item> VERANIUM_INGOT = ITEMS.register("veranium_ingot", () -> new Item(
             new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
 

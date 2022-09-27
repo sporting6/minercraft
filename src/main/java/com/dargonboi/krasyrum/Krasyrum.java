@@ -8,6 +8,7 @@ import com.dargonboi.krasyrum.recipe.ModRecipes;
 import com.dargonboi.krasyrum.screen.CondenserScreen;
 import com.dargonboi.krasyrum.screen.InfusionChamberScreen;
 import com.dargonboi.krasyrum.screen.ModMenuTypes;
+import com.dargonboi.krasyrum.screen.StrainerScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -45,6 +46,9 @@ public class Krasyrum {
 	}
 	private void clientSetup(final FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.INFUSION_CHAMBER.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.CONDENSER.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAINER.get(), RenderType.cutout());
+
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_LEAVES.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_SAPLING.get(), RenderType.cutout());
@@ -52,6 +56,8 @@ public class Krasyrum {
 
 		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
 		MenuScreens.register(ModMenuTypes.CONDENSER_MENU.get(), CondenserScreen::new);
+		MenuScreens.register(ModMenuTypes.STRAINER_MENU.get(), StrainerScreen::new);
+
 
 
 	}

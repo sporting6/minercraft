@@ -17,6 +17,12 @@
   "item.krasyrum.compressed_netherite": "Compressed Netherite",
   "item.krasyrum.kyranium_handle": "Kyranite Handle",
 
+  "item.krasyrum.blue_nanitarium_slurry": "Blue Nanitarium Slurry",
+  "item.krasyrum.red_nanitarium_slurry": "Red Nanitarium Slurry",
+
+  "item.krasyrum.pure_blue_nanitarium": "Pure Blue Nanitarium",
+  "item.krasyrum.pure_red_nanitarium": "Pure Red Nanitarium",
+
 
 
   "item.krasyrum.plate_iron": "Iron Plate",
@@ -37,6 +43,8 @@
 
   "block.krasyrum.infusion_chamber": "Infusion Chamber",
   "block.krasyrum.condenser": "Condenser",
+  "block.krasyrum.strainer": "Strainer",
+
 
   "item.krasyrum.lemon_juice":"Lemon Juice",
   "item.krasyrum.lemon":"Lemon",

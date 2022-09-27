@@ -3,6 +3,7 @@ package com.dargonboi.krasyrum.block;
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.entity.custom.CondenserBlock;
 import com.dargonboi.krasyrum.block.entity.custom.InfusionChamberBlock;
+import com.dargonboi.krasyrum.block.entity.custom.StrainerBlock;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.feature.tree.LemonTreeGrower;
@@ -41,11 +42,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_VERANIUM_BLOCK = registerBlock("raw_veranium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_LIGHT_BLUE)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().strength(5.0F, 60.0F).sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = registerBlock("raw_titanium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
-                    .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+                    .requiresCorrectToolForDrops().strength(5.0F, 30.0F).sound(SoundType.METAL)));
 
     // Material Blocks
 
@@ -100,6 +101,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> CONDENSER = registerBlock("condenser",
             () -> new CondenserBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> STRAINER = registerBlock("strainer",
+            () -> new StrainerBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
+                    .strength(3.0F, 6.0F).sound(SoundType.WOOD)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

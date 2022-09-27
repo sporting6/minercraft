@@ -38,7 +38,7 @@
                   ]
                 }
               ],
-              "name": "minecraft:lemon_leaves"
+              "name": "krasyrum:lemon_leaves"
             },
             {
               "type": "minecraft:item",
@@ -57,7 +57,7 @@
                   ]
                 }
               ],
-              "name": "minecraft:lemon_sapling"
+              "name": "krasyrum:lemon_sapling"
             }
           ]
         }

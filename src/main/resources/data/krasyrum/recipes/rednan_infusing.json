@@ -2,7 +2,7 @@
     "type": "krasyrum:infusing",
     "ingredients": [
       {
-        "item": "krasyrum:raw_blue_nanitarium"
+        "item": "krasyrum:raw_red_nanitarium"
       },
       {
         "item": "minecraft:netherite_scrap"
@@ -10,6 +10,6 @@
     ],
     "output":
     {
-      "item": "krasyrum:blue_nanitarium_slurry"
+      "item": "krasyrum:red_nanitarium_slurry"
     }
   }

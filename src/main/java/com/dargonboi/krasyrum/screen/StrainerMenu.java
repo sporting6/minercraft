@@ -1,7 +1,7 @@
 package com.dargonboi.krasyrum.screen;
 
 import com.dargonboi.krasyrum.block.ModBlocks;
-import com.dargonboi.krasyrum.block.entity.custom.CondenserBlockEntity;
+import com.dargonboi.krasyrum.block.entity.custom.StrainerBlockEntity;
 import com.dargonboi.krasyrum.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,19 +13,19 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class CondenserMenu extends AbstractContainerMenu {
-    private final CondenserBlockEntity blockEntity;
+public class StrainerMenu extends AbstractContainerMenu {
+    private final StrainerBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-    public CondenserMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+    public StrainerMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
         this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public CondenserMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.CONDENSER_MENU.get(), id);
-        checkContainerSize(inv, 3);
-        blockEntity = ((CondenserBlockEntity) entity);
+    public StrainerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.STRAINER_MENU.get(), id);
+        checkContainerSize(inv, 2);
+        blockEntity = ((StrainerBlockEntity) entity);
         this.level = inv.player.level;
         this.data = data;
 
@@ -34,8 +34,7 @@ public class CondenserMenu extends AbstractContainerMenu {
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 80, 19)); //Imput
-            this.addSlot(new SlotItemHandler(handler, 1, 113, 35)); //Fuel
-            this.addSlot(new ModResultSlot(handler, 2, 80, 76));             //Output
+            this.addSlot(new ModResultSlot(handler, 1, 80, 76));             //Output
         });
 
         addDataSlots(data);
@@ -48,18 +47,10 @@ public class CondenserMenu extends AbstractContainerMenu {
     public int getScaledProgress() {
         int progress = this.data.get(0);
         int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 58; // This is the height in pixels of your arrow
+        int progressArrowSize = 30; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
-    public int getScaledFuelProgress() {
-        int progress = this.data.get(0);
-        int maxProgress = this.data.get(1);  // Max Progress
-        int progressArrowSize = 14; // This is the height in pixels of your arrow
-
-        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
-    }
-
 
     private static final int HOTBAR_SLOT_COUNT = 9;
     private static final int PLAYER_INVENTORY_ROW_COUNT = 3;
@@ -70,7 +61,7 @@ public class CondenserMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -108,7 +99,7 @@ public class CondenserMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.CONDENSER.get());
+                pPlayer, ModBlocks.STRAINER.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

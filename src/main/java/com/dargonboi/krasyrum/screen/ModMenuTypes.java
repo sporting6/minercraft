@@ -17,9 +17,10 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<InfusionChamberMenu>> INFUSION_CHAMBER_MENU =
             registerMenuType(InfusionChamberMenu::new, "infusion_chamber_menu");
-
     public static final RegistryObject<MenuType<CondenserMenu>> CONDENSER_MENU =
             registerMenuType(CondenserMenu::new, "condenser_menu");
+    public static final RegistryObject<MenuType<StrainerMenu>> STRAINER_MENU =
+            registerMenuType(StrainerMenu::new, "strainer_menu");
 
 
 
