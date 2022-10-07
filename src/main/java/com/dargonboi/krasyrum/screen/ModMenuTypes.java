@@ -22,6 +22,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<StrainerMenu>> STRAINER_MENU =
             registerMenuType(StrainerMenu::new, "strainer_menu");
 
+    public static final RegistryObject<MenuType<ForgeMenu>> FORGE_MENU =
+            registerMenuType(ForgeMenu::new, "forge_menu");
+
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {

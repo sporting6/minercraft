@@ -106,6 +106,10 @@ public class ModBlocks {
             () -> new StrainerBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
                     .strength(3.0F, 6.0F).sound(SoundType.WOOD)));
 
+    public static final RegistryObject<Block> FORGE = registerBlock("forge",
+            () -> new StrainerBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
+                    .strength(3.0F, 6.0F).sound(SoundType.WOOD)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
