@@ -4,7 +4,6 @@ import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.*;
-import com.dargonboi.krasyrum.recipe.ModRecipes;
 import com.dargonboi.krasyrum.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -36,25 +35,20 @@ public class Krasyrum {
 		ModBlockEntities.register(bus);
 		ModMenuTypes.register(bus);
 
-		ModRecipes.register(bus);
 
 		bus.addListener(this::clientSetup);
 	}
 
 	private void clientSetup(final FMLClientSetupEvent event) {
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.INFUSION_CHAMBER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.CONDENSER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAINER.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.FORGE.get(), RenderType.cutout());
+//		ItemBlockRenderTypes.setRenderLayer(ModBlocks.INFUSION_CHAMBER.get(), RenderType.cutout());
+//		ItemBlockRenderTypes.setRenderLayer(ModBlocks.CONDENSER.get(), RenderType.cutout());
+//		ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAINER.get(), RenderType.cutout());
+//		ItemBlockRenderTypes.setRenderLayer(ModBlocks.FORGE.get(), RenderType.cutout());
 
 
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_LEAVES.get(), RenderType.cutout());
-		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_SAPLING.get(), RenderType.cutout());
-
-
-		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
-		MenuScreens.register(ModMenuTypes.CONDENSER_MENU.get(), CondenserScreen::new);
-		MenuScreens.register(ModMenuTypes.STRAINER_MENU.get(), StrainerScreen::new);
-		MenuScreens.register(ModMenuTypes.FORGE_MENU.get(), ForgeScreen::new);
+//		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
+//		MenuScreens.register(ModMenuTypes.CONDENSER_MENU.get(), CondenserScreen::new);
+//		MenuScreens.register(ModMenuTypes.STRAINER_MENU.get(), StrainerScreen::new);
+//		MenuScreens.register(ModMenuTypes.FORGE_MENU.get(), ForgeScreen::new);
 	}
 }

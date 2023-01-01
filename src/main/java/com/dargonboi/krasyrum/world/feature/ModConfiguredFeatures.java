@@ -77,22 +77,6 @@ public class ModConfiguredFeatures {
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> THERIUM_ORE = FeatureUtils.register("therium_ore",
             Feature.ORE, new OreConfiguration(THERIUM_ORES, 3)); // p_161014_ = Vien Size
 
-    //Tree Ores-------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> LEMON_TREE =
-            FeatureUtils.register("lemon", Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                    BlockStateProvider.simple(Blocks.OAK_LOG),
-                    new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
-                    BlockStateProvider.simple(ModBlocks.LEMON_LEAVES.get()),
-                    new RandomSpreadFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), ConstantInt.of(2), 60 ),
-                    new TwoLayersFeatureSize(1, 0, 2)).build());
-
-
-    public static final Holder<PlacedFeature> LEMON_CHECKED = PlacementUtils.register("lemon_checked", LEMON_TREE,
-            PlacementUtils.filteredByBlockSurvival(ModBlocks.LEMON_SAPLING.get()));
-
-    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> LEMON_SPAWN =
-            FeatureUtils.register("lemon_spawn", Feature.RANDOM_PATCH,
-                    FeatureUtils.simpleRandomPatchConfiguration( 100, LEMON_CHECKED));
+    //Tree -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 }

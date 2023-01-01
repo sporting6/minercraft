@@ -33,10 +33,7 @@ public class ModPlacedFeatures {
     public static final Holder<PlacedFeature> VERANIUM_ORE_PLACED = PlacementUtils.register("therium_ore_placed",
             ModConfiguredFeatures.VERANIUM_ORE, ModOrePlacement.rareOrePlacement(5, //    Viens Per Chunk
                     HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(75))));
-
-
-    public static final Holder<PlacedFeature> LEMON_PLACED = PlacementUtils.register("lemon_placed",
-            ModConfiguredFeatures.LEMON_SPAWN, RarityFilter.onAverageOnceEvery(300), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+    
 
 
 }
