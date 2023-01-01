@@ -35,7 +35,7 @@ public class ModBlockEntities {
     public static final RegistryObject<BlockEntityType<ForgeBlockEntity>> FORGE_BLOCK_ENTITY =
             BLOCK_ENTITIES.register("forge_block_entity",
                     () -> BlockEntityType.Builder.of(ForgeBlockEntity::new,
-                            ModBlocks.STRAINER.get()).build(null));
+                            ModBlocks.FORGE.get()).build(null));
 
 
 

@@ -5,10 +5,7 @@ import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.*;
 import com.dargonboi.krasyrum.recipe.ModRecipes;
-import com.dargonboi.krasyrum.screen.CondenserScreen;
-import com.dargonboi.krasyrum.screen.InfusionChamberScreen;
-import com.dargonboi.krasyrum.screen.ModMenuTypes;
-import com.dargonboi.krasyrum.screen.StrainerScreen;
+import com.dargonboi.krasyrum.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -26,7 +23,6 @@ public class Krasyrum {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ModIngots.Register(bus);
-		//ModBlockItem.Register(bus);
 		ModTools.Register(bus);
 		ModArmor.Register(bus);
 
@@ -44,10 +40,12 @@ public class Krasyrum {
 
 		bus.addListener(this::clientSetup);
 	}
+
 	private void clientSetup(final FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.INFUSION_CHAMBER.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.CONDENSER.get(), RenderType.cutout());
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAINER.get(), RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(ModBlocks.FORGE.get(), RenderType.cutout());
 
 
 		ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEMON_LEAVES.get(), RenderType.cutout());
@@ -57,8 +55,6 @@ public class Krasyrum {
 		MenuScreens.register(ModMenuTypes.INFUSION_CHAMBER_MENU.get(), InfusionChamberScreen::new);
 		MenuScreens.register(ModMenuTypes.CONDENSER_MENU.get(), CondenserScreen::new);
 		MenuScreens.register(ModMenuTypes.STRAINER_MENU.get(), StrainerScreen::new);
-
-
-
+		MenuScreens.register(ModMenuTypes.FORGE_MENU.get(), ForgeScreen::new);
 	}
 }

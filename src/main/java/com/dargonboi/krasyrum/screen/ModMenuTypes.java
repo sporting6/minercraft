@@ -21,7 +21,6 @@ public class ModMenuTypes {
             registerMenuType(CondenserMenu::new, "condenser_menu");
     public static final RegistryObject<MenuType<StrainerMenu>> STRAINER_MENU =
             registerMenuType(StrainerMenu::new, "strainer_menu");
-
     public static final RegistryObject<MenuType<ForgeMenu>> FORGE_MENU =
             registerMenuType(ForgeMenu::new, "forge_menu");
 

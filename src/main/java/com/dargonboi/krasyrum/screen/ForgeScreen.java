@@ -9,19 +9,22 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Inventory;
 
 public class ForgeScreen extends AbstractContainerScreen<ForgeMenu> {
     private static final ResourceLocation TEXTURE = new ResourceLocation(Krasyrum.MODID, "textures/gui/forge.png");
-
+    private static final ResourceLocation BUTTON_TEXTURE = new ResourceLocation(Krasyrum.MODID, "textures/gui/button/forge_button.png");
     private static int[] scores = {17, 16, 15, 14, 13, 12, 11, 10, 10, 9, 9, 8, 8, 8, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -1, -5, -5, -5, -5, -5, -5, -5, -5, -5, -20};
 
     public ForgeScreen(ForgeMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
         inventoryLabelY = 102;
         titleLabelY = 8;
-        imageHeight = 196; imageWidth = 176;
+        imageHeight = 196;
+        imageWidth = 176;
     }
 
     @Override
@@ -34,29 +37,9 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
 
-        if(menu.isCrafting()){
-            blit(pPoseStack, x + 83, y + 40, 176, 0, 11, menu.getScaledProgress() );
-            blit(pPoseStack,x+112,y+19, 187, 11, 0, 13);
+        if (menu.isCrafting()) {
+            blit(pPoseStack, x + 69, y + 38, 176, 14, menu.getScaledProgress(), 17);
         }
-
-        this.addWidget(new ImageButton(96, 60, 18, 18, 97, 61, 0
-                , new ResourceLocation("textures/gui/button/forge_button.png"), 16, 16,
-                pButton -> {
-            if(menu.isCrafting()) {
-                calculateScore();
-                int currentSpeed = menu.getPointerSpeed();
-                menu.setPointerSpeed(currentSpeed + 1);
-            }
-        }
-        ));
-    }
-
-    private void calculateScore() {
-        int pointerPos = menu.getPointerPosition();
-        int targetPos = menu.getTargetPosition();
-        int targetDif = Math.abs(targetPos - pointerPos);
-
-        menu.changeGearScore(scores[targetDif]);
     }
 
     @Override

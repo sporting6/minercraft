@@ -1,6 +1,7 @@
 package com.dargonboi.krasyrum.screen;
 
 import com.dargonboi.krasyrum.block.ModBlocks;
+import com.dargonboi.krasyrum.block.entity.custom.ForgeBlock;
 import com.dargonboi.krasyrum.block.entity.custom.ForgeBlockEntity;
 import com.dargonboi.krasyrum.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
@@ -16,16 +17,16 @@ import net.minecraftforge.items.SlotItemHandler;
 public class ForgeMenu extends AbstractContainerMenu {
     private final ForgeBlockEntity blockEntity;
     private final Level level;
-    private final ContainerData data;
+    private final ContainerData  data;
 
 
     public ForgeMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(10));
     }
 
     public ForgeMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.FORGE_MENU.get(), id);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, 10);
         blockEntity = ((ForgeBlockEntity) entity);
         this.level = inv.player.level;
         this.data = data;
@@ -36,13 +37,16 @@ public class ForgeMenu extends AbstractContainerMenu {
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             for(int y = 0; y < 3; y++){
                 for(int x = 0; x < 3; x++){
-                    this.addSlot(new SlotItemHandler(handler, x + y * 3, 11 + x * 18, 20 + y * 18)); //Imputs
+                    this.addSlot(new SlotItemHandler(handler, x + y * 3, 11 + x * 18, 20 + y * 18)); //Inputs
                 }
             }
             this.addSlot(new ModResultSlot(handler, 9, 149, 38));//Output
         });
 
         addDataSlots(data);
+    }
+    public ForgeBlockEntity getBlockEntity() {
+        return this.blockEntity;
     }
 
     public boolean isCrafting() {
@@ -56,39 +60,6 @@ public class ForgeMenu extends AbstractContainerMenu {
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
-
-    public int getPointerPosition(){
-        int pointerPos = this.data.get(3);
-        return pointerPos / 20;
-    }
-    public int getPointerDirection(){
-        return this.data.get(5);
-    }
-    public int getPointerSpeed(){
-        return this.data.get(6);
-    }
-    public void setPointerSpeed(int speed){
-        this.data.set(6, speed);
-    }
-    public int getGearScore(){
-        return this.data.get(7);
-    }
-    public void setGearScore(int score){
-        this.data.set(7, score);
-    }
-
-    public void changeGearScore(int score){
-        int currentScore = this.data.get(7);
-        int scoreChange = currentScore + score;
-        this.data.set(7, scoreChange);
-    }
-
-    public int getTargetPosition(){
-        int targetIndex = this.data.get(2);
-        int[] targetPositions = {35, 7, 62, 22, 47};
-        return targetPositions[targetIndex];
-    }
-
 
 
 

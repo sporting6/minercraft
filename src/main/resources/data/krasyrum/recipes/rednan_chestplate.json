@@ -1,0 +1,36 @@
+{
+    "type": "krasyrum:forging",
+    "ingredients": [
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "minecraft:netherite_block"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      },
+      {
+        "item": "krasyrum:pure_red_nanitarium"
+      }
+    ],
+    "output":
+    {
+      "item": "krasyrum:red_nanitarium_chestplate"
+    }
+  }

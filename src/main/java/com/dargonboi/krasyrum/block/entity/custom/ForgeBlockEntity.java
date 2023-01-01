@@ -28,10 +28,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.Optional;
+import java.util.Random;
 
 public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
-    private final ItemStackHandler itemHandler = new ItemStackHandler(2){
+    private final ItemStackHandler itemHandler = new ItemStackHandler(10){
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -43,17 +45,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 1000;
-    private int targetIndex = 0;
-    private int pointerPos = 0;
-    private int maxPointerPos = 1400;
-    private int pointerDir = 0;
-    private int pointerSpeed = 0;
-    private int gearScore = 0;
     private CompoundTag score = new CompoundTag();
-
-//    private int[] pointerSpeeds = {}
-
-    //Make Function To find pixel to generate pointer
 
 
     public ForgeBlockEntity(BlockPos pos, BlockState state) {
@@ -63,12 +55,6 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 switch (index) {
                     case 0: return ForgeBlockEntity.this.progress;
                     case 1: return ForgeBlockEntity.this.maxProgress;
-                    case 2: return ForgeBlockEntity.this.targetIndex;
-                    case 3: return ForgeBlockEntity.this.pointerPos;
-                    case 4: return ForgeBlockEntity.this.maxPointerPos;
-                    case 5: return ForgeBlockEntity.this.pointerDir;
-                    case 6: return ForgeBlockEntity.this.pointerSpeed;
-                    case 7: return ForgeBlockEntity.this.gearScore;
                     default: return 0;
                 }
             }
@@ -77,16 +63,10 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 switch(index) {
                     case 0: ForgeBlockEntity.this.progress = value; break;
                     case 1: ForgeBlockEntity.this.maxProgress = value; break;
-                    case 2: ForgeBlockEntity.this.targetIndex = value; break;
-                    case 3: ForgeBlockEntity.this.pointerPos = value; break;
-                    case 4: ForgeBlockEntity.this.maxPointerPos = value; break;
-                    case 5: ForgeBlockEntity.this.pointerDir = value; break;
-                    case 6: ForgeBlockEntity.this.pointerSpeed = value; break;
-                    case 7: ForgeBlockEntity.this.gearScore = value; break;
                 }
             }
             public int getCount() {
-                return 2;
+                return 8;
             }
         };
     }
@@ -149,33 +129,13 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
-
-    void pointerTick(int dir, ForgeBlockEntity entity){
-        int speed = 100 * entity.pointerSpeed;
-        int maxPointerPos = entity.maxPointerPos - speed;
-
-        if(entity.pointerPos == maxPointerPos){
-            entity.pointerPos++;
-        }
-
-        if(dir == 0){
-            entity.pointerPos++;
-        }
-        else if(dir == 1){
-            entity.pointerPos--;
-        }
-        else System.out.println("Non 0-1 Pointer Direction");
-    }
-
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ForgeBlockEntity pBlockEntity) {
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
             if(pBlockEntity.progress > pBlockEntity.maxProgress) {
-                craftItem(pBlockEntity);
+                pBlockEntity.craftItem(pBlockEntity);
             }
-            pBlockEntity.pointerTick(pBlockEntity.pointerDir, pBlockEntity);
-
         } else {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
@@ -196,9 +156,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())  ;
     }
 
-
-
-    private static void craftItem(ForgeBlockEntity entity) {
+    private void craftItem(ForgeBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
@@ -218,24 +176,24 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             entity.itemHandler.extractItem(6,1, false);
             entity.itemHandler.extractItem(7,1, false);
             entity.itemHandler.extractItem(8,1, false);
+            Random rand = new Random();
+            System.out.println("Gearscore is " + Math.abs((rand.nextInt() % 100) / 100) + "\nResult item is " + match.get().getResultItem().getItem());
 
-            System.out.println(entity.gearScore);
 
 
-            entity.score.putInt("krasyrum.score", entity.gearScore);
+            entity.score.putInt("krasyrum.score", Math.abs((rand.nextInt() % 100) / 100));
             entity.itemHandler.setStackInSlot(9, new ItemStack(match.get().getResultItem().getItem(),
                     entity.itemHandler.getStackInSlot(9).getCount() + 1, entity.score));
 
             entity.resetProgress();
+
         }
     }
 
     private void resetProgress() {
         this.progress = 0;
     }
-    private void resetScore() {
-        this.gearScore = 0;
-    }
+
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack output) {
         return inventory.getItem(9).getItem() == output.getItem() || inventory.getItem(9).isEmpty();

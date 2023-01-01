@@ -27,7 +27,16 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer container, Level level) {
-        return recipeItems.get(0).test(container.getItem(0));
+        return recipeItems.get(0).test(container.getItem(0)) &&
+                recipeItems.get(1).test(container.getItem(1)) &&
+                recipeItems.get(2).test(container.getItem(2)) &&
+                recipeItems.get(3).test(container.getItem(3)) &&
+                recipeItems.get(4).test(container.getItem(4)) &&
+                recipeItems.get(5).test(container.getItem(5)) &&
+                recipeItems.get(6).test(container.getItem(6)) &&
+                recipeItems.get(7).test(container.getItem(7)) &&
+                recipeItems.get(8).test(container.getItem(8));
+
     }
 
     @Override
@@ -67,7 +76,7 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
     }
 
     public static class Serializer implements RecipeSerializer<ForgeRecipe>{
-        public static final Serializer INSTANCE = new Serializer();
+            public static final Serializer INSTANCE = new Serializer();
         public static final ResourceLocation ID =
                 new ResourceLocation(Krasyrum.MODID,"forging");
 
@@ -76,12 +85,10 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
-
+            NonNullList<Ingredient> inputs = NonNullList.withSize(9, Ingredient.EMPTY);
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
-
             return new ForgeRecipe(id, output, inputs);
         }
 

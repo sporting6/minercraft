@@ -2,6 +2,7 @@ package com.dargonboi.krasyrum.block;
 
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.entity.custom.CondenserBlock;
+import com.dargonboi.krasyrum.block.entity.custom.ForgeBlock;
 import com.dargonboi.krasyrum.block.entity.custom.InfusionChamberBlock;
 import com.dargonboi.krasyrum.block.entity.custom.StrainerBlock;
 import com.dargonboi.krasyrum.item.ModIngots;
@@ -94,7 +95,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEMON_SAPLING = registerBlock("lemon_sapling",
             () -> new SaplingBlock(new LemonTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeTab.KRASYRUM_TOOLS_ARMOR);
 
-    // Machines
+    //Machines
     public static final RegistryObject<Block> INFUSION_CHAMBER = registerBlock("infusion_chamber",
             () -> new InfusionChamberBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
                     .strength(5.0F, 6.0F).sound(SoundType.METAL)));
@@ -107,8 +108,8 @@ public class ModBlocks {
                     .strength(3.0F, 6.0F).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> FORGE = registerBlock("forge",
-            () -> new StrainerBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.WOOD)
-                    .strength(3.0F, 6.0F).sound(SoundType.WOOD)));
+            () -> new ForgeBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+                    .strength(5.0F, 20.0F).sound(SoundType.STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

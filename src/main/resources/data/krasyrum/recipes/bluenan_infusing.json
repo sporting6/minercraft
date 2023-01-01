@@ -1,15 +1,15 @@
 {
-    "type": "krasyrum:infusing",
-    "ingredients": [
-      {
-        "item": "krasyrum:raw_blue_nanitarium"
-      },
-      {
-        "item": "minecraft:netherite_scrap"
-      }
-    ],
-    "output":
+  "type": "krasyrum:infusing",
+  "ingredients": [
     {
-      "item": "krasyrum:blue_nanitarium_slurry"
+      "item": "krasyrum:raw_blue_nanitarium"
+    },
+    {
+      "item": "minecraft:netherite_scrap"
     }
+  ],
+  "output":
+  {
+    "item": "krasyrum:blue_nanitarium_slurry"
   }
+}
