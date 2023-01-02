@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "R R",
+        "RBR",
+        "RRR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:red_nanitarium_ingot"
+        },
+        "B":
+        {
+            "item": "krasyrum:red_nanitarium_block"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:red_nanitarium_chestplate",
+        "count": 1
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "R R",
+        "RBR"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:blue_nanitarium_ingot"
+        },
+        "B":
+        {
+            "item": "krasyrum:blue_nanitarium_block"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:blue_nanitarium_boots",
+        "count": 1
+    }
+}

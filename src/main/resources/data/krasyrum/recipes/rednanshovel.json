@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        " B ",
+        " S ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "B":
+        {
+            "item": "krasyrum:red_nanitarium_block"
+        },
+        "S":
+        {
+            "item": "minecraft:stick"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:red_nanitarium_shovel",
+        "count": 1
+    }
+}

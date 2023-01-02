@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RBR",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "krasyrum:red_nanitarium_ingot"
+        },
+        "B":
+        {
+            "item": "krasyrum:red_nanitarium_block"
+        }
+    },
+   
+    "result":
+    {
+        "item": "krasyrum:red_nanitarium_helmet",
+        "count": 1
+    }
+}
