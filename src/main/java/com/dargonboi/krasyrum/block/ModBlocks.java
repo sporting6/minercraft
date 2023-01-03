@@ -67,6 +67,10 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
 
+    public static final RegistryObject<Block> KRASYRUM_STONE = registerBlock("krasyrum_stone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
+                    .requiresCorrectToolForDrops().strength(10.0F, 12.0F).sound(SoundType.METAL)));
+
     //Machines
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
