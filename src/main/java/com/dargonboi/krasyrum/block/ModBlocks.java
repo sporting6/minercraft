@@ -6,7 +6,8 @@ import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -68,8 +69,12 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> KRASYRUM_STONE = registerBlock("krasyrum_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.METAL)
-                    .requiresCorrectToolForDrops().strength(10.0F, 12.0F).sound(SoundType.METAL)));
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                    .requiresCorrectToolForDrops().strength(10.0F, 12.0F).sound(SoundType.STONE)));
+
+    public static final RegistryObject<Block> KRASYRUM_SAND = registerBlock("krasyrum_sand",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                    .requiresCorrectToolForDrops().strength(8.0f, 3.0F).sound(SoundType.SAND)));
 
     //Machines
 
