@@ -11,7 +11,8 @@ public class ModDimensions {
     public static final ResourceKey<Level> KRASYRUM_KEY = ResourceKey.create(Registry.DIMENSION_REGISTRY,
             new ResourceLocation(Krasyrum.MODID, "krasyrum"));
     public static final ResourceKey<DimensionType> KRASYRUM_TYPE =
-            ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY, KRASYRUM_KEY.getRegistryName());
+            ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY,
+                    new ResourceLocation(Krasyrum.MODID, "krasyrum"));
 
     public static void register() {
         System.out.println("Registering ModDimensions for " + Krasyrum.MODID);

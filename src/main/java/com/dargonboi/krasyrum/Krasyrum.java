@@ -4,8 +4,10 @@ import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.*;
-import com.dargonboi.krasyrum.screen.*;
+import com.dargonboi.krasyrum.screen.ModMenuTypes;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
+import com.dargonboi.krasyrum.world.feature.ModConfiguredFeatures;
+import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -30,10 +32,13 @@ public class Krasyrum {
 
 		ModPotions.register(bus);
 
-		ModBlockEntities.register(bus);
-		ModMenuTypes.register(bus);
+//		ModBlockEntities.register(bus);
+//		ModMenuTypes.register(bus);
 
 		ModDimensions.register();
+
+		ModConfiguredFeatures.register(bus);
+		ModPlacedFeatures.register(bus);
 
 
 		bus.addListener(this::clientSetup);

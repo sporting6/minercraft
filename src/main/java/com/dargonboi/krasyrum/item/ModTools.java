@@ -13,7 +13,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModTools {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
-
     // Blue Nanitarium Tools
     public static final RegistryObject<SwordItem> BLUE_NANITARIUM_SWORD = ITEMS.register("blue_nanitarium_sword",
             () -> new SwordItem(ModToolMaterials.BLUE_NANITARIUM, 13, -2.4F,

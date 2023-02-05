@@ -1,6 +1,7 @@
 package com.dargonboi.krasyrum.world.placement;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
@@ -16,9 +17,10 @@ public class ModPlacementUtils extends PlacementModifier{
     }
 
     @Override
-    public Stream<BlockPos> getPositions(PlacementContext placementContext, Random random, BlockPos blockPos) {
+    public Stream<BlockPos> getPositions(PlacementContext pContext, RandomSource pRandom, BlockPos pPos) {
         return null;
     }
+
 
     @Override
     public PlacementModifierType<?> type() {

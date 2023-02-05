@@ -3,21 +3,36 @@ package com.dargonboi.krasyrum.item;
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.util.item.ModRaritys;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Consumer;
+import java.util.Collection;
+import java.util.HashMap;
 
 public class ModIngots {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
+
+//    Collection<RegistryObject<Item>> ENTRIES = ITEMS.getEntries();
+//
+//    public static final HashMap INGOTMAP = new HashMap<String, Item>();
+//
+//    public static void registerIngot(String name, Item.Properties properties) {
+//        // Register Item
+//        final RegistryObject<Item> UNREGISTEREDITEM = ITEMS.register(name, () ->
+//        {
+//            Item tempItem = new Item(properties);
+//            INGOTMAP.put(name, tempItem);
+//            return tempItem;
+//        });
+//    }
+//    static {
+//        ModIngots.registerIngot("blue_nanitarium_ingot", new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE));
+//    }
 
     public static final RegistryObject<Item> BLUE_NANITARIUM_INGOT = ITEMS.register("blue_nanitarium_ingot",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
@@ -83,6 +98,8 @@ public class ModIngots {
     public static final RegistryObject<Item> REFINED_OBSIDIAN_INGOT = ITEMS.register("refined_obsidian_ingot",
             () -> new Item(
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
+
+
 
 
     public static void Register(IEventBus eventBus){
