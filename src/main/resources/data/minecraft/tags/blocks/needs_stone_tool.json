@@ -14,9 +14,6 @@
         "krasyrum:raw_veranium_block",
         "krasyrum:red_nanitarium_block",
         "krasyrum:blue_nanitarium_block",
-        "krasyrum:veranium_block",
-
-        "krasyrum:infusion_chamber",
-        "krasyrum:condenser"
+        "krasyrum:veranium_block"
     ]
 }
