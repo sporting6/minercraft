@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "krasyrum:ruby_ore_placed",
+  "features": "krasyrum:titanium_ore_placed",
   "step": "underground_ores"
 }
