@@ -2,12 +2,11 @@ package com.dargonboi.krasyrum;
 
 import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
-import com.dargonboi.krasyrum.block.entity.ModBlockEntities;
 import com.dargonboi.krasyrum.item.*;
-import com.dargonboi.krasyrum.screen.ModMenuTypes;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import com.dargonboi.krasyrum.world.feature.ModConfiguredFeatures;
 import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
+import com.dargonboi.krasyrum.world.feature.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;

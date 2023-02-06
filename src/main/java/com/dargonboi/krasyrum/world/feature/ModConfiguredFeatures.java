@@ -1,12 +1,13 @@
 package com.dargonboi.krasyrum.world.feature;
 
 import com.dargonboi.krasyrum.Krasyrum;
+import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -17,6 +18,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.Nullable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -26,6 +29,32 @@ public class ModConfiguredFeatures {
 
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
+
+    public static final HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> OREMAP = new HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>>();
+
+    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore){
+        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
+                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState())));
+
+        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
+                () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
+
+        OREMAP.put(name, ORE);
+    }
+
+    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore, RegistryObject<Block> deepslateOre){
+
+        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
+                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState()),
+                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, deepslateOre.get().defaultBlockState())));
+
+        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
+                () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
+
+        OREMAP.put(name, ORE);
+    }
+
+
 
 
     //Overworld Ores-------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,12 +67,12 @@ public class ModConfiguredFeatures {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(BLUE_NANITARIUM_ORES.get(),3))); // p_161014_ = Vien Size
 
     //  Titanium
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> TITANIUM_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModOres.TITANIUM_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModOres.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState())));
-
-    public static final RegistryObject<ConfiguredFeature<?, ?>> TITANIUM_ORE = CONFIGURED_FEATURES.register("titanium_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(TITANIUM_ORES.get(),6))); // p_161014_ = Vien Size
+//    public static final Supplier<List<OreConfiguration.TargetBlockState>> TITANIUM_ORES = Suppliers.memoize(() -> List.of(
+//            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModOres.TITANIUM_ORE.get().defaultBlockState()),
+//            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModOres.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState())));
+//
+//    public static final RegistryObject<ConfiguredFeature<?, ?>> TITANIUM_ORE = CONFIGURED_FEATURES.register("titanium_ore",
+//            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(TITANIUM_ORES.get(),6))); // p_161014_ = Vien Size
 
     //  Ruby
     public static final Supplier<List<OreConfiguration.TargetBlockState>> RUBY_ORES = Suppliers.memoize(() -> List.of(
@@ -80,6 +109,8 @@ public class ModConfiguredFeatures {
 
 
     public static void register(IEventBus eventBus) {
+        registerOres("titanium_ore", 6, ModOres.TITANIUM_ORE, ModOres.DEEPSLATE_TITANIUM_ORE);
+
         CONFIGURED_FEATURES.register(eventBus);
     }
 }

@@ -17,18 +17,15 @@ public class ModIngots {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
-//    Collection<RegistryObject<Item>> ENTRIES = ITEMS.getEntries();
-//
+    Collection<RegistryObject<Item>> ENTRIES = ITEMS.getEntries();
+
 //    public static final HashMap INGOTMAP = new HashMap<String, Item>();
 //
 //    public static void registerIngot(String name, Item.Properties properties) {
 //        // Register Item
-//        final RegistryObject<Item> UNREGISTEREDITEM = ITEMS.register(name, () ->
-//        {
-//            Item tempItem = new Item(properties);
-//            INGOTMAP.put(name, tempItem);
-//            return tempItem;
-//        });
+//        final RegistryObject<Item> ITEM = ITEMS.register(name, () -> new Item(properties));
+//        INGOTMAP.put(name, ITEM);
+//
 //    }
 //    static {
 //        ModIngots.registerIngot("blue_nanitarium_ingot", new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE));
