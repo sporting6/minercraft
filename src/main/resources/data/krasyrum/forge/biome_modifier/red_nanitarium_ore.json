@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": "#minecraft:is_nether",
-  "features": "krasyrum:nether_red_nanitarium_ore_placed",
+  "biomes": "minecraft:crimson_forest",
+  "features": "krasyrum:red_nanitarium_ore_placed",
   "step": "underground_ores"
 }
