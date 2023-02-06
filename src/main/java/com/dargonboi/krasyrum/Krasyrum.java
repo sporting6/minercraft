@@ -6,7 +6,6 @@ import com.dargonboi.krasyrum.item.*;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import com.dargonboi.krasyrum.world.feature.ModConfiguredFeatures;
 import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
-import com.dargonboi.krasyrum.world.feature.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
