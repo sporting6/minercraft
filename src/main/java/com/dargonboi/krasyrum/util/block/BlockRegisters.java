@@ -41,6 +41,34 @@ public class BlockRegisters {
         Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
         return Krasyrum.OREBLOCKMAP.get(name);
     }
+    public static final RegistryObject<Block> registerMaterialBlock(String name, MaterialColor color, float destroyTime, float explosionResistance, boolean rawOreBlock){
+        final RegistryObject<Block> MATERIAL_BLOCK = registerBlock(name,
+                () -> new Block(BlockBehaviour.Properties.of(Material.METAL, color)
+                        .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(SoundType.METAL)));
+        Krasyrum.BLOCKMAP.put(name, MATERIAL_BLOCK);
+
+        if(rawOreBlock){
+            final RegistryObject<Block> RAW_MATERIAL_BLOCK = registerBlock("raw_" + name,
+                    () -> new Block(BlockBehaviour.Properties.of(Material.METAL, color)
+                            .requiresCorrectToolForDrops().strength(destroyTime -2f, explosionResistance -5f).sound(SoundType.METAL)));
+            Krasyrum.BLOCKMAP.put("raw_" + name, RAW_MATERIAL_BLOCK);
+        }
+        return Krasyrum.BLOCKMAP.get(name);
+    }
+
+    public static final RegistryObject<Block> registerMaterialBlock(String name, Material material, MaterialColor color, float destroyTime, float explosionResistance, SoundType soundType,  boolean rawOreBlock){
+        final RegistryObject<Block> MATERIAL_BLOCK = registerBlock(name,
+                () -> new Block(BlockBehaviour.Properties.of(material, color)
+                        .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(soundType)));
+        Krasyrum.BLOCKMAP.put(name, MATERIAL_BLOCK);
+        if(rawOreBlock){
+            final RegistryObject<Block> RAW_MATERIAL_BLOCK = registerBlock("raw_" + name,
+                    () -> new Block(BlockBehaviour.Properties.of(material, color)
+                            .requiresCorrectToolForDrops().strength(destroyTime -2f, explosionResistance -5f).sound(soundType)));
+            Krasyrum.BLOCKMAP.put("raw_" + name, RAW_MATERIAL_BLOCK);
+        }
+        return Krasyrum.BLOCKMAP.get(name);
+    }
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModOres.BLOCKS.register(name, block);
