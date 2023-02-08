@@ -1,7 +1,6 @@
 package com.dargonboi.krasyrum.world.feature;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import com.dargonboi.krasyrum.block.ModOres;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
@@ -17,7 +16,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -28,7 +26,7 @@ public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
 
-    public static final HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> OREMAP = new HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>>();
+
 
     private static void registerOres(String name, int veinSize, RegistryObject<Block>[] ore, RuleTest[] ruleTest){
         final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> {
@@ -42,7 +40,7 @@ public class ModConfiguredFeatures {
         final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
                 () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
 
-        OREMAP.put(name, ORE);
+        Krasyrum.OREMAP.put(name, ORE);
     }
 
     public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre, RegistryObject<Block> deepslateOre){
@@ -67,34 +65,21 @@ public class ModConfiguredFeatures {
         registerOres(name, veinSize, ores, new RuleTest[]{ENDSTONE_ORE_REPLACEABLES});
     }
 
-//    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore, RegistryObject<Block> deepslateOre){
-//
-//        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
-//                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState()),
-//                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, deepslateOre.get().defaultBlockState())));
-//
-//        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
-//                () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
-//
-//        OREMAP.put(name, ORE);
-//    }
-
-
 
     public static void register(IEventBus eventBus) {
 
         //Overworld
-        registerOverworldOres("titanium_ore", 6, ModOres.OREBLOCKMAP.get("titanium_ore"),  ModOres.OREBLOCKMAP.get("deepslate_titanium_ore"));
-        registerOverworldOres("ruby_ore", 3, ModOres.OREBLOCKMAP.get("ruby_ore"), ModOres.OREBLOCKMAP.get("deepslate_ruby_ore"));
+        registerOverworldOres("titanium_ore", 6, Krasyrum.OREBLOCKMAP.get("titanium_ore"),  Krasyrum.OREBLOCKMAP.get("deepslate_titanium_ore"));
+        registerOverworldOres("ruby_ore", 3, Krasyrum.OREBLOCKMAP.get("ruby_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_ruby_ore"));
 
-        registerDeepslateOres("blue_nanitarium_ore", 3, ModOres.OREBLOCKMAP.get("blue_nanitarium_ore"));
+        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
         //Nether
-        registerNetherOres("red_nanitarium_ore", 3, ModOres.OREBLOCKMAP.get("red_nanitarium_ore"));
+        registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));
 
         //The End
-        registerEndOres("veranium_ore", 5, ModOres.OREBLOCKMAP.get("veranium_ore"));
-        registerEndOres("therium_ore", 5, ModOres.OREBLOCKMAP.get("therium_ore"));
+        registerEndOres("veranium_ore", 5, Krasyrum.OREBLOCKMAP.get("veranium_ore"));
+        registerEndOres("therium_ore", 5, Krasyrum.OREBLOCKMAP.get("therium_ore"));
 
         CONFIGURED_FEATURES.register(eventBus);
     }

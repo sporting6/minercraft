@@ -1,5 +1,6 @@
 package com.dargonboi.krasyrum.util.block;
 
+import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
@@ -28,17 +29,17 @@ public class BlockRegisters {
                         .requiresCorrectToolForDrops().strength(destroyTime + 1.5f,
                                 explosionResistance + 1.5f).sound(SoundType.DEEPSLATE)));
 
-        ModOres.OREBLOCKMAP.put(name, ORE_BLOCK);
-        ModOres.OREBLOCKMAP.put("deepslate_" + name, DEEPSLATE_ORE_BLOCK);
-        return ModOres.OREBLOCKMAP.get(name);
+        Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
+        Krasyrum.OREBLOCKMAP.put("deepslate_" + name, DEEPSLATE_ORE_BLOCK);
+        return Krasyrum.OREBLOCKMAP.get(name);
     }
 
     public static final RegistryObject<Block> registerOre(String name, MaterialColor color, float destroyTime, float explosionResistance, SoundType soundType){
         final RegistryObject<Block> ORE_BLOCK = registerBlock(name,
                 () -> new Block(BlockBehaviour.Properties.of(Material.STONE, color)
                         .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(soundType)));
-        ModOres.OREBLOCKMAP.put(name, ORE_BLOCK);
-        return ModOres.OREBLOCKMAP.get(name);
+        Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
+        return Krasyrum.OREBLOCKMAP.get(name);
     }
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -54,12 +55,12 @@ public class BlockRegisters {
 
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         RegistryObject<Item> toReturn = ModIngots.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
-        ModOres.OREITEMMAP.put(name, toReturn);
+        Krasyrum.OREITEMMAP.put(name, toReturn);
         return toReturn;
     }
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
         RegistryObject<Item> toReturn = ModIngots.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-        ModOres.OREITEMMAP.put(name, toReturn);
+        Krasyrum.OREITEMMAP.put(name, toReturn);
         return toReturn;
     }
 }

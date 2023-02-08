@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
     public static final HashMap<String, RegistryObject<PlacedFeature>> PLACEDOREMAP  = new HashMap<String, RegistryObject<PlacedFeature>>();
             
     private static void placeOres(String name, HashMap map, int veinsPerChunk, int minY, int maxY){
-        final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = ModConfiguredFeatures.OREMAP.get(name);
+        final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = Krasyrum.OREMAP.get(name);
 
         final RegistryObject<PlacedFeature> ORE_PLACED = PLACED_FEATURES.register(name + "_placed",
                 () -> new PlacedFeature(CONFIGURED_ORE.getHolder().get(), ModOrePlacement.commonOrePlacement(veinsPerChunk,
@@ -33,12 +33,12 @@ public class ModPlacedFeatures {
     }
     
     public static void register(IEventBus eventBus) {
-        placeOres("titanium_ore", ModConfiguredFeatures.OREMAP, 14, -64, 16);
-        placeOres("blue_nanitarium_ore", ModConfiguredFeatures.OREMAP, 1, -64, -32);
-        placeOres("red_nanitarium_ore", ModConfiguredFeatures.OREMAP, 2, 90, 125);
-        placeOres("ruby_ore", ModConfiguredFeatures.OREMAP, 12, -64, 16);
-        placeOres("veranium_ore", ModConfiguredFeatures.OREMAP, 4, 0, 75);
-        placeOres("therium_ore", ModConfiguredFeatures.OREMAP, 4, 0, 75);
+        placeOres("titanium_ore", Krasyrum.OREMAP, 14, -64, 16);
+        placeOres("blue_nanitarium_ore", Krasyrum.OREMAP, 1, -64, -32);
+        placeOres("red_nanitarium_ore", Krasyrum.OREMAP, 2, 90, 125);
+        placeOres("ruby_ore", Krasyrum.OREMAP, 12, -64, 16);
+        placeOres("veranium_ore", Krasyrum.OREMAP, 4, 0, 75);
+        placeOres("therium_ore", Krasyrum.OREMAP, 4, 0, 75);
         
         PLACED_FEATURES.register(eventBus);
     }
