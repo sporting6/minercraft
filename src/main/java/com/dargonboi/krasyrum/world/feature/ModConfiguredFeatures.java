@@ -87,7 +87,7 @@ public class ModConfiguredFeatures {
         registerOverworldOres("titanium_ore", 6, ModOres.TITANIUM_ORE, ModOres.DEEPSLATE_TITANIUM_ORE);
         registerOverworldOres("ruby_ore", 3, ModOres.RUBY_ORE, ModOres.DEEPSLATE_RUBY_ORE);
 
-        registerDeepslateOres("blue_nanitarium_ore", 3, ModOres.BLUE_NANITARIUM_ORE);
+        registerDeepslateOres("blue_nanitarium_ore", 3, ModOres.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
         //Nether
         registerNetherOres("red_nanitarium_ore", 3, ModOres.RED_NANITARIUM_ORE);
