@@ -1,10 +1,8 @@
 package com.dargonboi.krasyrum.world.feature;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.google.common.base.Suppliers;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +16,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.function.Supplier;
@@ -32,9 +30,14 @@ public class ModConfiguredFeatures {
 
     public static final HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> OREMAP = new HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>>();
 
-    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore){
-        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
-                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState())));
+    private static void registerOres(String name, int veinSize, RegistryObject<Block>[] ore, RuleTest[] ruleTest){
+        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> {
+            List list = new ArrayList();
+            for(int i = 0; i< ruleTest.length; i++) {
+                list.add(OreConfiguration.target(ruleTest[i], ore[i].get().defaultBlockState()));
+            }
+            return list;
+        });
 
         final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
                 () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
@@ -42,79 +45,56 @@ public class ModConfiguredFeatures {
         OREMAP.put(name, ORE);
     }
 
-    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore, RegistryObject<Block> deepslateOre){
-
-        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
-                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState()),
-                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, deepslateOre.get().defaultBlockState())));
-
-        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
-                () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
-
-        OREMAP.put(name, ORE);
+    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre, RegistryObject<Block> deepslateOre){
+        RegistryObject<Block>[] ore = new RegistryObject[]{stoneOre, deepslateOre};
+        registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.STONE_ORE_REPLACEABLES, OreFeatures.DEEPSLATE_ORE_REPLACEABLES});
+    }
+    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre){
+        RegistryObject<Block>[] ore = new RegistryObject[]{stoneOre};
+        registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.STONE_ORE_REPLACEABLES});
+    }
+    public static void registerDeepslateOres(String name, int veinSize, RegistryObject<Block> deepslateOre){
+        RegistryObject<Block>[] ore = new RegistryObject[]{ deepslateOre};
+        registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.DEEPSLATE_ORE_REPLACEABLES});
     }
 
+    public static void registerNetherOres(String name, int veinSize, RegistryObject<Block> ore){
+        RegistryObject<Block>[] ores = new RegistryObject[]{ore};
+        registerOres(name, veinSize, ores, new RuleTest[]{OreFeatures.NETHER_ORE_REPLACEABLES});
+    }
+    public static void registerEndOres(String name, int veinSize, RegistryObject<Block> ore){
+        RegistryObject<Block>[] ores = new RegistryObject[]{ore};
+        registerOres(name, veinSize, ores, new RuleTest[]{ENDSTONE_ORE_REPLACEABLES});
+    }
 
-
-
-    //Overworld Ores-------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    //  Blue Nanitarium
-//     public static final Supplier<List<OreConfiguration.TargetBlockState>> BLUE_NANITARIUM_ORES = Suppliers.memoize(() -> List.of(
-//             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModOres.BLUE_NANITARIUM_ORE.get().defaultBlockState())));
-
-//     public static final RegistryObject<ConfiguredFeature<?, ?>> BLUE_NANITARIUM_ORE = CONFIGURED_FEATURES.register("blue_nanitarium_ore",
-//             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(BLUE_NANITARIUM_ORES.get(),3))); // p_161014_ = Vien Size
-
-    //  Titanium
-//    public static final Supplier<List<OreConfiguration.TargetBlockState>> TITANIUM_ORES = Suppliers.memoize(() -> List.of(
-//            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModOres.TITANIUM_ORE.get().defaultBlockState()),
-//            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModOres.DEEPSLATE_TITANIUM_ORE.get().defaultBlockState())));
+//    private static void registerOres(String name, int veinSize, RegistryObject<Block> ore, RegistryObject<Block> deepslateOre){
 //
-//    public static final RegistryObject<ConfiguredFeature<?, ?>> TITANIUM_ORE = CONFIGURED_FEATURES.register("titanium_ore",
-//            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(TITANIUM_ORES.get(),6))); // p_161014_ = Vien Size
-
-    //  Ruby
-//     public static final Supplier<List<OreConfiguration.TargetBlockState>> RUBY_ORES = Suppliers.memoize(() -> List.of(
-//             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModOres.RUBY_ORE.get().defaultBlockState()),
-//             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModOres.DEEPSLATE_RUBY_ORE.get().defaultBlockState())));
-
-//     public static final RegistryObject<ConfiguredFeature<?, ?>> RUBY_ORE = CONFIGURED_FEATURES.register("ruby_ore",
-//             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(RUBY_ORES.get(),3))); // p_161014_ = Vien Size
-
-
-    //Nether Ores-------------------------------------------------------------------------------------------------------------------------------------------------------------
-    //  Red Nanitarium
-//     public static final Supplier<List<OreConfiguration.TargetBlockState>> RED_NANITARIUM_ORES = Suppliers.memoize(() -> List.of(
-//             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, ModOres.RED_NANITARIUM_ORE.get().defaultBlockState())));
-//     public static final RegistryObject<ConfiguredFeature<?, ?>> RED_NANITARIUM_ORE = CONFIGURED_FEATURES.register("red_nanitarium_ore",
-//             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(RED_NANITARIUM_ORES.get(),3))); // p_161014_ = Vien Size
-
-    //End Ores-------------------------------------------------------------------------------------------------------------------------------------------------------------
-    //  Veranium
-//     public static final Supplier<List<OreConfiguration.TargetBlockState>> VERANIUM_ORES = Suppliers.memoize(() -> List.of(
-//             OreConfiguration.target(ENDSTONE_ORE_REPLACEABLES, ModOres.VERANIUM_ORE.get().defaultBlockState())));
-
-//     public static final RegistryObject<ConfiguredFeature<?, ?>> VERANIUM_ORE = CONFIGURED_FEATURES.register("veranium_ore",
-//             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(VERANIUM_ORES.get(),3))); // p_161014_ = Vien Size
-    //  Therium
-//     public static final Supplier<List<OreConfiguration.TargetBlockState>> THERIUM_ORES = Suppliers.memoize(() -> List.of(
-//             OreConfiguration.target(ENDSTONE_ORE_REPLACEABLES, ModOres.THERIUM_ORE.get().defaultBlockState())));
-
-//     public static final RegistryObject<ConfiguredFeature<?, ?>> THERIUM_ORE = CONFIGURED_FEATURES.register("therium_ore",
-//             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(THERIUM_ORES.get(),3))); // p_161014_ = Vien Size
-
-    //Tree -------------------------------------------------------------------------------------------------------------------------------------------------------------
+//        final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> List.of(
+//                OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ore.get().defaultBlockState()),
+//                OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, deepslateOre.get().defaultBlockState())));
+//
+//        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
+//                () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
+//
+//        OREMAP.put(name, ORE);
+//    }
 
 
 
     public static void register(IEventBus eventBus) {
-        registerOres("titanium_ore", 6, ModOres.TITANIUM_ORE, ModOres.DEEPSLATE_TITANIUM_ORE);
-        registerOres("blue_nanitarium_ore", 3, ModOres.BLUE_NANITARIUM_ORE);
-        registerOres("red_nanitarium_ore", 3, ModOres.RED_NANITARIUM_ORE);
-        registerOres("ruby_ore", 3, ModOres.RUBY_ORE, ModOres.DEEPSLATE_RUBY_ORE);
-        registerOres("veranium_ore", 10, ModOres.VERANIUM_ORE, ModOres.VERANIUM_ORE);
-        registerOres("therium_ore", 10, ModOres.THERIUM_ORE, ModOres.THERIUM_ORE);
+
+        //Overworld
+        registerOverworldOres("titanium_ore", 6, ModOres.TITANIUM_ORE, ModOres.DEEPSLATE_TITANIUM_ORE);
+        registerOverworldOres("ruby_ore", 3, ModOres.RUBY_ORE, ModOres.DEEPSLATE_RUBY_ORE);
+
+        registerDeepslateOres("blue_nanitarium_ore", 3, ModOres.BLUE_NANITARIUM_ORE);
+
+        //Nether
+        registerNetherOres("red_nanitarium_ore", 3, ModOres.RED_NANITARIUM_ORE);
+
+        //The End
+        registerEndOres("veranium_ore", 5, ModOres.VERANIUM_ORE);
+        registerEndOres("therium_ore", 5, ModOres.THERIUM_ORE);
 
         CONFIGURED_FEATURES.register(eventBus);
     }

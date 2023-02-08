@@ -24,7 +24,7 @@ public class ModPlacedFeatures {
         final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = ModConfiguredFeatures.OREMAP.get(name);
 
         final RegistryObject<PlacedFeature> ORE_PLACED = PLACED_FEATURES.register(name + "_placed",
-                () -> new PlacedFeature(CONFIGURED_ORE.getHolder().get(), ModOrePlacement.rareOrePlacement(veinsPerChunk,
+                () -> new PlacedFeature(CONFIGURED_ORE.getHolder().get(), ModOrePlacement.commonOrePlacement(veinsPerChunk,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)))));
 
         System.out.println("=====================================> Registering " + name);
@@ -35,10 +35,10 @@ public class ModPlacedFeatures {
     public static void register(IEventBus eventBus) {
         placeOres("titanium_ore", ModConfiguredFeatures.OREMAP, 14, -64, 16);
         placeOres("blue_nanitarium_ore", ModConfiguredFeatures.OREMAP, 1, -64, -32);
-        placeOres("red_nanitarium_ore", ModConfiguredFeatures.OREMAP, 1, 90, 125);
+        placeOres("red_nanitarium_ore", ModConfiguredFeatures.OREMAP, 2, 90, 125);
         placeOres("ruby_ore", ModConfiguredFeatures.OREMAP, 12, -64, 16);
-        placeOres("veranium_ore", ModConfiguredFeatures.OREMAP, 5, 0, 100);
-        placeOres("therium_ore", ModConfiguredFeatures.OREMAP, 5, 0, 100);
+        placeOres("veranium_ore", ModConfiguredFeatures.OREMAP, 4, 0, 75);
+        placeOres("therium_ore", ModConfiguredFeatures.OREMAP, 4, 0, 75);
         
         PLACED_FEATURES.register(eventBus);
     }

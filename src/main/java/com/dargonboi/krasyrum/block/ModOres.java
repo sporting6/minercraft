@@ -1,8 +1,8 @@
 package com.dargonboi.krasyrum.block;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.item.ModIngots;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
