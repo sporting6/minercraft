@@ -84,17 +84,17 @@ public class ModConfiguredFeatures {
     public static void register(IEventBus eventBus) {
 
         //Overworld
-        registerOverworldOres("titanium_ore", 6, ModOres.TITANIUM_ORE, ModOres.DEEPSLATE_TITANIUM_ORE);
-        registerOverworldOres("ruby_ore", 3, ModOres.RUBY_ORE, ModOres.DEEPSLATE_RUBY_ORE);
+        registerOverworldOres("titanium_ore", 6, ModOres.OREBLOCKMAP.get("titanium_ore"),  ModOres.OREBLOCKMAP.get("deepslate_titanium_ore"));
+        registerOverworldOres("ruby_ore", 3, ModOres.OREBLOCKMAP.get("ruby_ore"), ModOres.OREBLOCKMAP.get("deepslate_ruby_ore"));
 
         registerDeepslateOres("blue_nanitarium_ore", 3, ModOres.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
         //Nether
-        registerNetherOres("red_nanitarium_ore", 3, ModOres.RED_NANITARIUM_ORE);
+        registerNetherOres("red_nanitarium_ore", 3, ModOres.OREBLOCKMAP.get("red_nanitarium_ore"));
 
         //The End
-        registerEndOres("veranium_ore", 5, ModOres.VERANIUM_ORE);
-        registerEndOres("therium_ore", 5, ModOres.THERIUM_ORE);
+        registerEndOres("veranium_ore", 5, ModOres.OREBLOCKMAP.get("veranium_ore"));
+        registerEndOres("therium_ore", 5, ModOres.OREBLOCKMAP.get("therium_ore"));
 
         CONFIGURED_FEATURES.register(eventBus);
     }
