@@ -27,8 +27,6 @@ public class ModPlacedFeatures {
                 () -> new PlacedFeature(CONFIGURED_ORE.getHolder().get(), ModOrePlacement.commonOrePlacement(veinsPerChunk,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(minY), VerticalAnchor.absolute(maxY)))));
 
-        System.out.println("=====================================> Registering " + name);
-
         PLACEDOREMAP.put(name, ORE_PLACED);
     }
     

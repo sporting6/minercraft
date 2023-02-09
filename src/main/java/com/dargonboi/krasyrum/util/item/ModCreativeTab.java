@@ -12,7 +12,7 @@ public class ModCreativeTab {
 
         @Override
         public ItemStack makeIcon(){
-            return new ItemStack(ModIngots.RED_NANITARIUM_INGOT.get());
+            return new ItemStack(ModIngots.INGOTMAP.get("blue_nanitarium_ingot").get());
         }
 
     };
