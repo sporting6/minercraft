@@ -1,5 +1,6 @@
 package com.dargonboi.krasyrum.util.item;
 
+import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.item.ModFoods;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.item.ModTools;
@@ -12,7 +13,7 @@ public class ModCreativeTab {
 
         @Override
         public ItemStack makeIcon(){
-            return new ItemStack(ModIngots.INGOTMAP.get("blue_nanitarium_ingot").get());
+            return new ItemStack(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get());
         }
 
     };

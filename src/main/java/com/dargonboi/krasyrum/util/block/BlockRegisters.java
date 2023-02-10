@@ -82,12 +82,12 @@ public class BlockRegisters {
     }
 
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        RegistryObject<Item> toReturn = ModIngots.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
+        RegistryObject<Item> toReturn = Krasyrum.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS)));
         Krasyrum.OREITEMMAP.put(name, toReturn);
         return toReturn;
     }
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        RegistryObject<Item> toReturn = ModIngots.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        RegistryObject<Item> toReturn = Krasyrum.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
         Krasyrum.OREITEMMAP.put(name, toReturn);
         return toReturn;
     }
