@@ -33,18 +33,21 @@ public class Material {
 
 
     public Material(String pName, CreativeModeTab pTab, Rarity pRarity){
-        name = pName;
-        rarity = pRarity;
-        tab = pTab;
+        this.name = pName;
+        this.rarity = pRarity;
+        this.tab = pTab;
     }
 
     public Material(String pName, CreativeModeTab pTab){
-        name = pName;
-        tab = pTab;
+        this.name = pName;
+        this.rarity = Rarity.COMMON;
+        this.tab = pTab;
     }
 
     public Material(String pName){
-        name = pName;
+        this.name = pName;
+        this.rarity = Rarity.COMMON;
+        this.tab = DEFAULT_TAB;
     }
 
     public static String getName() {
@@ -105,7 +108,7 @@ public class Material {
         toolTier = TierSortingRegistry.registerTier(
                 new ForgeTier(level ,durability, speed, attackDamageBonus, enchantmentValue, tag,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get())),
                 new ResourceLocation("krasyrum:" + name),
-                List.of(), List.of());
+                beforeTier, nextTier);
 
         if(fireResistant) {
             SWORD = Krasyrum.ITEMS.register(name + "_sword",
@@ -210,15 +213,14 @@ public class Material {
     }
 
     public Material deepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
-        BlockRegisters.registerOre(name + "_ore", destroyTime, explosionResistance);
-        ModConfiguredFeatures.registerDeepslateOres(name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(name + "_ore"));
+        BlockRegisters.registerDeepslateOre(name + "_ore", destroyTime, explosionResistance);
+        ModConfiguredFeatures.registerDeepslateOres(name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get("deepslate_" + name + "_ore"));
         ModPlacedFeatures.placeOres(name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
     public Material stoneDeepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
-        BlockRegisters.registerOre(name + "_ore", destroyTime, explosionResistance);
-        BlockRegisters.registerOre("deepslate_" + name + "_ore", destroyTime + 3, explosionResistance + 5);
+        BlockRegisters.registerOres(name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerOverworldOres(name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(name + "_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_" + name + "_ore"));
         ModPlacedFeatures.placeOres(name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
         return this;

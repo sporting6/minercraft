@@ -72,7 +72,7 @@ public class ModConfiguredFeatures {
         registerOverworldOres("titanium_ore", 6, Krasyrum.OREBLOCKMAP.get("titanium_ore"),  Krasyrum.OREBLOCKMAP.get("deepslate_titanium_ore"));
         registerOverworldOres("ruby_ore", 3, Krasyrum.OREBLOCKMAP.get("ruby_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_ruby_ore"));
 
-        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
+//        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
         //Nether
         registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));

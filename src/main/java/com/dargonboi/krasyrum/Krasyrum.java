@@ -19,6 +19,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -47,12 +48,21 @@ public class Krasyrum {
 
 	// Defferred Registers
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+
+	// Materials
 	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, ModRaritys.INSANE)
 			.fireResistant()
 			.ingot()
-			.armor(28, 3200, new int[]{8, 12, 14, 7}, .7f, 4, SoundEvents.ARMOR_EQUIP_NETHERITE)
-			.tools(6, 4200, 18f, 20, .4f, 26, ModTags.KYRANIUM_TAG, List.of(ModToolMaterials.BLUE_NANITARIUM), List.of())
-			;
+			.armor(22, 3200, new int[]{8, 12, 14, 7}, .4f, 4, SoundEvents.ARMOR_EQUIP_NETHERITE)
+			.tools(6, 4200, 18f, 20, .4f, 22,
+					ModTags.KYRANIUM_TAG, List.of(), List.of());
+
+	public static final Material BLUE_NANITARIUM = new Material("blue_nanitarium").fireResistant().ingot().raw().crushable()
+			.materialBlock(MaterialColor.COLOR_BLUE, 8f, 600f, true)
+			.armor(24, 2600, new int[]{3, 7, 8, 4}, .2f, 2, SoundEvents.ARMOR_EQUIP_NETHERITE)
+			.tools(5, 2976, 14f, 16, .2f, 18,
+					ModTags.BLUE_NANITARIUM_TAG, List.of(ModToolMaterials.RED_NANITARIUM), List.of())
+			.deepslateOre(12f, 20f, 3, 1, -64, -32);
 
 	public Krasyrum() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -68,9 +78,6 @@ public class Krasyrum {
 		ModOres.Register(bus);
 
 		ModPotions.register(bus);
-
-//		ModBlockEntities.register(bus);
-//		ModMenuTypes.register(bus);
 
 		ModDimensions.register();
 

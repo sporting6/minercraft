@@ -17,18 +17,18 @@ public class ModArmor {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
 
     // Blue Nanitarium Armor
-    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_HELMET = ITEMS.register("blue_nanitarium_helmet",
-            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_CHESTPLATE = ITEMS.register(
-            "blue_nanitarium_chestplate", () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_LEGGINGS = ITEMS.register("blue_nanitarium_leggings",
-            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_BOOTS = ITEMS.register("blue_nanitarium_boots",
-            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_HELMET = ITEMS.register("blue_nanitarium_helmet",
+//            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.HEAD,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_CHESTPLATE = ITEMS.register(
+//            "blue_nanitarium_chestplate", () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.CHEST,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_LEGGINGS = ITEMS.register("blue_nanitarium_leggings",
+//            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.LEGS,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ArmorItem> BLUE_NANITARIUM_BOOTS = ITEMS.register("blue_nanitarium_boots",
+//            () -> new ArmorItem(ModArmorMaterial.BLUE_NANITARIUM, EquipmentSlot.FEET,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Red Nanitarium Armor
     public static final RegistryObject<ArmorItem> RED_NANITARIUM_HELMET = ITEMS.register("red_nanitarium_helmet",

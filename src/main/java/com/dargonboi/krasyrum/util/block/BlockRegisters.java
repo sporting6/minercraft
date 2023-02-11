@@ -19,7 +19,7 @@ import java.util.function.Supplier;
 public class BlockRegisters {
 
 
-    public static final RegistryObject<Block> registerOre(String name, float destroyTime, float explosionResistance){
+    public static final RegistryObject<Block> registerOres(String name, float destroyTime, float explosionResistance){
         final RegistryObject<Block> ORE_BLOCK = registerBlock(name,
                 () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
                         .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(SoundType.STONE)));
@@ -30,6 +30,23 @@ public class BlockRegisters {
                                 explosionResistance + 1.5f).sound(SoundType.DEEPSLATE)));
 
         Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
+        Krasyrum.OREBLOCKMAP.put("deepslate_" + name, DEEPSLATE_ORE_BLOCK);
+        return Krasyrum.OREBLOCKMAP.get(name);
+    }
+    public static final RegistryObject<Block> registerOre(String name, float destroyTime, float explosionResistance){
+        final RegistryObject<Block> ORE_BLOCK = registerBlock(name,
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE)
+                        .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(SoundType.STONE)));
+
+        Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
+        return Krasyrum.OREBLOCKMAP.get(name);
+    }
+    public static final RegistryObject<Block> registerDeepslateOre(String name, float destroyTime, float explosionResistance){
+        final RegistryObject<Block> DEEPSLATE_ORE_BLOCK = registerBlock("deepslate_" + name,
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE)
+                        .requiresCorrectToolForDrops().strength(destroyTime + 1.5f,
+                                explosionResistance + 1.5f).sound(SoundType.DEEPSLATE)));
+
         Krasyrum.OREBLOCKMAP.put("deepslate_" + name, DEEPSLATE_ORE_BLOCK);
         return Krasyrum.OREBLOCKMAP.get(name);
     }

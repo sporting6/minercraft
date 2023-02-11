@@ -17,10 +17,10 @@ public class ModOres {
 
 
     public static void Register(IEventBus eventBus){
-        BlockRegisters.registerOre("blue_nanitarium_ore", MaterialColor.DEEPSLATE, 40f, 600f, SoundType.DEEPSLATE);
+//        BlockRegisters.registerOre("blue_nanitarium_ore", MaterialColor.DEEPSLATE, 40f, 600f, SoundType.DEEPSLATE);
         BlockRegisters.registerOre("red_nanitarium_ore", MaterialColor.NETHER, 40f, 600f, SoundType.NETHERRACK);
-        BlockRegisters.registerOre("ruby_ore", 4.5f, 4f);
-        BlockRegisters.registerOre("titanium_ore", 4.5f, 4f);
+        BlockRegisters.registerOres("ruby_ore", 4.5f, 4f);
+        BlockRegisters.registerOres("titanium_ore", 4.5f, 4f);
         BlockRegisters.registerOre("veranium_ore", MaterialColor.SAND, 30f, 600f, SoundType.STONE);
         BlockRegisters.registerOre("therium_ore", MaterialColor.SAND, 30f, 600f, SoundType.STONE);
 

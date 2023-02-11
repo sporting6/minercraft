@@ -9,13 +9,13 @@ import net.minecraft.world.item.crafting.Ingredient;
 public final class ModArmorMaterial {
 	
 	
-	public static final ArmorMaterial KYRANIUM = new BaseArmorMaterial(27, new int[] {3300, 3700, 4000, 3500}, 
-			new int[] {8, 12, 14, 7}, 0.5f, 7.0F, Krasyrum.MODID + ":kyranium",
-			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("kyranium_ingot").get()));
-	
-	public static final ArmorMaterial BLUE_NANITARIUM = new BaseArmorMaterial(17, new int[] {1900, 2300, 2600, 2000}, 
-			new int[] {3, 7, 8, 4}, 0.1f, 2.0F, Krasyrum.MODID + ":blue_nanitarium",
-			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get()));
+//	public static final ArmorMaterial KYRANIUM = new BaseArmorMaterial(27, new int[] {3300, 3700, 4000, 3500},
+//			new int[] {8, 12, 14, 7}, 0.5f, 7.0F, Krasyrum.MODID + ":kyranium",
+//			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("kyranium_ingot").get()));
+//
+//	public static final ArmorMaterial BLUE_NANITARIUM = new BaseArmorMaterial(17, new int[] {1900, 2300, 2600, 2000},
+//			new int[] {3, 7, 8, 4}, 0.1f, 2.0F, Krasyrum.MODID + ":blue_nanitarium",
+//			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get()));
 	
 	public static final ArmorMaterial RED_NANITARIUM = new BaseArmorMaterial(24, new int[] {2200, 2600, 2950, 2300}, 
 			new int[] {4, 8, 9, 5}, 0.2f, 4.0F, Krasyrum.MODID + ":red_nanitarium",

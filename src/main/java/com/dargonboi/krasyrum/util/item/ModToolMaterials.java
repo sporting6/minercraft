@@ -18,10 +18,10 @@ public final class ModToolMaterials {
 
 
 
-	public static final Tier BLUE_NANITARIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(5 ,2976, 10f, 0, 24, ModTags.BLUE_NANITARIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
-			new ResourceLocation("krasyrum:blue_nanitarium"),
-			List.of(Tiers.NETHERITE), List.of());
+//	public static final Tier BLUE_NANITARIUM = TierSortingRegistry.registerTier(
+//			new ForgeTier(5 ,2976, 10f, 0, 24, ModTags.BLUE_NANITARIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
+//			new ResourceLocation("krasyrum:blue_na-nitarium"),
+//			List.of(Tiers.NETHERITE), List.of());
 
 //	public static final Tier KYRANIUM = TierSortingRegistry.registerTier(
 //			new ForgeTier(6 ,4200, 33f, 4, 26, ModTags.KYRANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
@@ -33,7 +33,7 @@ public final class ModToolMaterials {
 	public static final Tier RED_NANITARIUM = TierSortingRegistry.registerTier(
 			new ForgeTier(5 ,2100, 8f, 0, 19, ModTags.RED_NANITARIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("red_nanitarium_ingot").get())),
 			new ResourceLocation("krasyrum:red_nanitarium"),
-			List.of(Tiers.NETHERITE), List.of(BLUE_NANITARIUM));
+			List.of(Tiers.NETHERITE), List.of());
 	
 	
 	public static final Tier VERANIUM = TierSortingRegistry.registerTier(
