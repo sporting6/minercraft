@@ -20,8 +20,8 @@ public class ModPlacedFeatures {
 
     public static final HashMap<String, RegistryObject<PlacedFeature>> PLACEDOREMAP  = new HashMap<String, RegistryObject<PlacedFeature>>();
             
-    private static void placeOres(String name, HashMap map, int veinsPerChunk, int minY, int maxY){
-        final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = Krasyrum.OREMAP.get(name);
+    public static void placeOres(String name, HashMap<String, RegistryObject<ConfiguredFeature<?,?>>> map, int veinsPerChunk, int minY, int maxY){
+        final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = map.get(name);
 
         final RegistryObject<PlacedFeature> ORE_PLACED = PLACED_FEATURES.register(name + "_placed",
                 () -> new PlacedFeature(CONFIGURED_ORE.getHolder().get(), ModOrePlacement.commonOrePlacement(veinsPerChunk,

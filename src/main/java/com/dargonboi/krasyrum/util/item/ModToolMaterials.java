@@ -16,16 +16,18 @@ public final class ModToolMaterials {
 	
 	//For MultiTools
 
-	
+
+
 	public static final Tier BLUE_NANITARIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(5 ,2670, 10f, 0, 16, ModTags.BLUE_NANITARIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("kyranium_ingot").get())),
+			new ForgeTier(5 ,2976, 10f, 0, 24, ModTags.BLUE_NANITARIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
 			new ResourceLocation("krasyrum:blue_nanitarium"),
 			List.of(Tiers.NETHERITE), List.of());
-	
+
 	public static final Tier KYRANIUM = TierSortingRegistry.registerTier(
 			new ForgeTier(6 ,4200, 33f, 4, 26, ModTags.KYRANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
 			new ResourceLocation("krasyrum:kyranium"),
 			List.of(BLUE_NANITARIUM), List.of());
+
 	
 	
 	public static final Tier RED_NANITARIUM = TierSortingRegistry.registerTier(

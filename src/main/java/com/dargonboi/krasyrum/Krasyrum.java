@@ -3,9 +3,14 @@ package com.dargonboi.krasyrum;
 import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.block.ModOres;
 import com.dargonboi.krasyrum.item.*;
+import com.dargonboi.krasyrum.util.Material;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.util.item.ModRaritys;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import com.dargonboi.krasyrum.world.feature.ModConfiguredFeatures;
 import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
+import io.netty.util.collection.ByteCollections;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -26,6 +31,9 @@ public class Krasyrum {
 
 	// Hashmaps
 	public static final HashMap<String, RegistryObject<Item>> ITEMMAP = new HashMap<String, RegistryObject<Item>>();
+	public static final HashMap<String, RegistryObject<ArmorItem>> ARMORMAP =  new HashMap<String, RegistryObject<ArmorItem>>();
+	public static final HashMap<String, RegistryObject<?>> TOOLMAP =  new HashMap<String, RegistryObject<?>>();
+
 	public static final HashMap<String, RegistryObject<Item>> OREITEMMAP = new HashMap<String, RegistryObject<Item>>();
 	public static final HashMap<String, RegistryObject<Block>> OREBLOCKMAP = new HashMap<String, RegistryObject<Block>>();
 	public static final HashMap<String, RegistryObject<Block>> BLOCKMAP = new HashMap<String, RegistryObject<Block>>();
@@ -33,11 +41,11 @@ public class Krasyrum {
 
 	// Defferred Registers
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-
+	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, ModRaritys.INSANE).ingot();
 
 	public Krasyrum() {
-
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
 
 		ModIngots.Register(bus);
 		ModTools.Register(bus);

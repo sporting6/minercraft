@@ -19,33 +19,9 @@ import java.util.HashMap;
 public class ModIngots {
 
 
-//    public static final RegistryObject<Item> KYRANIUM_HANDLE = ITEMS.register("kyranium_handle",
-//            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(ModRaritys.INSANE)));
-//
-//
-//
-//
-//    //Obsidian
-//    public static final RegistryObject<Item> OBSIDIAN_SHARDS = ITEMS.register("obsidian_shards", () -> new Item(
-//            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
-//
-//    public static final RegistryObject<Item> PARTALLY_REFINED_OBSIDIAN = ITEMS.register("partally_refined_obsidian",
-//            () -> new Item(new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant()
-//                    .rarity(Rarity.UNCOMMON)));
-//
-//    public static final RegistryObject<Item> REFINED_OBSIDIAN = ITEMS.register("refined_obsidian", () -> new Item(
-//            new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.UNCOMMON)));
-//
-//    public static final RegistryObject<Item> REFINED_OBSIDIAN_INGOT = ITEMS.register("refined_obsidian_ingot",
-//            () -> new Item(
-//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).fireResistant().rarity(Rarity.RARE)));
-
-
-
-
     public static void Register(IEventBus eventBus){
 
-        ItemRegisters.registerItem("kyranium_ingot", ModRaritys.INSANE, true);
+//        ItemRegisters.registerItem("kyranium_ingot", ModRaritys.INSANE, true);
         ItemRegisters.registerItem("kyranium_handle", ModRaritys.INSANE, true);
         ItemRegisters.registerIngot("blue_nanitarium",  Rarity.RARE, true);
         ItemRegisters.registerIngot("red_nanitarium",  Rarity.RARE, true);
@@ -59,8 +35,6 @@ public class ModIngots {
         ItemRegisters.registerItem("partally_refined_obsidian", true);
         ItemRegisters.registerItem("refined_obsidian", true);
         ItemRegisters.registerItem("refined_obsidian_ingot", true);
-
-
 
 
         Krasyrum.ITEMS.register(eventBus);
