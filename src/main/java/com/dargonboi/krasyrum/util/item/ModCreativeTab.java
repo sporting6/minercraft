@@ -4,6 +4,7 @@ import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.item.ModFoods;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.item.ModTools;
+import cpw.mods.modlauncher.api.TypesafeMap;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
@@ -31,7 +32,7 @@ public class ModCreativeTab {
 
         @Override
         public ItemStack makeIcon(){
-            return new ItemStack(ModTools.VERANIUM_PICKAXE.get());
+            return new ItemStack(Krasyrum.ARMORMAP.get("blue_nanitarium_chestplate").get());
         }
 
     };

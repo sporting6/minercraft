@@ -80,21 +80,21 @@ public class ModTools {
 //                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Veranium Tools
-    public static final RegistryObject<SwordItem> VERANIUM_SWORD = ITEMS.register("veranium_sword",
-            () -> new SwordItem(ModToolMaterials.VERANIUM, 8, -1.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<PickaxeItem> VERANIUM_PICKAXE = ITEMS.register("veranium_pickaxe",
-            () -> new PickaxeItem(ModToolMaterials.VERANIUM, 6, -2.0F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<AxeItem> VERANIUM_AXE = ITEMS.register("veranium_axe",
-            () -> new AxeItem(ModToolMaterials.VERANIUM, 10, -2.4F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<ShovelItem> VERANIUM_SHOVEL = ITEMS.register("veranium_shovel",
-            () -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<HoeItem> VERANIUM_HOE = ITEMS.register("veranium_hoe",
-            () -> new HoeItem(ModToolMaterials.VERANIUM, 3, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<SwordItem> VERANIUM_SWORD = ITEMS.register("veranium_sword",
+//            () -> new SwordItem(ModToolMaterials.VERANIUM, 8, -1.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<PickaxeItem> VERANIUM_PICKAXE = ITEMS.register("veranium_pickaxe",
+//            () -> new PickaxeItem(ModToolMaterials.VERANIUM, 6, -2.0F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<AxeItem> VERANIUM_AXE = ITEMS.register("veranium_axe",
+//            () -> new AxeItem(ModToolMaterials.VERANIUM, 10, -2.4F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ShovelItem> VERANIUM_SHOVEL = ITEMS.register("veranium_shovel",
+//            () -> new ShovelItem(ModToolMaterials.VERANIUM, 5, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<HoeItem> VERANIUM_HOE = ITEMS.register("veranium_hoe",
+//            () -> new HoeItem(ModToolMaterials.VERANIUM, 3, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Titanium Tools
 //    public static final RegistryObject<SwordItem> TITANIUM_SWORD = ITEMS.register("titanium_sword",
@@ -113,22 +113,22 @@ public class ModTools {
 //            () -> new HoeItem(ModToolMaterials.TITANIUM, 2, -0.8F,
 //                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
-    //Ruby Tools
-    public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword",
-            () -> new SwordItem(ModToolMaterials.RUBY, 6, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
-            () -> new PickaxeItem(ModToolMaterials.RUBY, 4, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe",
-            () -> new AxeItem(ModToolMaterials.RUBY, 8, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
-            () -> new ShovelItem(ModToolMaterials.RUBY, 5, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe",
-            () -> new HoeItem(ModToolMaterials.RUBY, 3, -0.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    //Ruby Tools
+//    public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword",
+//            () -> new SwordItem(ModToolMaterials.RUBY, 6, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<PickaxeItem> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
+//            () -> new PickaxeItem(ModToolMaterials.RUBY, 4, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<AxeItem> RUBY_AXE = ITEMS.register("ruby_axe",
+//            () -> new AxeItem(ModToolMaterials.RUBY, 8, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ShovelItem> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
+//            () -> new ShovelItem(ModToolMaterials.RUBY, 5, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<HoeItem> RUBY_HOE = ITEMS.register("ruby_hoe",
+//            () -> new HoeItem(ModToolMaterials.RUBY, 3, -0.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
 
 

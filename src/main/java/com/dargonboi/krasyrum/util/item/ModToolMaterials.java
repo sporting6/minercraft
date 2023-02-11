@@ -36,20 +36,20 @@ public final class ModToolMaterials {
 //			List.of(Tiers.NETHERITE), List.of());
 	
 	
-	public static final Tier VERANIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(3 ,1869, 100f, 0, 27, ModTags.VERANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("veranium_ingot").get())),
-			new ResourceLocation("krasyrum:veranium"),
-			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+//	public static final Tier VERANIUM = TierSortingRegistry.registerTier(
+//			new ForgeTier(3 ,1869, 100f, 0, 27, ModTags.VERANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("veranium_ingot").get())),
+//			new ResourceLocation("krasyrum:veranium"),
+//			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 	
 //	public static final Tier TITANIUM = TierSortingRegistry.registerTier(
 //			new ForgeTier(2 ,500, 7.5f, 0, 12,ModTags.TITANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("titanium_ingot").get())),
 //			new ResourceLocation("krasyrum:titanium"),
 //			List.of(Tiers.IRON), List.of(VERANIUM));
 	
-	public static final Tier RUBY = TierSortingRegistry.registerTier(
-			new ForgeTier(2 ,700, 10f, 0, 18,ModTags.RUBY_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("ruby").get())),
-			new ResourceLocation("krasyrum:ruby"),
-			List.of(Tiers.IRON), List.of());
+//	public static final Tier RUBY = TierSortingRegistry.registerTier(
+//			new ForgeTier(2 ,700, 10f, 0, 18,ModTags.RUBY_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("ruby").get())),
+//			new ResourceLocation("krasyrum:ruby"),
+//			List.of(Tiers.IRON), List.of());
 	
 	
 	

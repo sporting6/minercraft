@@ -53,13 +53,10 @@ public class Krasyrum {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
 	// Materials
-	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, ModRaritys.INSANE)
-			.fireResistant()
-			.ingot()
+	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, ModRaritys.INSANE).fireResistant().ingot()
 			.armor(22, 3000, new int[]{6, 12, 10, 4}, .4f, 4, SoundEvents.ARMOR_EQUIP_NETHERITE)
 			.tools(6, 4200, 18f, 20, .4f, 22,
 					ModTags.KYRANIUM_TAG, List.of(), List.of());
-
 	public static final Material BLUE_NANITARIUM = new Material("blue_nanitarium").fireResistant().ingot().raw().crushable()
 			.materialBlock(MaterialColor.COLOR_BLUE, 8f, 600f, true)
 			.armor(24, 2600, new int[]{3, 7, 6, 2}, .2f, 2, SoundEvents.ARMOR_EQUIP_NETHERITE)
@@ -69,15 +66,29 @@ public class Krasyrum {
 	public static final Material RED_NANITARIUM = new Material("red_nanitarium").fireResistant().ingot().raw().crushable()
 			.materialBlock(MaterialColor.COLOR_RED, 8f, 600f, true)
 			.armor(28, 2900, new int[]{5,9, 7, 3}, .3f, 3, SoundEvents.ARMOR_EQUIP_NETHERITE)
-			.tools(5, 2600, 10f, 14f, 0f, 12,
+			.tools(3, 2600, 10f, 14f, 0f, 12,
 					ModTags.RED_NANITARIUM_TAG, List.of(Tiers.NETHERITE), List.of())
 			.netherOre(11f, 20f, 3, 1, 100, 127);
-	public static final Material TITANIUM = new Material("titanium").fireResistant().ingot().raw().crushable()
-			.materialBlock(MaterialColor.COLOR_LIGHT_GRAY, 8f, 600f, true)
-			.armor(28, 2900, new int[]{5,9, 7, 3}, .3f, 3, SoundEvents.ARMOR_EQUIP_NETHERITE)
+	public static final Material TITANIUM = new Material("titanium").ingot().raw().crushable()
+			.materialBlock(MaterialColor.COLOR_LIGHT_GRAY, 4f, 30f, true)
+			.armor(14, 600, new int[]{2,5, 4, 2}, .0f, 0, SoundEvents.ARMOR_EQUIP_IRON)
 			.tools(2 ,500, 7.5f, 4.5f, 0f, 12,
 					ModTags.TITANIUM_TAG, List.of(Tiers.IRON), List.of(Tiers.DIAMOND))
-			.stoneDeepslateOre(11f, 20f, 3, 1, 100, 127);
+			.stoneDeepslateOre(4f, 6f, 8, 12, -48, 24);
+	public static final Material RUBY = new Material("ruby").gem()
+			.materialBlock(MaterialColor.COLOR_RED, 3f, 15, false)
+			.armor(18, 450, new int[]{5,9, 7, 3}, .0f, 0, SoundEvents.ARMOR_EQUIP_DIAMOND)
+			.tools(3 ,300, 10.5f, 4f, 0.1f, 18,
+					ModTags.RUBY_TAG, List.of(Tiers.IRON), List.of(Tiers.DIAMOND))
+			.stoneDeepslateOre(5f, 6f, 3, 7, -32, 32);
+	public static final Material VERANIUM = new Material("veranium").ingot().raw().crushable()
+			.materialBlock(MaterialColor.COLOR_LIGHT_GRAY, 4f, 30f, true)
+			.tools(2 ,500, 100f, 2.5f, 1f, 6,
+					ModTags.VERANIUM_TAG, List.of(Tiers.IRON), List.of(Tiers.DIAMOND))
+			.endOre(4f, 6f, 6, 4, 0, 72);
+	public static final Material THERIUM = new Material("therium").ingot().raw().crushable()
+			.endOre(4f, 6f, 6, 4, 0, 72);
+
 
 	public Krasyrum() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

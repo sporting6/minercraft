@@ -77,6 +77,17 @@ public class Material {
         return this;
     }
 
+    public Material gem(){
+        final RegistryObject<Item> ITEM;
+        if(fireResistant) {
+            ITEM = Krasyrum.ITEMS.register(this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity).fireResistant()));
+        } else {
+            ITEM = Krasyrum.ITEMS.register(this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity)));
+        }
+        Krasyrum.ITEMMAP.put(this.name, ITEM);
+        return this;
+    }
+
     public Material raw(){
         final RegistryObject<Item> ITEM;
         if(fireResistant) {

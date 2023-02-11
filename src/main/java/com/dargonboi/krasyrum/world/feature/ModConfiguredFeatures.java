@@ -70,7 +70,7 @@ public class ModConfiguredFeatures {
 
         //Overworld
 //        registerOverworldOres("titanium_ore", 6, Krasyrum.OREBLOCKMAP.get("titanium_ore"),  Krasyrum.OREBLOCKMAP.get("deepslate_titanium_ore"));
-        registerOverworldOres("ruby_ore", 3, Krasyrum.OREBLOCKMAP.get("ruby_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_ruby_ore"));
+//        registerOverworldOres("ruby_ore", 3, Krasyrum.OREBLOCKMAP.get("ruby_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_ruby_ore"));
 
 //        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
@@ -78,8 +78,8 @@ public class ModConfiguredFeatures {
 //        registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));
 
         //The End
-        registerEndOres("veranium_ore", 5, Krasyrum.OREBLOCKMAP.get("veranium_ore"));
-        registerEndOres("therium_ore", 5, Krasyrum.OREBLOCKMAP.get("therium_ore"));
+//        registerEndOres("veranium_ore", 5, Krasyrum.OREBLOCKMAP.get("veranium_ore"));
+//        registerEndOres("therium_ore", 5, Krasyrum.OREBLOCKMAP.get("therium_ore"));
 
         CONFIGURED_FEATURES.register(eventBus);
     }

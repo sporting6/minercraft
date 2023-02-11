@@ -34,9 +34,9 @@ public class ModPlacedFeatures {
 //        placeOres("titanium_ore", Krasyrum.OREMAP, 14, -64, 16);
 //        placeOres("blue_nanitarium_ore", Krasyrum.OREMAP, 1, -64, -32);
 //        placeOres("red_nanitarium_ore", Krasyrum.OREMAP, 2, 90, 125);
-        placeOres("ruby_ore", Krasyrum.OREMAP, 12, -64, 16);
-        placeOres("veranium_ore", Krasyrum.OREMAP, 4, 0, 75);
-        placeOres("therium_ore", Krasyrum.OREMAP, 4, 0, 75);
+//        placeOres("ruby_ore", Krasyrum.OREMAP, 12, -64, 16);
+//        placeOres("veranium_ore", Krasyrum.OREMAP, 4, 0, 75);
+//        placeOres("therium_ore", Krasyrum.OREMAP, 4, 0, 75);
         
         PLACED_FEATURES.register(eventBus);
     }

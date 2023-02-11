@@ -71,19 +71,19 @@ public class ModArmor {
 //            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET,
 //                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
-    // Ruby Armor
-    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
-            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
-            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots",
-            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    // Ruby Armor
+//    public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",
+//            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.HEAD,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate",
+//            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.CHEST,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> RUBY_LEGGINGS = ITEMS.register("ruby_leggings",
+//            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.LEGS,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> RUBY_BOOTS = ITEMS.register("ruby_boots",
+//            () -> new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlot.FEET,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
     
     public static void Register(IEventBus eventBus){

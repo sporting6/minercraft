@@ -26,9 +26,9 @@ public class ModIngots {
 //        ItemRegisters.registerIngot("blue_nanitarium",  Rarity.RARE, true);
 //        ItemRegisters.registerIngot("red_nanitarium",  Rarity.RARE, true);
 //        ItemRegisters.registerIngot("titanium");
-        ItemRegisters.registerIngot("veranium");
-        ItemRegisters.registerIngot("therium");
-        ItemRegisters.registerItem("ruby");
+//        ItemRegisters.registerIngot("veranium");
+//        ItemRegisters.registerIngot("therium");
+//        ItemRegisters.registerItem("ruby");
         ItemRegisters.registerItem("perfect_diamond");
         ItemRegisters.registerItem("compressed_netherite");
         ItemRegisters.registerItem("obsidian_shards");
