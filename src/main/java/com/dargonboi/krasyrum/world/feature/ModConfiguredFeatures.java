@@ -75,7 +75,7 @@ public class ModConfiguredFeatures {
 //        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
 
         //Nether
-        registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));
+//        registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));
 
         //The End
         registerEndOres("veranium_ore", 5, Krasyrum.OREBLOCKMAP.get("veranium_ore"));

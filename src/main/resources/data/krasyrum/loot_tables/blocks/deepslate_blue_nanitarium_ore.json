@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "krasyrum:blue_nanitarium_ore",
+              "name": "krasyrum:deepslate_blue_nanitarium_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

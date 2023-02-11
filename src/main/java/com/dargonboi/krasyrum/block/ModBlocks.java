@@ -27,7 +27,7 @@ public class ModBlocks {
 
     public static void Register(IEventBus eventBus){
 //        BlockRegisters.registerMaterialBlock("blue_nanitarium_block", MaterialColor.COLOR_BLUE, 8.0F, 600.0F, true);
-        BlockRegisters.registerMaterialBlock("red_nanitarium_block", MaterialColor.COLOR_RED, 8.0F, 600.0F, true);
+//        BlockRegisters.registerMaterialBlock("red_nanitarium_block", MaterialColor.COLOR_RED, 8.0F, 600.0F, true);
 
         BlockRegisters.registerMaterialBlock("kyranium_block", MaterialColor.COLOR_MAGENTA, 8.0F, 600.0F, false);
 

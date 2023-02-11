@@ -63,21 +63,21 @@ public class ModTools {
     // Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Red Nanitarium Tools
-    public static final RegistryObject<SwordItem> RED_NANITARIUM_SWORD = ITEMS.register("red_nanitarium_sword",
-            () -> new SwordItem(ModToolMaterials.RED_NANITARIUM, 11, -2.3F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<PickaxeItem> RED_NANITARIUM_PICKAXE = ITEMS.register("red_nanitarium_pickaxe",
-            () -> new PickaxeItem(ModToolMaterials.RED_NANITARIUM, 5, -2.7F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<AxeItem> RED_NANITARIUM_AXE = ITEMS.register("red_nanitarium_axe",
-            () -> new AxeItem(ModToolMaterials.RED_NANITARIUM, 14, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<ShovelItem> RED_NANITARIUM_SHOVEL = ITEMS.register("red_nanitarium_shovel",
-            () -> new ShovelItem(ModToolMaterials.RED_NANITARIUM, 5, -2.7F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
-    public static final RegistryObject<HoeItem> RED_NANITARIUM_HOE = ITEMS.register("red_nanitarium_hoe",
-            () -> new HoeItem(ModToolMaterials.RED_NANITARIUM, 2, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<SwordItem> RED_NANITARIUM_SWORD = ITEMS.register("red_nanitarium_sword",
+//            () -> new SwordItem(ModToolMaterials.RED_NANITARIUM, 11, -2.3F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<PickaxeItem> RED_NANITARIUM_PICKAXE = ITEMS.register("red_nanitarium_pickaxe",
+//            () -> new PickaxeItem(ModToolMaterials.RED_NANITARIUM, 5, -2.7F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<AxeItem> RED_NANITARIUM_AXE = ITEMS.register("red_nanitarium_axe",
+//            () -> new AxeItem(ModToolMaterials.RED_NANITARIUM, 14, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<ShovelItem> RED_NANITARIUM_SHOVEL = ITEMS.register("red_nanitarium_shovel",
+//            () -> new ShovelItem(ModToolMaterials.RED_NANITARIUM, 5, -2.7F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
+//    public static final RegistryObject<HoeItem> RED_NANITARIUM_HOE = ITEMS.register("red_nanitarium_hoe",
+//            () -> new HoeItem(ModToolMaterials.RED_NANITARIUM, 2, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Veranium Tools
     public static final RegistryObject<SwordItem> VERANIUM_SWORD = ITEMS.register("veranium_sword",

@@ -17,9 +17,9 @@ public final class ModArmorMaterial {
 //			new int[] {3, 7, 8, 4}, 0.1f, 2.0F, Krasyrum.MODID + ":blue_nanitarium",
 //			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get()));
 	
-	public static final ArmorMaterial RED_NANITARIUM = new BaseArmorMaterial(24, new int[] {2200, 2600, 2950, 2300}, 
-			new int[] {4, 8, 9, 5}, 0.2f, 4.0F, Krasyrum.MODID + ":red_nanitarium",
-			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("red_nanitarium_ingot").get()));
+//	public static final ArmorMaterial RED_NANITARIUM = new BaseArmorMaterial(24, new int[] {2200, 2600, 2950, 2300},
+//			new int[] {4, 8, 9, 5}, 0.2f, 4.0F, Krasyrum.MODID + ":red_nanitarium",
+//			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("red_nanitarium_ingot").get()));
 	
 	public static final ArmorMaterial TITANIUM = new BaseArmorMaterial(12, new int[] {512, 512, 512, 512}, 
 			new int[] {3, 7, 5, 2}, 0.0f, 0.0F, Krasyrum.MODID + ":titanium",
