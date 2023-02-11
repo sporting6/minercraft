@@ -23,10 +23,10 @@ public final class ModToolMaterials {
 			new ResourceLocation("krasyrum:blue_nanitarium"),
 			List.of(Tiers.NETHERITE), List.of());
 
-	public static final Tier KYRANIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(6 ,4200, 33f, 4, 26, ModTags.KYRANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
-			new ResourceLocation("krasyrum:kyranium"),
-			List.of(BLUE_NANITARIUM), List.of());
+//	public static final Tier KYRANIUM = TierSortingRegistry.registerTier(
+//			new ForgeTier(6 ,4200, 33f, 4, 26, ModTags.KYRANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get())),
+//			new ResourceLocation("krasyrum:kyranium"),
+//			List.of(BLUE_NANITARIUM), List.of());
 
 	
 	

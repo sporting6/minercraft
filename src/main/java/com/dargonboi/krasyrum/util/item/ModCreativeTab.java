@@ -31,7 +31,7 @@ public class ModCreativeTab {
 
         @Override
         public ItemStack makeIcon(){
-            return new ItemStack(ModTools.KYRANIUM_PICKAXE.get());
+            return new ItemStack(ModTools.BLUE_NANITARIUM_PICKAXE.get());
         }
 
     };

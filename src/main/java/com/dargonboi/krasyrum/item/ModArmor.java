@@ -44,18 +44,18 @@ public class ModArmor {
             () -> new ArmorItem(ModArmorMaterial.RED_NANITARIUM, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
     // Kyranium Aromor
-    public static final RegistryObject<ArmorItem> KYRANIUM_HELMET = ITEMS.register("kyranium_helmet",
-            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<ArmorItem> KYRANIUM_CHESTPLATE = ITEMS.register("kyranium_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<ArmorItem> KYRANIUM_LEGGINGS = ITEMS.register("kyranium_leggings",
-            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<ArmorItem> KYRANIUM_BOOTS = ITEMS.register("kyranium_boots",
-            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<ArmorItem> KYRANIUM_HELMET = ITEMS.register("kyranium_helmet",
+//            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.HEAD,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<ArmorItem> KYRANIUM_CHESTPLATE = ITEMS.register("kyranium_chestplate",
+//            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.CHEST,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<ArmorItem> KYRANIUM_LEGGINGS = ITEMS.register("kyranium_leggings",
+//            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.LEGS,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<ArmorItem> KYRANIUM_BOOTS = ITEMS.register("kyranium_boots",
+//            () -> new ArmorItem(ModArmorMaterial.KYRANIUM, EquipmentSlot.FEET,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
 
     // Titanium Armor
     public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",

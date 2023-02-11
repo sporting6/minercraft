@@ -31,29 +31,29 @@ public class ModTools {
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Kyranium Tools
-    public static final RegistryObject<SwordItem> KYRANIUM_SWORD = ITEMS.register("kyranium_sword",
-            () -> new SwordItem(ModToolMaterials.KYRANIUM, 20, -2.2F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<PickaxeItem> KYRANIUM_PICKAXE = ITEMS.register("kyranium_pickaxe",
-            () -> new PickaxeItem(ModToolMaterials.KYRANIUM, 6, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<AxeItem> KYRANIUM_AXE = ITEMS.register("kyranium_axe",
-            () -> new AxeItem(ModToolMaterials.KYRANIUM, 25, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<ShovelItem> KYRANIUM_SHOVEL = ITEMS.register("kyranium_shovel",
-            () -> new ShovelItem(ModToolMaterials.KYRANIUM, 8, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-    public static final RegistryObject<HoeItem> KYRANIUM_HOE = ITEMS.register("kyranium_hoe",
-            () -> new HoeItem(ModToolMaterials.KYRANIUM, 5, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<SwordItem> KYRANIUM_SWORD = ITEMS.register("kyranium_sword",
+//            () -> new SwordItem(ModToolMaterials.KYRANIUM, 20, -2.2F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<PickaxeItem> KYRANIUM_PICKAXE = ITEMS.register("kyranium_pickaxe",
+//            () -> new PickaxeItem(ModToolMaterials.KYRANIUM, 6, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<AxeItem> KYRANIUM_AXE = ITEMS.register("kyranium_axe",
+//            () -> new AxeItem(ModToolMaterials.KYRANIUM, 25, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<ShovelItem> KYRANIUM_SHOVEL = ITEMS.register("kyranium_shovel",
+//            () -> new ShovelItem(ModToolMaterials.KYRANIUM, 8, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<HoeItem> KYRANIUM_HOE = ITEMS.register("kyranium_hoe",
+//            () -> new HoeItem(ModToolMaterials.KYRANIUM, 5, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
 
-    public static final RegistryObject<SwordItem> SHARPENED_KYRANIUM_SWORD = ITEMS.register("sharpened_kyranium_sword",
-            () -> new SwordItem(ModToolMaterials.KYRANIUM, 17, -2.2F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
-
-    public static final RegistryObject<AxeItem> SHARPENED_KYRANIUM_AXE = ITEMS.register("sharpened_kyranium_axe",
-            () -> new AxeItem(ModToolMaterials.KYRANIUM, 22, -2.7F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//    public static final RegistryObject<SwordItem> SHARPENED_KYRANIUM_SWORD = ITEMS.register("sharpened_kyranium_sword",
+//            () -> new SwordItem(ModToolMaterials.KYRANIUM, 17, -2.2F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
+//
+//    public static final RegistryObject<AxeItem> SHARPENED_KYRANIUM_AXE = ITEMS.register("sharpened_kyranium_axe",
+//            () -> new AxeItem(ModToolMaterials.KYRANIUM, 22, -2.7F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
 
     // Blue Nanitarium Multi-Tools
     // public static final RegistryObject<> BLUE_NANITARIUM_PICK_SHOVEL =

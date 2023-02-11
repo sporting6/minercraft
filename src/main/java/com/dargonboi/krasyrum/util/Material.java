@@ -17,6 +17,8 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Material {
@@ -57,7 +59,7 @@ public class Material {
         return this;
     }
     public Material fireResistant(){
-        fireResistant = false;
+        fireResistant = true;
         return this;
     }
 
@@ -94,7 +96,7 @@ public class Material {
         return this;
     }
 
-    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, TagKey<Block> tag, Tier beforeTier, Tier nextTier){
+    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, TagKey<Block> tag, List beforeTier, List nextTier){
         final RegistryObject<SwordItem> SWORD;
         final RegistryObject<PickaxeItem> PICKAXE;
         final RegistryObject<AxeItem> AXE;
@@ -103,7 +105,8 @@ public class Material {
         toolTier = TierSortingRegistry.registerTier(
                 new ForgeTier(level ,durability, speed, attackDamageBonus, enchantmentValue, tag,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get())),
                 new ResourceLocation("krasyrum:" + name),
-                List.of(beforeTier), List.of(nextTier));
+                List.of(), List.of());
+
         if(fireResistant) {
             SWORD = Krasyrum.ITEMS.register(name + "_sword",
                     () -> new SwordItem(toolTier, 2, -2.4F + attackSpeedBonus,
@@ -153,7 +156,7 @@ public class Material {
         final RegistryObject<ArmorItem> CHESTPLATE;
         final RegistryObject<ArmorItem> LEGGINGS;
         final RegistryObject<ArmorItem> BOOTS;
-        armorMaterial = new BaseArmorMaterial(enchantibility, new int[] {baseDurability, (int)(baseDurability * 1.5), (int)(baseDurability * 1.3), (int)(baseDurability * 1.2)},
+        armorMaterial = new BaseArmorMaterial(enchantibility, new int[] {(int)(baseDurability * 1.2), (int)(baseDurability * 1.5), (int)(baseDurability * 1.3), baseDurability},
                 armor, knockbackResistance, toughness, Krasyrum.MODID + ":" + name,
                 sound,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get()));
 
