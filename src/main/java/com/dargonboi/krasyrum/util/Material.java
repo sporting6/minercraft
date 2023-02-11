@@ -2,11 +2,13 @@ package com.dargonboi.krasyrum.util;
 
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.util.block.BlockRegisters;
-import com.dargonboi.krasyrum.util.item.*;
+import com.dargonboi.krasyrum.util.item.BaseArmorMaterial;
+import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.feature.ModConfiguredFeatures;
 import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -17,8 +19,6 @@ import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.annotation.Nullable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Material {
@@ -30,6 +30,8 @@ public class Material {
     private  Rarity rarity = Rarity.COMMON;
     private  Tier toolTier;
     private  ArmorMaterial armorMaterial;
+
+    private TagKey<Block> tag;
 
 
     public Material(String pName, CreativeModeTab pTab, Rarity pRarity){
@@ -53,6 +55,22 @@ public class Material {
     public String getName() {
         return this.name;
     }
+    public Tier getToolTier() {
+        return this.toolTier;
+    }
+
+    public ArmorMaterial getArmorMaterial() {
+        return armorMaterial;
+    }
+
+    public TagKey<Block> getTag() {
+        return tag;
+    }
+
+    public CreativeModeTab getTab() {
+        return tab;
+    }
+
     public boolean getFireResistant(){
         return this.fireResistant;
     }
@@ -110,12 +128,13 @@ public class Material {
         return this;
     }
 
-    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, TagKey<Block> tag, List beforeTier, List nextTier){
+    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, List beforeTier, List nextTier){
         final RegistryObject<SwordItem> SWORD;
         final RegistryObject<PickaxeItem> PICKAXE;
         final RegistryObject<AxeItem> AXE;
         final RegistryObject<ShovelItem> SHOVEL;
         final RegistryObject<HoeItem> HOE;
+        tag = BlockTags.create(new ResourceLocation("krasyrum:" + name + "_tool"));
         this.toolTier = TierSortingRegistry.registerTier(
                 new ForgeTier(level ,durability, speed, attackDamageBonus, enchantmentValue, tag,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get())),
                 new ResourceLocation("krasyrum:" + name),
@@ -221,35 +240,35 @@ public class Material {
     public Material ore(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerOverworldOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
-        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
+        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
     public Material deepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
         BlockRegisters.registerDeepslateOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerDeepslateOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get("deepslate_" + this.name + "_ore"));
-        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
+        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
     public Material stoneDeepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
         BlockRegisters.registerOres(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerOverworldOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_" + this.name + "_ore"));
-        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
+        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
     public Material netherOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerNetherOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
-        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
+        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
     public Material endOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerEndOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
-        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.OREMAP, orePerChunk, minY, maxY);
+        ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 }

@@ -1,8 +1,6 @@
 package com.dargonboi.krasyrum.util.block;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import com.dargonboi.krasyrum.block.ModOres;
-import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -88,12 +86,12 @@ public class BlockRegisters {
     }
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = ModOres.BLOCKS.register(name, block);
+        RegistryObject<T> toReturn = Krasyrum.BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = ModOres.BLOCKS.register(name, block);
+        RegistryObject<T> toReturn = Krasyrum.BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
         return toReturn;
     }

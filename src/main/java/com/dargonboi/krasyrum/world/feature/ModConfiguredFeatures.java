@@ -2,7 +2,6 @@ package com.dargonboi.krasyrum.world.feature;
 
 import com.dargonboi.krasyrum.Krasyrum;
 import com.google.common.base.Suppliers;
-import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -11,8 +10,6 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.ArrayList;
@@ -22,9 +19,7 @@ import java.util.function.Supplier;
 public class ModConfiguredFeatures {
 
     public static final RuleTest ENDSTONE_ORE_REPLACEABLES = new BlockMatchTest(Blocks.END_STONE);
-
-    public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
-            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
+    
 
 
 
@@ -37,10 +32,10 @@ public class ModConfiguredFeatures {
             return list;
         });
 
-        final RegistryObject<ConfiguredFeature<?, ?>> ORE = CONFIGURED_FEATURES.register(name,
+        final RegistryObject<ConfiguredFeature<?, ?>> ORE = Krasyrum.CONFIGURED_FEATURES.register(name,
                 () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ORES.get(), veinSize)));
 
-        Krasyrum.OREMAP.put(name, ORE);
+        Krasyrum.CONFIGUREDOREMAP.put(name, ORE);
     }
 
     public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre, RegistryObject<Block> deepslateOre){
@@ -63,24 +58,5 @@ public class ModConfiguredFeatures {
     public static void registerEndOres(String name, int veinSize, RegistryObject<Block> ore){
         RegistryObject<Block>[] ores = new RegistryObject[]{ore};
         registerOres(name, veinSize, ores, new RuleTest[]{ENDSTONE_ORE_REPLACEABLES});
-    }
-
-
-    public static void register(IEventBus eventBus) {
-
-        //Overworld
-//        registerOverworldOres("titanium_ore", 6, Krasyrum.OREBLOCKMAP.get("titanium_ore"),  Krasyrum.OREBLOCKMAP.get("deepslate_titanium_ore"));
-//        registerOverworldOres("ruby_ore", 3, Krasyrum.OREBLOCKMAP.get("ruby_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_ruby_ore"));
-
-//        registerDeepslateOres("blue_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("blue_nanitarium_ore"));
-
-        //Nether
-//        registerNetherOres("red_nanitarium_ore", 3, Krasyrum.OREBLOCKMAP.get("red_nanitarium_ore"));
-
-        //The End
-//        registerEndOres("veranium_ore", 5, Krasyrum.OREBLOCKMAP.get("veranium_ore"));
-//        registerEndOres("therium_ore", 5, Krasyrum.OREBLOCKMAP.get("therium_ore"));
-
-        CONFIGURED_FEATURES.register(eventBus);
     }
 }
