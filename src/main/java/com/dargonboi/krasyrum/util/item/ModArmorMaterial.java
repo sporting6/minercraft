@@ -21,10 +21,10 @@ public final class ModArmorMaterial {
 //			new int[] {4, 8, 9, 5}, 0.2f, 4.0F, Krasyrum.MODID + ":red_nanitarium",
 //			SoundEvents.ARMOR_EQUIP_NETHERITE,() -> Ingredient.of(Krasyrum.ITEMMAP.get("red_nanitarium_ingot").get()));
 	
-	public static final ArmorMaterial TITANIUM = new BaseArmorMaterial(12, new int[] {512, 512, 512, 512}, 
-			new int[] {3, 7, 5, 2}, 0.0f, 0.0F, Krasyrum.MODID + ":titanium",
-			SoundEvents.ARMOR_EQUIP_IRON,() -> Ingredient.of(Krasyrum.ITEMMAP.get("titanium_ingot").get()));
-	
+//	public static final ArmorMaterial TITANIUM = new BaseArmorMaterial(12, new int[] {512, 512, 512, 512},
+//			new int[] {3, 7, 5, 2}, 0.0f, 0.0F, Krasyrum.MODID + ":titanium",
+//			SoundEvents.ARMOR_EQUIP_IRON,() -> Ingredient.of(Krasyrum.ITEMMAP.get("titanium_ingot").get()));
+//
 	public static final ArmorMaterial RUBY = new BaseArmorMaterial(18, new int[] {700, 700, 700, 700}, 
 			new int[] {3, 7, 6, 2}, 0.0f, 0.0F, Krasyrum.MODID + ":ruby",
 			SoundEvents.ARMOR_EQUIP_IRON,() -> Ingredient.of(Krasyrum.ITEMMAP.get("ruby").get()));

@@ -58,18 +58,18 @@ public class ModArmor {
 //                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(ModRaritys.INSANE)));
 
     // Titanium Armor
-    public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
-            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.CHEST,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
-            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.LEGS,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
-            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
+//            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.HEAD,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
+//            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.CHEST,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
+//            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.LEGS,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ArmorItem> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
+//            () -> new ArmorItem(ModArmorMaterial.TITANIUM, EquipmentSlot.FEET,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
     // Ruby Armor
     public static final RegistryObject<ArmorItem> RUBY_HELMET = ITEMS.register("ruby_helmet",

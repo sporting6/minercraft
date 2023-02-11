@@ -31,7 +31,7 @@ public class ModBlocks {
 
         BlockRegisters.registerMaterialBlock("kyranium_block", MaterialColor.COLOR_MAGENTA, 8.0F, 600.0F, false);
 
-        BlockRegisters.registerMaterialBlock("titanium_block", MaterialColor.TERRACOTTA_WHITE, 5.0F, 6.0F, true);
+//        BlockRegisters.registerMaterialBlock("titanium_block", MaterialColor.TERRACOTTA_WHITE, 5.0F, 6.0F, true);
 
         BlockRegisters.registerMaterialBlock("ruby_block", MaterialColor.COLOR_PINK, 5.0F, 6.0F, false);
 

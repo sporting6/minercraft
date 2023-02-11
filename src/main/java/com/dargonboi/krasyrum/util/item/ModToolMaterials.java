@@ -41,15 +41,15 @@ public final class ModToolMaterials {
 			new ResourceLocation("krasyrum:veranium"),
 			List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
 	
-	public static final Tier TITANIUM = TierSortingRegistry.registerTier(
-			new ForgeTier(2 ,500, 7.5f, 0, 12,ModTags.TITANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("titanium_ingot").get())),
-			new ResourceLocation("krasyrum:titanium"),
-			List.of(Tiers.IRON), List.of(VERANIUM));
+//	public static final Tier TITANIUM = TierSortingRegistry.registerTier(
+//			new ForgeTier(2 ,500, 7.5f, 0, 12,ModTags.TITANIUM_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("titanium_ingot").get())),
+//			new ResourceLocation("krasyrum:titanium"),
+//			List.of(Tiers.IRON), List.of(VERANIUM));
 	
 	public static final Tier RUBY = TierSortingRegistry.registerTier(
 			new ForgeTier(2 ,700, 10f, 0, 18,ModTags.RUBY_TAG,() -> Ingredient.of(Krasyrum.ITEMMAP.get("ruby").get())),
 			new ResourceLocation("krasyrum:ruby"),
-			List.of(Tiers.IRON), List.of(TITANIUM));
+			List.of(Tiers.IRON), List.of());
 	
 	
 	

@@ -25,7 +25,7 @@ public class ModIngots {
         ItemRegisters.registerItem("kyranium_handle", ModRaritys.INSANE, true);
 //        ItemRegisters.registerIngot("blue_nanitarium",  Rarity.RARE, true);
 //        ItemRegisters.registerIngot("red_nanitarium",  Rarity.RARE, true);
-        ItemRegisters.registerIngot("titanium");
+//        ItemRegisters.registerIngot("titanium");
         ItemRegisters.registerIngot("veranium");
         ItemRegisters.registerIngot("therium");
         ItemRegisters.registerItem("ruby");

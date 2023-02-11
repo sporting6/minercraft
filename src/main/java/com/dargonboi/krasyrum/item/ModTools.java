@@ -97,21 +97,21 @@ public class ModTools {
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(Rarity.RARE)));
 
     // Titanium Tools
-    public static final RegistryObject<SwordItem> TITANIUM_SWORD = ITEMS.register("titanium_sword",
-            () -> new SwordItem(ModToolMaterials.TITANIUM, 5, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<PickaxeItem> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe",
-            () -> new PickaxeItem(ModToolMaterials.TITANIUM, 3, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<AxeItem> TITANIUM_AXE = ITEMS.register("titanium_axe",
-            () -> new AxeItem(ModToolMaterials.TITANIUM, 8, -2.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel",
-            () -> new ShovelItem(ModToolMaterials.TITANIUM, 5, -2.6F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
-    public static final RegistryObject<HoeItem> TITANIUM_HOE = ITEMS.register("titanium_hoe",
-            () -> new HoeItem(ModToolMaterials.TITANIUM, 2, -0.8F,
-                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<SwordItem> TITANIUM_SWORD = ITEMS.register("titanium_sword",
+//            () -> new SwordItem(ModToolMaterials.TITANIUM, 5, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<PickaxeItem> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe",
+//            () -> new PickaxeItem(ModToolMaterials.TITANIUM, 3, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<AxeItem> TITANIUM_AXE = ITEMS.register("titanium_axe",
+//            () -> new AxeItem(ModToolMaterials.TITANIUM, 8, -2.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<ShovelItem> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel",
+//            () -> new ShovelItem(ModToolMaterials.TITANIUM, 5, -2.6F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
+//    public static final RegistryObject<HoeItem> TITANIUM_HOE = ITEMS.register("titanium_hoe",
+//            () -> new HoeItem(ModToolMaterials.TITANIUM, 2, -0.8F,
+//                    new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR)));
 
     //Ruby Tools
     public static final RegistryObject<SwordItem> RUBY_SWORD = ITEMS.register("ruby_sword",

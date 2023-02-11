@@ -14,9 +14,7 @@ import com.dargonboi.krasyrum.world.feature.ModPlacedFeatures;
 import io.netty.util.collection.ByteCollections;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -42,6 +40,10 @@ public class Krasyrum {
 	public static final HashMap<String, RegistryObject<ArmorItem>> ARMORMAP =  new HashMap<String, RegistryObject<ArmorItem>>();
 	public static final HashMap<String, RegistryObject<?>> TOOLMAP =  new HashMap<String, RegistryObject<?>>();
 
+	public static final HashMap<String, Tier> TIERMAP =  new HashMap<String, Tier>();
+	public static final HashMap<String, ArmorMaterial> ARMORMATERIALMAP =  new HashMap<String, ArmorMaterial>();
+
+
 	public static final HashMap<String, RegistryObject<Item>> OREITEMMAP = new HashMap<String, RegistryObject<Item>>();
 	public static final HashMap<String, RegistryObject<Block>> OREBLOCKMAP = new HashMap<String, RegistryObject<Block>>();
 	public static final HashMap<String, RegistryObject<Block>> BLOCKMAP = new HashMap<String, RegistryObject<Block>>();
@@ -65,11 +67,17 @@ public class Krasyrum {
 					ModTags.BLUE_NANITARIUM_TAG, List.of(), List.of())
 			.deepslateOre(12f, 20f, 3, 1, -64, -32);
 	public static final Material RED_NANITARIUM = new Material("red_nanitarium").fireResistant().ingot().raw().crushable()
-			.materialBlock(MaterialColor.COLOR_BLUE, 8f, 600f, true)
+			.materialBlock(MaterialColor.COLOR_RED, 8f, 600f, true)
 			.armor(28, 2900, new int[]{5,9, 7, 3}, .3f, 3, SoundEvents.ARMOR_EQUIP_NETHERITE)
 			.tools(5, 2600, 10f, 14f, 0f, 12,
 					ModTags.RED_NANITARIUM_TAG, List.of(Tiers.NETHERITE), List.of())
 			.netherOre(11f, 20f, 3, 1, 100, 127);
+	public static final Material TITANIUM = new Material("titanium").fireResistant().ingot().raw().crushable()
+			.materialBlock(MaterialColor.COLOR_LIGHT_GRAY, 8f, 600f, true)
+			.armor(28, 2900, new int[]{5,9, 7, 3}, .3f, 3, SoundEvents.ARMOR_EQUIP_NETHERITE)
+			.tools(2 ,500, 7.5f, 4.5f, 0f, 12,
+					ModTags.TITANIUM_TAG, List.of(Tiers.IRON), List.of(Tiers.DIAMOND))
+			.stoneDeepslateOre(11f, 20f, 3, 1, 100, 127);
 
 	public Krasyrum() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

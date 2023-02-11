@@ -31,7 +31,7 @@ public class ModPlacedFeatures {
     }
     
     public static void register(IEventBus eventBus) {
-        placeOres("titanium_ore", Krasyrum.OREMAP, 14, -64, 16);
+//        placeOres("titanium_ore", Krasyrum.OREMAP, 14, -64, 16);
 //        placeOres("blue_nanitarium_ore", Krasyrum.OREMAP, 1, -64, -32);
 //        placeOres("red_nanitarium_ore", Krasyrum.OREMAP, 2, 90, 125);
         placeOres("ruby_ore", Krasyrum.OREMAP, 12, -64, 16);
