@@ -74,7 +74,7 @@ public class Krasyrum {
 			.stoneDeepslateOre(4f, 6f, 8, 12, -48, 24);
 	public static final Material RUBY = new Material("ruby").gem()
 			.materialBlock(MaterialColor.COLOR_RED, 3f, 15, false)
-			.armor(18, 450, new int[]{5,9, 7, 3}, .0f, 0, SoundEvents.ARMOR_EQUIP_DIAMOND)
+			.armor(18, 450, new int[]{2,4, 4, 2}, .0f, 0, SoundEvents.ARMOR_EQUIP_DIAMOND)
 			.tools(3 ,300, 10.5f, 4f, 0.1f, 18,
 					List.of(Tiers.IRON), List.of(Tiers.DIAMOND))
 			.stoneDeepslateOre(5f, 6f, 3, 7, -32, 32);

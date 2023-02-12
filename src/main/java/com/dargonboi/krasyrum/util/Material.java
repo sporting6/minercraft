@@ -140,37 +140,44 @@ public class Material {
                 new ResourceLocation("krasyrum:" + name),
                 beforeTier, nextTier);
         Krasyrum.TIERMAP.put(this.name, this.toolTier);
+
+        final float SWORD_ATTACK_BONUS = .2f;
+        final float PICK_ATTACK_BONUS = 0;
+        final float AXE_ATTACK_BONUS = .4f;
+        final float SHOVEL_ATTACK_BONUS = 0;
+        final float HOE_ATTACK_BONUS = -.8f;
+
         if(fireResistant) {
             SWORD = Krasyrum.ITEMS.register(this.name + "_sword",
-                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), 2, -2.4F + attackSpeedBonus,
+                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             PICKAXE = Krasyrum.ITEMS.register(this.name + "_pickaxe",
-                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), 0, -2.8F + attackSpeedBonus,
+                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             AXE = Krasyrum.ITEMS.register(this.name + "_axe",
-                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), 4, -3 + attackSpeedBonus,
+                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             SHOVEL = Krasyrum.ITEMS.register(this.name + "_shovel",
-                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), 0, -2.8F + attackSpeedBonus,
+                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             HOE = Krasyrum.ITEMS.register(this.name + "_hoe",
-                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), -4, 0 + attackSpeedBonus,
+                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
         } else {
             SWORD = Krasyrum.ITEMS.register(this.name + "_sword",
-                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), 2, -2.4F + attackSpeedBonus,
+                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             PICKAXE = Krasyrum.ITEMS.register(this.name + "_pickaxe",
-                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), 0, -2.8F + attackSpeedBonus,
+                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             AXE = Krasyrum.ITEMS.register(this.name + "_axe",
-                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), 4, -3 + attackSpeedBonus,
+                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             SHOVEL = Krasyrum.ITEMS.register(this.name + "_shovel",
-                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), 0, -2.8F + attackSpeedBonus,
+                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             HOE = Krasyrum.ITEMS.register(this.name + "_hoe",
-                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), -4, 0 + attackSpeedBonus,
+                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
         }
 
