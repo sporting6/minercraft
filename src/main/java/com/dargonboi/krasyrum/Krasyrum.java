@@ -53,7 +53,7 @@ public class Krasyrum {
 
 	// Materials
 	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, RARITY_INSANE).fireResistant().ingot()
-			.materialBlock(MaterialColor.COLOR_MAGENTA, 14f, 600f, true)
+			.materialBlock(MaterialColor.COLOR_MAGENTA, 14f, 600f, false)
 			.armor(22, 3000, new int[]{6, 12, 10, 4}, .4f, 4, SoundEvents.ARMOR_EQUIP_NETHERITE)
 			.tools(6, 4200, 18f, 20, .4f, 22,
 					List.of(), List.of());
