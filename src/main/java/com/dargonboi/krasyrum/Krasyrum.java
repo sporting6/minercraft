@@ -1,6 +1,8 @@
 package com.dargonboi.krasyrum;
 
 import com.dargonboi.krasyrum.block.ModBlocks;
+import com.dargonboi.krasyrum.fluid.ModFluidTypes;
+import com.dargonboi.krasyrum.fluid.ModFluids;
 import com.dargonboi.krasyrum.item.ModFoods;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.item.ModPotions;
@@ -8,6 +10,8 @@ import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
@@ -16,6 +20,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -109,9 +114,21 @@ public class Krasyrum {
 		CONFIGURED_FEATURES.register(bus);
 		PLACED_FEATURES.register(bus);
 
+		ModFluids.register(bus);
+		ModFluidTypes.register(bus);
+
 
 		bus.addListener(this::clientSetup);
 	}
 	private void clientSetup(final FMLClientSetupEvent event) {
+	}
+
+	@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+	public static class ClientModEvents {
+		@SubscribeEvent
+		public static void onClientSetup(FMLClientSetupEvent event) {
+			ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_BOILING_WATER.get(), RenderType.translucent());
+			ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_BOILING_WATER.get(), RenderType.translucent());
+		}
 	}
 }

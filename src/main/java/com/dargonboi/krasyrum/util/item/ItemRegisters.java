@@ -1,9 +1,9 @@
 package com.dargonboi.krasyrum.util.item;
 
 import com.dargonboi.krasyrum.Krasyrum;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemRegisters {
@@ -16,6 +16,8 @@ public class ItemRegisters {
         Krasyrum.ITEMMAP.put(name, ITEM);
         return Krasyrum.ITEMMAP.get(name);
     }
+
+
     public static RegistryObject<Item> registerItem(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant) {
         final RegistryObject<Item> ITEM;
         if(isFireResistant) {
@@ -69,6 +71,16 @@ public class ItemRegisters {
             ITEM = registerItem("raw_" + name, new Item.Properties().tab(tab).rarity(rarity));
         }
         return ITEM;
+    }
+
+    public static RegistryObject<Item> registerBucket(String name, RegistryObject<FlowingFluid> fluid, Item.Properties properties) {
+        final RegistryObject<Item> BUCKET = Krasyrum.ITEMS.register(name, () -> new BucketItem(fluid, properties));
+        Krasyrum.ITEMMAP.put(name, BUCKET);
+        return Krasyrum.ITEMMAP.get(name);
+    }
+    public static RegistryObject<Item> registerBucket(String name, RegistryObject<FlowingFluid> fluid) {
+        registerBucket(name, fluid, new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).craftRemainder(Items.BUCKET).stacksTo(1));
+        return Krasyrum.ITEMMAP.get(name);
     }
 
 
