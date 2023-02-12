@@ -43,11 +43,14 @@ public class Krasyrum {
 	public static final HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> CONFIGUREDOREMAP = new HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>>();
 	public static final HashMap<String, RegistryObject<PlacedFeature>> PLACEDOREMAP  = new HashMap<String, RegistryObject<PlacedFeature>>();
 
+
 	// Defferred Registers
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Krasyrum.MODID);
 	public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
 	public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Krasyrum.MODID);
+
+
 	// Materials
 	public static final Material KYRANIUM = new Material("kyranium", ModCreativeTab.KRASYRUM_MATERIALS, RARITY_INSANE).fireResistant().ingot()
 			.materialBlock(MaterialColor.COLOR_MAGENTA, 14f, 600f, true)
@@ -107,7 +110,6 @@ public class Krasyrum {
 
 		bus.addListener(this::clientSetup);
 	}
-
 	private void clientSetup(final FMLClientSetupEvent event) {
 	}
 }
