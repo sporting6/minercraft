@@ -17,16 +17,9 @@
   "item.krasyrum.compressed_netherite": "Compressed Netherite",
   "item.krasyrum.kyranium_handle": "Kyranite Handle",
 
-  "item.krasyrum.blue_nanitarium_slurry": "Blue Nanitarium Slurry",
-  "item.krasyrum.red_nanitarium_slurry": "Red Nanitarium Slurry",
 
-  "item.krasyrum.pure_blue_nanitarium": "Pure Blue Nanitarium",
-  "item.krasyrum.pure_red_nanitarium": "Pure Red Nanitarium",
-
-
-
-  "item.krasyrum.plate_iron": "Iron Plate",
-  "item.krasyrum.canister_iron": "Iron Fluid Tank",
+  "block.krasyrum.krasyrum_stone": "Reibedite",
+  "block.krasyrum.krasyrum_cobblestone": "Cobbled Reibedite",
 
 
 
@@ -68,29 +61,11 @@
   "item.krasyrum.crushed_therium": "Crushed Therium",
   "item.krasyrum.crushed_titanium": "Crushed Titanium",
 
-
-  "block.krasyrum.iron_chest": "Iron Chest",
-  "container.krasyrum.iron_chest": "Iron Chest",
-
-  "block.krasyrum.diamond_chest": "Diamond Chest",
-  "container.krasyrum.diamond_chest": "Diamond Chest",
-
-  "block.krasyrum.netherite_chest": "Netherite Chest",
-  "container.krasyrum.netherite_chest": "Netherite Chest",
-
-  "block.krasyrum.nanitarium_chest": "Nanitarium Chest",
-  "container.krasyrum.nanitarium_chest": "Nanitarium Chest",
-
   "button.krasyrum.right_page_button": ">",
 
   "item.krasyrum.blue_nanitarium_apple": "Nanitarium Apple",
   "item.krasyrum.red_nanitarium_apple": "Nanitarium Apple",
   "item.krasyrum.hastey_apple": "Hastey Apple",
-
-  "block.krasyrum.pineapple_crop": "Pineapple Plant",
-  "item.krasyrum.pineapple_seeds": "Pineapple Seeds",
-  "item.krasyrum.pineapple": "Pineapple",
-  "item.krasyrum.pineapple_slice": "Pineapple Slice",
 
 
   "block.krasyrum.deepslate_blue_nanitarium_ore": "Deepslate Blue Nanitarium Ore",
@@ -128,10 +103,6 @@
   "item.krasyrum.kyranium_axe": "Kyranite Axe",
   "item.krasyrum.kyranium_hoe": "Kyranite Hoe",
 
-  "item.krasyrum.sharpened_kyranium_sword": "Sharpened Kyranite Sword",
-  "item.krasyrum.sharpened_kyranium_axe": "Sharpened Kyranite Axe",
-
-
 
   "item.krasyrum.blue_nanitarium_sword": "Blue Nanitarium Sword",
   "item.krasyrum.blue_nanitarium_pickaxe": "Blue Nanitarium Pickaxe",
@@ -163,12 +134,6 @@
   "item.krasyrum.ruby_axe": "Ruby Axe",
   "item.krasyrum.ruby_hoe": "Ruby Hoe",
 
-
-
-  "item.krasyrum.blue_nanitarium_pick_shovel": "Blue Nanitarium Pickaxe Shovel",
-
-
-
   "item.krasyrum.blue_nanitarium_helmet": "Blue Nanitarium Helmet",
   "item.krasyrum.blue_nanitarium_chestplate": "Blue Nanitarium Chestplate",
   "item.krasyrum.blue_nanitarium_leggings": "Blue Nanitarium Leggings",
@@ -196,11 +161,9 @@
   "item.krasyrum.ruby_boots": "Ruby Boots",
 
 
+
+
   "itemGroup.krasyrum_materials": "Krasyrum Materials",
   "itemGroup.krasyrum_tools_armor": "Krasyrum Tools And Armor",
-  "itemGroup.krasyrum_foods": "Krasyrum Foods",
-  "itemGroup.krasyrum_chests": "Krasyrum Storage"
-
-
-
+  "itemGroup.krasyrum_foods": "Krasyrum Foods"
 }

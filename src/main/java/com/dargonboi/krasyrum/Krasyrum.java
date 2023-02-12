@@ -1,5 +1,6 @@
 package com.dargonboi.krasyrum;
 
+import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.item.ModFoods;
 import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.item.ModPotions;
@@ -99,6 +100,7 @@ public class Krasyrum {
 		ModFoods.Register(bus);
 
 		BLOCKS.register(bus);
+		ModBlocks.register();
 
 		ModPotions.register(bus);
 
