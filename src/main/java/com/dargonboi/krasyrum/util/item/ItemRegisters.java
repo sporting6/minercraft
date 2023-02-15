@@ -3,7 +3,6 @@ package com.dargonboi.krasyrum.util.item;
 import com.dargonboi.krasyrum.Krasyrum;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.material.FlowingFluid;
-import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemRegisters {

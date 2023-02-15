@@ -9,6 +9,7 @@ import com.dargonboi.krasyrum.item.ModPotions;
 import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
+import com.dargonboi.krasyrum.world.feature.ore.LavaPoolFeature;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -17,6 +18,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +33,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 @Mod(Krasyrum.MODID)
 public class Krasyrum {
@@ -54,6 +58,7 @@ public class Krasyrum {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Krasyrum.MODID);
 	public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
+	public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, Krasyrum.MODID);
 	public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Krasyrum.MODID);
 
 
@@ -95,6 +100,9 @@ public class Krasyrum {
 	public static final Material THERIUM = new Material("therium").ingot().raw().crushable()
 			.endOre(4f, 6f, 6, 4, 0, 72);
 
+	public static final RegistryObject<LavaPoolFeature> LAVA_POOL = FEATURES.register("lava_pool",
+			() -> new LavaPoolFeature(NoneFeatureConfiguration.CODEC, 5));
+
 
 	public Krasyrum() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -116,6 +124,8 @@ public class Krasyrum {
 
 		ModFluids.register(bus);
 		ModFluidTypes.register(bus);
+
+		FEATURES.register(bus);
 
 
 		bus.addListener(this::clientSetup);

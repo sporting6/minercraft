@@ -3,7 +3,6 @@ package com.dargonboi.krasyrum.fluid;
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.ModBlocks;
 import com.dargonboi.krasyrum.item.ModIngots;
-import io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueue;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.eventbus.api.IEventBus;
