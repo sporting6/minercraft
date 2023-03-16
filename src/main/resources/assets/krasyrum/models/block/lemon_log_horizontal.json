@@ -1,7 +1,7 @@
 {
-    "parent": "block/cube_column_horizontal",
-    "textures": {
-        "end": "krasyrum:blocks/lemon_log_top",
-        "side": "krasyrum:blocks/lemon_log"
-    }
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "krasyrum:blocks/lemon_log_top",
+    "side": "krasyrum:blocks/lemon_log"
+  }
 }

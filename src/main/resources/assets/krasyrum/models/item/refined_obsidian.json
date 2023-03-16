@@ -1,6 +1,6 @@
 {
-   "parent": "item/handheld",
-   "textures": {
-       "layer0": "krasyrum:items/refined_obsidian"
-   }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "krasyrum:items/refined_obsidian"
+  }
 }

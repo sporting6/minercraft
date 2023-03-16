@@ -1,6 +1,6 @@
 {
-   "parent": "item/handheld",
-   "textures": {
-       "layer0": "krasyrum:items/blue_nanitarium_pick_shovel"
-   }
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "krasyrum:items/blue_nanitarium_pick_shovel"
+  }
 }

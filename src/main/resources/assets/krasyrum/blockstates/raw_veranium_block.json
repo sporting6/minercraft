@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "krasyrum:block/raw_veranium_block" }
-	}
+  "variants": {
+    "": {
+      "model": "krasyrum:block/raw_veranium_block"
+    }
+  }
 }

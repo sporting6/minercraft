@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/ruby_block" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/ruby_block"
     }
+  }
 }

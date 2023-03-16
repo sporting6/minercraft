@@ -1,32 +1,23 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        " RB",
-        " SR",
-        " S "
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:red_nanitarium_ingot"
-        },
-        "B":
-        {
-            "item": "krasyrum:red_nanitarium_block"
-        },
-        "S":
-        {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " RB",
+    " SR",
+    " S "
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:red_nanitarium_ingot"
     },
-   
-    "result":
-    {
-        "item": "krasyrum:red_nanitarium_axe",
-        "count": 1
+    "B": {
+      "item": "krasyrum:red_nanitarium_block"
+    },
+    "S": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "krasyrum:red_nanitarium_axe",
+    "count": 1
+  }
 }

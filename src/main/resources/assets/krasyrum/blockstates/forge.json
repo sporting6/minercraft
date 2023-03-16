@@ -1,8 +1,19 @@
 {
-	"variants": {
-		"facing=north": { "model": "krasyrum:block/forge" },
-		"facing=east": { "model": "krasyrum:block/forge", "y": 90 },
-		"facing=south": { "model": "krasyrum:block/forge", "y": 180 },
-		"facing=west": { "model": "krasyrum:block/forge", "y": 270 }
-	}
+  "variants": {
+    "facing=north": {
+      "model": "krasyrum:block/forge"
+    },
+    "facing=east": {
+      "model": "krasyrum:block/forge",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "krasyrum:block/forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "krasyrum:block/forge",
+      "y": 270
+    }
+  }
 }

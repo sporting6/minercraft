@@ -1,28 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        "ttt",
-        " s ",
-        " s "
-    ],
-   
-    "key":
-    {
-        "t":
-        {
-            "item": "krasyrum:ruby"
-        },
-        "s":
-        {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ttt",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "t": {
+      "item": "krasyrum:ruby"
     },
-   
-    "result":
-    {
-        "item": "krasyrum:ruby_pickaxe",
-        "count": 1
+    "s": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "krasyrum:ruby_pickaxe",
+    "count": 1
+  }
 }

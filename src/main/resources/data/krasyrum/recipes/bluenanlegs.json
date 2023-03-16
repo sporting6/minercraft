@@ -1,28 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        "RBR",
-        "R R",
-        "R R"
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:blue_nanitarium_ingot"
-        },
-        "B":
-        {
-            "item": "krasyrum:blue_nanitarium_block"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RBR",
+    "R R",
+    "R R"
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:blue_nanitarium_ingot"
     },
-   
-    "result":
-    {
-        "item": "krasyrum:blue_nanitarium_leggings",
-        "count": 1
+    "B": {
+      "item": "krasyrum:blue_nanitarium_block"
     }
+  },
+  "result": {
+    "item": "krasyrum:blue_nanitarium_leggings",
+    "count": 1
+  }
 }

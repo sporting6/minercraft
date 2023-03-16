@@ -13,10 +13,7 @@ import java.util.HashMap;
 public class ModPlacedFeatures {
 
 
-
-
-            
-    public static void placeOres(String name, HashMap<String, RegistryObject<ConfiguredFeature<?,?>>> map, int veinsPerChunk, int minY, int maxY){
+    public static void placeOres(String name, HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> map, int veinsPerChunk, int minY, int maxY) {
         final RegistryObject<ConfiguredFeature<?, ?>> CONFIGURED_ORE = map.get(name);
 
         final RegistryObject<PlacedFeature> ORE_PLACED = Krasyrum.PLACED_FEATURES.register(name + "_placed",

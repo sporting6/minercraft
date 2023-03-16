@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/therium_ore" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/therium_ore"
     }
+  }
 }

@@ -1,6 +1,6 @@
 {
-  "type" : "forge:add_features",
-  "biomes" : "krasyrum:krasyrum_hot_spot",
-  "features" : "krasyrum:lava_pool",
-  "step" : "underground_ores"
+  "type": "forge:add_features",
+  "biomes": "krasyrum:krasyrum_hot_spot",
+  "features": "krasyrum:lava_pool",
+  "step": "underground_ores"
 }

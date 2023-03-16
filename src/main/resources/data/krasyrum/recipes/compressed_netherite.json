@@ -1,9 +1,6 @@
 {
-    "type": "minecraft:crafting_shapeless",
- 
-    "ingredients":
-    [
- 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
       "item": "minecraft:netherite_ingot"
     },
@@ -16,12 +13,9 @@
     {
       "item": "minecraft:netherite_ingot"
     }
-   
-    ],
- 
-    "result":
-    {
-        "item": "krasyrum:compressed_netherite",
-        "count": 1
-    }
+  ],
+  "result": {
+    "item": "krasyrum:compressed_netherite",
+    "count": 1
+  }
 }

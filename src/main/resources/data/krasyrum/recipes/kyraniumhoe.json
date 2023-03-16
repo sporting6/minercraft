@@ -1,28 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        " RR",
-        " s ",
-        " s "
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:kyranium_ingot"
-        },
-        "s":
-        {
-            "item": "krasyrum:kyranium_handle"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " RR",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:kyranium_ingot"
     },
-   
-    "result":
-    {
-        "item": "krasyrum:kyranium_hoe",
-        "count": 1
+    "s": {
+      "item": "krasyrum:kyranium_handle"
     }
+  },
+  "result": {
+    "item": "krasyrum:kyranium_hoe",
+    "count": 1
+  }
 }

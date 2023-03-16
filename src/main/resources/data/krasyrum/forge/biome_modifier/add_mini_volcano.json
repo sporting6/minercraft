@@ -1,6 +1,6 @@
 {
-  "type" : "forge:add_features",
-  "biomes" : "krasyrum:krasyrum_hot_spot",
-  "features" : "krasyrum:mini_volcano",
-  "step" : "underground_ores"
+  "type": "forge:add_features",
+  "biomes": "krasyrum:krasyrum_hot_spot",
+  "features": "krasyrum:mini_volcano",
+  "step": "underground_ores"
 }

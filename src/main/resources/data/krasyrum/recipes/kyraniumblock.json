@@ -1,24 +1,17 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        "RRR",
-        "RRR",
-        "RRR"
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:kyranium_ingot"
-        }
-    },
-   
-    "result":
-    {
-        "item": "krasyrum:kyranium_block",
-        "count": 1
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:kyranium_ingot"
     }
+  },
+  "result": {
+    "item": "krasyrum:kyranium_block",
+    "count": 1
+  }
 }

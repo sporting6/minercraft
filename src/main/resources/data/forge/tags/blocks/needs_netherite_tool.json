@@ -1,10 +1,9 @@
 {
-    "replace": false,
-    "values": [
-        "krasyrum:veranium_ore",
-        "krasyrum:therium_ore",
-        "krasyrum:deepslate_blue_nanitarium_ore",
-        "krasyrum:red_nanitarium_ore"
-
-    ]
+  "replace": false,
+  "values": [
+    "krasyrum:veranium_ore",
+    "krasyrum:therium_ore",
+    "krasyrum:deepslate_blue_nanitarium_ore",
+    "krasyrum:red_nanitarium_ore"
+  ]
 }

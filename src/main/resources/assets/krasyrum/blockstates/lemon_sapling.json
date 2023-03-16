@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "krasyrum:block/lemon_sapling" }
-	}
+  "variants": {
+    "": {
+      "model": "krasyrum:block/lemon_sapling"
+    }
+  }
 }

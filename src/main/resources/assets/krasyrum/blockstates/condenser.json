@@ -1,8 +1,19 @@
 {
-	"variants": {
-		"facing=north": { "model": "krasyrum:block/condenser" },
-		"facing=east": { "model": "krasyrum:block/condenser", "y": 90 },
-		"facing=south": { "model": "krasyrum:block/condenser", "y": 180 },
-		"facing=west": { "model": "krasyrum:block/condenser", "y": 270 }
-	}
+  "variants": {
+    "facing=north": {
+      "model": "krasyrum:block/condenser"
+    },
+    "facing=east": {
+      "model": "krasyrum:block/condenser",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "krasyrum:block/condenser",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "krasyrum:block/condenser",
+      "y": 270
+    }
+  }
 }

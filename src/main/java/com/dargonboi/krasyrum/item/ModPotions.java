@@ -12,7 +12,6 @@ public class ModPotions {
             = DeferredRegister.create(ForgeRegistries.POTIONS, Krasyrum.MODID);
 
 
-
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }

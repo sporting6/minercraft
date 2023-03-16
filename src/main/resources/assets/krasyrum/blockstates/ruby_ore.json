@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/ruby_ore" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/ruby_ore"
     }
+  }
 }

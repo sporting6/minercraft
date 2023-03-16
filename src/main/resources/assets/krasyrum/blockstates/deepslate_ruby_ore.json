@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/deepslate_ruby_ore" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/deepslate_ruby_ore"
     }
+  }
 }

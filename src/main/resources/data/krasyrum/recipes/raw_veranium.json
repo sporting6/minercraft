@@ -1,13 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      {
-        "item": "krasyrum:raw_veranium_block"
-      }
-    ],
-    "result":
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
-      "item": "krasyrum:raw_veranium",
-      "count": 9
+      "item": "krasyrum:raw_veranium_block"
     }
+  ],
+  "result": {
+    "item": "krasyrum:raw_veranium",
+    "count": 9
   }
+}

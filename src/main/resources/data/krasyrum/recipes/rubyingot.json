@@ -1,18 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
- 
-    "ingredients":
-    [
- 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
       "item": "krasyrum:ruby_block"
     }
-   
-    ],
- 
-    "result":
-    {
-        "item": "krasyrum:ruby",
-        "count": 9
-    }
+  ],
+  "result": {
+    "item": "krasyrum:ruby",
+    "count": 9
+  }
 }

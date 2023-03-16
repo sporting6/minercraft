@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "krasyrum:block/krasyrum_magma" }
-	}
+  "variants": {
+    "": {
+      "model": "krasyrum:block/krasyrum_magma"
+    }
+  }
 }

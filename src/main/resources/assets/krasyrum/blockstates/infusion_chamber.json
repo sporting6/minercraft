@@ -1,8 +1,19 @@
 {
-	"variants": {
-		"facing=north": { "model": "krasyrum:block/infusion_chamber" },
-		"facing=east": { "model": "krasyrum:block/infusion_chamber", "y": 90 },
-		"facing=south": { "model": "krasyrum:block/infusion_chamber", "y": 180 },
-		"facing=west": { "model": "krasyrum:block/infusion_chamber", "y": 270 }
-	}
+  "variants": {
+    "facing=north": {
+      "model": "krasyrum:block/infusion_chamber"
+    },
+    "facing=east": {
+      "model": "krasyrum:block/infusion_chamber",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "krasyrum:block/infusion_chamber",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "krasyrum:block/infusion_chamber",
+      "y": 270
+    }
+  }
 }

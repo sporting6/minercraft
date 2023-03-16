@@ -15,7 +15,9 @@ public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
             DeferredRegister.create(ForgeRegistries.FLUIDS, Krasyrum.MODID);
 
-    public static final RegistryObject<FlowingFluid> SOURCE_BOILING_WATER = FLUIDS.register("boiling_water_fluid",
+    public static void register(IEventBus eventBus) {
+        FLUIDS.register(eventBus);
+    }    public static final RegistryObject<FlowingFluid> SOURCE_BOILING_WATER = FLUIDS.register("boiling_water_fluid",
             () -> new ForgeFlowingFluid.Source(ModFluids.BOILING_WATER_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_BOILING_WATER = FLUIDS.register("flowing_boiling_water",
             () -> new ForgeFlowingFluid.Flowing(ModFluids.BOILING_WATER_FLUID_PROPERTIES));
@@ -30,7 +32,5 @@ public class ModFluids {
             .explosionResistance(200f);
 
 
-    public static void register(IEventBus eventBus) {
-        FLUIDS.register(eventBus);
-    }
+
 }

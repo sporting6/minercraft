@@ -1,18 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
- 
-    "ingredients":
-    [
- 
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
       "item": "krasyrum:kyranium_block"
     }
-   
-    ],
- 
-    "result":
-    {
-        "item": "krasyrum:kyranium_ingot",
-        "count": 9
-    }
+  ],
+  "result": {
+    "item": "krasyrum:kyranium_ingot",
+    "count": 9
+  }
 }

@@ -2,12 +2,11 @@
 
 <br>
 
-
 ## What is Minercraft?
 
-Minercraft is a minecraft mod where there is extra recources such as Nanitarium, Copper, Tungsten, etc. It has potental to be added to modpacks and to be played on its own.  My plans for the current future are to add a new demension Mineshaft where there are active mineshafts with miner villagers.
-
-
+Minercraft is a minecraft mod where there is extra recources such as Nanitarium, Copper, Tungsten, etc. It has potental
+to be added to modpacks and to be played on its own. My plans for the current future are to add a new demension
+Mineshaft where there are active mineshafts with miner villagers.
 
 # Materials
 
@@ -75,16 +74,11 @@ Pickaxe Breaking Power: 3 <br>
 
 #### Uncompleated<br>
 
-
-
 ## Recipes
-
 
 ### How To Craft A Perfect Diamond
 
-
 #### Uncompleated<br>
-
 
 ###### This README is uncompleate.
 

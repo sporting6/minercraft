@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/stripped_lemon_wood" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/stripped_lemon_wood"
     }
+  }
 }

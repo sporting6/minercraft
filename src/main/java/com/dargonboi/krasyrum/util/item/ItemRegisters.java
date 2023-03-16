@@ -19,7 +19,7 @@ public class ItemRegisters {
 
     public static RegistryObject<Item> registerItem(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant) {
         final RegistryObject<Item> ITEM;
-        if(isFireResistant) {
+        if (isFireResistant) {
             ITEM = registerItem(name, new Item.Properties().tab(tab).rarity(rarity).fireResistant());
         } else {
             ITEM = registerItem(name, new Item.Properties().tab(tab).rarity(rarity));
@@ -28,45 +28,48 @@ public class ItemRegisters {
         return Krasyrum.ITEMMAP.get(name);
     }
 
-    public static RegistryObject<Item> registerItem(String name, Rarity rarity, boolean isFireResistant){
+    public static RegistryObject<Item> registerItem(String name, Rarity rarity, boolean isFireResistant) {
         return registerItem(name, DEFAULT_TAB, rarity, isFireResistant);
     }
-    public static RegistryObject<Item> registerItem(String name, boolean isFireResistant){
+
+    public static RegistryObject<Item> registerItem(String name, boolean isFireResistant) {
         return registerItem(name, DEFAULT_TAB, Rarity.COMMON, isFireResistant);
     }
-    public static RegistryObject<Item> registerItem(String name){
+
+    public static RegistryObject<Item> registerItem(String name) {
         return registerItem(name, DEFAULT_TAB, Rarity.COMMON, false);
     }
 
-    public static RegistryObject<Item> registerIngot(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant){
+    public static RegistryObject<Item> registerIngot(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant) {
         final RegistryObject<Item> ITEM;
-        if(isFireResistant) {
+        if (isFireResistant) {
             ITEM = registerItem(name + "_ingot", new Item.Properties().tab(tab).rarity(rarity).fireResistant());
-        }else {
+        } else {
             ITEM = registerItem(name + "_ingot", new Item.Properties().tab(tab).rarity(rarity));
         }
         return ITEM;
     }
 
-    public static RegistryObject<Item> registerIngot(String name, CreativeModeTab tab, Rarity rarity){
+    public static RegistryObject<Item> registerIngot(String name, CreativeModeTab tab, Rarity rarity) {
         registerRaw(name, tab, rarity, false);
         return registerIngot(name, tab, rarity, false);
     }
-    public static RegistryObject<Item> registerIngot(String name, Rarity rarity, boolean isFireResistant){
+
+    public static RegistryObject<Item> registerIngot(String name, Rarity rarity, boolean isFireResistant) {
         registerRaw(name, DEFAULT_TAB, rarity, isFireResistant);
         return registerIngot(name, DEFAULT_TAB, rarity, isFireResistant);
     }
 
-    public static RegistryObject<Item> registerIngot(String name){
+    public static RegistryObject<Item> registerIngot(String name) {
         registerRaw(name, DEFAULT_TAB, Rarity.COMMON, false);
         return registerIngot(name, DEFAULT_TAB, Rarity.COMMON, false);
     }
 
-    public static RegistryObject<Item> registerRaw(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant){
+    public static RegistryObject<Item> registerRaw(String name, CreativeModeTab tab, Rarity rarity, boolean isFireResistant) {
         final RegistryObject<Item> ITEM;
-        if(isFireResistant) {
+        if (isFireResistant) {
             ITEM = registerItem("raw_" + name, new Item.Properties().tab(tab).rarity(rarity).fireResistant());
-        }else {
+        } else {
             ITEM = registerItem("raw_" + name, new Item.Properties().tab(tab).rarity(rarity));
         }
         return ITEM;
@@ -77,6 +80,7 @@ public class ItemRegisters {
         Krasyrum.ITEMMAP.put(name, BUCKET);
         return Krasyrum.ITEMMAP.get(name);
     }
+
     public static RegistryObject<Item> registerBucket(String name, RegistryObject<FlowingFluid> fluid) {
         registerBucket(name, fluid, new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).craftRemainder(Items.BUCKET).stacksTo(1));
         return Krasyrum.ITEMMAP.get(name);

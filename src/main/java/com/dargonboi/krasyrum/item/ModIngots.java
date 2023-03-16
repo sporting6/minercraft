@@ -18,7 +18,7 @@ public class ModIngots {
                     new Item.Properties().tab(ModCreativeTab.KRASYRUM_MATERIALS).craftRemainder(Items.BUCKET).stacksTo(1)));
 
 
-    public static void Register(IEventBus eventBus){
+    public static void Register(IEventBus eventBus) {
 
         ItemRegisters.registerItem("kyranium_handle", Krasyrum.RARITY_INSANE, true);
         ItemRegisters.registerItem("perfect_diamond");
@@ -27,7 +27,6 @@ public class ModIngots {
         ItemRegisters.registerItem("partally_refined_obsidian", true);
         ItemRegisters.registerItem("refined_obsidian", true);
         ItemRegisters.registerItem("refined_obsidian_ingot", true);
-
 
 
         Krasyrum.ITEMS.register(eventBus);

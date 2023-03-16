@@ -15,8 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModFoods {
-	
-	
+
+
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Krasyrum.MODID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Krasyrum.MODID);
 
@@ -50,13 +50,13 @@ public class ModFoods {
                             .food(new FoodProperties.Builder().alwaysEat().nutrition(5).saturationMod(1.5F).fast()
                                     .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 24000, 2), 1)
                                     .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 24000, 4), 1).build())));
-    
-    
-    public static void Register(IEventBus eventBus){
+
+
+    public static void Register(IEventBus eventBus) {
         ITEMS.register(eventBus);
         BLOCKS.register(eventBus);
 
-        
+
     }
 
 }

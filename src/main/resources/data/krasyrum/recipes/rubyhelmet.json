@@ -1,24 +1,17 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        "RRR",
-        "R R",
-        "   "
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:ruby"
-        }
-    },
-   
-    "result":
-    {
-        "item": "krasyrum:ruby_helmet",
-        "count": 1
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "R R",
+    "   "
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:ruby"
     }
+  },
+  "result": {
+    "item": "krasyrum:ruby_helmet",
+    "count": 1
+  }
 }

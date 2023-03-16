@@ -1,29 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-   
-    "pattern":
-    [
-        " R ",
-        "RAR",
-        " R "
-    ],
-   
-    "key":
-    {
-        "R":
-        {
-            "item": "krasyrum:veranium_ingot"
-        },
-
-        "A":
-        {
-            "item": "minecraft:enchanted_golden_apple"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "RAR",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "krasyrum:veranium_ingot"
     },
-   
-    "result":
-    {
-        "item": "krasyrum:hastey_apple",
-        "count": 1
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
     }
+  },
+  "result": {
+    "item": "krasyrum:hastey_apple",
+    "count": 1
+  }
 }

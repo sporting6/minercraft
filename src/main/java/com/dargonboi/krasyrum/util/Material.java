@@ -23,30 +23,30 @@ import java.util.List;
 
 public class Material {
 
-    private String name;
     private static final CreativeModeTab DEFAULT_TAB = ModCreativeTab.KRASYRUM_MATERIALS;
+    private String name;
     private CreativeModeTab tab = DEFAULT_TAB;
-    private  boolean fireResistant = false;
-    private  Rarity rarity = Rarity.COMMON;
-    private  Tier toolTier;
-    private  ArmorMaterial armorMaterial;
+    private boolean fireResistant = false;
+    private Rarity rarity = Rarity.COMMON;
+    private Tier toolTier;
+    private ArmorMaterial armorMaterial;
 
     private TagKey<Block> tag;
 
 
-    public Material(String pName, CreativeModeTab pTab, Rarity pRarity){
+    public Material(String pName, CreativeModeTab pTab, Rarity pRarity) {
         this.name = pName;
         this.rarity = pRarity;
         this.tab = pTab;
     }
 
-    public Material(String pName, CreativeModeTab pTab){
+    public Material(String pName, CreativeModeTab pTab) {
         this.name = pName;
         this.rarity = Rarity.COMMON;
         this.tab = pTab;
     }
 
-    public Material(String pName){
+    public Material(String pName) {
         this.name = pName;
         this.rarity = Rarity.COMMON;
         this.tab = DEFAULT_TAB;
@@ -55,6 +55,7 @@ public class Material {
     public String getName() {
         return this.name;
     }
+
     public Tier getToolTier() {
         return this.toolTier;
     }
@@ -71,33 +72,34 @@ public class Material {
         return tab;
     }
 
-    public boolean getFireResistant(){
+    public boolean getFireResistant() {
         return this.fireResistant;
     }
 
-    public Material fireResistant(boolean isFireResistant){
+    public Material fireResistant(boolean isFireResistant) {
         this.fireResistant = isFireResistant;
         return this;
     }
-    public Material fireResistant(){
+
+    public Material fireResistant() {
         this.fireResistant = true;
         return this;
     }
 
-    public Material ingot(){
+    public Material ingot() {
         final RegistryObject<Item> ITEM;
-        if(fireResistant) {
+        if (fireResistant) {
             ITEM = Krasyrum.ITEMS.register(this.name + "_ingot", () -> new Item(new Item.Properties().tab(tab).rarity(rarity).fireResistant()));
         } else {
             ITEM = Krasyrum.ITEMS.register(this.name + "_ingot", () -> new Item(new Item.Properties().tab(tab).rarity(rarity)));
         }
-            Krasyrum.ITEMMAP.put(this.name + "_ingot", ITEM);
+        Krasyrum.ITEMMAP.put(this.name + "_ingot", ITEM);
         return this;
     }
 
-    public Material gem(){
+    public Material gem() {
         final RegistryObject<Item> ITEM;
-        if(fireResistant) {
+        if (fireResistant) {
             ITEM = Krasyrum.ITEMS.register(this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity).fireResistant()));
         } else {
             ITEM = Krasyrum.ITEMS.register(this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity)));
@@ -106,9 +108,9 @@ public class Material {
         return this;
     }
 
-    public Material raw(){
+    public Material raw() {
         final RegistryObject<Item> ITEM;
-        if(fireResistant) {
+        if (fireResistant) {
             ITEM = Krasyrum.ITEMS.register("raw_" + this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity).fireResistant()));
         } else {
             ITEM = Krasyrum.ITEMS.register("raw_" + this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity)));
@@ -117,9 +119,9 @@ public class Material {
         return this;
     }
 
-    public Material crushable(){
+    public Material crushable() {
         final RegistryObject<Item> ITEM;
-        if(fireResistant) {
+        if (fireResistant) {
             ITEM = Krasyrum.ITEMS.register("crushed_" + this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity).fireResistant()));
         } else {
             ITEM = Krasyrum.ITEMS.register("crushed_" + this.name, () -> new Item(new Item.Properties().tab(tab).rarity(rarity)));
@@ -128,7 +130,7 @@ public class Material {
         return this;
     }
 
-    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, List beforeTier, List nextTier){
+    public Material tools(int level, int durability, float speed, float attackDamageBonus, float attackSpeedBonus, int enchantmentValue, List beforeTier, List nextTier) {
         final RegistryObject<SwordItem> SWORD;
         final RegistryObject<PickaxeItem> PICKAXE;
         final RegistryObject<AxeItem> AXE;
@@ -136,7 +138,7 @@ public class Material {
         final RegistryObject<HoeItem> HOE;
         tag = BlockTags.create(new ResourceLocation("krasyrum:" + name + "_tool"));
         this.toolTier = TierSortingRegistry.registerTier(
-                new ForgeTier(level ,durability, speed, attackDamageBonus, enchantmentValue, tag,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get())),
+                new ForgeTier(level, durability, speed, attackDamageBonus, enchantmentValue, tag, () -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get())),
                 new ResourceLocation("krasyrum:" + name),
                 beforeTier, nextTier);
         Krasyrum.TIERMAP.put(this.name, this.toolTier);
@@ -147,37 +149,37 @@ public class Material {
         final float SHOVEL_ATTACK_BONUS = 0;
         final float HOE_ATTACK_BONUS = -.8f;
 
-        if(fireResistant) {
+        if (fireResistant) {
             SWORD = Krasyrum.ITEMS.register(this.name + "_sword",
-                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
+                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             PICKAXE = Krasyrum.ITEMS.register(this.name + "_pickaxe",
-                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
+                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             AXE = Krasyrum.ITEMS.register(this.name + "_axe",
-                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
+                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             SHOVEL = Krasyrum.ITEMS.register(this.name + "_shovel",
-                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
+                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
             HOE = Krasyrum.ITEMS.register(this.name + "_hoe",
-                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
+                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
         } else {
             SWORD = Krasyrum.ITEMS.register(this.name + "_sword",
-                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
+                    () -> new SwordItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * SWORD_ATTACK_BONUS), -2.4F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             PICKAXE = Krasyrum.ITEMS.register(this.name + "_pickaxe",
-                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
+                    () -> new PickaxeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * PICK_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             AXE = Krasyrum.ITEMS.register(this.name + "_axe",
-                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
+                    () -> new AxeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * AXE_ATTACK_BONUS), -3 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             SHOVEL = Krasyrum.ITEMS.register(this.name + "_shovel",
-                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
+                    () -> new ShovelItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * SHOVEL_ATTACK_BONUS), -2.8F + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
             HOE = Krasyrum.ITEMS.register(this.name + "_hoe",
-                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int)(attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
+                    () -> new HoeItem(Krasyrum.TIERMAP.get(this.name), (int) (attackDamageBonus * HOE_ATTACK_BONUS), 0 + attackSpeedBonus,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
         }
 
@@ -191,18 +193,18 @@ public class Material {
 
     }
 
-    public Material armor(int enchantibility, int baseDurability, int[] armor, float knockbackResistance, float toughness, SoundEvent sound){
+    public Material armor(int enchantibility, int baseDurability, int[] armor, float knockbackResistance, float toughness, SoundEvent sound) {
         final RegistryObject<ArmorItem> HELMET;
         final RegistryObject<ArmorItem> CHESTPLATE;
         final RegistryObject<ArmorItem> LEGGINGS;
         final RegistryObject<ArmorItem> BOOTS;
-        this.armorMaterial = new BaseArmorMaterial(enchantibility, new int[] {(int)(baseDurability * 1.2), (int)(baseDurability * 1.5), (int)(baseDurability * 1.3), baseDurability},
+        this.armorMaterial = new BaseArmorMaterial(enchantibility, new int[]{(int) (baseDurability * 1.2), (int) (baseDurability * 1.5), (int) (baseDurability * 1.3), baseDurability},
                 armor, knockbackResistance, toughness, Krasyrum.MODID + ":" + name,
-                sound,() -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get()));
+                sound, () -> Ingredient.of(Krasyrum.ITEMMAP.get(name + "_ingot").get()));
 
         Krasyrum.ARMORMATERIALMAP.put(this.name, this.armorMaterial);
 
-        if(fireResistant) {
+        if (fireResistant) {
             HELMET = Krasyrum.ITEMS.register(this.name + "_helmet",
                     () -> new ArmorItem(Krasyrum.ARMORMATERIALMAP.get(this.name), EquipmentSlot.HEAD,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
@@ -215,7 +217,7 @@ public class Material {
             BOOTS = Krasyrum.ITEMS.register(this.name + "_boots",
                     () -> new ArmorItem(Krasyrum.ARMORMATERIALMAP.get(this.name), EquipmentSlot.FEET,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).fireResistant().rarity(rarity)));
-        }else {
+        } else {
             HELMET = Krasyrum.ITEMS.register(this.name + "_helmet",
                     () -> new ArmorItem(Krasyrum.ARMORMATERIALMAP.get(this.name), EquipmentSlot.HEAD,
                             new Item.Properties().tab(ModCreativeTab.KRASYRUM_TOOLS_ARMOR).rarity(rarity)));
@@ -239,40 +241,40 @@ public class Material {
         return this;
     }
 
-    public Material materialBlock(MaterialColor color, float destroyTime, float explosionResistance, boolean rawOreBlock){
+    public Material materialBlock(MaterialColor color, float destroyTime, float explosionResistance, boolean rawOreBlock) {
         BlockRegisters.registerMaterialBlock(this.name + "_block", color, destroyTime, explosionResistance, rawOreBlock);
         return this;
     }
 
-    public Material ore(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
+    public Material ore(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY) {
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerOverworldOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
         ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
-    public Material deepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
+    public Material deepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY) {
         BlockRegisters.registerDeepslateOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerDeepslateOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get("deepslate_" + this.name + "_ore"));
         ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
-    public Material stoneDeepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
+    public Material stoneDeepslateOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY) {
         BlockRegisters.registerOres(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerOverworldOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"), Krasyrum.OREBLOCKMAP.get("deepslate_" + this.name + "_ore"));
         ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
-    public Material netherOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
+    public Material netherOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY) {
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerNetherOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
         ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);
         return this;
     }
 
-    public Material endOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY){
+    public Material endOre(float destroyTime, float explosionResistance, int veinSize, int orePerChunk, int minY, int maxY) {
         BlockRegisters.registerOre(this.name + "_ore", destroyTime, explosionResistance);
         ModConfiguredFeatures.registerEndOres(this.name + "_ore", veinSize, Krasyrum.OREBLOCKMAP.get(this.name + "_ore"));
         ModPlacedFeatures.placeOres(this.name + "_ore", Krasyrum.CONFIGUREDOREMAP, orePerChunk, minY, maxY);

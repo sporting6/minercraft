@@ -8,8 +8,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public class BaseArmorMaterial implements ArmorMaterial {
-	
-	private final int enchantability;
+
+    private final int enchantability;
     private final int[] durability, damageReduction;
     private final float knockbackResistance, toughness;
     private final String name;
@@ -17,8 +17,8 @@ public class BaseArmorMaterial implements ArmorMaterial {
     private final Supplier<Ingredient> repairMaterial;
 
     public BaseArmorMaterial(int enchantability, int[] durability, int[] damageReduction,
-            float knockbackResistance, float toughness, String name, SoundEvent equipSound,
-            Supplier<Ingredient> repairMaterial) {
+                             float knockbackResistance, float toughness, String name, SoundEvent equipSound,
+                             Supplier<Ingredient> repairMaterial) {
         this.enchantability = enchantability;
         this.durability = durability;
         this.damageReduction = damageReduction;
@@ -30,44 +30,44 @@ public class BaseArmorMaterial implements ArmorMaterial {
     }
 
 
-	@Override
-	public int getDefenseForSlot(EquipmentSlot slot) {
-		return this.damageReduction[slot.getIndex()];
-	}
+    @Override
+    public int getDefenseForSlot(EquipmentSlot slot) {
+        return this.damageReduction[slot.getIndex()];
+    }
 
-	@Override
-	public int getDurabilityForSlot(EquipmentSlot slot) {
-		return this.durability[slot.getIndex()];
-	}
+    @Override
+    public int getDurabilityForSlot(EquipmentSlot slot) {
+        return this.durability[slot.getIndex()];
+    }
 
-	@Override
-	public int getEnchantmentValue() {
-		return this.enchantability;
-	}
+    @Override
+    public int getEnchantmentValue() {
+        return this.enchantability;
+    }
 
-	@Override
-	public SoundEvent getEquipSound() {
-		return this.equipSound;
-	}
+    @Override
+    public SoundEvent getEquipSound() {
+        return this.equipSound;
+    }
 
-	@Override
-	public float getKnockbackResistance() {
-		return this.knockbackResistance;
-	}
+    @Override
+    public float getKnockbackResistance() {
+        return this.knockbackResistance;
+    }
 
-	@Override
-	public String getName() {
-		return this.name;
-	}
+    @Override
+    public String getName() {
+        return this.name;
+    }
 
-	@Override
-	public Ingredient getRepairIngredient() {
-		return this.repairMaterial.get();
-	}
+    @Override
+    public Ingredient getRepairIngredient() {
+        return this.repairMaterial.get();
+    }
 
-	@Override
-	public float getToughness() {
-		return this.toughness;
-	}
+    @Override
+    public float getToughness() {
+        return this.toughness;
+    }
 
 }

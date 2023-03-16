@@ -21,11 +21,10 @@ public class ModConfiguredFeatures {
     public static final RuleTest ENDSTONE_ORE_REPLACEABLES = new BlockMatchTest(Blocks.END_STONE);
 
 
-
-    private static void registerOres(String name, int veinSize, RegistryObject<Block>[] ore, RuleTest[] ruleTest){
+    private static void registerOres(String name, int veinSize, RegistryObject<Block>[] ore, RuleTest[] ruleTest) {
         final Supplier<List<OreConfiguration.TargetBlockState>> ORES = Suppliers.memoize(() -> {
             List list = new ArrayList();
-            for(int i = 0; i< ruleTest.length; i++) {
+            for (int i = 0; i < ruleTest.length; i++) {
                 list.add(OreConfiguration.target(ruleTest[i], ore[i].get().defaultBlockState()));
             }
             return list;
@@ -37,24 +36,27 @@ public class ModConfiguredFeatures {
         Krasyrum.CONFIGUREDOREMAP.put(name, ORE);
     }
 
-    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre, RegistryObject<Block> deepslateOre){
+    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre, RegistryObject<Block> deepslateOre) {
         RegistryObject<Block>[] ore = new RegistryObject[]{stoneOre, deepslateOre};
         registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.STONE_ORE_REPLACEABLES, OreFeatures.DEEPSLATE_ORE_REPLACEABLES});
     }
-    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre){
+
+    public static void registerOverworldOres(String name, int veinSize, RegistryObject<Block> stoneOre) {
         RegistryObject<Block>[] ore = new RegistryObject[]{stoneOre};
         registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.STONE_ORE_REPLACEABLES});
     }
-    public static void registerDeepslateOres(String name, int veinSize, RegistryObject<Block> deepslateOre){
-        RegistryObject<Block>[] ore = new RegistryObject[]{ deepslateOre};
+
+    public static void registerDeepslateOres(String name, int veinSize, RegistryObject<Block> deepslateOre) {
+        RegistryObject<Block>[] ore = new RegistryObject[]{deepslateOre};
         registerOres(name, veinSize, ore, new RuleTest[]{OreFeatures.DEEPSLATE_ORE_REPLACEABLES});
     }
 
-    public static void registerNetherOres(String name, int veinSize, RegistryObject<Block> ore){
+    public static void registerNetherOres(String name, int veinSize, RegistryObject<Block> ore) {
         RegistryObject<Block>[] ores = new RegistryObject[]{ore};
         registerOres(name, veinSize, ores, new RuleTest[]{OreFeatures.NETHER_ORE_REPLACEABLES});
     }
-    public static void registerEndOres(String name, int veinSize, RegistryObject<Block> ore){
+
+    public static void registerEndOres(String name, int veinSize, RegistryObject<Block> ore) {
         RegistryObject<Block>[] ores = new RegistryObject[]{ore};
         registerOres(name, veinSize, ores, new RuleTest[]{ENDSTONE_ORE_REPLACEABLES});
     }

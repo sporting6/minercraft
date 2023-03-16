@@ -1,13 +1,12 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-      {
-        "item": "krasyrum:veranium_block"
-      }
-    ],
-    "result":
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
     {
-      "item": "krasyrum:veranium_ingot",
-      "count": 9
+      "item": "krasyrum:veranium_block"
     }
+  ],
+  "result": {
+    "item": "krasyrum:veranium_ingot",
+    "count": 9
   }
+}

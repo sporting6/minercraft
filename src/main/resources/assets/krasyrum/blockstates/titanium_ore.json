@@ -1,5 +1,7 @@
 {
-    "variants": {
-     "" : { "model": "krasyrum:block/titanium_ore" }
+  "variants": {
+    "": {
+      "model": "krasyrum:block/titanium_ore"
     }
+  }
 }

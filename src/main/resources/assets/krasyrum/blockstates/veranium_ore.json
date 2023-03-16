@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "krasyrum:block/veranium_ore" }
-	}
+  "variants": {
+    "": {
+      "model": "krasyrum:block/veranium_ore"
+    }
+  }
 }

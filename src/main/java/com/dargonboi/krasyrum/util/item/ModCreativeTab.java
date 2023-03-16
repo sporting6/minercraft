@@ -10,7 +10,7 @@ public class ModCreativeTab {
     public static final CreativeModeTab KRASYRUM_MATERIALS = new CreativeModeTab("krasyrum_materials") {
 
         @Override
-        public ItemStack makeIcon(){
+        public ItemStack makeIcon() {
             return new ItemStack(Krasyrum.ITEMMAP.get("blue_nanitarium_ingot").get());
         }
 
@@ -19,7 +19,7 @@ public class ModCreativeTab {
     public static final CreativeModeTab KRASYRUM_FOODS = new CreativeModeTab("krasyrum_foods") {
 
         @Override
-        public ItemStack makeIcon(){
+        public ItemStack makeIcon() {
             return new ItemStack(ModFoods.BLUE_NANITARIUM_APPLE.get());
         }
 
@@ -28,7 +28,7 @@ public class ModCreativeTab {
     public static final CreativeModeTab KRASYRUM_TOOLS_ARMOR = new CreativeModeTab("krasyrum_tools_armor") {
 
         @Override
-        public ItemStack makeIcon(){
+        public ItemStack makeIcon() {
             return new ItemStack(Krasyrum.ARMORMAP.get("blue_nanitarium_chestplate").get());
         }
 

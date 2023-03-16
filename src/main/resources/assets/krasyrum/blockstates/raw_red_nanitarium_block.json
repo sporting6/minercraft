@@ -1,5 +1,7 @@
 {
-	"variants": {
-		"": { "model": "krasyrum:block/raw_red_nanitarium_block" }
-	}
+  "variants": {
+    "": {
+      "model": "krasyrum:block/raw_red_nanitarium_block"
+    }
+  }
 }
