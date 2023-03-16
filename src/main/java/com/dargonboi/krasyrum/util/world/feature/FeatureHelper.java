@@ -1,7 +1,6 @@
 package com.dargonboi.krasyrum.util.world.feature;
 
 import com.dargonboi.krasyrum.block.ModBlocks;
-import com.dargonboi.krasyrum.util.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;

@@ -9,7 +9,8 @@ import com.dargonboi.krasyrum.item.ModPotions;
 import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
-import com.dargonboi.krasyrum.world.feature.ore.LavaPoolFeature;
+import com.dargonboi.krasyrum.world.feature.hotspot.LavaPoolFeature;
+import com.dargonboi.krasyrum.world.feature.hotspot.MiniVolcanoFeature;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -33,7 +34,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 @Mod(Krasyrum.MODID)
 public class Krasyrum {
@@ -49,7 +49,7 @@ public class Krasyrum {
 	public static final HashMap<String, ArmorMaterial> ARMORMATERIALMAP =  new HashMap<String, ArmorMaterial>();
 	public static final HashMap<String, RegistryObject<Item>> OREITEMMAP = new HashMap<String, RegistryObject<Item>>();
 	public static final HashMap<String, RegistryObject<Block>> OREBLOCKMAP = new HashMap<String, RegistryObject<Block>>();
-	public static final HashMap<String, RegistryObject<Block>> BLOCKMAP = new HashMap<String, RegistryObject<Block>>();
+	public static final HashMap<String, RegistryObject<? extends Block>> BLOCKMAP = new HashMap<String, RegistryObject<?extends Block>>();
 	public static final HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>> CONFIGUREDOREMAP = new HashMap<String, RegistryObject<ConfiguredFeature<?, ?>>>();
 	public static final HashMap<String, RegistryObject<PlacedFeature>> PLACEDOREMAP  = new HashMap<String, RegistryObject<PlacedFeature>>();
 
@@ -103,17 +103,19 @@ public class Krasyrum {
 	public static final RegistryObject<LavaPoolFeature> LAVA_POOL = FEATURES.register("lava_pool",
 			() -> new LavaPoolFeature(NoneFeatureConfiguration.CODEC, 5));
 
+	public static final RegistryObject<MiniVolcanoFeature> MINI_VOLCANO = FEATURES.register("mini_volcano",
+			() -> new MiniVolcanoFeature(NoneFeatureConfiguration.CODEC));
+
 
 	public Krasyrum() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
 
 		ModIngots.Register(bus);
 
 		ModFoods.Register(bus);
 
-		BLOCKS.register(bus);
 		ModBlocks.register();
+		BLOCKS.register(bus);
 
 		ModPotions.register(bus);
 

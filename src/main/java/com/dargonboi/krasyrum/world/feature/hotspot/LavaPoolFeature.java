@@ -1,4 +1,4 @@
-package com.dargonboi.krasyrum.world.feature.ore;
+package com.dargonboi.krasyrum.world.feature.hotspot;
 
 import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.ModBlocks;

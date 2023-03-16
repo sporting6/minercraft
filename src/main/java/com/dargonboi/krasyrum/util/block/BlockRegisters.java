@@ -56,7 +56,7 @@ public class BlockRegisters {
         Krasyrum.OREBLOCKMAP.put(name, ORE_BLOCK);
         return Krasyrum.OREBLOCKMAP.get(name);
     }
-    public static final RegistryObject<Block> registerMaterialBlock(String name, MaterialColor color, float destroyTime, float explosionResistance, boolean rawOreBlock){
+    public static final RegistryObject<? extends Block> registerMaterialBlock(String name, MaterialColor color, float destroyTime, float explosionResistance, boolean rawOreBlock){
         final RegistryObject<Block> MATERIAL_BLOCK = registerBlock(name,
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL, color)
                         .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(SoundType.METAL)));
@@ -71,7 +71,7 @@ public class BlockRegisters {
         return Krasyrum.BLOCKMAP.get(name);
     }
 
-    public static final RegistryObject<Block> registerMaterialBlock(String name, Material material, MaterialColor color, float destroyTime, float explosionResistance, SoundType soundType,  boolean rawOreBlock){
+    public static final  RegistryObject<? extends Block> registerMaterialBlock(String name, Material material, MaterialColor color, float destroyTime, float explosionResistance, SoundType soundType,  boolean rawOreBlock){
         final RegistryObject<Block> MATERIAL_BLOCK = registerBlock(name,
                 () -> new Block(BlockBehaviour.Properties.of(material, color)
                         .requiresCorrectToolForDrops().strength(destroyTime, explosionResistance).sound(soundType)));
@@ -88,11 +88,13 @@ public class BlockRegisters {
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = Krasyrum.BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
+        Krasyrum.BLOCKMAP.put(name, toReturn);
         return toReturn;
     }
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = Krasyrum.BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
+        Krasyrum.BLOCKMAP.put(name, toReturn);
         return toReturn;
     }
 
