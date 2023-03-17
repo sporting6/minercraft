@@ -38,7 +38,6 @@ public class LavaPoolFeature extends Feature<NoneFeatureConfiguration> {
         if (FeatureHelper.blockCheck(origin, worldgenlevel, 2, Blocks.CAVE_AIR.defaultBlockState()))
             return false;
 
-
         int w = randomsource.nextInt(6);
         int h = randomsource.nextInt(6);
         FeatureHelper.filledNoOverhangEllipse(origin, Blocks.LAVA, w, h, worldgenlevel);
@@ -58,7 +57,6 @@ public class LavaPoolFeature extends Feature<NoneFeatureConfiguration> {
 
             FeatureHelper.filledNoOverhangEllipse(origin.north(north).west(west), Blocks.LAVA, randomsource.nextInt(6), randomsource.nextInt(6), worldgenlevel);
         }
-
 
         System.out.println("===================> Lava Pool Registration Success");
         return true;

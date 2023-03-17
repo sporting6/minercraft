@@ -1,5 +1,6 @@
 package com.dargonboi.krasyrum.util.world.feature;
 
+import com.dargonboi.krasyrum.Krasyrum;
 import com.dargonboi.krasyrum.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.WorldGenLevel;
@@ -25,7 +26,12 @@ public class FeatureHelper {
 
     public static void filledNoOverhangEllipse(BlockPos origin, Block block, double a, double b, WorldGenLevel level) {
         BlockState originalBlock = level.getBlockState(origin);
-        level.setBlock(origin, block.defaultBlockState(), 2);
+        if (!blockCheck(origin, level, 1, Blocks.AIR.defaultBlockState())
+                && !blockCheck(origin, level, 1, Blocks.CAVE_AIR.defaultBlockState())
+                && !blockCheck(origin, level, 1, Blocks.WATER.defaultBlockState())
+                && !blockCheck(origin, level, 1, ModBlocks.BOILING_WATER_BLOCK.get().defaultBlockState())) {
+            level.setBlock(origin, block.defaultBlockState(), 2);
+        }
         for (int i = 0; i <= a; i++) {
             for (int j = 0; j <= b; j++) {
                 noOverhangEllipse(origin, block, i, j, level);
@@ -36,11 +42,8 @@ public class FeatureHelper {
 
 
     public static void noOverhangEllipse(BlockPos origin, Block block, double a, double b, WorldGenLevel level) {
-        BlockState originalBlock = level.getBlockState(origin);
         for (double x = 0 - a; x <= a; x = x + 0.25) {
             double y = (b / a) * Math.sqrt((a * a) - (x * x));
-//            System.out.println("X = " + x + ", Y = " + y);
-
 
             BlockPos pos = origin.east((int) x).north((int) y);
             if (!blockCheck(pos, level, 1, Blocks.AIR.defaultBlockState())
@@ -58,10 +61,32 @@ public class FeatureHelper {
                 level.setBlock(pos, block.defaultBlockState(), 2);
             }
         }
-//        level.setBlock(origin.west((int)a), originalBlock, 2);
-//        level.setBlock(origin.east((int)a), originalBlock, 2);
-//        level.setBlock(origin.north((int)b), originalBlock, 2);
-//        level.setBlock(origin.south((int)b), originalBlock, 2);
+    }
+
+    public static void blockCheckEllipse(BlockPos origin, Block block, double a, double b, WorldGenLevel level, Block blockToCheck) {
+        BlockState originalBlock = level.getBlockState(origin);
+        for (double x = 0 - a; x <= a; x = x + 0.25) {
+            double y = (b / a) * Math.sqrt((a * a) - (x * x));
+            if(level.getBlockState(origin.east((int) x).north((int) y)) == block.defaultBlockState())
+                level.setBlock(origin.east((int) x).north((int) y), block.defaultBlockState(), 2);
+            if(level.getBlockState(origin.east((int) x).north((int) y)) == block.defaultBlockState())
+                level.setBlock(origin.west((int) x).south((int) y), block.defaultBlockState(), 2);
+        }
+        level.setBlock(origin.west((int) a), originalBlock, 2);
+        level.setBlock(origin.east((int) a), originalBlock, 2);
+        level.setBlock(origin.north((int) b), originalBlock, 2);
+        level.setBlock(origin.south((int) b), originalBlock, 2);
+    }
+
+    public static void blockCheckFilledEllipse(BlockPos origin, Block block, double a, double b, WorldGenLevel level, Block blockToCheck){
+        BlockState originalBlock = level.getBlockState(origin);
+        level.setBlock(origin, block.defaultBlockState(), 2);
+        for (int i = 0; i <= a; i++) {
+            for (int j = 0; j <= b; j++) {
+                blockCheckEllipse(origin, block, i, j, level, blockToCheck);
+            }
+        }
+        blockCheckEllipse(origin, originalBlock.getBlock(), a + 1, b + 1, level, blockToCheck);
     }
 
     public static void ellipse(BlockPos origin, Block block, double a, double b, WorldGenLevel level) {

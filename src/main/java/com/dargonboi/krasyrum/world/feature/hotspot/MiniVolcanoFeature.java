@@ -50,9 +50,6 @@ public class MiniVolcanoFeature extends Feature<NoneFeatureConfiguration> {
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> pContext) {
 
-        System.out.println(Krasyrum.BLOCKMAP.get("krasyrum_stone"));
-
-
         BlockPos origin = pContext.origin().below();
         WorldGenLevel worldgenlevel = pContext.level();
         RandomSource randomsource = pContext.random();

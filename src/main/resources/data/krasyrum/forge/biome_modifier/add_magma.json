@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "krasyrum:krasyrum_hot_spot",
+  "features": "krasyrum:magma",
+  "step": "underground_ores"
+}

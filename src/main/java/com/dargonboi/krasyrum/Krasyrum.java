@@ -10,6 +10,7 @@ import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import com.dargonboi.krasyrum.world.feature.hotspot.LavaPoolFeature;
+import com.dargonboi.krasyrum.world.feature.hotspot.MagmaFeature;
 import com.dargonboi.krasyrum.world.feature.hotspot.MiniVolcanoFeature;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -65,10 +66,15 @@ public class Krasyrum {
                     List.of(), List.of());
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Krasyrum.MODID);
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, Krasyrum.MODID);
+
     public static final RegistryObject<LavaPoolFeature> LAVA_POOL = FEATURES.register("lava_pool",
             () -> new LavaPoolFeature(NoneFeatureConfiguration.CODEC, 5));
+
     public static final RegistryObject<MiniVolcanoFeature> MINI_VOLCANO = FEATURES.register("mini_volcano",
             () -> new MiniVolcanoFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final RegistryObject<MagmaFeature> MAGMA = FEATURES.register("magma",
+            () -> new MagmaFeature(NoneFeatureConfiguration.CODEC));
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Krasyrum.MODID);
     public static final Material BLUE_NANITARIUM = new Material("blue_nanitarium").fireResistant().ingot().raw().crushable()
             .materialBlock(MaterialColor.COLOR_BLUE, 8f, 600f, true)
