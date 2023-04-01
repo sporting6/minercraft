@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "krasyrum:blocks/darkwood_log_top",
+    "side": "krasyrum:blocks/darkwood_log_side"
+  }
+}

@@ -8,6 +8,7 @@ import com.dargonboi.krasyrum.item.ModIngots;
 import com.dargonboi.krasyrum.item.ModPotions;
 import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
+import com.dargonboi.krasyrum.util.world.feature.Tree;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
 import com.dargonboi.krasyrum.world.feature.hotspot.LavaPoolFeature;
 import com.dargonboi.krasyrum.world.feature.hotspot.MagmaFeature;
@@ -107,6 +108,8 @@ public class Krasyrum {
             .endOre(4f, 6f, 6, 4, 0, 72);
     public static final Material THERIUM = new Material("therium").ingot().raw().crushable()
             .endOre(4f, 6f, 6, 4, 0, 72);
+
+    public static final Tree DARKWOOD = new Tree("darkwood");
 
 
     public Krasyrum() {
