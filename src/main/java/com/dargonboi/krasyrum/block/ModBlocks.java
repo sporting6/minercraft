@@ -18,9 +18,10 @@ public class ModBlocks {
             () -> new LiquidBlock(ModFluids.SOURCE_BOILING_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
     public static void register() {
-        BlockRegisters.registerBlock("krasyrum_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.POLISHED_DEEPSLATE)));
+        BlockRegisters.registerBlock("krasyrum_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE)));
         BlockRegisters.registerBlock("krasyrum_cobblestone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE)));
         BlockRegisters.registerBlock("krasyrum_magma", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE)));
+        BlockRegisters.registerBlock("overgrown_krasyrum_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE)));
 
 
     }

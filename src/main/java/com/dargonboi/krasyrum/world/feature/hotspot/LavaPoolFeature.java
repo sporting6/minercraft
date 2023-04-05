@@ -13,7 +13,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 
 public class LavaPoolFeature extends Feature<NoneFeatureConfiguration> {
 
-
     private int poolMaxRadius;
 
     public LavaPoolFeature(Codec<NoneFeatureConfiguration> pCodec, int poolMaxRadius) {
