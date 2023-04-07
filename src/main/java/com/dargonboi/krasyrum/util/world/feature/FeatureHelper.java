@@ -116,4 +116,8 @@ public class FeatureHelper {
         }
         return false;
     }
+
+    public static boolean airTest(BlockPos pos, WorldGenLevel level){
+        return level.getBlockState(pos) == Blocks.AIR.defaultBlockState() || level.getBlockState(pos) == Blocks.CAVE_AIR.defaultBlockState() ||level.getBlockState(pos) == Blocks.VOID_AIR.defaultBlockState();
+    }
 }

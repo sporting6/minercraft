@@ -1,4 +1,4 @@
-package com.dargonboi.krasyrum.world.feature.tree;
+package com.dargonboi.krasyrum.world.feature.darkforest;
 
 import com.dargonboi.krasyrum.Krasyrum;
 import com.mojang.serialization.Codec;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 import net.minecraft.world.level.levelgen.feature.stateproviders.RotatedBlockProvider;
 
 public class DarkwoodTreeFeature extends Feature<NoneFeatureConfiguration> {
-    WorldGenLevel level;
+    private WorldGenLevel level;
 
     public DarkwoodTreeFeature(Codec<NoneFeatureConfiguration> pCodec) {
         super(pCodec);

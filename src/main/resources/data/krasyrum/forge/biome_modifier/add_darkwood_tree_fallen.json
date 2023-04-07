@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "krasyrum:krasyrum_dark_forest",
+  "features": "krasyrum:darkwood_tree_fallen",
+  "step": "underground_ores"
+}
