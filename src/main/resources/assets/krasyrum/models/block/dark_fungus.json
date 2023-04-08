@@ -1,0 +1,123 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "krasyrum:blocks/dark_fungus",
+		"particle": "krasyrum:blocks/dark_fungus"
+	},
+	"elements": [
+		{
+			"from": [14, 5, 6],
+			"to": [15, 6, 11],
+			"faces": {
+				"north": {"uv": [1.5, 5, 2, 5.5], "texture": "#0"},
+				"east": {"uv": [3.5, 2, 6, 2.5], "texture": "#0"},
+				"south": {"uv": [2, 5, 2.5, 5.5], "texture": "#0"},
+				"west": {"uv": [3.5, 2.5, 6, 3], "texture": "#0"},
+				"up": {"uv": [4, 5.5, 3.5, 3], "texture": "#0"},
+				"down": {"uv": [4.5, 3, 4, 5.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 5, 6],
+			"to": [9, 6, 11],
+			"faces": {
+				"north": {"uv": [0.5, 5.5, 1, 6], "texture": "#0"},
+				"east": {"uv": [4.5, 3, 7, 3.5], "texture": "#0"},
+				"south": {"uv": [1, 5.5, 1.5, 6], "texture": "#0"},
+				"west": {"uv": [4.5, 3.5, 7, 4], "texture": "#0"},
+				"up": {"uv": [5, 6.5, 4.5, 4], "texture": "#0"},
+				"down": {"uv": [0.5, 5, 0, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9, 5, 5],
+			"to": [14, 6, 6],
+			"faces": {
+				"north": {"uv": [5, 4, 7.5, 4.5], "texture": "#0"},
+				"east": {"uv": [1.5, 5.5, 2, 6], "texture": "#0"},
+				"south": {"uv": [5, 4.5, 7.5, 5], "texture": "#0"},
+				"west": {"uv": [2, 5.5, 2.5, 6], "texture": "#0"},
+				"up": {"uv": [7.5, 5.5, 5, 5], "texture": "#0"},
+				"down": {"uv": [7.5, 5.5, 5, 6], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9, 5, 11],
+			"to": [14, 6, 12],
+			"faces": {
+				"north": {"uv": [6, 0, 8.5, 0.5], "texture": "#0"},
+				"east": {"uv": [3.5, 5.5, 4, 6], "texture": "#0"},
+				"south": {"uv": [0.5, 6, 3, 6.5], "texture": "#0"},
+				"west": {"uv": [4, 5.5, 4.5, 6], "texture": "#0"},
+				"up": {"uv": [8.5, 1, 6, 0.5], "texture": "#0"},
+				"down": {"uv": [8.5, 1, 6, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [11, 0, 8],
+			"to": [12, 6, 9],
+			"faces": {
+				"north": {"uv": [2.5, 0, 3, 3], "texture": "#0"},
+				"east": {"uv": [3, 0, 3.5, 3], "texture": "#0"},
+				"south": {"uv": [2.5, 3, 3, 6], "texture": "#0"},
+				"west": {"uv": [3, 3, 3.5, 6], "texture": "#0"},
+				"up": {"uv": [1, 5.5, 0.5, 5], "texture": "#0"},
+				"down": {"uv": [1.5, 5, 1, 5.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9, 6, 6],
+			"to": [14, 7, 11],
+			"faces": {
+				"north": {"uv": [3.5, 0, 6, 0.5], "texture": "#0"},
+				"east": {"uv": [3.5, 0.5, 6, 1], "texture": "#0"},
+				"south": {"uv": [3.5, 1, 6, 1.5], "texture": "#0"},
+				"west": {"uv": [3.5, 1.5, 6, 2], "texture": "#0"},
+				"up": {"uv": [2.5, 2.5, 0, 0], "texture": "#0"},
+				"down": {"uv": [2.5, 2.5, 0, 5], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [-2, 6, 1.25]
+		},
+		"thirdperson_lefthand": {
+			"translation": [2.25, 6, 1.25]
+		},
+		"firstperson_righthand": {
+			"translation": [-2, 5.25, -0.75]
+		},
+		"firstperson_lefthand": {
+			"translation": [3, 5.25, -0.75]
+		},
+		"ground": {
+			"translation": [0, 4.75, 0]
+		},
+		"gui": {
+			"rotation": [16.72, -25.91, 10.01],
+			"translation": [-3.75, 5.25, 0],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"head": {
+			"translation": [0, 9.5, 0]
+		},
+		"fixed": {
+			"translation": [-4, 4.5, 0],
+			"scale": [1.5, 1.5, 1.5]
+		}
+	},
+	"groups": [
+		0,
+		1,
+		2,
+		3,
+		{
+			"name": "VoxelShapes",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [4, 5]
+		}
+	]
+}

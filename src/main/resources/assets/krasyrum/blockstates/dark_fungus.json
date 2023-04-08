@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "krasyrum:block/dark_fungus"
+    },
+    "facing=east": {
+      "model": "krasyrum:block/dark_fungus",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "krasyrum:block/dark_fungus",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "krasyrum:block/dark_fungus",
+      "y": 270
+    }
+  }
+}
