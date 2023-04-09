@@ -10,6 +10,7 @@ import com.dargonboi.krasyrum.util.Material;
 import com.dargonboi.krasyrum.util.item.ModCreativeTab;
 import com.dargonboi.krasyrum.util.world.feature.Tree;
 import com.dargonboi.krasyrum.world.dimension.ModDimensions;
+import com.dargonboi.krasyrum.world.feature.darkforest.DarkFungusFeature;
 import com.dargonboi.krasyrum.world.feature.darkforest.DarkwoodBushFeature;
 import com.dargonboi.krasyrum.world.feature.darkforest.FallenDarkwoodTree;
 import com.dargonboi.krasyrum.world.feature.hotspot.LavaPoolFeature;
@@ -20,7 +21,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
-import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.BlockTags;
@@ -130,6 +130,10 @@ public class Krasyrum {
             () -> new DarkwoodBushFeature(NoneFeatureConfiguration.CODEC));
     private static final RegistryObject<FallenDarkwoodTree> DARKWOOD_TREE_FALLEN = FEATURES.register("darkwood_tree_fallen",
             () -> new FallenDarkwoodTree(NoneFeatureConfiguration.CODEC));
+
+    private static final RegistryObject<DarkFungusFeature> DARK_FUNGUS = FEATURES.register("dark_fungus",
+            () -> new DarkFungusFeature(NoneFeatureConfiguration.CODEC));
+
 
 
     // Materials

@@ -17,12 +17,12 @@ public class ModBlocks {
     public static void register() {
         BlockRegisters.registerBlock("krasyrum_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
         BlockRegisters.registerBlock("krasyrum_cobblestone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
-        BlockRegisters.registerBlock("krasyrum_magma", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+        BlockRegisters.registerBlock("krasyrum_magma", () -> new MagmaBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
         BlockRegisters.registerBlock("overgrown_krasyrum_stone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(20f, 1200f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops()));
+
 
         BlockRegisters.registerBlock("dark_fungus", () -> new FungusBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLACK).strength(1,5).sound(SoundType.FUNGUS).requiresCorrectToolForDrops()));
         BlockRegisters.registerBlock("dark_fungus_clump", () -> new FungusGroupBlock(BlockBehaviour.Properties.of(Material.PLANT, MaterialColor.COLOR_BLACK).strength(1,5).sound(SoundType.FUNGUS).requiresCorrectToolForDrops()));
-
     }
 
 }

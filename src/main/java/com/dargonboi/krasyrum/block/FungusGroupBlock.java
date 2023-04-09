@@ -6,6 +6,11 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -29,6 +34,24 @@ public class FungusGroupBlock extends HorizontalDirectionalBlock {
     protected FungusGroupBlock(Properties pProperties) {
         super(pProperties);
     }
+
+    @Override
+    public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+        if(pEntity instanceof LivingEntity livingEntity){
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 500, 2), livingEntity);
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 500, 2), livingEntity);
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 500, 2), livingEntity);
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100, 2), livingEntity);
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.WITHER, 100, 1), livingEntity);
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 2), livingEntity);
+
+        }
+
+        pEntity.hurt(DamageSource.WITHER, 2);
+
+        super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
 
 
     @Override

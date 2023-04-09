@@ -74,7 +74,7 @@ public class DarkwoodTreeFeature extends Feature<NoneFeatureConfiguration> {
         int height = randomSource.nextInt(5) + 1;
         int length = randomSource.nextInt(3) + 3;
 
-        System.out.println("Hight = " + height + ", Length = " + length + ", Direction = " + dir);
+//        System.out.println("Hight = " + height + ", Length = " + length + ", Direction = " + dir);
 
         BlockState log = Krasyrum.BLOCKMAP.get("darkwood_log").get().defaultBlockState();
 
